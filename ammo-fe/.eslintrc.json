@@ -21,7 +21,7 @@
   },
   "parser": "@typescript-eslint/parser",
   "parserOptions": {
-    "project" : "./tsconfig.json" ,
+    "project" : "../ammo-fe/tsconfig.json",
     "ecmaFeatures": {
       "jsx": true
     },
