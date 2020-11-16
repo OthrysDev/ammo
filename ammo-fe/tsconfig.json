@@ -21,7 +21,11 @@
     "jsx": "react",
     "baseUrl": "src"
   },
+  "exclude": [
+    "cypress",
+    "node_modules"
+  ],
   "include": [
-    "src", "integration"
+    "src"
   ]
 }
