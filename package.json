@@ -1,0 +1,5 @@
+{
+    "scripts": {
+        "start": "(cd ammo-be && npm start) & (cd ammo-fe && npm start)"
+    }
+}
