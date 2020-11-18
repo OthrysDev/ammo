@@ -242,7 +242,7 @@ describe('Testing endpoints', () => {
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toContain(
-                    '\\"request.body\\" failed custom validation because your body is too heavy, max 100Ko"'
+                    '\\"request.body\\" failed custom validation because your body is too heavy, max 50Ko"'
                 );
             });
     });
