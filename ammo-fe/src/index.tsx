@@ -6,15 +6,18 @@ import reportWebVitals from 'reportWebVitals';
 import store from 'redux/store';
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import theme from 'material/Theme';
+import I18nProvider from 'redux/I18nProvider';
 
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
-            <ThemeProvider theme={theme}>
-                <CssBaseline>
-                    <App />
-                </CssBaseline>
-            </ThemeProvider>
+            <I18nProvider>
+                <ThemeProvider theme={theme}>
+                    <CssBaseline>
+                        <App />
+                    </CssBaseline>
+                </ThemeProvider>
+            </I18nProvider>
         </Provider>
     </React.StrictMode>,
     document.getElementById('root')
