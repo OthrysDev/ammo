@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 import Joi from 'joi';
 import Sizeof from 'object-sizeof';
 
-import { ConnectorData } from 'typings/Connector';
+import { Bullet } from 'typings/Connector';
 
 const app = express();
 const port = 3001;
@@ -16,7 +16,7 @@ app.post(
     '/',
     (req, res): express.Response => {
         try {
-            const potentialBullet: ConnectorData = { ...req.body.data };
+            const potentialBullet: Bullet = { ...req.body.data };
 
             const urlRegex = new RegExp(
                 /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/,

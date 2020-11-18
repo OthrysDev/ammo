@@ -1,6 +1,6 @@
 import app from 'index';
 import request from 'supertest';
-import { ConnectorData } from 'typings/Connector';
+import { Bullet } from 'typings/Connector';
 
 interface HTTPError {
     error: {
@@ -25,7 +25,7 @@ const createOverweight = (): string => {
     return string;
 };
 
-const connectorData: ConnectorData = {
+const connectorData: Bullet = {
     url: 'http://localhost:3000/user',
     method: 'POST',
     request: {

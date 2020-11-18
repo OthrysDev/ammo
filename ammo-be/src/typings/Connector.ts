@@ -1,4 +1,4 @@
-export type ConnectorData = {
+export type Bullet = {
     url: string;
     method:
         | 'GET'
