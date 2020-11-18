@@ -2,7 +2,7 @@ type CustomReducerAction = {
     type: 'incremented' | 'decremented';
 };
 
-type CustomReducerState = {
+export type CustomReducerState = {
     value: number;
 };
 
