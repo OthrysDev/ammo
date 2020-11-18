@@ -17,10 +17,16 @@ interface HTTPError {
 const createOverweight = (): string => {
     let string = '';
 
-    // 42 Because it's the perfect number to go overweight
+    // 42 Because it's the perfect number to go overweight by a few bytes
     for (let i = 0; i < 42; i += 1) {
-        string
-            += '{"firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","password":"ezrkezlrkezrlmzek","hasAcceptedMails":true,"captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}';
+        string += `{
+            "firstName":"Foo",
+            "name":"Bar",
+            "email":"foo@bar.com",
+            "password":"123456789",
+            "hasAcceptedMails":true,
+            "captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"
+        }`;
     }
     return string;
 };
@@ -236,7 +242,7 @@ describe('Testing endpoints', () => {
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toContain(
-                    '\\"request.body\\" failed custom validation because your body is too heavy, max 100Ko"',
+                    '\\"request.body\\" failed custom validation because your body is too heavy, max 100Ko"'
                 );
             });
     });
@@ -248,7 +254,7 @@ describe('Testing endpoints', () => {
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toContain(
-                    '"\\"url\\" with value \\"AfakeUrlWhosGonnaMiss\\" fails to match the required pattern',
+                    '"\\"url\\" with value \\"AfakeUrlWhosGonnaMiss\\" fails to match the required pattern'
                 );
             });
     });

@@ -19,7 +19,7 @@ app.post(
             const potentialBullet: Bullet = { ...req.body.data };
 
             const urlRegex = new RegExp(
-                /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/,
+                /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/
             );
 
             const customBodyLengthValidation = (value: string): string => {
@@ -47,7 +47,7 @@ app.post(
                             'OPTIONS',
                             'TRACE',
                             'PATCH',
-                        ],
+                        ]
                     )
                     .required(),
                 request: Joi.object().keys({
@@ -68,7 +68,7 @@ app.post(
         } catch ({ message }) {
             return res.status(400).json({ message });
         }
-    },
+    }
 );
 
 const server = app.listen(port);
