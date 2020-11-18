@@ -1,10 +1,10 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
-import MainPannel, { MainPannelProps } from 'layout/MainPannel';
+import MainPannel, { MainPannelProps } from 'components/MainPannel';
 import {
     generateMockBullet,
     generateMockBullets,
-} from 'layout/MainPannel/__stories__/mocks/IBullet.mock';
+} from 'components/MainPannel/__stories__/mocks/IBullet.mock';
 
 export default {
     component: MainPannel,

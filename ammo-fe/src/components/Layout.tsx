@@ -2,10 +2,6 @@ import React, { ReactElement, ReactNode } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Box from '@material-ui/core/Box';
 
-interface LayoutProps {
-    children?: ReactNode;
-}
-
 const useStyles = makeStyles(() => ({
     root: {
         height: '100vh',
@@ -16,6 +12,10 @@ const useStyles = makeStyles(() => ({
         width: '100%',
     },
 }));
+
+interface LayoutProps {
+    children?: ReactNode;
+}
 
 const Layout = ({ children }: LayoutProps): ReactElement => {
     const classes = useStyles();

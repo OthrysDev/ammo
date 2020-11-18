@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
-import Layout from 'layout/Layout';
-import MainPannel from 'layout/MainPannel';
+import Layout from 'components/Layout';
+import MainPannel from 'components/MainPannel';
 
 function App(): ReactElement {
     return (

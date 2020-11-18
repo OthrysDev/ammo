@@ -9,6 +9,7 @@ interface IBullet {
     response: {
         body: string;
         headers: Record<string, string>;
+        status: number;
     };
 }
 

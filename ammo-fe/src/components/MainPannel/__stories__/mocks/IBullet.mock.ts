@@ -1,8 +1,8 @@
 import IBullet from 'imported/IBullet';
 
-const generateMockBullet = (index: number) => {
+const generateMockBullet = (index: number = 0) => {
     const mockBullet: IBullet = {
-        url: `http://localhost/foo/${index}`,
+        url: `http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/${index}`,
         method: 'GET',
         date: new Date(`2020-10-10 10:00:00${index}`),
         request: {
@@ -18,6 +18,7 @@ const generateMockBullet = (index: number) => {
                 responseHeader2: 'responseHeader2 value',
             },
             body: "{responseKey: 'responseValue'}",
+            status: 200,
         },
     };
 
