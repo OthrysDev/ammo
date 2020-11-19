@@ -2,6 +2,7 @@ import IBullet from 'imported/IBullet';
 
 const generateMockBullet = (index: number = 0) => {
     const mockBullet: IBullet = {
+        id: `id${index}`,
         url: `http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/${index}`,
         method: 'GET',
         date: new Date(`2020-10-10 10:00:00${index}`),

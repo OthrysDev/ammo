@@ -20,7 +20,11 @@ interface LayoutProps {
 const Layout = ({ children }: LayoutProps): ReactElement => {
     const classes = useStyles();
 
-    return <Box className={classes.root}>{children}</Box>;
+    return (
+        <Box id="layout-root" className={classes.root}>
+            {children}
+        </Box>
+    );
 };
 
 export default Layout;

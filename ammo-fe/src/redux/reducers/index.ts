@@ -4,7 +4,7 @@ import i18nReducer, {
 } from 'redux/reducers/i18nReducer';
 import customReducer, {
     CustomReducerState,
-} from 'redux/reducers/ReducerExemple';
+} from 'redux/reducers/ReducerExample';
 
 export interface RootReducer {
     i18n: i18nState;

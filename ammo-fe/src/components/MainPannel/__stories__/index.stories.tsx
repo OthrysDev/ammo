@@ -4,7 +4,7 @@ import MainPannel, { MainPannelProps } from 'components/MainPannel';
 import {
     generateMockBullet,
     generateMockBullets,
-} from 'components/MainPannel/__stories__/mocks/IBullet.mock';
+} from 'components/Bullet/__stories__/mocks/IBullet.mock';
 
 export default {
     component: MainPannel,

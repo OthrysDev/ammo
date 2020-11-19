@@ -18,28 +18,40 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 interface TitleAndKeyValuesDescProps {
+    id: string;
     title: string;
     obj: Record<string, string>;
 }
 
 export const TitleAndKeyValuesDesc = ({
+    id,
     title,
     obj,
 }: TitleAndKeyValuesDescProps): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box>
-            <Box className={classes.title}>
+        <Box id={id}>
+            <Box id={`${id}-title`} className={classes.title}>
                 <Typography variant="subtitle2">{title}</Typography>
             </Box>
             {obj &&
                 Object.keys(obj).map((key, i) => {
                     return (
-                        <Box key={i} className={classes.values}>
+                        <Box
+                            id={`${id}-line-${i}`}
+                            key={`${id}-value-${i}`}
+                            className={classes.values}
+                        >
                             <Box>
                                 <Typography variant="subtitle2">
-                                    {key} : "{obj[key]}"
+                                    <span id={`${id}-line-${i}-key`}>
+                                        {key}
+                                    </span>{' '}
+                                    :{' '}
+                                    <span id={`${id}-line-${i}-value`}>
+                                        "{obj[key]}"
+                                    </span>
                                 </Typography>
                             </Box>
                         </Box>
@@ -52,23 +64,25 @@ export const TitleAndKeyValuesDesc = ({
 // ==========================================================
 
 interface TitleAndRawValueDescProps {
+    id: string;
     title: string;
     obj: string;
 }
 
 export const TitleAndRawValueDesc = ({
+    id,
     title,
     obj,
 }: TitleAndRawValueDescProps): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box>
-            <Box className={classes.title}>
+        <Box id={id}>
+            <Box id={`${id}-title`} className={classes.title}>
                 <Typography variant="subtitle2">{title}</Typography>
             </Box>
             {obj && (
-                <Box className={classes.values}>
+                <Box id={`${id}-value`} className={classes.values}>
                     <Box>
                         <Typography variant="subtitle2">{obj}</Typography>
                     </Box>

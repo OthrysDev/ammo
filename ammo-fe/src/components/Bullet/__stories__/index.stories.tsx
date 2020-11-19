@@ -1,7 +1,7 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
 import Bullet, { BulletProps } from 'components/Bullet';
-import { generateMockBullet } from 'components/MainPannel/__stories__/mocks/IBullet.mock';
+import { generateMockBullet } from 'components/Bullet/__stories__/mocks/IBullet.mock';
 
 export default {
     component: Bullet,

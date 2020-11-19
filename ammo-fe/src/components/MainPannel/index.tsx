@@ -21,14 +21,26 @@ export interface MainPannelProps {
 const MainPannel = ({ bullets = [] }: MainPannelProps): ReactElement => {
     const classes = useStyles();
     return (
-        <Box className={classes.root}>
-            {bullets.map((b) => {
+        <Box id="main-pannel" className={classes.root}>
+            {bullets.map((b, i) => {
                 return (
-                    <Grid container key={b.date.toString()}>
-                        <Grid item xs={6}>
+                    <Grid
+                        id={`main-pannel-outer-grid-bullet-${b.id}`}
+                        container
+                        key={b.date.toString()}
+                    >
+                        <Grid
+                            id={`main-pannel-left-grid-bullet-${b.id}`}
+                            item
+                            xs={6}
+                        >
                             <Bullet bullet={b} />
                         </Grid>
-                        <Grid item xs={6}>
+                        <Grid
+                            id={`main-pannel-right-grid-bullet-${b.id}`}
+                            item
+                            xs={6}
+                        >
                             script
                         </Grid>
                     </Grid>

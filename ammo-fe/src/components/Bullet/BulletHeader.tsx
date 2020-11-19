@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
     },
     statusBadge: {
         margin: '0 12px',
-        padding: '0 9px',
+        padding: '0 3px',
         borderRadius: '3px',
         backgroundColor: theme.palette.primary.main,
         color: theme.palette.secondary.dark,
@@ -58,24 +58,34 @@ const BulletHeader = ({
 }: BulletHeaderProps): ReactElement => {
     const classes = useStyles();
     return (
-        <Box className={classes.root}>
-            <Box>
+        <Box id={`bullet-header-${bullet.id}`} className={classes.root}>
+            <Box id={`bullet-header-ms-${bullet.id}`}>
                 <Typography>
                     ::{new Date(bullet.date).getMilliseconds()}
                 </Typography>
             </Box>
-            <Box className={classes.methodBadge}>
+            <Box
+                id={`bullet-header-method-${bullet.id}`}
+                className={classes.methodBadge}
+            >
                 <Typography>{bullet.method.toUpperCase()}</Typography>
             </Box>
-            <Box className={classes.url}>
+            <Box id={`bullet-header-url-${bullet.id}`} className={classes.url}>
                 <Typography>{bullet.url}</Typography>
             </Box>
-            <Box className={classes.filler}></Box>
-            <Box className={classes.statusBadge}>
+            <Box
+                id={`bullet-header-filler-${bullet.id}`}
+                className={classes.filler}
+            ></Box>
+            <Box
+                id={`bullet-header-status-${bullet.id}`}
+                className={classes.statusBadge}
+            >
                 <Typography>{bullet.response?.status}</Typography>
             </Box>
             <ToolTip title="TODO">
                 <img
+                    id={`bullet-header-collapse-${bullet.id}`}
                     src={collapse ? DownCarret : UpCarret}
                     alt="TODO"
                     className={classes.downCarret}
