@@ -3,9 +3,19 @@ import bodyParser from 'body-parser';
 
 import { Bullet } from 'typings/Connector';
 import bulletSchema from 'validators/bulletValidator';
+import io from 'socket.io';
+import cors from 'cors';
 
 const app = express();
-const port = 3001;
+app.use(cors({ origin: 'http://localhost:3000' }));
+
+const server = app.listen(3001);
+
+const ioServer = new io.Server(server, {
+    cors: {
+        origin: 'http://localhost:3000',
+    },
+});
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
@@ -16,8 +26,10 @@ app.post(
         try {
             const potentialBullet: Bullet = { ...req.body.data };
 
-            const { error } = bulletSchema.validate(potentialBullet);
+            const { error, value } = bulletSchema.validate(potentialBullet);
             if (error) throw new Error(error.details[0].message);
+
+            ioServer.emit('bullet', { bullet: value });
 
             return res.status(200).json({ bullet: potentialBullet });
         } catch ({ message }) {
@@ -25,7 +37,5 @@ app.post(
         }
     }
 );
-
-const server = app.listen(port);
 
 export default server;
