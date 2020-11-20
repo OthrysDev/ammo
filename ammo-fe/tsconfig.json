@@ -10,7 +10,6 @@
     "skipLibCheck": true,
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
-    "strict": true,
     "forceConsistentCasingInFileNames": true,
     "noFallthroughCasesInSwitch": true,
     "module": "esnext",
@@ -22,10 +21,9 @@
     "baseUrl": "src"
   },
   "exclude": [
-    "cypress",
     "node_modules"
   ],
   "include": [
-    "src"
+    "src",
   ]
 }

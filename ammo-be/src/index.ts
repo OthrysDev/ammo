@@ -13,7 +13,7 @@ const server = app.listen(3001);
 
 const ioServer = new io.Server(server, {
     cors: {
-        origin: 'http://localhost:3000',
+        origin: ['http://localhost:3000'],
     },
 });
 
