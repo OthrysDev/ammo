@@ -83,7 +83,10 @@ const BulletHeader = ({
             >
                 <Typography>{bullet.response?.status}</Typography>
             </Box>
-            <ToolTip title="TODO">
+            <ToolTip
+                id={`bullet-header-collapse-tooltip-${bullet.id}`}
+                title="TODO"
+            >
                 <img
                     id={`bullet-header-collapse-${bullet.id}`}
                     src={collapse ? DownCarret : UpCarret}
