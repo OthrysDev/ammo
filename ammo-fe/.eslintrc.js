@@ -1,44 +1,35 @@
-var conf = {
-    extends: [
-        'airbnb-typescript',
-        'airbnb/hooks',
-        'plugin:@typescript-eslint/recommended',
-        'plugin:jest/recommended',
-        'prettier',
-        'prettier/react',
-        'prettier/@typescript-eslint',
-        'plugin:prettier/recommended',
-        'plugin:cypress/recommended',
-    ],
-    plugins: ['react', '@typescript-eslint', 'jest', 'cypress'],
+module.exports = {
     env: {
         browser: true,
         es6: true,
         jest: true,
     },
-    globals: {
-        Atomics: 'readonly',
-        SharedArrayBuffer: 'readonly',
-    },
+    extends: [
+        'airbnb-base',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
-        project: 'ammo-fe/tsconfig.json',
-        ecmaFeatures: {
-            jsx: true,
-        },
-        ecmaVersion: 2018,
+        ecmaVersion: 11,
         sourceType: 'module',
     },
+    plugins: ['@typescript-eslint'],
     rules: {
-        'linebreak-style': 'off',
-        'prettier/prettier': 'error',
-        'jest/valid-expect': 'off',
-        'jest/no-export': 'off',
+        // indent: ['error', 4],
+        'no-use-before-define': 'off',
+        '@typescript-eslint/no-use-before-define': ['error'],
+        'no-console': 0,
+        '@typescript-eslint/explicit-function-return-type': ['error'],
+        'import/extensions': [1, 'never'],
+        'comma-dangle': 0,
+        '@typescript-eslint/ban-ts-comment': 0,
     },
     settings: {
         'import/resolver': {
             node: {
-                paths: ['src'],
+                extensions: ['.js', '.jsx', '.d.ts', '.ts', '.tsx'],
+                moduleDirectory: ['node_modules', 'src'],
             },
         },
     },

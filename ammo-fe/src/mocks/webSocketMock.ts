@@ -1,6 +1,6 @@
 import MockedSocket from 'socket.io-mock';
 
-let socket = new MockedSocket();
+const socket = new MockedSocket();
 
 socket.on('bullet', () => {
     // TODO

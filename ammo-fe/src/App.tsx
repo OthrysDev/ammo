@@ -1,8 +1,8 @@
-import React, { ReactElement } from 'react';
+import * as React from 'react';
 import { useSelector } from 'react-redux';
 import { RootReducer } from 'redux/reducers';
 
-function App(): ReactElement {
+function App(): React.ReactElement {
     const connected = useSelector(
         (state: RootReducer) => state.wsMock.connected
     );
