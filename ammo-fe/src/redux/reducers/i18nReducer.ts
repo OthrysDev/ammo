@@ -1,10 +1,10 @@
 import englishMessages from 'i18n/en';
-import frenchMessages from 'i18n/fr';
+// import frenchMessages from 'i18n/fr';
 
-const findMessages = (language: string) => {
-    if (language === 'fr') return frenchMessages;
-    else if (language === 'en') return englishMessages;
-    else return frenchMessages;
+const getMessages = (language: string) => {
+    // if (language === 'fr') return frenchMessages;
+    // else
+    return englishMessages;
 };
 
 const getLanguage = () => {
@@ -18,7 +18,7 @@ const getLanguage = () => {
     return language.toLowerCase().split(/[_-]+/)[0];
 };
 
-type AcceptedLanguages = 'fr' | 'en';
+type AcceptedLanguages = /** 'fr' | */ 'en';
 
 type ReducerAction = {
     type: AcceptedLanguages;
@@ -30,15 +30,14 @@ export type ReducerState = {
 };
 
 export default function i18nReducer(
-    state = { messages: findMessages(getLanguage()), language: getLanguage() },
+    state = { messages: getMessages(getLanguage()), language: getLanguage() },
     action: ReducerAction
 ): ReducerState {
     switch (action.type) {
-        case 'fr':
-            return { messages: findMessages('fr'), language: 'fr' };
+        // case 'fr':
+        //     return { messages: getMessages('fr'), language: 'fr' };
         case 'en':
-            return { messages: findMessages('en'), language: 'en' };
         default:
-            return state;
+            return { messages: getMessages('en'), language: 'en' };
     }
 }

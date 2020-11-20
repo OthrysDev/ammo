@@ -2,6 +2,8 @@ import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { FormattedMessage } from 'react-intl';
+import i18n from 'types/i18n';
 
 // ==========================================================
 // ==========================================================
@@ -19,7 +21,7 @@ const useStyles = makeStyles((theme) => ({
 
 interface TitleAndKeyValuesDescProps {
     uuid: string;
-    title: string;
+    title: i18n;
     obj: Record<string, string>;
 }
 
@@ -33,7 +35,9 @@ export const TitleAndKeyValuesDesc = ({
     return (
         <Box data-cy={uuid}>
             <Box data-cy={`${uuid}-title`} className={classes.title}>
-                <Typography variant="subtitle2">{title}</Typography>
+                <Typography variant="subtitle2">
+                    <FormattedMessage id={title} />
+                </Typography>
             </Box>
             {obj &&
                 Object.keys(obj).map((key, i) => {
@@ -65,7 +69,7 @@ export const TitleAndKeyValuesDesc = ({
 
 interface TitleAndRawValueDescProps {
     uuid: string;
-    title: string;
+    title: i18n;
     obj: string;
 }
 
@@ -79,7 +83,9 @@ export const TitleAndRawValueDesc = ({
     return (
         <Box data-cy={uuid}>
             <Box data-cy={`${uuid}-title`} className={classes.title}>
-                <Typography variant="subtitle2">{title}</Typography>
+                <Typography variant="subtitle2">
+                    <FormattedMessage id={title} />
+                </Typography>
             </Box>
             {obj && (
                 <Box data-cy={`${uuid}-value`} className={classes.values}>
@@ -115,7 +121,7 @@ const useDelimiterStyles = makeStyles((theme) => ({
 }));
 
 interface DelimiterProps {
-    title: string;
+    title: i18n;
 }
 
 export const Delimiter = ({ title }: DelimiterProps): ReactElement => {
@@ -125,7 +131,9 @@ export const Delimiter = ({ title }: DelimiterProps): ReactElement => {
         <Box className={classes.root}>
             <Box className={classes.border}></Box>
             <Box className={classes.title}>
-                <Typography variant="subtitle2">{title}</Typography>
+                <Typography variant="subtitle2">
+                    <FormattedMessage id={title} />
+                </Typography>
             </Box>
             <Box className={classes.border}></Box>
         </Box>
