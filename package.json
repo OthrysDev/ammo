@@ -2,5 +2,14 @@
     "scripts": {
         "start": "(cd ammo-be && npm start) & (cd ammo-fe && npm start)",
         "install": "(cd ammo-be && npm install) && (cd ammo-fe && npm install)"
-    }
+    },
+    "husky": {
+        "hooks": {
+          "pre-commit": "(cd ammo-fe && npm run lint) & (cd ammo-be && jest --runInBand) & (cd ammo-be && npm run lint)"
+        }
+      },
+      "lint-staged": {
+        "*.ts": "eslint --cache --fix",
+        "*.{js,css,md}": "prettier --write"
+      }
 }

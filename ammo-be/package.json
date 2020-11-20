@@ -5,7 +5,8 @@
   "main": "src/index",
   "scripts": {
     "start": "tsc && nodemon",
-    "test": "jest --watch --runInBand"
+    "test": "jest --watch --runInBand",
+    "lint": "eslint --max-warnings=0 --ext .ts src/ "
   },
   "author": "Othrys",
   "license": "MIT",
@@ -37,15 +38,6 @@
     "socket.io-client": "^3.0.2",
     "supertest": "^6.0.1",
     "ts-node": "^9.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "lint-staged && jest --runInBand"
-    }
-  },
-  "lint-staged": {
-    "*.ts": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
   },
   "jest": {
     "moduleDirectories": [

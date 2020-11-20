@@ -66,13 +66,5 @@
       "last 1 safari version"
     ]
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run lint && jest --runInBand"
-    }
-  },
-  "lint-staged": {
-    "*.ts": "eslint --cache --fix",
-    "*.{js,css,md}": "prettier --write"
-  }
+ 
 }
