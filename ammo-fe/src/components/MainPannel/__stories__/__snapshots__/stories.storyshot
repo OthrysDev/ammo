@@ -7,23 +7,23 @@ exports[`FileProperties MainPannel Default 1`] = `
 >
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id0"
+    data-cy="main-pannel-outer-grid-bullet-id0"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id0"
+      data-cy="main-pannel-left-grid-bullet-id0"
     >
       <div
         className="MuiBox-root MuiBox-root-57 makeStyles-root-55"
-        id="bullet-id0"
+        data-cy="bullet-id0"
       >
         <div
           className="MuiBox-root MuiBox-root-64 makeStyles-root-58"
-          id="bullet-header-id0"
+          data-cy="bullet-header-id0"
         >
           <div
             className="MuiBox-root MuiBox-root-65"
-            id="bullet-header-ms-id0"
+            data-cy="bullet-header-ms-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -34,7 +34,7 @@ exports[`FileProperties MainPannel Default 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-66 makeStyles-methodBadge-59"
-            id="bullet-header-method-id0"
+            data-cy="bullet-header-method-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -44,7 +44,7 @@ exports[`FileProperties MainPannel Default 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-67 makeStyles-url-60"
-            id="bullet-header-url-id0"
+            data-cy="bullet-header-url-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -54,11 +54,11 @@ exports[`FileProperties MainPannel Default 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-68 makeStyles-filler-62"
-            id="bullet-header-filler-id0"
+            data-cy="bullet-header-filler-id0"
           />
           <div
             className="MuiBox-root MuiBox-root-69 makeStyles-statusBadge-61"
-            id="bullet-header-status-id0"
+            data-cy="bullet-header-status-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -70,7 +70,7 @@ exports[`FileProperties MainPannel Default 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-63"
-            id="bullet-header-collapse-id0"
+            data-cy="bullet-header-collapse-id0"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -98,7 +98,7 @@ exports[`FileProperties MainPannel Default 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-71 makeStyles-root-70"
-                id="bullet-desc-id0"
+                data-cy="bullet-desc-id0"
               >
                 <div
                   className="MuiBox-root MuiBox-root-75 makeStyles-root-72"
@@ -121,11 +121,11 @@ exports[`FileProperties MainPannel Default 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-81"
-                  id="bullet-desc-req-headers-id0"
+                  data-cy="bullet-desc-req-headers-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-82 makeStyles-title-79"
-                    id="bullet-desc-req-headers-id0-title"
+                    data-cy="bullet-desc-req-headers-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -135,7 +135,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-83 makeStyles-values-80"
-                    id="bullet-desc-req-headers-id0-line-0"
+                    data-cy="bullet-desc-req-headers-id0-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-84"
@@ -144,7 +144,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id0-line-0-key"
+                          data-cy="bullet-desc-req-headers-id0-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -152,7 +152,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id0-line-0-value"
+                          data-cy="bullet-desc-req-headers-id0-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -163,7 +163,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-85 makeStyles-values-80"
-                    id="bullet-desc-req-headers-id0-line-1"
+                    data-cy="bullet-desc-req-headers-id0-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-86"
@@ -172,7 +172,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id0-line-1-key"
+                          data-cy="bullet-desc-req-headers-id0-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -180,7 +180,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id0-line-1-value"
+                          data-cy="bullet-desc-req-headers-id0-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -192,11 +192,11 @@ exports[`FileProperties MainPannel Default 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-87"
-                  id="bullet-desc-req-body-id0"
+                  data-cy="bullet-desc-req-body-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-88 makeStyles-title-79"
-                    id="bullet-desc-req-body-id0-title"
+                    data-cy="bullet-desc-req-body-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -206,7 +206,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-89 makeStyles-values-80"
-                    id="bullet-desc-req-body-id0-value"
+                    data-cy="bullet-desc-req-body-id0-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-90"
@@ -240,11 +240,11 @@ exports[`FileProperties MainPannel Default 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-95"
-                  id="bullet-desc-res-headers-id0"
+                  data-cy="bullet-desc-res-headers-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-96 makeStyles-title-79"
-                    id="bullet-desc-res-headers-id0-title"
+                    data-cy="bullet-desc-res-headers-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -254,7 +254,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-97 makeStyles-values-80"
-                    id="bullet-desc-res-headers-id0-line-0"
+                    data-cy="bullet-desc-res-headers-id0-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-98"
@@ -263,7 +263,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id0-line-0-key"
+                          data-cy="bullet-desc-res-headers-id0-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -271,7 +271,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id0-line-0-value"
+                          data-cy="bullet-desc-res-headers-id0-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -282,7 +282,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-99 makeStyles-values-80"
-                    id="bullet-desc-res-headers-id0-line-1"
+                    data-cy="bullet-desc-res-headers-id0-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-100"
@@ -291,7 +291,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id0-line-1-key"
+                          data-cy="bullet-desc-res-headers-id0-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -299,7 +299,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id0-line-1-value"
+                          data-cy="bullet-desc-res-headers-id0-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -311,11 +311,11 @@ exports[`FileProperties MainPannel Default 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-101"
-                  id="bullet-desc-res-body-id0"
+                  data-cy="bullet-desc-res-body-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-102 makeStyles-title-79"
-                    id="bullet-desc-res-body-id0-title"
+                    data-cy="bullet-desc-res-body-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -325,7 +325,7 @@ exports[`FileProperties MainPannel Default 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-103 makeStyles-values-80"
-                    id="bullet-desc-res-body-id0-value"
+                    data-cy="bullet-desc-res-body-id0-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-104"
@@ -346,7 +346,7 @@ exports[`FileProperties MainPannel Default 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id0"
+      data-cy="main-pannel-right-grid-bullet-id0"
     >
       script
     </div>
@@ -368,23 +368,23 @@ exports[`FileProperties MainPannel Rich 1`] = `
 >
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id0"
+    data-cy="main-pannel-outer-grid-bullet-id0"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id0"
+      data-cy="main-pannel-left-grid-bullet-id0"
     >
       <div
         className="MuiBox-root MuiBox-root-109 makeStyles-root-107"
-        id="bullet-id0"
+        data-cy="bullet-id0"
       >
         <div
           className="MuiBox-root MuiBox-root-116 makeStyles-root-110"
-          id="bullet-header-id0"
+          data-cy="bullet-header-id0"
         >
           <div
             className="MuiBox-root MuiBox-root-117"
-            id="bullet-header-ms-id0"
+            data-cy="bullet-header-ms-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -395,7 +395,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-118 makeStyles-methodBadge-111"
-            id="bullet-header-method-id0"
+            data-cy="bullet-header-method-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -405,7 +405,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-119 makeStyles-url-112"
-            id="bullet-header-url-id0"
+            data-cy="bullet-header-url-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -415,11 +415,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-120 makeStyles-filler-114"
-            id="bullet-header-filler-id0"
+            data-cy="bullet-header-filler-id0"
           />
           <div
             className="MuiBox-root MuiBox-root-121 makeStyles-statusBadge-113"
-            id="bullet-header-status-id0"
+            data-cy="bullet-header-status-id0"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -431,7 +431,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id0"
+            data-cy="bullet-header-collapse-id0"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -459,7 +459,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-123 makeStyles-root-122"
-                id="bullet-desc-id0"
+                data-cy="bullet-desc-id0"
               >
                 <div
                   className="MuiBox-root MuiBox-root-127 makeStyles-root-124"
@@ -482,11 +482,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-133"
-                  id="bullet-desc-req-headers-id0"
+                  data-cy="bullet-desc-req-headers-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-134 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id0-title"
+                    data-cy="bullet-desc-req-headers-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -496,7 +496,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-135 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id0-line-0"
+                    data-cy="bullet-desc-req-headers-id0-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-136"
@@ -505,7 +505,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id0-line-0-key"
+                          data-cy="bullet-desc-req-headers-id0-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -513,7 +513,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id0-line-0-value"
+                          data-cy="bullet-desc-req-headers-id0-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -524,7 +524,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-137 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id0-line-1"
+                    data-cy="bullet-desc-req-headers-id0-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-138"
@@ -533,7 +533,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id0-line-1-key"
+                          data-cy="bullet-desc-req-headers-id0-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -541,7 +541,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id0-line-1-value"
+                          data-cy="bullet-desc-req-headers-id0-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -553,11 +553,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-139"
-                  id="bullet-desc-req-body-id0"
+                  data-cy="bullet-desc-req-body-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-140 makeStyles-title-131"
-                    id="bullet-desc-req-body-id0-title"
+                    data-cy="bullet-desc-req-body-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -567,7 +567,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-141 makeStyles-values-132"
-                    id="bullet-desc-req-body-id0-value"
+                    data-cy="bullet-desc-req-body-id0-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-142"
@@ -601,11 +601,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-147"
-                  id="bullet-desc-res-headers-id0"
+                  data-cy="bullet-desc-res-headers-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-148 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id0-title"
+                    data-cy="bullet-desc-res-headers-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -615,7 +615,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-149 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id0-line-0"
+                    data-cy="bullet-desc-res-headers-id0-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-150"
@@ -624,7 +624,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id0-line-0-key"
+                          data-cy="bullet-desc-res-headers-id0-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -632,7 +632,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id0-line-0-value"
+                          data-cy="bullet-desc-res-headers-id0-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -643,7 +643,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-151 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id0-line-1"
+                    data-cy="bullet-desc-res-headers-id0-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-152"
@@ -652,7 +652,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id0-line-1-key"
+                          data-cy="bullet-desc-res-headers-id0-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -660,7 +660,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id0-line-1-value"
+                          data-cy="bullet-desc-res-headers-id0-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -672,11 +672,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-153"
-                  id="bullet-desc-res-body-id0"
+                  data-cy="bullet-desc-res-body-id0"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-154 makeStyles-title-131"
-                    id="bullet-desc-res-body-id0-title"
+                    data-cy="bullet-desc-res-body-id0-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -686,7 +686,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-155 makeStyles-values-132"
-                    id="bullet-desc-res-body-id0-value"
+                    data-cy="bullet-desc-res-body-id0-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-156"
@@ -707,30 +707,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id0"
+      data-cy="main-pannel-right-grid-bullet-id0"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id1"
+    data-cy="main-pannel-outer-grid-bullet-id1"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id1"
+      data-cy="main-pannel-left-grid-bullet-id1"
     >
       <div
         className="MuiBox-root MuiBox-root-157 makeStyles-root-107"
-        id="bullet-id1"
+        data-cy="bullet-id1"
       >
         <div
           className="MuiBox-root MuiBox-root-158 makeStyles-root-110"
-          id="bullet-header-id1"
+          data-cy="bullet-header-id1"
         >
           <div
             className="MuiBox-root MuiBox-root-159"
-            id="bullet-header-ms-id1"
+            data-cy="bullet-header-ms-id1"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -741,7 +741,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-160 makeStyles-methodBadge-111"
-            id="bullet-header-method-id1"
+            data-cy="bullet-header-method-id1"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -751,7 +751,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-161 makeStyles-url-112"
-            id="bullet-header-url-id1"
+            data-cy="bullet-header-url-id1"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -761,11 +761,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-162 makeStyles-filler-114"
-            id="bullet-header-filler-id1"
+            data-cy="bullet-header-filler-id1"
           />
           <div
             className="MuiBox-root MuiBox-root-163 makeStyles-statusBadge-113"
-            id="bullet-header-status-id1"
+            data-cy="bullet-header-status-id1"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -777,7 +777,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id1"
+            data-cy="bullet-header-collapse-id1"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -805,7 +805,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-164 makeStyles-root-122"
-                id="bullet-desc-id1"
+                data-cy="bullet-desc-id1"
               >
                 <div
                   className="MuiBox-root MuiBox-root-165 makeStyles-root-124"
@@ -828,11 +828,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-169"
-                  id="bullet-desc-req-headers-id1"
+                  data-cy="bullet-desc-req-headers-id1"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-170 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id1-title"
+                    data-cy="bullet-desc-req-headers-id1-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -842,7 +842,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-171 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id1-line-0"
+                    data-cy="bullet-desc-req-headers-id1-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-172"
@@ -851,7 +851,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id1-line-0-key"
+                          data-cy="bullet-desc-req-headers-id1-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -859,7 +859,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id1-line-0-value"
+                          data-cy="bullet-desc-req-headers-id1-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -870,7 +870,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-173 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id1-line-1"
+                    data-cy="bullet-desc-req-headers-id1-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-174"
@@ -879,7 +879,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id1-line-1-key"
+                          data-cy="bullet-desc-req-headers-id1-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -887,7 +887,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id1-line-1-value"
+                          data-cy="bullet-desc-req-headers-id1-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -899,11 +899,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-175"
-                  id="bullet-desc-req-body-id1"
+                  data-cy="bullet-desc-req-body-id1"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-176 makeStyles-title-131"
-                    id="bullet-desc-req-body-id1-title"
+                    data-cy="bullet-desc-req-body-id1-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -913,7 +913,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-177 makeStyles-values-132"
-                    id="bullet-desc-req-body-id1-value"
+                    data-cy="bullet-desc-req-body-id1-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-178"
@@ -947,11 +947,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-183"
-                  id="bullet-desc-res-headers-id1"
+                  data-cy="bullet-desc-res-headers-id1"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-184 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id1-title"
+                    data-cy="bullet-desc-res-headers-id1-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -961,7 +961,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-185 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id1-line-0"
+                    data-cy="bullet-desc-res-headers-id1-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-186"
@@ -970,7 +970,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id1-line-0-key"
+                          data-cy="bullet-desc-res-headers-id1-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -978,7 +978,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id1-line-0-value"
+                          data-cy="bullet-desc-res-headers-id1-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -989,7 +989,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-187 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id1-line-1"
+                    data-cy="bullet-desc-res-headers-id1-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-188"
@@ -998,7 +998,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id1-line-1-key"
+                          data-cy="bullet-desc-res-headers-id1-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -1006,7 +1006,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id1-line-1-value"
+                          data-cy="bullet-desc-res-headers-id1-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -1018,11 +1018,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-189"
-                  id="bullet-desc-res-body-id1"
+                  data-cy="bullet-desc-res-body-id1"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-190 makeStyles-title-131"
-                    id="bullet-desc-res-body-id1-title"
+                    data-cy="bullet-desc-res-body-id1-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1032,7 +1032,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-191 makeStyles-values-132"
-                    id="bullet-desc-res-body-id1-value"
+                    data-cy="bullet-desc-res-body-id1-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-192"
@@ -1053,30 +1053,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id1"
+      data-cy="main-pannel-right-grid-bullet-id1"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id2"
+    data-cy="main-pannel-outer-grid-bullet-id2"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id2"
+      data-cy="main-pannel-left-grid-bullet-id2"
     >
       <div
         className="MuiBox-root MuiBox-root-193 makeStyles-root-107"
-        id="bullet-id2"
+        data-cy="bullet-id2"
       >
         <div
           className="MuiBox-root MuiBox-root-194 makeStyles-root-110"
-          id="bullet-header-id2"
+          data-cy="bullet-header-id2"
         >
           <div
             className="MuiBox-root MuiBox-root-195"
-            id="bullet-header-ms-id2"
+            data-cy="bullet-header-ms-id2"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1087,7 +1087,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-196 makeStyles-methodBadge-111"
-            id="bullet-header-method-id2"
+            data-cy="bullet-header-method-id2"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1097,7 +1097,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-197 makeStyles-url-112"
-            id="bullet-header-url-id2"
+            data-cy="bullet-header-url-id2"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1107,11 +1107,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-198 makeStyles-filler-114"
-            id="bullet-header-filler-id2"
+            data-cy="bullet-header-filler-id2"
           />
           <div
             className="MuiBox-root MuiBox-root-199 makeStyles-statusBadge-113"
-            id="bullet-header-status-id2"
+            data-cy="bullet-header-status-id2"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1123,7 +1123,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id2"
+            data-cy="bullet-header-collapse-id2"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -1151,7 +1151,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-200 makeStyles-root-122"
-                id="bullet-desc-id2"
+                data-cy="bullet-desc-id2"
               >
                 <div
                   className="MuiBox-root MuiBox-root-201 makeStyles-root-124"
@@ -1174,11 +1174,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-205"
-                  id="bullet-desc-req-headers-id2"
+                  data-cy="bullet-desc-req-headers-id2"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-206 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id2-title"
+                    data-cy="bullet-desc-req-headers-id2-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1188,7 +1188,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-207 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id2-line-0"
+                    data-cy="bullet-desc-req-headers-id2-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-208"
@@ -1197,7 +1197,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id2-line-0-key"
+                          data-cy="bullet-desc-req-headers-id2-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -1205,7 +1205,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id2-line-0-value"
+                          data-cy="bullet-desc-req-headers-id2-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -1216,7 +1216,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-209 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id2-line-1"
+                    data-cy="bullet-desc-req-headers-id2-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-210"
@@ -1225,7 +1225,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id2-line-1-key"
+                          data-cy="bullet-desc-req-headers-id2-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -1233,7 +1233,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id2-line-1-value"
+                          data-cy="bullet-desc-req-headers-id2-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -1245,11 +1245,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-211"
-                  id="bullet-desc-req-body-id2"
+                  data-cy="bullet-desc-req-body-id2"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-212 makeStyles-title-131"
-                    id="bullet-desc-req-body-id2-title"
+                    data-cy="bullet-desc-req-body-id2-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1259,7 +1259,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-213 makeStyles-values-132"
-                    id="bullet-desc-req-body-id2-value"
+                    data-cy="bullet-desc-req-body-id2-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-214"
@@ -1293,11 +1293,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-219"
-                  id="bullet-desc-res-headers-id2"
+                  data-cy="bullet-desc-res-headers-id2"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-220 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id2-title"
+                    data-cy="bullet-desc-res-headers-id2-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1307,7 +1307,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-221 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id2-line-0"
+                    data-cy="bullet-desc-res-headers-id2-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-222"
@@ -1316,7 +1316,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id2-line-0-key"
+                          data-cy="bullet-desc-res-headers-id2-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -1324,7 +1324,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id2-line-0-value"
+                          data-cy="bullet-desc-res-headers-id2-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -1335,7 +1335,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-223 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id2-line-1"
+                    data-cy="bullet-desc-res-headers-id2-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-224"
@@ -1344,7 +1344,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id2-line-1-key"
+                          data-cy="bullet-desc-res-headers-id2-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -1352,7 +1352,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id2-line-1-value"
+                          data-cy="bullet-desc-res-headers-id2-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -1364,11 +1364,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-225"
-                  id="bullet-desc-res-body-id2"
+                  data-cy="bullet-desc-res-body-id2"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-226 makeStyles-title-131"
-                    id="bullet-desc-res-body-id2-title"
+                    data-cy="bullet-desc-res-body-id2-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1378,7 +1378,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-227 makeStyles-values-132"
-                    id="bullet-desc-res-body-id2-value"
+                    data-cy="bullet-desc-res-body-id2-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-228"
@@ -1399,30 +1399,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id2"
+      data-cy="main-pannel-right-grid-bullet-id2"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id3"
+    data-cy="main-pannel-outer-grid-bullet-id3"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id3"
+      data-cy="main-pannel-left-grid-bullet-id3"
     >
       <div
         className="MuiBox-root MuiBox-root-229 makeStyles-root-107"
-        id="bullet-id3"
+        data-cy="bullet-id3"
       >
         <div
           className="MuiBox-root MuiBox-root-230 makeStyles-root-110"
-          id="bullet-header-id3"
+          data-cy="bullet-header-id3"
         >
           <div
             className="MuiBox-root MuiBox-root-231"
-            id="bullet-header-ms-id3"
+            data-cy="bullet-header-ms-id3"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1433,7 +1433,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-232 makeStyles-methodBadge-111"
-            id="bullet-header-method-id3"
+            data-cy="bullet-header-method-id3"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1443,7 +1443,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-233 makeStyles-url-112"
-            id="bullet-header-url-id3"
+            data-cy="bullet-header-url-id3"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1453,11 +1453,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-234 makeStyles-filler-114"
-            id="bullet-header-filler-id3"
+            data-cy="bullet-header-filler-id3"
           />
           <div
             className="MuiBox-root MuiBox-root-235 makeStyles-statusBadge-113"
-            id="bullet-header-status-id3"
+            data-cy="bullet-header-status-id3"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1469,7 +1469,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id3"
+            data-cy="bullet-header-collapse-id3"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -1497,7 +1497,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-236 makeStyles-root-122"
-                id="bullet-desc-id3"
+                data-cy="bullet-desc-id3"
               >
                 <div
                   className="MuiBox-root MuiBox-root-237 makeStyles-root-124"
@@ -1520,11 +1520,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-241"
-                  id="bullet-desc-req-headers-id3"
+                  data-cy="bullet-desc-req-headers-id3"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-242 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id3-title"
+                    data-cy="bullet-desc-req-headers-id3-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1534,7 +1534,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-243 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id3-line-0"
+                    data-cy="bullet-desc-req-headers-id3-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-244"
@@ -1543,7 +1543,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id3-line-0-key"
+                          data-cy="bullet-desc-req-headers-id3-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -1551,7 +1551,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id3-line-0-value"
+                          data-cy="bullet-desc-req-headers-id3-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -1562,7 +1562,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-245 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id3-line-1"
+                    data-cy="bullet-desc-req-headers-id3-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-246"
@@ -1571,7 +1571,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id3-line-1-key"
+                          data-cy="bullet-desc-req-headers-id3-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -1579,7 +1579,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id3-line-1-value"
+                          data-cy="bullet-desc-req-headers-id3-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -1591,11 +1591,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-247"
-                  id="bullet-desc-req-body-id3"
+                  data-cy="bullet-desc-req-body-id3"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-248 makeStyles-title-131"
-                    id="bullet-desc-req-body-id3-title"
+                    data-cy="bullet-desc-req-body-id3-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1605,7 +1605,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-249 makeStyles-values-132"
-                    id="bullet-desc-req-body-id3-value"
+                    data-cy="bullet-desc-req-body-id3-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-250"
@@ -1639,11 +1639,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-255"
-                  id="bullet-desc-res-headers-id3"
+                  data-cy="bullet-desc-res-headers-id3"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-256 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id3-title"
+                    data-cy="bullet-desc-res-headers-id3-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1653,7 +1653,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-257 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id3-line-0"
+                    data-cy="bullet-desc-res-headers-id3-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-258"
@@ -1662,7 +1662,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id3-line-0-key"
+                          data-cy="bullet-desc-res-headers-id3-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -1670,7 +1670,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id3-line-0-value"
+                          data-cy="bullet-desc-res-headers-id3-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -1681,7 +1681,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-259 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id3-line-1"
+                    data-cy="bullet-desc-res-headers-id3-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-260"
@@ -1690,7 +1690,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id3-line-1-key"
+                          data-cy="bullet-desc-res-headers-id3-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -1698,7 +1698,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id3-line-1-value"
+                          data-cy="bullet-desc-res-headers-id3-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -1710,11 +1710,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-261"
-                  id="bullet-desc-res-body-id3"
+                  data-cy="bullet-desc-res-body-id3"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-262 makeStyles-title-131"
-                    id="bullet-desc-res-body-id3-title"
+                    data-cy="bullet-desc-res-body-id3-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1724,7 +1724,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-263 makeStyles-values-132"
-                    id="bullet-desc-res-body-id3-value"
+                    data-cy="bullet-desc-res-body-id3-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-264"
@@ -1745,30 +1745,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id3"
+      data-cy="main-pannel-right-grid-bullet-id3"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id4"
+    data-cy="main-pannel-outer-grid-bullet-id4"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id4"
+      data-cy="main-pannel-left-grid-bullet-id4"
     >
       <div
         className="MuiBox-root MuiBox-root-265 makeStyles-root-107"
-        id="bullet-id4"
+        data-cy="bullet-id4"
       >
         <div
           className="MuiBox-root MuiBox-root-266 makeStyles-root-110"
-          id="bullet-header-id4"
+          data-cy="bullet-header-id4"
         >
           <div
             className="MuiBox-root MuiBox-root-267"
-            id="bullet-header-ms-id4"
+            data-cy="bullet-header-ms-id4"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1779,7 +1779,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-268 makeStyles-methodBadge-111"
-            id="bullet-header-method-id4"
+            data-cy="bullet-header-method-id4"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1789,7 +1789,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-269 makeStyles-url-112"
-            id="bullet-header-url-id4"
+            data-cy="bullet-header-url-id4"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1799,11 +1799,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-270 makeStyles-filler-114"
-            id="bullet-header-filler-id4"
+            data-cy="bullet-header-filler-id4"
           />
           <div
             className="MuiBox-root MuiBox-root-271 makeStyles-statusBadge-113"
-            id="bullet-header-status-id4"
+            data-cy="bullet-header-status-id4"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -1815,7 +1815,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id4"
+            data-cy="bullet-header-collapse-id4"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -1843,7 +1843,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-272 makeStyles-root-122"
-                id="bullet-desc-id4"
+                data-cy="bullet-desc-id4"
               >
                 <div
                   className="MuiBox-root MuiBox-root-273 makeStyles-root-124"
@@ -1866,11 +1866,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-277"
-                  id="bullet-desc-req-headers-id4"
+                  data-cy="bullet-desc-req-headers-id4"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-278 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id4-title"
+                    data-cy="bullet-desc-req-headers-id4-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1880,7 +1880,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-279 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id4-line-0"
+                    data-cy="bullet-desc-req-headers-id4-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-280"
@@ -1889,7 +1889,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id4-line-0-key"
+                          data-cy="bullet-desc-req-headers-id4-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -1897,7 +1897,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id4-line-0-value"
+                          data-cy="bullet-desc-req-headers-id4-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -1908,7 +1908,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-281 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id4-line-1"
+                    data-cy="bullet-desc-req-headers-id4-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-282"
@@ -1917,7 +1917,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id4-line-1-key"
+                          data-cy="bullet-desc-req-headers-id4-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -1925,7 +1925,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id4-line-1-value"
+                          data-cy="bullet-desc-req-headers-id4-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -1937,11 +1937,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-283"
-                  id="bullet-desc-req-body-id4"
+                  data-cy="bullet-desc-req-body-id4"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-284 makeStyles-title-131"
-                    id="bullet-desc-req-body-id4-title"
+                    data-cy="bullet-desc-req-body-id4-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1951,7 +1951,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-285 makeStyles-values-132"
-                    id="bullet-desc-req-body-id4-value"
+                    data-cy="bullet-desc-req-body-id4-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-286"
@@ -1985,11 +1985,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-291"
-                  id="bullet-desc-res-headers-id4"
+                  data-cy="bullet-desc-res-headers-id4"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-292 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id4-title"
+                    data-cy="bullet-desc-res-headers-id4-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -1999,7 +1999,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-293 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id4-line-0"
+                    data-cy="bullet-desc-res-headers-id4-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-294"
@@ -2008,7 +2008,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id4-line-0-key"
+                          data-cy="bullet-desc-res-headers-id4-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -2016,7 +2016,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id4-line-0-value"
+                          data-cy="bullet-desc-res-headers-id4-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -2027,7 +2027,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-295 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id4-line-1"
+                    data-cy="bullet-desc-res-headers-id4-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-296"
@@ -2036,7 +2036,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id4-line-1-key"
+                          data-cy="bullet-desc-res-headers-id4-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -2044,7 +2044,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id4-line-1-value"
+                          data-cy="bullet-desc-res-headers-id4-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -2056,11 +2056,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-297"
-                  id="bullet-desc-res-body-id4"
+                  data-cy="bullet-desc-res-body-id4"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-298 makeStyles-title-131"
-                    id="bullet-desc-res-body-id4-title"
+                    data-cy="bullet-desc-res-body-id4-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2070,7 +2070,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-299 makeStyles-values-132"
-                    id="bullet-desc-res-body-id4-value"
+                    data-cy="bullet-desc-res-body-id4-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-300"
@@ -2091,30 +2091,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id4"
+      data-cy="main-pannel-right-grid-bullet-id4"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id5"
+    data-cy="main-pannel-outer-grid-bullet-id5"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id5"
+      data-cy="main-pannel-left-grid-bullet-id5"
     >
       <div
         className="MuiBox-root MuiBox-root-301 makeStyles-root-107"
-        id="bullet-id5"
+        data-cy="bullet-id5"
       >
         <div
           className="MuiBox-root MuiBox-root-302 makeStyles-root-110"
-          id="bullet-header-id5"
+          data-cy="bullet-header-id5"
         >
           <div
             className="MuiBox-root MuiBox-root-303"
-            id="bullet-header-ms-id5"
+            data-cy="bullet-header-ms-id5"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2125,7 +2125,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-304 makeStyles-methodBadge-111"
-            id="bullet-header-method-id5"
+            data-cy="bullet-header-method-id5"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2135,7 +2135,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-305 makeStyles-url-112"
-            id="bullet-header-url-id5"
+            data-cy="bullet-header-url-id5"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2145,11 +2145,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-306 makeStyles-filler-114"
-            id="bullet-header-filler-id5"
+            data-cy="bullet-header-filler-id5"
           />
           <div
             className="MuiBox-root MuiBox-root-307 makeStyles-statusBadge-113"
-            id="bullet-header-status-id5"
+            data-cy="bullet-header-status-id5"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2161,7 +2161,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id5"
+            data-cy="bullet-header-collapse-id5"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -2189,7 +2189,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-308 makeStyles-root-122"
-                id="bullet-desc-id5"
+                data-cy="bullet-desc-id5"
               >
                 <div
                   className="MuiBox-root MuiBox-root-309 makeStyles-root-124"
@@ -2212,11 +2212,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-313"
-                  id="bullet-desc-req-headers-id5"
+                  data-cy="bullet-desc-req-headers-id5"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-314 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id5-title"
+                    data-cy="bullet-desc-req-headers-id5-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2226,7 +2226,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-315 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id5-line-0"
+                    data-cy="bullet-desc-req-headers-id5-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-316"
@@ -2235,7 +2235,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id5-line-0-key"
+                          data-cy="bullet-desc-req-headers-id5-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -2243,7 +2243,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id5-line-0-value"
+                          data-cy="bullet-desc-req-headers-id5-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -2254,7 +2254,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-317 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id5-line-1"
+                    data-cy="bullet-desc-req-headers-id5-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-318"
@@ -2263,7 +2263,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id5-line-1-key"
+                          data-cy="bullet-desc-req-headers-id5-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -2271,7 +2271,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id5-line-1-value"
+                          data-cy="bullet-desc-req-headers-id5-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -2283,11 +2283,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-319"
-                  id="bullet-desc-req-body-id5"
+                  data-cy="bullet-desc-req-body-id5"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-320 makeStyles-title-131"
-                    id="bullet-desc-req-body-id5-title"
+                    data-cy="bullet-desc-req-body-id5-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2297,7 +2297,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-321 makeStyles-values-132"
-                    id="bullet-desc-req-body-id5-value"
+                    data-cy="bullet-desc-req-body-id5-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-322"
@@ -2331,11 +2331,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-327"
-                  id="bullet-desc-res-headers-id5"
+                  data-cy="bullet-desc-res-headers-id5"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-328 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id5-title"
+                    data-cy="bullet-desc-res-headers-id5-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2345,7 +2345,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-329 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id5-line-0"
+                    data-cy="bullet-desc-res-headers-id5-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-330"
@@ -2354,7 +2354,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id5-line-0-key"
+                          data-cy="bullet-desc-res-headers-id5-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -2362,7 +2362,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id5-line-0-value"
+                          data-cy="bullet-desc-res-headers-id5-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -2373,7 +2373,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-331 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id5-line-1"
+                    data-cy="bullet-desc-res-headers-id5-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-332"
@@ -2382,7 +2382,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id5-line-1-key"
+                          data-cy="bullet-desc-res-headers-id5-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -2390,7 +2390,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id5-line-1-value"
+                          data-cy="bullet-desc-res-headers-id5-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -2402,11 +2402,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-333"
-                  id="bullet-desc-res-body-id5"
+                  data-cy="bullet-desc-res-body-id5"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-334 makeStyles-title-131"
-                    id="bullet-desc-res-body-id5-title"
+                    data-cy="bullet-desc-res-body-id5-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2416,7 +2416,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-335 makeStyles-values-132"
-                    id="bullet-desc-res-body-id5-value"
+                    data-cy="bullet-desc-res-body-id5-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-336"
@@ -2437,30 +2437,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id5"
+      data-cy="main-pannel-right-grid-bullet-id5"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id6"
+    data-cy="main-pannel-outer-grid-bullet-id6"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id6"
+      data-cy="main-pannel-left-grid-bullet-id6"
     >
       <div
         className="MuiBox-root MuiBox-root-337 makeStyles-root-107"
-        id="bullet-id6"
+        data-cy="bullet-id6"
       >
         <div
           className="MuiBox-root MuiBox-root-338 makeStyles-root-110"
-          id="bullet-header-id6"
+          data-cy="bullet-header-id6"
         >
           <div
             className="MuiBox-root MuiBox-root-339"
-            id="bullet-header-ms-id6"
+            data-cy="bullet-header-ms-id6"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2471,7 +2471,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-340 makeStyles-methodBadge-111"
-            id="bullet-header-method-id6"
+            data-cy="bullet-header-method-id6"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2481,7 +2481,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-341 makeStyles-url-112"
-            id="bullet-header-url-id6"
+            data-cy="bullet-header-url-id6"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2491,11 +2491,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-342 makeStyles-filler-114"
-            id="bullet-header-filler-id6"
+            data-cy="bullet-header-filler-id6"
           />
           <div
             className="MuiBox-root MuiBox-root-343 makeStyles-statusBadge-113"
-            id="bullet-header-status-id6"
+            data-cy="bullet-header-status-id6"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2507,7 +2507,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id6"
+            data-cy="bullet-header-collapse-id6"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -2535,7 +2535,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-344 makeStyles-root-122"
-                id="bullet-desc-id6"
+                data-cy="bullet-desc-id6"
               >
                 <div
                   className="MuiBox-root MuiBox-root-345 makeStyles-root-124"
@@ -2558,11 +2558,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-349"
-                  id="bullet-desc-req-headers-id6"
+                  data-cy="bullet-desc-req-headers-id6"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-350 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id6-title"
+                    data-cy="bullet-desc-req-headers-id6-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2572,7 +2572,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-351 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id6-line-0"
+                    data-cy="bullet-desc-req-headers-id6-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-352"
@@ -2581,7 +2581,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id6-line-0-key"
+                          data-cy="bullet-desc-req-headers-id6-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -2589,7 +2589,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id6-line-0-value"
+                          data-cy="bullet-desc-req-headers-id6-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -2600,7 +2600,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-353 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id6-line-1"
+                    data-cy="bullet-desc-req-headers-id6-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-354"
@@ -2609,7 +2609,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id6-line-1-key"
+                          data-cy="bullet-desc-req-headers-id6-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -2617,7 +2617,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id6-line-1-value"
+                          data-cy="bullet-desc-req-headers-id6-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -2629,11 +2629,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-355"
-                  id="bullet-desc-req-body-id6"
+                  data-cy="bullet-desc-req-body-id6"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-356 makeStyles-title-131"
-                    id="bullet-desc-req-body-id6-title"
+                    data-cy="bullet-desc-req-body-id6-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2643,7 +2643,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-357 makeStyles-values-132"
-                    id="bullet-desc-req-body-id6-value"
+                    data-cy="bullet-desc-req-body-id6-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-358"
@@ -2677,11 +2677,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-363"
-                  id="bullet-desc-res-headers-id6"
+                  data-cy="bullet-desc-res-headers-id6"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-364 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id6-title"
+                    data-cy="bullet-desc-res-headers-id6-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2691,7 +2691,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-365 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id6-line-0"
+                    data-cy="bullet-desc-res-headers-id6-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-366"
@@ -2700,7 +2700,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id6-line-0-key"
+                          data-cy="bullet-desc-res-headers-id6-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -2708,7 +2708,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id6-line-0-value"
+                          data-cy="bullet-desc-res-headers-id6-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -2719,7 +2719,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-367 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id6-line-1"
+                    data-cy="bullet-desc-res-headers-id6-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-368"
@@ -2728,7 +2728,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id6-line-1-key"
+                          data-cy="bullet-desc-res-headers-id6-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -2736,7 +2736,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id6-line-1-value"
+                          data-cy="bullet-desc-res-headers-id6-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -2748,11 +2748,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-369"
-                  id="bullet-desc-res-body-id6"
+                  data-cy="bullet-desc-res-body-id6"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-370 makeStyles-title-131"
-                    id="bullet-desc-res-body-id6-title"
+                    data-cy="bullet-desc-res-body-id6-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2762,7 +2762,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-371 makeStyles-values-132"
-                    id="bullet-desc-res-body-id6-value"
+                    data-cy="bullet-desc-res-body-id6-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-372"
@@ -2783,30 +2783,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id6"
+      data-cy="main-pannel-right-grid-bullet-id6"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id7"
+    data-cy="main-pannel-outer-grid-bullet-id7"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id7"
+      data-cy="main-pannel-left-grid-bullet-id7"
     >
       <div
         className="MuiBox-root MuiBox-root-373 makeStyles-root-107"
-        id="bullet-id7"
+        data-cy="bullet-id7"
       >
         <div
           className="MuiBox-root MuiBox-root-374 makeStyles-root-110"
-          id="bullet-header-id7"
+          data-cy="bullet-header-id7"
         >
           <div
             className="MuiBox-root MuiBox-root-375"
-            id="bullet-header-ms-id7"
+            data-cy="bullet-header-ms-id7"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2817,7 +2817,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-376 makeStyles-methodBadge-111"
-            id="bullet-header-method-id7"
+            data-cy="bullet-header-method-id7"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2827,7 +2827,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-377 makeStyles-url-112"
-            id="bullet-header-url-id7"
+            data-cy="bullet-header-url-id7"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2837,11 +2837,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-378 makeStyles-filler-114"
-            id="bullet-header-filler-id7"
+            data-cy="bullet-header-filler-id7"
           />
           <div
             className="MuiBox-root MuiBox-root-379 makeStyles-statusBadge-113"
-            id="bullet-header-status-id7"
+            data-cy="bullet-header-status-id7"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -2853,7 +2853,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id7"
+            data-cy="bullet-header-collapse-id7"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -2881,7 +2881,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-380 makeStyles-root-122"
-                id="bullet-desc-id7"
+                data-cy="bullet-desc-id7"
               >
                 <div
                   className="MuiBox-root MuiBox-root-381 makeStyles-root-124"
@@ -2904,11 +2904,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-385"
-                  id="bullet-desc-req-headers-id7"
+                  data-cy="bullet-desc-req-headers-id7"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-386 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id7-title"
+                    data-cy="bullet-desc-req-headers-id7-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2918,7 +2918,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-387 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id7-line-0"
+                    data-cy="bullet-desc-req-headers-id7-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-388"
@@ -2927,7 +2927,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id7-line-0-key"
+                          data-cy="bullet-desc-req-headers-id7-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -2935,7 +2935,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id7-line-0-value"
+                          data-cy="bullet-desc-req-headers-id7-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -2946,7 +2946,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-389 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id7-line-1"
+                    data-cy="bullet-desc-req-headers-id7-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-390"
@@ -2955,7 +2955,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id7-line-1-key"
+                          data-cy="bullet-desc-req-headers-id7-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -2963,7 +2963,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id7-line-1-value"
+                          data-cy="bullet-desc-req-headers-id7-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -2975,11 +2975,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-391"
-                  id="bullet-desc-req-body-id7"
+                  data-cy="bullet-desc-req-body-id7"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-392 makeStyles-title-131"
-                    id="bullet-desc-req-body-id7-title"
+                    data-cy="bullet-desc-req-body-id7-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -2989,7 +2989,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-393 makeStyles-values-132"
-                    id="bullet-desc-req-body-id7-value"
+                    data-cy="bullet-desc-req-body-id7-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-394"
@@ -3023,11 +3023,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-399"
-                  id="bullet-desc-res-headers-id7"
+                  data-cy="bullet-desc-res-headers-id7"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-400 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id7-title"
+                    data-cy="bullet-desc-res-headers-id7-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3037,7 +3037,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-401 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id7-line-0"
+                    data-cy="bullet-desc-res-headers-id7-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-402"
@@ -3046,7 +3046,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id7-line-0-key"
+                          data-cy="bullet-desc-res-headers-id7-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -3054,7 +3054,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id7-line-0-value"
+                          data-cy="bullet-desc-res-headers-id7-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -3065,7 +3065,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-403 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id7-line-1"
+                    data-cy="bullet-desc-res-headers-id7-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-404"
@@ -3074,7 +3074,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id7-line-1-key"
+                          data-cy="bullet-desc-res-headers-id7-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -3082,7 +3082,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id7-line-1-value"
+                          data-cy="bullet-desc-res-headers-id7-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -3094,11 +3094,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-405"
-                  id="bullet-desc-res-body-id7"
+                  data-cy="bullet-desc-res-body-id7"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-406 makeStyles-title-131"
-                    id="bullet-desc-res-body-id7-title"
+                    data-cy="bullet-desc-res-body-id7-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3108,7 +3108,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-407 makeStyles-values-132"
-                    id="bullet-desc-res-body-id7-value"
+                    data-cy="bullet-desc-res-body-id7-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-408"
@@ -3129,30 +3129,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id7"
+      data-cy="main-pannel-right-grid-bullet-id7"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id8"
+    data-cy="main-pannel-outer-grid-bullet-id8"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id8"
+      data-cy="main-pannel-left-grid-bullet-id8"
     >
       <div
         className="MuiBox-root MuiBox-root-409 makeStyles-root-107"
-        id="bullet-id8"
+        data-cy="bullet-id8"
       >
         <div
           className="MuiBox-root MuiBox-root-410 makeStyles-root-110"
-          id="bullet-header-id8"
+          data-cy="bullet-header-id8"
         >
           <div
             className="MuiBox-root MuiBox-root-411"
-            id="bullet-header-ms-id8"
+            data-cy="bullet-header-ms-id8"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3163,7 +3163,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-412 makeStyles-methodBadge-111"
-            id="bullet-header-method-id8"
+            data-cy="bullet-header-method-id8"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3173,7 +3173,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-413 makeStyles-url-112"
-            id="bullet-header-url-id8"
+            data-cy="bullet-header-url-id8"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3183,11 +3183,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-414 makeStyles-filler-114"
-            id="bullet-header-filler-id8"
+            data-cy="bullet-header-filler-id8"
           />
           <div
             className="MuiBox-root MuiBox-root-415 makeStyles-statusBadge-113"
-            id="bullet-header-status-id8"
+            data-cy="bullet-header-status-id8"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3199,7 +3199,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id8"
+            data-cy="bullet-header-collapse-id8"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -3227,7 +3227,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-416 makeStyles-root-122"
-                id="bullet-desc-id8"
+                data-cy="bullet-desc-id8"
               >
                 <div
                   className="MuiBox-root MuiBox-root-417 makeStyles-root-124"
@@ -3250,11 +3250,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-421"
-                  id="bullet-desc-req-headers-id8"
+                  data-cy="bullet-desc-req-headers-id8"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-422 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id8-title"
+                    data-cy="bullet-desc-req-headers-id8-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3264,7 +3264,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-423 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id8-line-0"
+                    data-cy="bullet-desc-req-headers-id8-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-424"
@@ -3273,7 +3273,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id8-line-0-key"
+                          data-cy="bullet-desc-req-headers-id8-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -3281,7 +3281,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id8-line-0-value"
+                          data-cy="bullet-desc-req-headers-id8-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -3292,7 +3292,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-425 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id8-line-1"
+                    data-cy="bullet-desc-req-headers-id8-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-426"
@@ -3301,7 +3301,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id8-line-1-key"
+                          data-cy="bullet-desc-req-headers-id8-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -3309,7 +3309,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id8-line-1-value"
+                          data-cy="bullet-desc-req-headers-id8-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -3321,11 +3321,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-427"
-                  id="bullet-desc-req-body-id8"
+                  data-cy="bullet-desc-req-body-id8"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-428 makeStyles-title-131"
-                    id="bullet-desc-req-body-id8-title"
+                    data-cy="bullet-desc-req-body-id8-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3335,7 +3335,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-429 makeStyles-values-132"
-                    id="bullet-desc-req-body-id8-value"
+                    data-cy="bullet-desc-req-body-id8-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-430"
@@ -3369,11 +3369,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-435"
-                  id="bullet-desc-res-headers-id8"
+                  data-cy="bullet-desc-res-headers-id8"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-436 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id8-title"
+                    data-cy="bullet-desc-res-headers-id8-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3383,7 +3383,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-437 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id8-line-0"
+                    data-cy="bullet-desc-res-headers-id8-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-438"
@@ -3392,7 +3392,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id8-line-0-key"
+                          data-cy="bullet-desc-res-headers-id8-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -3400,7 +3400,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id8-line-0-value"
+                          data-cy="bullet-desc-res-headers-id8-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -3411,7 +3411,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-439 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id8-line-1"
+                    data-cy="bullet-desc-res-headers-id8-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-440"
@@ -3420,7 +3420,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id8-line-1-key"
+                          data-cy="bullet-desc-res-headers-id8-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -3428,7 +3428,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id8-line-1-value"
+                          data-cy="bullet-desc-res-headers-id8-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -3440,11 +3440,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-441"
-                  id="bullet-desc-res-body-id8"
+                  data-cy="bullet-desc-res-body-id8"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-442 makeStyles-title-131"
-                    id="bullet-desc-res-body-id8-title"
+                    data-cy="bullet-desc-res-body-id8-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3454,7 +3454,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-443 makeStyles-values-132"
-                    id="bullet-desc-res-body-id8-value"
+                    data-cy="bullet-desc-res-body-id8-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-444"
@@ -3475,30 +3475,30 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id8"
+      data-cy="main-pannel-right-grid-bullet-id8"
     >
       script
     </div>
   </div>
   <div
     className="MuiGrid-root MuiGrid-container"
-    id="main-pannel-outer-grid-bullet-id9"
+    data-cy="main-pannel-outer-grid-bullet-id9"
   >
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-left-grid-bullet-id9"
+      data-cy="main-pannel-left-grid-bullet-id9"
     >
       <div
         className="MuiBox-root MuiBox-root-445 makeStyles-root-107"
-        id="bullet-id9"
+        data-cy="bullet-id9"
       >
         <div
           className="MuiBox-root MuiBox-root-446 makeStyles-root-110"
-          id="bullet-header-id9"
+          data-cy="bullet-header-id9"
         >
           <div
             className="MuiBox-root MuiBox-root-447"
-            id="bullet-header-ms-id9"
+            data-cy="bullet-header-ms-id9"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3509,7 +3509,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-448 makeStyles-methodBadge-111"
-            id="bullet-header-method-id9"
+            data-cy="bullet-header-method-id9"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3519,7 +3519,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-449 makeStyles-url-112"
-            id="bullet-header-url-id9"
+            data-cy="bullet-header-url-id9"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3529,11 +3529,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
           </div>
           <div
             className="MuiBox-root MuiBox-root-450 makeStyles-filler-114"
-            id="bullet-header-filler-id9"
+            data-cy="bullet-header-filler-id9"
           />
           <div
             className="MuiBox-root MuiBox-root-451 makeStyles-statusBadge-113"
-            id="bullet-header-status-id9"
+            data-cy="bullet-header-status-id9"
           >
             <p
               className="MuiTypography-root MuiTypography-body1"
@@ -3545,7 +3545,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             alt="TODO"
             aria-describedby={null}
             className="makeStyles-downCarret-115"
-            id="bullet-header-collapse-id9"
+            data-cy="bullet-header-collapse-id9"
             onBlur={[Function]}
             onClick={[Function]}
             onFocus={[Function]}
@@ -3573,7 +3573,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
             >
               <div
                 className="MuiBox-root MuiBox-root-452 makeStyles-root-122"
-                id="bullet-desc-id9"
+                data-cy="bullet-desc-id9"
               >
                 <div
                   className="MuiBox-root MuiBox-root-453 makeStyles-root-124"
@@ -3596,11 +3596,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-457"
-                  id="bullet-desc-req-headers-id9"
+                  data-cy="bullet-desc-req-headers-id9"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-458 makeStyles-title-131"
-                    id="bullet-desc-req-headers-id9-title"
+                    data-cy="bullet-desc-req-headers-id9-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3610,7 +3610,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-459 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id9-line-0"
+                    data-cy="bullet-desc-req-headers-id9-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-460"
@@ -3619,7 +3619,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id9-line-0-key"
+                          data-cy="bullet-desc-req-headers-id9-line-0-key"
                         >
                           requestHeader1
                         </span>
@@ -3627,7 +3627,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id9-line-0-value"
+                          data-cy="bullet-desc-req-headers-id9-line-0-value"
                         >
                           "
                           requestHeader1 value
@@ -3638,7 +3638,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-461 makeStyles-values-132"
-                    id="bullet-desc-req-headers-id9-line-1"
+                    data-cy="bullet-desc-req-headers-id9-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-462"
@@ -3647,7 +3647,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-req-headers-id9-line-1-key"
+                          data-cy="bullet-desc-req-headers-id9-line-1-key"
                         >
                           requestHeader2
                         </span>
@@ -3655,7 +3655,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-req-headers-id9-line-1-value"
+                          data-cy="bullet-desc-req-headers-id9-line-1-value"
                         >
                           "
                           requestHeader2 value
@@ -3667,11 +3667,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-463"
-                  id="bullet-desc-req-body-id9"
+                  data-cy="bullet-desc-req-body-id9"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-464 makeStyles-title-131"
-                    id="bullet-desc-req-body-id9-title"
+                    data-cy="bullet-desc-req-body-id9-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3681,7 +3681,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-465 makeStyles-values-132"
-                    id="bullet-desc-req-body-id9-value"
+                    data-cy="bullet-desc-req-body-id9-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-466"
@@ -3715,11 +3715,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-471"
-                  id="bullet-desc-res-headers-id9"
+                  data-cy="bullet-desc-res-headers-id9"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-472 makeStyles-title-131"
-                    id="bullet-desc-res-headers-id9-title"
+                    data-cy="bullet-desc-res-headers-id9-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3729,7 +3729,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-473 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id9-line-0"
+                    data-cy="bullet-desc-res-headers-id9-line-0"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-474"
@@ -3738,7 +3738,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id9-line-0-key"
+                          data-cy="bullet-desc-res-headers-id9-line-0-key"
                         >
                           responseHeader1
                         </span>
@@ -3746,7 +3746,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id9-line-0-value"
+                          data-cy="bullet-desc-res-headers-id9-line-0-value"
                         >
                           "
                           responseHeader1 value
@@ -3757,7 +3757,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-475 makeStyles-values-132"
-                    id="bullet-desc-res-headers-id9-line-1"
+                    data-cy="bullet-desc-res-headers-id9-line-1"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-476"
@@ -3766,7 +3766,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         className="MuiTypography-root MuiTypography-subtitle2"
                       >
                         <span
-                          id="bullet-desc-res-headers-id9-line-1-key"
+                          data-cy="bullet-desc-res-headers-id9-line-1-key"
                         >
                           responseHeader2
                         </span>
@@ -3774,7 +3774,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                         :
                          
                         <span
-                          id="bullet-desc-res-headers-id9-line-1-value"
+                          data-cy="bullet-desc-res-headers-id9-line-1-value"
                         >
                           "
                           responseHeader2 value
@@ -3786,11 +3786,11 @@ exports[`FileProperties MainPannel Rich 1`] = `
                 </div>
                 <div
                   className="MuiBox-root MuiBox-root-477"
-                  id="bullet-desc-res-body-id9"
+                  data-cy="bullet-desc-res-body-id9"
                 >
                   <div
                     className="MuiBox-root MuiBox-root-478 makeStyles-title-131"
-                    id="bullet-desc-res-body-id9-title"
+                    data-cy="bullet-desc-res-body-id9-title"
                   >
                     <h6
                       className="MuiTypography-root MuiTypography-subtitle2"
@@ -3800,7 +3800,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
                   </div>
                   <div
                     className="MuiBox-root MuiBox-root-479 makeStyles-values-132"
-                    id="bullet-desc-res-body-id9-value"
+                    data-cy="bullet-desc-res-body-id9-value"
                   >
                     <div
                       className="MuiBox-root MuiBox-root-480"
@@ -3821,7 +3821,7 @@ exports[`FileProperties MainPannel Rich 1`] = `
     </div>
     <div
       className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      id="main-pannel-right-grid-bullet-id9"
+      data-cy="main-pannel-right-grid-bullet-id9"
     >
       script
     </div>

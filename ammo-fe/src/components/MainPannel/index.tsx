@@ -25,19 +25,19 @@ const MainPannel = ({ bullets = [] }: MainPannelProps): ReactElement => {
             {bullets.map((b, i) => {
                 return (
                     <Grid
-                        id={`main-pannel-outer-grid-bullet-${b.id}`}
+                        data-cy={`main-pannel-outer-grid-bullet-${b.id}`}
                         container
                         key={b.date.toString()}
                     >
                         <Grid
-                            id={`main-pannel-left-grid-bullet-${b.id}`}
+                            data-cy={`main-pannel-left-grid-bullet-${b.id}`}
                             item
                             xs={6}
                         >
                             <Bullet bullet={b} />
                         </Grid>
                         <Grid
-                            id={`main-pannel-right-grid-bullet-${b.id}`}
+                            data-cy={`main-pannel-right-grid-bullet-${b.id}`}
                             item
                             xs={6}
                         >

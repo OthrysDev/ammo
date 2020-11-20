@@ -26,7 +26,7 @@ const Bullet = ({ bullet }: BulletProps): ReactElement => {
     const [collapse, setCollapse] = useState(true);
 
     return (
-        <Box id={`bullet-${bullet.id}`} className={classes.root}>
+        <Box data-cy={`bullet-${bullet.id}`} className={classes.root}>
             <BulletHeader
                 bullet={bullet}
                 collapse={collapse}

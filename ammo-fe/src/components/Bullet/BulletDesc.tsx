@@ -29,18 +29,18 @@ const BulletDesc = ({
     const classes = useStyles();
     return (
         <Collapse in={!collapse}>
-            <Box id={`bullet-desc-${bullet.id}`} className={classes.root}>
+            <Box data-cy={`bullet-desc-${bullet.id}`} className={classes.root}>
                 <Delimiter title="Request" />
                 {bullet.request.headers && (
                     <TitleAndKeyValuesDesc
-                        id={`bullet-desc-req-headers-${bullet.id}`}
+                        uuid={`bullet-desc-req-headers-${bullet.id}`}
                         title="Headers"
                         obj={bullet.request.headers}
                     />
                 )}
                 {bullet.request.body && (
                     <TitleAndRawValueDesc
-                        id={`bullet-desc-req-body-${bullet.id}`}
+                        uuid={`bullet-desc-req-body-${bullet.id}`}
                         title="Body"
                         obj={bullet.request.body}
                     />
@@ -48,14 +48,14 @@ const BulletDesc = ({
                 <Delimiter title="Response" />
                 {bullet.response.headers && (
                     <TitleAndKeyValuesDesc
-                        id={`bullet-desc-res-headers-${bullet.id}`}
+                        uuid={`bullet-desc-res-headers-${bullet.id}`}
                         title="Headers"
                         obj={bullet.response.headers}
                     />
                 )}
                 {bullet.response.body && (
                     <TitleAndRawValueDesc
-                        id={`bullet-desc-res-body-${bullet.id}`}
+                        uuid={`bullet-desc-res-body-${bullet.id}`}
                         title="Body"
                         obj={bullet.response.body}
                     />
