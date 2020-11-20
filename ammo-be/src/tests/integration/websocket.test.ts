@@ -48,7 +48,7 @@ describe('Testing WebSockets', () => {
     });
 
     it('Make an API call, the WebSocket must trigger and return a bullet', async (done) => {
-        socket.on('bullet', ({ bullet }: Record<string, Bullet>) => {
+        socket.on('bullet', () => {
             done.fail('Should not catch a bullet as the data is incorrect.');
         });
 
