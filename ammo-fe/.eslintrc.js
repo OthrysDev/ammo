@@ -8,8 +8,9 @@ var conf = {
         'prettier/react',
         'prettier/@typescript-eslint',
         'plugin:prettier/recommended',
+        'plugin:cypress/recommended',
     ],
-    plugins: ['react', '@typescript-eslint', 'jest'],
+    plugins: ['react', '@typescript-eslint', 'jest', 'cypress'],
     env: {
         browser: true,
         es6: true,
