@@ -40,7 +40,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "lint-staged && jest"
+      "pre-commit": "lint-staged && jest --runInBand"
     }
   },
   "lint-staged": {
