@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         background: `linear-gradient(90deg, ${theme.palette.primary.dark} 50%, ${theme.palette.primary.main} 50%)`,
         color: 'white',
+        overflowY: 'auto',
     },
 }));
 
@@ -21,7 +22,7 @@ export interface MainPannelProps {
 const MainPannel = ({ bullets = [] }: MainPannelProps): ReactElement => {
     const classes = useStyles();
     return (
-        <Box id="main-pannel" className={classes.root}>
+        <Box id="main-pannel" className={classes.root} data-simplebar>
             {bullets.map((b, i) => {
                 return (
                     <Grid

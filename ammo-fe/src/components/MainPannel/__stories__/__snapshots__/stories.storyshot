@@ -3,6 +3,7 @@
 exports[`FileProperties MainPannel Default 1`] = `
 <div
   className="MuiBox-root MuiBox-root-54 makeStyles-root-53"
+  data-simplebar={true}
   id="main-pannel"
 >
   <div
@@ -357,6 +358,7 @@ exports[`FileProperties MainPannel Default 1`] = `
 exports[`FileProperties MainPannel Empty 1`] = `
 <div
   className="MuiBox-root MuiBox-root-52 makeStyles-root-51"
+  data-simplebar={true}
   id="main-pannel"
 />
 `;
@@ -364,6 +366,7 @@ exports[`FileProperties MainPannel Empty 1`] = `
 exports[`FileProperties MainPannel Rich 1`] = `
 <div
   className="MuiBox-root MuiBox-root-106 makeStyles-root-105"
+  data-simplebar={true}
   id="main-pannel"
 >
   <div

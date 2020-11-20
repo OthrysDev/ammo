@@ -4,6 +4,8 @@ import Box from '@material-ui/core/Box';
 import IBullet from 'imported/IBullet';
 import BulletHeader from 'components/Bullet/BulletHeader';
 import BulletDesc from 'components/Bullet/BulletDesc';
+import 'simplebar';
+import 'simplebar/dist/simplebar.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
