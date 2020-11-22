@@ -22,7 +22,7 @@ export interface MainPannelProps {
 const MainPannel = ({ bullets = [] }: MainPannelProps): ReactElement => {
     const classes = useStyles();
     return (
-        <Box id="main-pannel" className={classes.root} data-simplebar>
+        <Box data-cy="main-pannel" className={classes.root} data-simplebar>
             {bullets.map((b, i) => {
                 return (
                     <Grid

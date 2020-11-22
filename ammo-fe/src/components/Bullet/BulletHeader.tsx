@@ -5,7 +5,6 @@ import Box from '@material-ui/core/Box';
 import ToolTip from 'components/misc/ToolTip';
 import IBullet from 'imported/IBullet';
 import DownCarret from 'assets/down_carret.svg';
-import UpCarret from 'assets/up_carret.svg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -42,6 +41,9 @@ const useStyles = makeStyles((theme) => ({
         '&:hover': {
             cursor: 'pointer',
         },
+    },
+    flipY: {
+        transform: 'scaleY(-1)',
     },
 }));
 
@@ -92,9 +94,11 @@ const BulletHeader = ({
             >
                 <img
                     data-cy={`bullet-header-collapse-${bullet.id}`}
-                    src={collapse ? DownCarret : UpCarret}
+                    src={DownCarret}
                     alt="TODO"
-                    className={classes.downCarret}
+                    className={`${classes.downCarret} ${
+                        collapse ? '' : classes.flipY
+                    }`}
                     onClick={onClick}
                 />
             </ToolTip>
