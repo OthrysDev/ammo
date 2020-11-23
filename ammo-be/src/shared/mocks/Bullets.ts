@@ -42,7 +42,7 @@ const connectorMock: Bullet = {
         },
         body: {
             user:
-                '{"firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","password":"ezrkezlrkezrlmzek","hasAcceptedMails":true,"captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}',
+                '{"firstName":"foo","name":"bar","email":"baz@bar.fr","password":"123456789","hasAcceptedMails":true,"captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}',
         },
     },
     response: {
@@ -57,7 +57,7 @@ const connectorMock: Bullet = {
             etag: 'W/"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8"',
         },
         body:
-            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
+            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"foo","name":"bar","email":"baz@bar.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
         status: 200,
     },
 };
@@ -86,7 +86,7 @@ const incorrectMock = {
         },
         body: {
             user:
-                '{"firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","password":"ezrkezlrkezrlmzek","hasAcceptedMails":true,"captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}',
+                '{"firstName":"foo","name":"bar","email":"baz@bar.fr","password":"123456789","hasAcceptedMails":true,"captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}',
         },
     },
     response: {
@@ -101,7 +101,7 @@ const incorrectMock = {
             etag: 'W/"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8"',
         },
         body:
-            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
+            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"foo","name":"bar","email":"baz@bar.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
         status: 200,
     },
 };
@@ -145,7 +145,7 @@ const overweightedMock = {
             etag: 'W/"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8"',
         },
         body:
-            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
+            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"foo","name":"bar","email":"baz@bar.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
         status: 200,
     },
 };
@@ -175,7 +175,7 @@ const nonValidUrlMock = {
         },
         body: {
             user:
-                '{"firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","password":"ezrkezlrkezrlmzek","hasAcceptedMails":true,"captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}',
+                '{"firstName":"foo","name":"bar","email":"baz@bar.fr","password":"123456789","hasAcceptedMails":true,"captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}',
         },
     },
     response: {
@@ -190,7 +190,7 @@ const nonValidUrlMock = {
             etag: 'W/"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8"',
         },
         body:
-            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"apekrzark","name":"ozkeropazk","email":"zeoazk@zeork.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
+            '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"foo","name":"bar","email":"baz@bar.fr","hasAcceptedMails":true,"picture":{"id":"5fb3a5ae5be2f60fc786d90d","name":"_ Img-2.png"}}}}',
         status: 200,
     },
 };
