@@ -2,7 +2,7 @@ import * as React from 'react';
 import { useSelector } from 'react-redux';
 import { RootReducer } from 'redux/reducers';
 import useWs from 'hook/useWs';
-import { Bullet } from 'typings/Bullet';
+import { Bullet } from 'shared/typings/Bullet';
 
 function App(): React.ReactElement {
     useWs();

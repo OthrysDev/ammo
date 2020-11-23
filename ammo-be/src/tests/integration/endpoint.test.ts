@@ -7,7 +7,7 @@ import {
     nonValidUrlMock,
     almostValidUrlMock,
     almostValidUrlMock2,
-} from 'tests/mocks/Bullets';
+} from 'shared/mocks/Bullets';
 
 interface HTTPError {
     error: {

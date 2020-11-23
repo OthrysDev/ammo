@@ -1,4 +1,4 @@
-import { Bullet } from 'typings/Bullet';
+import { Bullet } from 'shared/typings/Bullet';
 
 const createOverweight = (): string => {
     let string = '';

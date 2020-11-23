@@ -1,8 +1,8 @@
 import app from 'index';
 import request from 'supertest';
-import { Bullet } from 'typings/Bullet';
+import { Bullet } from 'shared/typings/Bullet';
 import { io, Socket } from 'socket.io-client';
-import { connectorMock, incorrectMock } from 'tests/mocks/Bullets';
+import { connectorMock, incorrectMock } from 'shared/mocks/Bullets';
 
 let socket: Socket;
 

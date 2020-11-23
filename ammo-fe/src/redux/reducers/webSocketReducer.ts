@@ -1,4 +1,4 @@
-import { Bullet } from 'typings/Bullet';
+import { Bullet } from 'shared/typings/Bullet';
 
 type WebSocketReducerAction = {
     type: 'connected' | 'disconnect' | 'receivedBullet';

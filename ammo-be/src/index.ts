@@ -1,7 +1,7 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
-import { Bullet } from 'typings/Bullet';
+import { Bullet } from 'shared/typings/Bullet';
 import bulletSchema from 'validators/bulletValidator';
 import io from 'socket.io';
 import cors from 'cors';
