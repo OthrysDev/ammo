@@ -2,9 +2,9 @@ import { combineReducers } from 'redux';
 import i18nReducer, {
     ReducerState as i18nState,
 } from 'redux/reducers/i18nReducer';
-import webSocketMockReducer, {
-    WebSocketMockReducerState,
-} from 'redux/reducers/webSocketMockReducer';
+import webSocketReducer, {
+    WebSocketReducerState,
+} from 'redux/reducers/webSocketReducer';
 import customReducer, {
     CustomReducerState,
 } from 'redux/reducers/ReducerExemple';
@@ -12,11 +12,11 @@ import customReducer, {
 export interface RootReducer {
     i18n: i18nState;
     custom: CustomReducerState;
-    wsMock: WebSocketMockReducerState;
+    ws: WebSocketReducerState;
 }
 
 export default combineReducers({
     i18n: i18nReducer,
     custom: customReducer,
-    wsMock: webSocketMockReducer,
+    ws: webSocketReducer,
 });

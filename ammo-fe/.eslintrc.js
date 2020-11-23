@@ -24,6 +24,7 @@ module.exports = {
         'import/extensions': [1, 'never'],
         'comma-dangle': 0,
         '@typescript-eslint/ban-ts-comment': 0,
+        'no-underscore-dangle': 0,
     },
     settings: {
         'import/resolver': {
