@@ -39,7 +39,7 @@ describe('Testing WebSockets', () => {
 
     it('Make an API call, the WebSocket must trigger and return a bullet', async (done) => {
         socket.on('bullet', ({ bullet }: Record<string, Bullet>) => {
-            expect(bullet).toMatchObject(connectorMock);
+            expect(bullet).toMatchSnapshot();
 
             done();
         });

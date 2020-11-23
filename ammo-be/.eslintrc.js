@@ -17,6 +17,7 @@ module.exports = {
         '@typescript-eslint/explicit-function-return-type': ['error'],
         'import/extensions': [1, 'never'],
         'comma-dangle': 0,
+        'object-curly-newline': 0,
     },
     settings: {
         'import/resolver': {

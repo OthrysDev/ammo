@@ -5,8 +5,6 @@ import {
     incorrectMock,
     overweightedMock,
     nonValidUrlMock,
-    almostValidUrlMock,
-    almostValidUrlMock2,
 } from 'shared/mocks/Bullets';
 
 interface HTTPError {
@@ -33,7 +31,7 @@ describe('Testing endpoints', () => {
             .expect(200)
             .expect((r) => {
                 const { bullet } = r.body;
-                expect(bullet).toMatchObject(connectorMock);
+                expect(bullet).toMatchSnapshot();
             });
     });
 
@@ -67,30 +65,6 @@ describe('Testing endpoints', () => {
             .expect((r: HTTPError) => {
                 expect(r.error.text).toContain(
                     '"\\"url\\" with value \\"AfakeUrlWhosGonnaMiss\\" fails to match the required pattern'
-                );
-            });
-    });
-
-    it('Send an almost nice url - Joi must throw error as a slash is missing', async () => {
-        await request(app)
-            .post('/')
-            .send({ data: almostValidUrlMock })
-            .expect(400)
-            .expect((r: HTTPError) => {
-                expect(r.error.text).toContain(
-                    '"\\"url\\" with value \\"http:/google.com\\" fails to match the required pattern'
-                );
-            });
-    });
-
-    it('Send another almost nice url - Joi must throw error as there is nothing after the slash', async () => {
-        await request(app)
-            .post('/')
-            .send({ data: almostValidUrlMock2 })
-            .expect(400)
-            .expect((r: HTTPError) => {
-                expect(r.error.text).toContain(
-                    '"\\"url\\" with value \\"http://\\" fails to match the required pattern'
                 );
             });
     });
