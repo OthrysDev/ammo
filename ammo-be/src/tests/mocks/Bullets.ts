@@ -1,4 +1,4 @@
-import { Bullet } from 'typings/Connector';
+import { Bullet } from 'typings/Bullet';
 
 const createOverweight = (): string => {
     let string = '';

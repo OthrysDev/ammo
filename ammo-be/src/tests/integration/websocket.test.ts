@@ -1,6 +1,6 @@
 import app from 'index';
 import request from 'supertest';
-import { Bullet } from 'typings/Connector';
+import { Bullet } from 'typings/Bullet';
 import { io, Socket } from 'socket.io-client';
 import { connectorMock, incorrectMock } from 'tests/mocks/Bullets';
 
