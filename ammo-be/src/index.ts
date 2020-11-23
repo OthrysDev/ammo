@@ -1,10 +1,9 @@
 import express from 'express';
 import bodyParser from 'body-parser';
 
-import { Bullet } from 'shared/typings/Bullet';
-import bulletSchema from 'validators/bulletValidator';
 import io from 'socket.io';
 import cors from 'cors';
+import bulletRouter from 'routers/bulletRouter/tests';
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
@@ -20,22 +19,7 @@ const ioServer = new io.Server(server, {
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.post(
-    '/',
-    (req, res): express.Response => {
-        try {
-            const potentialBullet: Bullet = { ...req.body.data };
+app.use(bulletRouter);
 
-            const { error, value } = bulletSchema.validate(potentialBullet);
-            if (error) throw new Error(error.details[0].message);
-
-            ioServer.emit('bullet', { bullet: value });
-
-            return res.status(200).json({ bullet: potentialBullet });
-        } catch ({ message }) {
-            return res.status(400).json({ message });
-        }
-    }
-);
-
+export { ioServer };
 export default server;
