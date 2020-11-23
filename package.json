@@ -1,7 +1,8 @@
 {
   "scripts": {
     "start": "(cd ammo-be && npm start) & (cd ammo-fe && npm start)",
-    "install": "(cd ammo-be && npm install) && (cd ammo-fe && npm install)"
+    "install": "(cd ammo-be && npm install) && (cd ammo-fe && npm install)",
+    "exportMocksAndTypes" : "(ncp ammo-be/src/tests/mocks ammo-fe/src/mocks --stoponErr) & (ncp ammo-be/src/typings ammo-fe/src/typings --stoponErr)"
   },
   "husky": {
     "hooks": {
@@ -15,5 +16,8 @@
   "devDependencies": {
     "husky": "^4.3.0",
     "lint-staged": "^10.5.1"
+  },
+  "dependencies": {
+    "ncp": "^2.0.0"
   }
-} 
+}
