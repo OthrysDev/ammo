@@ -1,21 +1,19 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 
 # dependencies
-node_modules
-ammo-fe/node_modules
-ammo-be/node_modules
+**/node_modules
 
 /.pnp
 .pnp.js
 
 # testing
-ammo-be/coverage
+**/coverage
 
 # production
-ammo-fe/build
+**/build
 
 # compilation
-ammo-be/dist
+**/dist
 
 # misc
 .DS_Store
