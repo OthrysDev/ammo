@@ -1,10 +1,10 @@
 import app from 'index';
 import request from 'supertest';
 import {
-    connectorMock,
-    incorrectMock,
-    overweightedMock,
-    nonValidUrlMock,
+    bulletMock,
+    incorrectBulletMock,
+    overweightedBulletMock,
+    invalidUrlBulletMock,
 } from 'shared/mocks/Bullets';
 
 interface HTTPError {
@@ -27,7 +27,7 @@ describe('Testing endpoints', () => {
     test('Send correct data', async () => {
         await request(app)
             .post('/')
-            .send({ data: connectorMock })
+            .send({ data: bulletMock })
             .expect(200)
             .expect((r) => {
                 const { bullet } = r.body;
@@ -38,7 +38,7 @@ describe('Testing endpoints', () => {
     it('Send incorrect data - Joi must throw error as method is missing', async () => {
         await request(app)
             .post('/')
-            .send({ data: incorrectMock })
+            .send({ data: incorrectBulletMock })
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toContain('\\"method\\" is required');
@@ -48,7 +48,7 @@ describe('Testing endpoints', () => {
     it('Send an overweighted body - Joi must throw error', async () => {
         await request(app)
             .post('/')
-            .send({ data: overweightedMock })
+            .send({ data: overweightedBulletMock })
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toContain(
@@ -60,7 +60,7 @@ describe('Testing endpoints', () => {
     it('Send a fake url - Joi must throw error', async () => {
         await request(app)
             .post('/')
-            .send({ data: nonValidUrlMock })
+            .send({ data: invalidUrlBulletMock })
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toMatchSnapshot();

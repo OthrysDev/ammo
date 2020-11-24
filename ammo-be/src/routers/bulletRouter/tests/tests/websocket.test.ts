@@ -2,7 +2,7 @@ import app from 'index';
 import request from 'supertest';
 import { Bullet } from 'shared/typings/Bullet';
 import { io, Socket } from 'socket.io-client';
-import { connectorMock, incorrectMock } from 'shared/mocks/Bullets';
+import { bulletMock, incorrectBulletMock } from 'shared/mocks/Bullets';
 
 let socket: Socket;
 
@@ -44,7 +44,7 @@ describe('Testing WebSockets', () => {
             done();
         });
 
-        await request(app).post('/').send({ data: connectorMock }).expect(200);
+        await request(app).post('/').send({ data: bulletMock }).expect(200);
     });
 
     it('Make an API call with an incorrect mock - Should catch error', async (done) => {
@@ -52,7 +52,10 @@ describe('Testing WebSockets', () => {
             done.fail('Should not catch a bullet as the data is incorrect.');
         });
 
-        await request(app).post('/').send({ data: incorrectMock }).expect(400);
+        await request(app)
+            .post('/')
+            .send({ data: incorrectBulletMock })
+            .expect(400);
         done();
     });
 });

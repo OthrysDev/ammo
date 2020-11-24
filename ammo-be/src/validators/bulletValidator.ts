@@ -41,6 +41,4 @@ const bulletSchema = Joi.object({
     }),
 });
 
-export { urlRegex };
-
 export default bulletSchema;

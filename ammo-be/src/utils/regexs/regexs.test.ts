@@ -1,4 +1,4 @@
-import { urlRegex } from 'validators/bulletValidator';
+import urlRegex from 'utils/regexs/regexs';
 
 describe('Email validation regex', () => {
     it('Is a valid email', () => {

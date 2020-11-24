@@ -62,7 +62,7 @@ const connectorMock: Bullet = {
     },
 };
 
-const incorrectMock = {
+const incorrectBulletMock = {
     url: 'http://localhost:3000/user',
     request: {
         headers: {
@@ -106,7 +106,7 @@ const incorrectMock = {
     },
 };
 
-const overweightedMock = {
+const overweightedBulletMock = {
     url: 'http://localhost:3000/user',
     method: 'POST',
     request: {
@@ -150,7 +150,7 @@ const overweightedMock = {
     },
 };
 
-const nonValidUrlMock = {
+const invalidUrlBulletMock = {
     url: 'AfakeUrlWhosGonnaMiss',
     method: 'POST',
     request: {
@@ -195,4 +195,9 @@ const nonValidUrlMock = {
     },
 };
 
-export { connectorMock, incorrectMock, overweightedMock, nonValidUrlMock };
+export {
+    connectorMock,
+    incorrectBulletMock,
+    overweightedBulletMock,
+    invalidUrlBulletMock,
+};
