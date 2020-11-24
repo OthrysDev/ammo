@@ -2,6 +2,8 @@ import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
+import { FormattedMessage } from 'react-intl';
+import i18n from 'types/i18n';
 
 // ==========================================================
 // ==========================================================
@@ -18,38 +20,40 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 interface TitleAndKeyValuesDescProps {
-    id: string;
-    title: string;
+    uuid: string;
+    title: i18n;
     obj: Record<string, string>;
 }
 
 export const TitleAndKeyValuesDesc = ({
-    id,
+    uuid,
     title,
     obj,
 }: TitleAndKeyValuesDescProps): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box id={id}>
-            <Box id={`${id}-title`} className={classes.title}>
-                <Typography variant="subtitle2">{title}</Typography>
+        <Box data-cy={uuid}>
+            <Box data-cy={`${uuid}-title`} className={classes.title}>
+                <Typography variant="subtitle2">
+                    <FormattedMessage id={title} />
+                </Typography>
             </Box>
             {obj &&
                 Object.keys(obj).map((key, i) => {
                     return (
                         <Box
-                            id={`${id}-line-${i}`}
-                            key={`${id}-value-${i}`}
+                            data-cy={`${uuid}-line-${i}`}
+                            key={`${uuid}-value-${i}`}
                             className={classes.values}
                         >
                             <Box>
                                 <Typography variant="subtitle2">
-                                    <span id={`${id}-line-${i}-key`}>
+                                    <span data-cy={`${uuid}-line-${i}-key`}>
                                         {key}
                                     </span>{' '}
                                     :{' '}
-                                    <span id={`${id}-line-${i}-value`}>
+                                    <span data-cy={`${uuid}-line-${i}-value`}>
                                         "{obj[key]}"
                                     </span>
                                 </Typography>
@@ -64,25 +68,27 @@ export const TitleAndKeyValuesDesc = ({
 // ==========================================================
 
 interface TitleAndRawValueDescProps {
-    id: string;
-    title: string;
+    uuid: string;
+    title: i18n;
     obj: string;
 }
 
 export const TitleAndRawValueDesc = ({
-    id,
+    uuid,
     title,
     obj,
 }: TitleAndRawValueDescProps): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box id={id}>
-            <Box id={`${id}-title`} className={classes.title}>
-                <Typography variant="subtitle2">{title}</Typography>
+        <Box data-cy={uuid}>
+            <Box data-cy={`${uuid}-title`} className={classes.title}>
+                <Typography variant="subtitle2">
+                    <FormattedMessage id={title} />
+                </Typography>
             </Box>
             {obj && (
-                <Box id={`${id}-value`} className={classes.values}>
+                <Box data-cy={`${uuid}-value`} className={classes.values}>
                     <Box>
                         <Typography variant="subtitle2">{obj}</Typography>
                     </Box>
@@ -115,7 +121,7 @@ const useDelimiterStyles = makeStyles((theme) => ({
 }));
 
 interface DelimiterProps {
-    title: string;
+    title: i18n;
 }
 
 export const Delimiter = ({ title }: DelimiterProps): ReactElement => {
@@ -125,7 +131,9 @@ export const Delimiter = ({ title }: DelimiterProps): ReactElement => {
         <Box className={classes.root}>
             <Box className={classes.border}></Box>
             <Box className={classes.title}>
-                <Typography variant="subtitle2">{title}</Typography>
+                <Typography variant="subtitle2">
+                    <FormattedMessage id={title} />
+                </Typography>
             </Box>
             <Box className={classes.border}></Box>
         </Box>

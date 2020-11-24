@@ -11,6 +11,7 @@ const useStyles = makeStyles((theme) => ({
         width: '100%',
         background: `linear-gradient(90deg, ${theme.palette.primary.dark} 50%, ${theme.palette.primary.main} 50%)`,
         color: 'white',
+        overflowY: 'auto',
     },
 }));
 
@@ -22,23 +23,23 @@ const MainPannel = ({ bullets = [] }: MainPannelProps): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box id="main-pannel" className={classes.root}>
+        <Box data-cy="main-pannel" className={classes.root} data-simplebar>
             {bullets.map((b) => {
                 return (
                     <Grid
-                        id={`main-pannel-outer-grid-bullet-${b.id}`}
+                        data-cy={`main-pannel-outer-grid-bullet-${b.id}`}
                         container
                         key={b.id}
                     >
                         <Grid
-                            id={`main-pannel-left-grid-bullet-${b.id}`}
+                            data-cy={`main-pannel-left-grid-bullet-${b.id}`}
                             item
                             xs={6}
                         >
                             <Bullet bullet={b} />
                         </Grid>
                         <Grid
-                            id={`main-pannel-right-grid-bullet-${b.id}`}
+                            data-cy={`main-pannel-right-grid-bullet-${b.id}`}
                             item
                             xs={6}
                         >

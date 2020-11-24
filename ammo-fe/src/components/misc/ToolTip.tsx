@@ -2,13 +2,14 @@ import React, { ReactElement, ReactNode } from 'react';
 import Tooltip from '@material-ui/core/Tooltip';
 
 interface ToolTipProps {
+    uuid: string;
     title: string;
     children: ReactElement<any, any>;
 }
 
-const ToolTip = ({ title, children }: ToolTipProps): ReactElement => {
+const ToolTip = ({ uuid, title, children }: ToolTipProps): ReactElement => {
     return (
-        <Tooltip title={title} enterDelay={1000} leaveDelay={0} id="tooltip">
+        <Tooltip data-cy={uuid} title={title} enterDelay={1000} leaveDelay={0}>
             {children}
         </Tooltip>
     );

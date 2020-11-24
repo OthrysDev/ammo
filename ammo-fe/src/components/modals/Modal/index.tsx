@@ -28,7 +28,7 @@ const Modal = ({
     const classes = useStyles();
     return (
         <Dialog
-            id="modal"
+            data-cy="modal"
             PaperProps={{ className: classes.root }}
             open={open}
             aria-labelledby={ariaLabelledby}

@@ -21,7 +21,7 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box id="layout-root" className={classes.root}>
+        <Box data-cy="layout-root" className={classes.root}>
             {children}
         </Box>
     );

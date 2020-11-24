@@ -5,7 +5,6 @@ import Box from '@material-ui/core/Box';
 import ToolTip from 'components/misc/ToolTip';
 import IBullet from 'imported/IBullet';
 import DownCarret from 'assets/down_carret.svg';
-import UpCarret from 'assets/up_carret.svg';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -43,6 +42,9 @@ const useStyles = makeStyles((theme) => ({
             cursor: 'pointer',
         },
     },
+    flipY: {
+        transform: 'scaleY(-1)',
+    },
 }));
 
 export interface BulletHeaderProps {
@@ -58,37 +60,45 @@ const BulletHeader = ({
 }: BulletHeaderProps): ReactElement => {
     const classes = useStyles();
     return (
-        <Box id={`bullet-header-${bullet.id}`} className={classes.root}>
-            <Box id={`bullet-header-ms-${bullet.id}`}>
+        <Box data-cy={`bullet-header-${bullet.id}`} className={classes.root}>
+            <Box data-cy={`bullet-header-ms-${bullet.id}`}>
                 <Typography>
                     ::{new Date(bullet.date).getMilliseconds()}
                 </Typography>
             </Box>
             <Box
-                id={`bullet-header-method-${bullet.id}`}
+                data-cy={`bullet-header-method-${bullet.id}`}
                 className={classes.methodBadge}
             >
                 <Typography>{bullet.method.toUpperCase()}</Typography>
             </Box>
-            <Box id={`bullet-header-url-${bullet.id}`} className={classes.url}>
+            <Box
+                data-cy={`bullet-header-url-${bullet.id}`}
+                className={classes.url}
+            >
                 <Typography>{bullet.url}</Typography>
             </Box>
             <Box
-                id={`bullet-header-filler-${bullet.id}`}
+                data-cy={`bullet-header-filler-${bullet.id}`}
                 className={classes.filler}
             ></Box>
             <Box
-                id={`bullet-header-status-${bullet.id}`}
+                data-cy={`bullet-header-status-${bullet.id}`}
                 className={classes.statusBadge}
             >
                 <Typography>{bullet.response?.status}</Typography>
             </Box>
-            <ToolTip title="TODO">
+            <ToolTip
+                uuid={`bullet-header-collapse-tooltip-${bullet.id}`}
+                title="TODO"
+            >
                 <img
-                    id={`bullet-header-collapse-${bullet.id}`}
-                    src={collapse ? DownCarret : UpCarret}
+                    data-cy={`bullet-header-collapse-${bullet.id}`}
+                    src={DownCarret}
                     alt="TODO"
-                    className={classes.downCarret}
+                    className={`${classes.downCarret} ${
+                        collapse ? '' : classes.flipY
+                    }`}
                     onClick={onClick}
                 />
             </ToolTip>

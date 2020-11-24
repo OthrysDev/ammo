@@ -1,5 +1,8 @@
 const englishMessages = {
-    Hello: 'Hello',
+    Headers: 'Headers',
+    Body: 'Body',
+    Response: 'Response',
+    Request: 'Request',
 };
 
 export default englishMessages;
