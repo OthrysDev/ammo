@@ -63,9 +63,7 @@ describe('Testing endpoints', () => {
             .send({ data: nonValidUrlMock })
             .expect(400)
             .expect((r: HTTPError) => {
-                expect(r.error.text).toContain(
-                    '"\\"url\\" with value \\"AfakeUrlWhosGonnaMiss\\" fails to match the required pattern'
-                );
+                expect(r.error.text).toMatchSnapshot();
             });
     });
 });
