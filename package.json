@@ -6,7 +6,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "(cd ammo-fe && npm run lint) & (cd ammo-be && jest --runInBand) & (cd ammo-be && npm run lint)"
+      "pre-commit": "(cd ammo-fe && npm run precommit) & (cd ammo-be && npm run precommit)"
     }
   },
   "lint-staged": {

@@ -46,7 +46,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "test:e2e": "cypress open",
-    "lint": "eslint --max-warnings=0 --ext .tsx src/ "
+    "lint": "eslint --max-warnings=0 --ext .tsx src/ ",
+    "precommit" : "npm run lint"
   },
   "eslintConfig": {
     "extends": [
