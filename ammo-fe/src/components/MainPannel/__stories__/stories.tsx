@@ -8,7 +8,7 @@ import {
 
 export default {
     component: MainPannel,
-    title: 'MainPannel',
+    title: 'Components/MainPannel',
 };
 
 const MainPannelTemplate: Story<MainPannelProps> = ({ bullets }) => {

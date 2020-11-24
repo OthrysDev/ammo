@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`FileProperties Pages/Error Default 1`] = `
+<div
+  className="MuiBox-root MuiBox-root-493 makeStyles-root-487"
+  data-cy="not-found"
+>
+  <div
+    className="MuiBox-root MuiBox-root-494 makeStyles-centered-488"
+  >
+    <div
+      className="MuiBox-root MuiBox-root-495 makeStyles-title-489"
+    >
+      <h4
+        className="MuiTypography-root MuiTypography-h4"
+      >
+        Default title
+      </h4>
+    </div>
+    <div
+      className="MuiBox-root MuiBox-root-496 makeStyles-content-490"
+    >
+      <p
+        className="MuiTypography-root MuiTypography-body1"
+      >
+        Default content
+      </p>
+    </div>
+    <button
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-491"
+      disabled={false}
+      onBlur={[Function]}
+      onDragLeave={[Function]}
+      onFocus={[Function]}
+      onKeyDown={[Function]}
+      onKeyUp={[Function]}
+      onMouseDown={[Function]}
+      onMouseLeave={[Function]}
+      onMouseUp={[Function]}
+      onTouchEnd={[Function]}
+      onTouchMove={[Function]}
+      onTouchStart={[Function]}
+      tabIndex={0}
+      type="button"
+    >
+      <span
+        className="MuiButton-label"
+      >
+        <svg
+          aria-hidden={true}
+          className="MuiSvgIcon-root makeStyles-icon-492"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+          />
+        </svg>
+        <h6
+          className="MuiTypography-root MuiTypography-subtitle2"
+        >
+          Default button
+        </h6>
+      </span>
+    </button>
+  </div>
+</div>
+`;

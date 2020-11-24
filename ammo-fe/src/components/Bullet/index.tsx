@@ -1,11 +1,10 @@
 import React, { ReactElement, useState } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Box from '@material-ui/core/Box';
+import Grow from '@material-ui/core/Grow';
 import IBullet from 'imported/IBullet';
 import BulletHeader from 'components/Bullet/BulletHeader';
 import BulletDesc from 'components/Bullet/BulletDesc';
-import 'simplebar';
-import 'simplebar/dist/simplebar.css';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -28,15 +27,17 @@ const Bullet = ({ bullet }: BulletProps): ReactElement => {
     const [collapse, setCollapse] = useState(true);
 
     return (
-        <Box data-cy={`bullet-${bullet.id}`} className={classes.root}>
-            <BulletHeader
-                bullet={bullet}
-                collapse={collapse}
-                onClick={() => setCollapse(!collapse)}
-            />
+        <Grow in>
+            <Box data-cy={`bullet-${bullet.id}`} className={classes.root}>
+                <BulletHeader
+                    bullet={bullet}
+                    collapse={collapse}
+                    onClick={() => setCollapse(!collapse)}
+                />
 
-            <BulletDesc bullet={bullet} collapse={collapse} />
-        </Box>
+                <BulletDesc bullet={bullet} collapse={collapse} />
+            </Box>
+        </Grow>
     );
 };
 

@@ -5,6 +5,7 @@ import Box from '@material-ui/core/Box';
 import ToolTip from 'components/misc/ToolTip';
 import IBullet from 'imported/IBullet';
 import DownCarret from 'assets/down_carret.svg';
+import useI18n from 'hooks/useI18n';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -59,6 +60,7 @@ const BulletHeader = ({
     onClick,
 }: BulletHeaderProps): ReactElement => {
     const classes = useStyles();
+    const i18n = useI18n();
     return (
         <Box data-cy={`bullet-header-${bullet.id}`} className={classes.root}>
             <Box data-cy={`bullet-header-ms-${bullet.id}`}>
@@ -90,12 +92,14 @@ const BulletHeader = ({
             </Box>
             <ToolTip
                 uuid={`bullet-header-collapse-tooltip-${bullet.id}`}
-                title="TODO"
+                title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
             >
                 <img
                     data-cy={`bullet-header-collapse-${bullet.id}`}
                     src={DownCarret}
-                    alt="TODO"
+                    alt={i18n(
+                        collapse ? 'Img.Alt.DownCarret' : 'Img.Alt.UpCarret'
+                    )}
                     className={`${classes.downCarret} ${
                         collapse ? '' : classes.flipY
                     }`}

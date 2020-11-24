@@ -1,6 +1,6 @@
 import IBullet from 'imported/IBullet';
 
-const generateMockBullet = (index: number = 0) => {
+const generateMockBullet = (index: number = 0): IBullet => {
     const mockBullet: IBullet = {
         id: `id${index}`,
         url: `http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/${index}`,
@@ -26,7 +26,7 @@ const generateMockBullet = (index: number = 0) => {
     return mockBullet;
 };
 
-const generateMockBullets = (index: number) => {
+const generateMockBullets = (index: number): IBullet[] => {
     const mockBullets = [];
     for (let i = 0; i < index; i++) mockBullets.push(generateMockBullet(i));
     return mockBullets;

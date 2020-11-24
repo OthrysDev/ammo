@@ -1,5 +1,61 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`FileProperties Components/MainPannel Empty 1`] = `
+<div
+  className="makeStyles-scrollbar-52"
+  data-simplebar={true}
+>
+  <div
+    className="simplebar-wrapper"
+  >
+    <div
+      className="simplebar-height-auto-observer-wrapper"
+    >
+      <div
+        className="simplebar-height-auto-observer"
+      />
+    </div>
+    <div
+      className="simplebar-mask"
+    >
+      <div
+        className="simplebar-offset"
+      >
+        <div
+          className="simplebar-content-wrapper"
+        >
+          <div
+            className="simplebar-content"
+          >
+            <div
+              className="MuiBox-root MuiBox-root-54 makeStyles-root-53"
+              data-cy="main-pannel"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="simplebar-placeholder"
+    />
+  </div>
+  <div
+    className="simplebar-track simplebar-horizontal"
+  >
+    <div
+      className="simplebar-scrollbar"
+    />
+  </div>
+  <div
+    className="simplebar-track simplebar-vertical"
+  >
+    <div
+      className="simplebar-scrollbar"
+    />
+  </div>
+</div>
+`;
+
 exports[`FileProperties MainPannel Default 1`] = `
 <div
   className="MuiBox-root MuiBox-root-55 makeStyles-root-54"

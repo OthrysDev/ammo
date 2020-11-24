@@ -19,15 +19,14 @@ const ModalTemplate: Story<ModalProps> = ({
     ariaLabelledby,
     ariaDescribedby,
 }) => {
-    return <div>TODO</div>;
-    // return (
-    //     <Modal
-    //         open={open}
-    //         children={children}
-    //         ariaLabelledby={ariaLabelledby}
-    //         ariaDescribedby={ariaDescribedby}
-    //     />
-    // );
+    return (
+        <Modal
+            open={open}
+            children={children}
+            ariaLabelledby={ariaLabelledby}
+            ariaDescribedby={ariaDescribedby}
+        />
+    );
 };
 
 export const Default = ModalTemplate.bind({});

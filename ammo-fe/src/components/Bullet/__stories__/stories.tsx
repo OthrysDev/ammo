@@ -5,7 +5,7 @@ import { generateMockBullet } from 'components/Bullet/__stories__/mocks/IBullet.
 
 export default {
     component: Bullet,
-    title: 'Bullet',
+    title: 'Components/Bullet',
 };
 
 const BulletTemplate: Story<BulletProps> = ({ bullet }) => {
