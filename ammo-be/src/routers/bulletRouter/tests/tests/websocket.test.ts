@@ -47,7 +47,7 @@ describe('Testing WebSockets', () => {
         await request(app).post('/').send({ data: connectorMock }).expect(200);
     });
 
-    it('Make an API call, the WebSocket must trigger and return a bullet', async (done) => {
+    it('Make an API call with an incorrect mock - Should catch error', async (done) => {
         socket.on('bullet', () => {
             done.fail('Should not catch a bullet as the data is incorrect.');
         });
