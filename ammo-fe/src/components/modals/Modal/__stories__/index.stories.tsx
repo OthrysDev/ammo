@@ -49,3 +49,4 @@
 //     ariaLabelledby: 'aria-labelled-by',
 //     ariaDescribedby: 'aria-described-by',
 // };
+export {};

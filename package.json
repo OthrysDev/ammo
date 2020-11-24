@@ -1,6 +1,6 @@
 {
     "scripts": {
         "start": "(cd ammo-be && npm start) & (cd ammo-fe && npm start)",
-        "install": "(cd ammo-be && npm install) && (cd ../ammo-fe && npm install)"
+        "install": "(cd ammo-be && npm install) && (cd ammo-fe && npm install)"
     }
 }
