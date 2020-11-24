@@ -1,6 +1,6 @@
 import Joi from 'joi';
 import Sizeof from 'object-sizeof';
-import urlRegex from 'utils/regexs/regexs';
+import urlRegex from 'utils/validationUtils/validationUtils';
 
 const customBodyLengthValidation = (value: string): string => {
     // Sizeof calculations of bytes based
