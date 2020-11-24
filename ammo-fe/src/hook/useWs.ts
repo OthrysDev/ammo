@@ -7,21 +7,21 @@ const useWS = (): void => {
     const dispatch = useDispatch();
 
     socket.on('connect', () => {
-        dispatch({ type: 'connected' });
+        dispatch({ type: 'CONNECTED' });
     });
 
     socket.on('bullet', ({ bullet }) => {
-        dispatch({ type: 'receivedBullet', bullet });
+        dispatch({ type: 'RECEIVED_BULLET', bullet });
     });
 
     // For a list of all reasons why the ws can disconenct : https://socket.io/docs/v3/client-api/#Event-%E2%80%98disconnect%E2%80%99
     socket.on('disconnect', (reason: string) => {
-        dispatch({ type: 'disconnect' });
+        dispatch({ type: 'DISCONNECTED' });
 
         if (reason === 'io server disconnect') {
             // the disconnection was initiated by the server, you need to reconnect manually
             socket.connect();
-            dispatch({ type: 'connected' });
+            dispatch({ type: 'CONNECTED' });
         }
         // else the socket will automatically try to reconnect
     });

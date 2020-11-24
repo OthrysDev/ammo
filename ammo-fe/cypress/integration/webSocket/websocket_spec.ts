@@ -13,7 +13,7 @@ describe('WebSocket', () => {
         socket.on('bullet', ({ bullet }) => {
             cy.window()
                 .its('store')
-                .invoke('dispatch', { type: 'receivedBullet', bullet });
+                .invoke('dispatch', { type: 'RECEIVED_BULLET', bullet });
         });
     });
 
@@ -33,7 +33,7 @@ describe('WebSocket', () => {
     });
 
     it('Disconnect the webSocket - Ui must change accordingly', () => {
-        cy.window().its('store').invoke('dispatch', { type: 'disconnect' });
+        cy.window().its('store').invoke('dispatch', { type: 'DISCONNECTED' });
 
         cy.get('[data-cy=ws-not-connected]');
     });

@@ -1,7 +1,7 @@
 import { Bullet } from 'shared/typings/Bullet';
 
 type WebSocketReducerAction = {
-    type: 'connected' | 'disconnect' | 'receivedBullet';
+    type: 'CONNECTED' | 'DISCONNECTED' | 'RECEIVED_BULLET';
     bullet?: Bullet;
 };
 
@@ -15,11 +15,11 @@ export default function webSocketReducer(
     action: WebSocketReducerAction
 ): WebSocketReducerState {
     switch (action.type) {
-        case 'receivedBullet':
+        case 'RECEIVED_BULLET':
             return { ...state, bullets: [...state.bullets, action.bullet] };
-        case 'connected':
+        case 'CONNECTED':
             return { ...state, connected: true };
-        case 'disconnect':
+        case 'DISCONNECTED':
             return { ...state, connected: false };
         default:
             return state;
