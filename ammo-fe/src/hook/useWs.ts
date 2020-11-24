@@ -3,7 +3,7 @@ import { useDispatch } from 'react-redux';
 
 const socket = io('http://localhost:3001');
 
-const useWs = (): void => {
+const useWS = (): void => {
     const dispatch = useDispatch();
 
     socket.on('connect', () => {
@@ -27,4 +27,4 @@ const useWs = (): void => {
     });
 };
 
-export default useWs;
+export default useWS;

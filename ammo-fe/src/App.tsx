@@ -1,11 +1,11 @@
 import * as React from 'react';
 import { useSelector } from 'react-redux';
 import { RootReducer } from 'redux/reducers';
-import useWs from 'hook/useWs';
+import useWS from 'hook/useWS';
 import { Bullet } from 'shared/typings/Bullet';
 
 function App(): React.ReactElement {
-    useWs();
+    useWS();
 
     const connected = useSelector((state: RootReducer) => state.ws.connected);
     const bullets = useSelector((state: RootReducer) => state.ws.bullets);
