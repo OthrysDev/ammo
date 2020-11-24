@@ -1,5 +1,5 @@
 import express from 'express';
-import { ioServer } from 'index';
+import { ioServer } from 'webSocket/index';
 import bulletSchema from 'validators/bulletValidator';
 import { Bullet } from 'shared/typings/Bullet';
 

@@ -2,7 +2,7 @@
   "scripts": {
     "start": "(cd ammo-be && npm start) & (cd ammo-fe && npm start)",
     "install": "(cd ammo-be && npm install) && (cd ammo-fe && npm install)",
-    "export" : "ncp ammo-be/src/shared ammo-fe/src/shared --stoponErr"
+    "export": "ncp ammo-be/src/shared ammo-fe/src/shared --stoponErr"
   },
   "husky": {
     "hooks": {
