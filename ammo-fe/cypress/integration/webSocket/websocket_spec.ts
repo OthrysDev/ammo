@@ -1,5 +1,5 @@
 import MockedSocket from 'socket.io-mock';
-import { connectorMock } from '../../../src/mocks/Bullets';
+import { connectorMock } from '../../../src/shared/mocks/Bullets';
 
 const socket = new MockedSocket();
 
@@ -23,19 +23,19 @@ describe('WebSocket', () => {
     });
 
     it('Must connect properly to the server', () => {
-        cy.get('#ws-connected');
+        cy.get('[data-cy=ws-connected]');
     });
 
-    it('Send a bullet, must see the bullet on the UI', () => {
+    it('Server sends a bullet, must see the bullet on the UI', () => {
         socket.socketClient.emit('bullet', { bullet: connectorMock });
 
-        cy.get('#bullets').children().should('have.length', 1);
+        cy.get('[data-cy=bullets]').children().should('have.length', 1);
     });
 
     it('Disconnect the webSocket - Ui must change accordingly', () => {
         cy.window().its('store').invoke('dispatch', { type: 'disconnect' });
 
-        cy.get('#ws-not-connected');
+        cy.get('[data-cy=ws-not-connected]');
     });
 });
 

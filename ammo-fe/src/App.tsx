@@ -16,7 +16,7 @@ function App(): React.ReactElement {
                 {connected ? (
                     <>
                         {bullets && (
-                            <div id="bullets">
+                            <div data-cy="bullets">
                                 {bullets.map(
                                     (bullet: Bullet, index: number) => (
                                         <div key={index}>{bullet.url}</div>
@@ -24,7 +24,7 @@ function App(): React.ReactElement {
                                 )}
                             </div>
                         )}
-                        <p id="ws-connected">
+                        <p data-cy="ws-connected">
                             Edit <code>src/App.tsx</code> and save to reload.
                         </p>
                         <a
@@ -38,7 +38,7 @@ function App(): React.ReactElement {
                     </>
                 ) : (
                     <p
-                        id="ws-not-connected"
+                        data-cy="ws-not-connected"
                         style={{ color: 'red', fontSize: '22px' }}
                     >
                         You're not connected
