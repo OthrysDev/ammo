@@ -51,9 +51,7 @@ describe('Testing endpoints', () => {
             .send({ data: overweightedBulletMock })
             .expect(400)
             .expect((r: HTTPError) => {
-                expect(r.error.text).toContain(
-                    '\\"request.body\\" failed custom validation because your body is too heavy, max 50Ko"'
-                );
+                expect(r.error.text).toMatchSnapshot();
             });
     });
 

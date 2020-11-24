@@ -1,6 +1,6 @@
 import { Bullet } from 'shared/typings/Bullet';
 
-const createOverweight = (): string => {
+export const createOverweight = (): string => {
     let string = '';
 
     // 42 Because it's the perfect number to go overweight by a few bytes

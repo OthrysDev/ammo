@@ -1,20 +1,11 @@
 import Joi from 'joi';
-import Sizeof from 'object-sizeof';
-import urlRegex from 'utils/validationUtils/validationUtils';
-
-const customBodyLengthValidation = (value: string): string => {
-    // Sizeof calculations of bytes based
-    const requestBodySize = Sizeof(value);
-
-    // Arbitrary value of 50ko
-    if (requestBodySize > 50000) {
-        throw new Error('your body is too heavy, max 50Ko');
-    }
-    return value;
-};
+import {
+    isValidUrl,
+    weightValidator,
+} from 'utils/validationUtils/validationUtils';
 
 const bulletSchema = Joi.object({
-    url: Joi.string().regex(urlRegex).required(),
+    url: Joi.string().regex(isValidUrl).required(),
     method: Joi.string()
         .valid(
             ...[
@@ -32,11 +23,11 @@ const bulletSchema = Joi.object({
         .required(),
     request: Joi.object().keys({
         headers: Joi.object().unknown(),
-        body: Joi.custom(customBodyLengthValidation),
+        body: Joi.custom(weightValidator),
     }),
     response: Joi.object().keys({
         headers: Joi.object().unknown().required(),
-        body: Joi.custom(customBodyLengthValidation),
+        body: Joi.custom(weightValidator),
         status: Joi.number().required(),
     }),
 });

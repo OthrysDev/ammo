@@ -11,12 +11,14 @@ bulletRouter.post(
         try {
             const potentialBullet: Bullet = { ...req.body.data };
 
-            const { error, value } = bulletSchema.validate(potentialBullet);
+            const { error, value: bullet } = bulletSchema.validate(
+                potentialBullet
+            );
             if (error) throw new Error(error.details[0].message);
 
-            ioServer.emit('bullet', { bullet: value });
+            ioServer.emit('bullet', { bullet });
 
-            return res.status(200).json({ bullet: potentialBullet });
+            return res.status(200).json({ bullet });
         } catch ({ message }) {
             return res.status(400).json({ message });
         }
