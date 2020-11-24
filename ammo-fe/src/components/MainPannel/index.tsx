@@ -26,6 +26,7 @@ export interface MainPannelProps {
 
 const MainPannel = ({ bullets = [] }: MainPannelProps): ReactElement => {
     const classes = useStyles();
+
     return (
         <SimpleBar className={classes.scrollbar}>
             <Box data-cy="main-pannel" className={classes.root}>
