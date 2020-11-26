@@ -8,7 +8,11 @@ import theme from 'material/Theme';
 
 addDecorator((story) => (
     <Provider store={store}>
-        <I18nProvider>
+        <I18nProvider
+            onError={() => {
+                /** Ignore i18n errors during tests */
+            }}
+        >
             <ThemeProvider theme={theme}>{story()}</ThemeProvider>
         </I18nProvider>
     </Provider>
