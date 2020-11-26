@@ -14,17 +14,17 @@ let i = 0;
 
 function App(): ReactElement {
     const [bullets, setBullets] = useState<IBullet[]>([]);
-    throw new Error('bui');
-    // useEffect(() => {
-    //     setInterval(
-    //         () =>
-    //             setBullets((prevState) => [
-    //                 ...prevState,
-    //                 generateMockBullet(i++),
-    //             ]),
-    //         1000
-    //     );
-    // }, []);
+
+    useEffect(() => {
+        setInterval(
+            () =>
+                setBullets((prevState) => [
+                    ...prevState,
+                    generateMockBullet(i++),
+                ]),
+            1000
+        );
+    }, []);
 
     return (
         <Router>
