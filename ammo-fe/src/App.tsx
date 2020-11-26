@@ -1,30 +1,23 @@
-import React, { ReactElement, useState, useEffect } from 'react';
+import React, { ReactElement } from 'react';
 import Layout from 'components/Layout';
 import MainPannel from 'components/MainPannel';
-import {
-    generateMockBullet,
-    generateMockBullets,
-} from 'components/Bullet/__stories__/mocks/IBullet.mock';
-import IBullet from 'imported/IBullet';
-
-let i = 0;
+import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import RouterFallback from 'RouterFallback';
 
 function App(): ReactElement {
-    const [bullets, setBullets] = useState<IBullet[]>([]);
-    // useEffect(() => {
-    //     setInterval(
-    //         () =>
-    //             setBullets((prevState) => [
-    //                 ...prevState,
-    //                 generateMockBullet(i++),
-    //             ]),
-    //         3000
-    //     );
-    // }, []);
     return (
-        <Layout>
-            <MainPannel bullets={bullets} />
-        </Layout>
+        <Router>
+            <Switch>
+                <Route exact path="/">
+                    <Layout>
+                        <MainPannel />
+                    </Layout>
+                </Route>
+                <Route path="*">
+                    <RouterFallback />
+                </Route>
+            </Switch>
+        </Router>
     );
 }
 
