@@ -29,7 +29,7 @@ describe('WebSocket', () => {
     it('Server sends a bullet, must see the bullet on the UI', () => {
         socket.socketClient.emit('bullet', { bullet: connectorMock });
 
-        cy.get('[data-cy=bullets]').children().should('have.length', 2);
+        cy.get('[data-cy=bullets]').children().should('have.length', 1);
     });
 
     it('Disconnect the webSocket - Ui must change accordingly', () => {

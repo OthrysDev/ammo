@@ -8,22 +8,20 @@ function App(): React.ReactElement {
     useWS();
 
     const connected = useSelector((state: RootReducer) => state.ws.connected);
-    const bullets = useSelector((state: RootReducer) => state.ws.bullets);
+    const bullets = useSelector((state: RootReducer) => state.bullets);
 
     return (
         <div className="App">
             <header className="App-header">
+                {bullets && (
+                    <div data-cy="bullets">
+                        {bullets.map((bullet: Bullet, index: number) => (
+                            <div key={index}>{bullet.url}</div>
+                        ))}
+                    </div>
+                )}
                 {connected ? (
                     <>
-                        {bullets && (
-                            <div data-cy="bullets">
-                                {bullets.map(
-                                    (bullet: Bullet, index: number) => (
-                                        <div key={index}>{bullet.url}</div>
-                                    )
-                                )}
-                            </div>
-                        )}
                         <p data-cy="ws-connected">
                             Edit <code>src/App.tsx</code> and save to reload.
                         </p>

@@ -5,18 +5,18 @@ import i18nReducer, {
 import webSocketReducer, {
     WebSocketReducerState,
 } from 'redux/reducers/webSocketReducer';
-import customReducer, {
-    CustomReducerState,
-} from 'redux/reducers/ReducerExemple';
+import bulletReducer, {
+    BulletReducerState,
+} from 'redux/reducers/bulletReducer';
 
 export interface RootReducer {
     i18n: i18nState;
-    custom: CustomReducerState;
     ws: WebSocketReducerState;
+    bullets: BulletReducerState;
 }
 
 export default combineReducers({
     i18n: i18nReducer,
-    custom: customReducer,
     ws: webSocketReducer,
+    bullets: bulletReducer,
 });

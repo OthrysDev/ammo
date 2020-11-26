@@ -1,5 +1,6 @@
 import { io } from 'socket.io-client';
 import { useDispatch } from 'react-redux';
+import { Bullet } from 'shared/typings/Bullet';
 
 const socket = io('http://localhost:3001');
 
@@ -10,7 +11,7 @@ const useWS = (): void => {
         dispatch({ type: 'CONNECTED' });
     });
 
-    socket.on('bullet', ({ bullet }) => {
+    socket.on('bullet', ({ bullet }: { bullet: Bullet }) => {
         dispatch({ type: 'RECEIVED_BULLET', bullet });
     });
 
