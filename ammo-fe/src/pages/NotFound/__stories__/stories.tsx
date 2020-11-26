@@ -12,3 +12,4 @@ const NotFoundTemplate: Story = () => {
 };
 
 export const Default = NotFoundTemplate.bind({});
+Default.storyName = 'NotFound';

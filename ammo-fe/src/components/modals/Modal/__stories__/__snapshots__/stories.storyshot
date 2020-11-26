@@ -1,7 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Modals/Modal Default 1`] = `
+exports[`Modals/Modal Default 1`] = `
 <div>
-  TODO
+  YEAH
+</div>
+`;
+
+exports[`Storyshots Modals/Modal Default 1`] = `
+<div>
+  YEAH
+</div>
+`;
+
+exports[`Storyshots Modals/Modal Modal 1`] = `
+<div>
+  TODO: fix portal mock so that storybook / jest snapshots work
 </div>
 `;

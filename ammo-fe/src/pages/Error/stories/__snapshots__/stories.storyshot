@@ -1,33 +1,33 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Pages/Error Default 1`] = `
+exports[`Storyshots Pages/Error Error 1`] = `
 <div
-  className="MuiBox-root MuiBox-root-493 makeStyles-root-487"
+  className="MuiBox-root MuiBox-root makeStyles-root"
   data-cy="not-found"
 >
   <div
-    className="MuiBox-root MuiBox-root-494 makeStyles-centered-488"
+    className="MuiBox-root MuiBox-root makeStyles-centered"
   >
     <div
-      className="MuiBox-root MuiBox-root-495 makeStyles-title-489"
+      className="MuiBox-root MuiBox-root makeStyles-title"
     >
       <h4
         className="MuiTypography-root MuiTypography-h4"
       >
-        Default title
+        Default.Title
       </h4>
     </div>
     <div
-      className="MuiBox-root MuiBox-root-496 makeStyles-content-490"
+      className="MuiBox-root MuiBox-root makeStyles-content"
     >
       <p
         className="MuiTypography-root MuiTypography-body1"
       >
-        Default content
+        Default.Content
       </p>
     </div>
     <button
-      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button-491"
+      className="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button"
       disabled={false}
       onBlur={[Function]}
       onDragLeave={[Function]}
@@ -48,7 +48,7 @@ exports[`FileProperties Pages/Error Default 1`] = `
       >
         <svg
           aria-hidden={true}
-          className="MuiSvgIcon-root makeStyles-icon-492"
+          className="MuiSvgIcon-root makeStyles-icon"
           focusable="false"
           viewBox="0 0 24 24"
         >
@@ -59,7 +59,7 @@ exports[`FileProperties Pages/Error Default 1`] = `
         <h6
           className="MuiTypography-root MuiTypography-subtitle2"
         >
-          Default button
+          Default.Button
         </h6>
       </span>
     </button>

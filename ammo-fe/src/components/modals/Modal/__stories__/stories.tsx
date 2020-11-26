@@ -30,6 +30,7 @@ const ModalTemplate: Story<ModalProps> = ({
 };
 
 export const Default = ModalTemplate.bind({});
+Default.storyName = 'Modal';
 Default.args = {
     open: true,
     children: (

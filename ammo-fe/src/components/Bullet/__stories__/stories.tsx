@@ -13,6 +13,7 @@ const BulletTemplate: Story<BulletProps> = ({ bullet }) => {
 };
 
 export const Default = BulletTemplate.bind({});
+Default.storyName = 'Bullet';
 Default.args = {
     bullet: generateMockBullet(),
 };

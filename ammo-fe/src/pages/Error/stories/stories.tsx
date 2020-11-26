@@ -16,8 +16,9 @@ const ErrorTemplate: Story<ErrorProps> = ({
 };
 
 export const Default = ErrorTemplate.bind({});
+Default.storyName = 'Error';
 Default.args = {
-    title: 'Default title',
-    content: 'Default content',
-    button: 'Default button',
+    title: 'Default.Title',
+    content: 'Default.Content',
+    button: 'Default.Button',
 };

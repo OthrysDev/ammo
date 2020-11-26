@@ -12,3 +12,4 @@ const UnexpectedErrorTemplate: Story = () => {
 };
 
 export const Default = UnexpectedErrorTemplate.bind({});
+Default.storyName = 'UnexpectedError';

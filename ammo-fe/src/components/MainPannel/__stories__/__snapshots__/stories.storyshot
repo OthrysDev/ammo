@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`FileProperties Components/MainPannel Empty 1`] = `
+exports[`Storyshots Components/MainPannel Default 1`] = `
 <div
-  className="makeStyles-scrollbar-52"
+  className="makeStyles-scrollbar"
   data-simplebar={true}
 >
   <div
@@ -28,7 +28,170 @@ exports[`FileProperties Components/MainPannel Empty 1`] = `
             className="simplebar-content"
           >
             <div
-              className="MuiBox-root MuiBox-root-54 makeStyles-root-53"
+              className="MuiBox-root MuiBox-root makeStyles-root"
+              data-cy="main-pannel"
+            >
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id0"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id0"
+                >
+                  <Grow
+                    in={true}
+                  >
+                    <div
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id0"
+                    >
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id0"
+                      >
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id0"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id0"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Grow>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id0"
+                >
+                  script
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      className="simplebar-placeholder"
+    />
+  </div>
+  <div
+    className="simplebar-track simplebar-horizontal"
+  >
+    <div
+      className="simplebar-scrollbar"
+    />
+  </div>
+  <div
+    className="simplebar-track simplebar-vertical"
+  >
+    <div
+      className="simplebar-scrollbar"
+    />
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/MainPannel Empty 1`] = `
+<div
+  className="makeStyles-scrollbar"
+  data-simplebar={true}
+>
+  <div
+    className="simplebar-wrapper"
+  >
+    <div
+      className="simplebar-height-auto-observer-wrapper"
+    >
+      <div
+        className="simplebar-height-auto-observer"
+      />
+    </div>
+    <div
+      className="simplebar-mask"
+    >
+      <div
+        className="simplebar-offset"
+      >
+        <div
+          className="simplebar-content-wrapper"
+        >
+          <div
+            className="simplebar-content"
+          >
+            <div
+              className="MuiBox-root MuiBox-root makeStyles-root"
               data-cy="main-pannel"
             />
           </div>
@@ -56,344 +219,1095 @@ exports[`FileProperties Components/MainPannel Empty 1`] = `
 </div>
 `;
 
-exports[`FileProperties MainPannel Default 1`] = `
+exports[`Storyshots Components/MainPannel Rich 1`] = `
 <div
-  className="MuiBox-root MuiBox-root-55 makeStyles-root-54"
-  data-cy="main-pannel"
+  className="makeStyles-scrollbar"
   data-simplebar={true}
 >
   <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id0"
+    className="simplebar-wrapper"
   >
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id0"
+      className="simplebar-height-auto-observer-wrapper"
     >
       <div
-        className="MuiBox-root MuiBox-root-58 makeStyles-root-56"
-        data-cy="bullet-id0"
+        className="simplebar-height-auto-observer"
+      />
+    </div>
+    <div
+      className="simplebar-mask"
+    >
+      <div
+        className="simplebar-offset"
       >
         <div
-          className="MuiBox-root MuiBox-root-66 makeStyles-root-59"
-          data-cy="bullet-header-id0"
+          className="simplebar-content-wrapper"
         >
           <div
-            className="MuiBox-root MuiBox-root-67"
-            data-cy="bullet-header-ms-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-68 makeStyles-methodBadge-60"
-            data-cy="bullet-header-method-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-69 makeStyles-url-61"
-            data-cy="bullet-header-url-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-70 makeStyles-filler-63"
-            data-cy="bullet-header-filler-id0"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-71 makeStyles-statusBadge-62"
-            data-cy="bullet-header-status-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-64 "
-            data-cy="bullet-header-collapse-id0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
+            className="simplebar-content"
           >
             <div
-              className="MuiCollapse-wrapperInner"
+              className="MuiBox-root MuiBox-root makeStyles-root"
+              data-cy="main-pannel"
             >
               <div
-                className="MuiBox-root MuiBox-root-73 makeStyles-root-72"
-                data-cy="bullet-desc-id0"
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id0"
               >
                 <div
-                  className="MuiBox-root MuiBox-root-77 makeStyles-root-74"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id0"
                 >
-                  <div
-                    className="MuiBox-root MuiBox-root-78 makeStyles-border-75"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-79 makeStyles-title-76"
+                  <Grow
+                    in={true}
                   >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
+                    <div
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id0"
                     >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-80 makeStyles-border-75"
-                  />
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id0"
+                      >
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id0"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id0"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id0"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Grow>
                 </div>
                 <div
-                  className="MuiBox-root MuiBox-root-83"
-                  data-cy="bullet-desc-req-headers-id0"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id0"
                 >
-                  <div
-                    className="MuiBox-root MuiBox-root-84 makeStyles-title-81"
-                    data-cy="bullet-desc-req-headers-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-85 makeStyles-values-82"
-                    data-cy="bullet-desc-req-headers-id0-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-86"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-87 makeStyles-values-82"
-                    data-cy="bullet-desc-req-headers-id0-line-1"
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id1"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id1"
+                >
+                  <Grow
+                    in={true}
                   >
                     <div
-                      className="MuiBox-root MuiBox-root-88"
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id1"
                     >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id1"
                       >
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-1-key"
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id1"
                         >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-1-value"
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id1"
                         >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id1"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/1
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id1"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id1"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id1"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </Grow>
                 </div>
                 <div
-                  className="MuiBox-root MuiBox-root-89"
-                  data-cy="bullet-desc-req-body-id0"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id1"
                 >
-                  <div
-                    className="MuiBox-root MuiBox-root-90 makeStyles-title-81"
-                    data-cy="bullet-desc-req-body-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-91 makeStyles-values-82"
-                    data-cy="bullet-desc-req-body-id0-value"
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id2"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id2"
+                >
+                  <Grow
+                    in={true}
                   >
                     <div
-                      className="MuiBox-root MuiBox-root-92"
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id2"
                     >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id2"
                       >
-                        {requestKey: 'requestValue'}
-                      </h6>
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id2"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id2"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id2"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/2
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id2"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id2"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id2"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </Grow>
                 </div>
                 <div
-                  className="MuiBox-root MuiBox-root-93 makeStyles-root-74"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id2"
                 >
-                  <div
-                    className="MuiBox-root MuiBox-root-94 makeStyles-border-75"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-95 makeStyles-title-76"
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id3"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id3"
+                >
+                  <Grow
+                    in={true}
                   >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
+                    <div
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id3"
                     >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-96 makeStyles-border-75"
-                  />
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id3"
+                      >
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id3"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id3"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id3"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/3
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id3"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id3"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id3"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Grow>
                 </div>
                 <div
-                  className="MuiBox-root MuiBox-root-97"
-                  data-cy="bullet-desc-res-headers-id0"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id3"
                 >
-                  <div
-                    className="MuiBox-root MuiBox-root-98 makeStyles-title-81"
-                    data-cy="bullet-desc-res-headers-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-99 makeStyles-values-82"
-                    data-cy="bullet-desc-res-headers-id0-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-100"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-101 makeStyles-values-82"
-                    data-cy="bullet-desc-res-headers-id0-line-1"
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id4"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id4"
+                >
+                  <Grow
+                    in={true}
                   >
                     <div
-                      className="MuiBox-root MuiBox-root-102"
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id4"
                     >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id4"
                       >
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-1-key"
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id4"
                         >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-1-value"
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id4"
                         >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id4"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/4
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id4"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id4"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id4"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </Grow>
                 </div>
                 <div
-                  className="MuiBox-root MuiBox-root-103"
-                  data-cy="bullet-desc-res-body-id0"
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id4"
                 >
-                  <div
-                    className="MuiBox-root MuiBox-root-104 makeStyles-title-81"
-                    data-cy="bullet-desc-res-body-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-105 makeStyles-values-82"
-                    data-cy="bullet-desc-res-body-id0-value"
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id5"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id5"
+                >
+                  <Grow
+                    in={true}
                   >
                     <div
-                      className="MuiBox-root MuiBox-root-106"
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id5"
                     >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id5"
                       >
-                        {responseKey: 'responseValue'}
-                      </h6>
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id5"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id5"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id5"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/5
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id5"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id5"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id5"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
                     </div>
-                  </div>
+                  </Grow>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id5"
+                >
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id6"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id6"
+                >
+                  <Grow
+                    in={true}
+                  >
+                    <div
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id6"
+                    >
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id6"
+                      >
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id6"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id6"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id6"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/6
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id6"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id6"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id6"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Grow>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id6"
+                >
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id7"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id7"
+                >
+                  <Grow
+                    in={true}
+                  >
+                    <div
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id7"
+                    >
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id7"
+                      >
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id7"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id7"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id7"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/7
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id7"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id7"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id7"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Grow>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id7"
+                >
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id8"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id8"
+                >
+                  <Grow
+                    in={true}
+                  >
+                    <div
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id8"
+                    >
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id8"
+                      >
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id8"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id8"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id8"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/8
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id8"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id8"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id8"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Grow>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id8"
+                >
+                  script
+                </div>
+              </div>
+              <div
+                className="MuiGrid-root MuiGrid-container"
+                data-cy="main-pannel-outer-grid-bullet-id9"
+              >
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-left-grid-bullet-id9"
+                >
+                  <Grow
+                    in={true}
+                  >
+                    <div
+                      className="MuiBox-root MuiBox-root makeStyles-root"
+                      data-cy="bullet-id9"
+                    >
+                      <div
+                        className="MuiBox-root MuiBox-root makeStyles-root"
+                        data-cy="bullet-header-id9"
+                      >
+                        <div
+                          className="MuiBox-root MuiBox-root"
+                          data-cy="bullet-header-ms-id9"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            ::
+                            0
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-methodBadge"
+                          data-cy="bullet-header-method-id9"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            GET
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-url"
+                          data-cy="bullet-header-url-id9"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/9
+                          </p>
+                        </div>
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-filler"
+                          data-cy="bullet-header-filler-id9"
+                        />
+                        <div
+                          className="MuiBox-root MuiBox-root makeStyles-statusBadge"
+                          data-cy="bullet-header-status-id9"
+                        >
+                          <p
+                            className="MuiTypography-root MuiTypography-body1"
+                          >
+                            200
+                          </p>
+                        </div>
+                        <img
+                          alt="Down carret"
+                          aria-describedby={null}
+                          className="makeStyles-downCarret "
+                          data-cy="bullet-header-collapse-id9"
+                          onBlur={[Function]}
+                          onClick={[Function]}
+                          onFocus={[Function]}
+                          onMouseLeave={[Function]}
+                          onMouseOver={[Function]}
+                          onTouchEnd={[Function]}
+                          onTouchStart={[Function]}
+                          src="down_carret.svg"
+                          title="Uncollapse"
+                        />
+                      </div>
+                      <div
+                        className="MuiCollapse-container MuiCollapse-hidden"
+                        style={
+                          Object {
+                            "minHeight": "0px",
+                          }
+                        }
+                      >
+                        <div
+                          className="MuiCollapse-wrapper"
+                        >
+                          <div
+                            className="MuiCollapse-wrapperInner"
+                          />
+                        </div>
+                      </div>
+                    </div>
+                  </Grow>
+                </div>
+                <div
+                  className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
+                  data-cy="main-pannel-right-grid-bullet-id9"
+                >
+                  script
                 </div>
               </div>
             </div>
@@ -402,3488 +1316,22 @@ exports[`FileProperties MainPannel Default 1`] = `
       </div>
     </div>
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id0"
-    >
-      script
-    </div>
-  </div>
-</div>
-`;
-
-exports[`FileProperties MainPannel Empty 1`] = `
-<div
-  className="MuiBox-root MuiBox-root-53 makeStyles-root-52"
-  data-cy="main-pannel"
-  data-simplebar={true}
-/>
-`;
-
-exports[`FileProperties MainPannel Rich 1`] = `
-<div
-  className="MuiBox-root MuiBox-root-108 makeStyles-root-107"
-  data-cy="main-pannel"
-  data-simplebar={true}
->
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id0"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id0"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-111 makeStyles-root-109"
-        data-cy="bullet-id0"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-119 makeStyles-root-112"
-          data-cy="bullet-header-id0"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-120"
-            data-cy="bullet-header-ms-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-121 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-122 makeStyles-url-114"
-            data-cy="bullet-header-url-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-123 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id0"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-124 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id0"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id0"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-126 makeStyles-root-125"
-                data-cy="bullet-desc-id0"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-130 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-131 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-132 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-133 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-136"
-                  data-cy="bullet-desc-req-headers-id0"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-137 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-138 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id0-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-139"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-140 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id0-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-141"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id0-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-142"
-                  data-cy="bullet-desc-req-body-id0"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-143 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-144 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id0-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-145"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-146 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-147 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-148 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-149 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-150"
-                  data-cy="bullet-desc-res-headers-id0"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-151 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-152 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id0-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-153"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-154 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id0-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-155"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id0-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-156"
-                  data-cy="bullet-desc-res-body-id0"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-157 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id0-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-158 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id0-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-159"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id0"
-    >
-      script
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id1"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id1"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-160 makeStyles-root-109"
-        data-cy="bullet-id1"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-161 makeStyles-root-112"
-          data-cy="bullet-header-id1"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-162"
-            data-cy="bullet-header-ms-id1"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-163 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id1"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-164 makeStyles-url-114"
-            data-cy="bullet-header-url-id1"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/1
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-165 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id1"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-166 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id1"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id1"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-167 makeStyles-root-125"
-                data-cy="bullet-desc-id1"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-168 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-169 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-170 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-171 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-172"
-                  data-cy="bullet-desc-req-headers-id1"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-173 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id1-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-174 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id1-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-175"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id1-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id1-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-176 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id1-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-177"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id1-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id1-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-178"
-                  data-cy="bullet-desc-req-body-id1"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-179 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id1-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-180 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id1-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-181"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-182 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-183 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-184 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-185 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-186"
-                  data-cy="bullet-desc-res-headers-id1"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-187 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id1-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-188 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id1-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-189"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id1-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id1-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-190 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id1-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-191"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id1-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id1-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-192"
-                  data-cy="bullet-desc-res-body-id1"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-193 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id1-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-194 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id1-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-195"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id1"
-    >
-      script
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id2"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id2"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-196 makeStyles-root-109"
-        data-cy="bullet-id2"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-197 makeStyles-root-112"
-          data-cy="bullet-header-id2"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-198"
-            data-cy="bullet-header-ms-id2"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-199 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id2"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-200 makeStyles-url-114"
-            data-cy="bullet-header-url-id2"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/2
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-201 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id2"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-202 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id2"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id2"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-203 makeStyles-root-125"
-                data-cy="bullet-desc-id2"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-204 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-205 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-206 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-207 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-208"
-                  data-cy="bullet-desc-req-headers-id2"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-209 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id2-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-210 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id2-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-211"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id2-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id2-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-212 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id2-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-213"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id2-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id2-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-214"
-                  data-cy="bullet-desc-req-body-id2"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-215 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id2-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-216 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id2-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-217"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-218 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-219 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-220 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-221 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-222"
-                  data-cy="bullet-desc-res-headers-id2"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-223 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id2-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-224 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id2-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-225"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id2-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id2-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-226 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id2-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-227"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id2-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id2-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-228"
-                  data-cy="bullet-desc-res-body-id2"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-229 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id2-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-230 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id2-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-231"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id2"
-    >
-      script
-    </div>
+      className="simplebar-placeholder"
+    />
   </div>
   <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id3"
+    className="simplebar-track simplebar-horizontal"
   >
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id3"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-232 makeStyles-root-109"
-        data-cy="bullet-id3"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-233 makeStyles-root-112"
-          data-cy="bullet-header-id3"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-234"
-            data-cy="bullet-header-ms-id3"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-235 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id3"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-236 makeStyles-url-114"
-            data-cy="bullet-header-url-id3"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/3
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-237 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id3"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-238 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id3"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id3"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-239 makeStyles-root-125"
-                data-cy="bullet-desc-id3"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-240 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-241 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-242 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-243 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-244"
-                  data-cy="bullet-desc-req-headers-id3"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-245 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id3-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-246 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id3-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-247"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id3-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id3-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-248 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id3-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-249"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id3-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id3-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-250"
-                  data-cy="bullet-desc-req-body-id3"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-251 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id3-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-252 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id3-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-253"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-254 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-255 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-256 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-257 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-258"
-                  data-cy="bullet-desc-res-headers-id3"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-259 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id3-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-260 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id3-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-261"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id3-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id3-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-262 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id3-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-263"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id3-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id3-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-264"
-                  data-cy="bullet-desc-res-body-id3"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-265 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id3-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-266 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id3-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-267"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id3"
-    >
-      script
-    </div>
+      className="simplebar-scrollbar"
+    />
   </div>
   <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id4"
+    className="simplebar-track simplebar-vertical"
   >
     <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id4"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-268 makeStyles-root-109"
-        data-cy="bullet-id4"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-269 makeStyles-root-112"
-          data-cy="bullet-header-id4"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-270"
-            data-cy="bullet-header-ms-id4"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-271 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id4"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-272 makeStyles-url-114"
-            data-cy="bullet-header-url-id4"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/4
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-273 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id4"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-274 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id4"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id4"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-275 makeStyles-root-125"
-                data-cy="bullet-desc-id4"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-276 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-277 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-278 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-279 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-280"
-                  data-cy="bullet-desc-req-headers-id4"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-281 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id4-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-282 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id4-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-283"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id4-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id4-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-284 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id4-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-285"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id4-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id4-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-286"
-                  data-cy="bullet-desc-req-body-id4"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-287 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id4-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-288 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id4-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-289"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-290 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-291 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-292 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-293 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-294"
-                  data-cy="bullet-desc-res-headers-id4"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-295 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id4-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-296 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id4-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-297"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id4-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id4-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-298 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id4-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-299"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id4-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id4-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-300"
-                  data-cy="bullet-desc-res-body-id4"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-301 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id4-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-302 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id4-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-303"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id4"
-    >
-      script
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id5"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id5"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-304 makeStyles-root-109"
-        data-cy="bullet-id5"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-305 makeStyles-root-112"
-          data-cy="bullet-header-id5"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-306"
-            data-cy="bullet-header-ms-id5"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-307 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id5"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-308 makeStyles-url-114"
-            data-cy="bullet-header-url-id5"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/5
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-309 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id5"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-310 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id5"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id5"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-311 makeStyles-root-125"
-                data-cy="bullet-desc-id5"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-312 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-313 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-314 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-315 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-316"
-                  data-cy="bullet-desc-req-headers-id5"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-317 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id5-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-318 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id5-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-319"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id5-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id5-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-320 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id5-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-321"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id5-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id5-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-322"
-                  data-cy="bullet-desc-req-body-id5"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-323 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id5-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-324 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id5-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-325"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-326 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-327 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-328 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-329 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-330"
-                  data-cy="bullet-desc-res-headers-id5"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-331 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id5-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-332 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id5-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-333"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id5-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id5-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-334 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id5-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-335"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id5-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id5-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-336"
-                  data-cy="bullet-desc-res-body-id5"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-337 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id5-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-338 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id5-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-339"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id5"
-    >
-      script
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id6"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id6"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-340 makeStyles-root-109"
-        data-cy="bullet-id6"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-341 makeStyles-root-112"
-          data-cy="bullet-header-id6"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-342"
-            data-cy="bullet-header-ms-id6"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-343 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id6"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-344 makeStyles-url-114"
-            data-cy="bullet-header-url-id6"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/6
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-345 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id6"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-346 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id6"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id6"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-347 makeStyles-root-125"
-                data-cy="bullet-desc-id6"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-348 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-349 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-350 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-351 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-352"
-                  data-cy="bullet-desc-req-headers-id6"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-353 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id6-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-354 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id6-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-355"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id6-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id6-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-356 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id6-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-357"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id6-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id6-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-358"
-                  data-cy="bullet-desc-req-body-id6"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-359 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id6-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-360 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id6-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-361"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-362 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-363 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-364 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-365 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-366"
-                  data-cy="bullet-desc-res-headers-id6"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-367 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id6-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-368 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id6-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-369"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id6-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id6-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-370 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id6-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-371"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id6-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id6-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-372"
-                  data-cy="bullet-desc-res-body-id6"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-373 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id6-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-374 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id6-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-375"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id6"
-    >
-      script
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id7"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id7"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-376 makeStyles-root-109"
-        data-cy="bullet-id7"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-377 makeStyles-root-112"
-          data-cy="bullet-header-id7"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-378"
-            data-cy="bullet-header-ms-id7"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-379 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id7"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-380 makeStyles-url-114"
-            data-cy="bullet-header-url-id7"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/7
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-381 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id7"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-382 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id7"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id7"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-383 makeStyles-root-125"
-                data-cy="bullet-desc-id7"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-384 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-385 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-386 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-387 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-388"
-                  data-cy="bullet-desc-req-headers-id7"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-389 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id7-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-390 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id7-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-391"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id7-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id7-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-392 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id7-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-393"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id7-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id7-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-394"
-                  data-cy="bullet-desc-req-body-id7"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-395 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id7-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-396 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id7-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-397"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-398 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-399 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-400 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-401 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-402"
-                  data-cy="bullet-desc-res-headers-id7"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-403 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id7-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-404 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id7-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-405"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id7-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id7-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-406 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id7-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-407"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id7-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id7-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-408"
-                  data-cy="bullet-desc-res-body-id7"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-409 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id7-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-410 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id7-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-411"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id7"
-    >
-      script
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id8"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id8"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-412 makeStyles-root-109"
-        data-cy="bullet-id8"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-413 makeStyles-root-112"
-          data-cy="bullet-header-id8"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-414"
-            data-cy="bullet-header-ms-id8"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-415 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id8"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-416 makeStyles-url-114"
-            data-cy="bullet-header-url-id8"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/8
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-417 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id8"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-418 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id8"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id8"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-419 makeStyles-root-125"
-                data-cy="bullet-desc-id8"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-420 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-421 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-422 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-423 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-424"
-                  data-cy="bullet-desc-req-headers-id8"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-425 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id8-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-426 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id8-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-427"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id8-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id8-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-428 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id8-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-429"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id8-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id8-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-430"
-                  data-cy="bullet-desc-req-body-id8"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-431 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id8-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-432 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id8-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-433"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-434 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-435 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-436 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-437 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-438"
-                  data-cy="bullet-desc-res-headers-id8"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-439 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id8-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-440 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id8-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-441"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id8-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id8-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-442 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id8-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-443"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id8-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id8-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-444"
-                  data-cy="bullet-desc-res-body-id8"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-445 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id8-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-446 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id8-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-447"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id8"
-    >
-      script
-    </div>
-  </div>
-  <div
-    className="MuiGrid-root MuiGrid-container"
-    data-cy="main-pannel-outer-grid-bullet-id9"
-  >
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-left-grid-bullet-id9"
-    >
-      <div
-        className="MuiBox-root MuiBox-root-448 makeStyles-root-109"
-        data-cy="bullet-id9"
-      >
-        <div
-          className="MuiBox-root MuiBox-root-449 makeStyles-root-112"
-          data-cy="bullet-header-id9"
-        >
-          <div
-            className="MuiBox-root MuiBox-root-450"
-            data-cy="bullet-header-ms-id9"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              ::
-              0
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-451 makeStyles-methodBadge-113"
-            data-cy="bullet-header-method-id9"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              GET
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-452 makeStyles-url-114"
-            data-cy="bullet-header-url-id9"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              http://localhost/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/foo/bar/baz/9
-            </p>
-          </div>
-          <div
-            className="MuiBox-root MuiBox-root-453 makeStyles-filler-116"
-            data-cy="bullet-header-filler-id9"
-          />
-          <div
-            className="MuiBox-root MuiBox-root-454 makeStyles-statusBadge-115"
-            data-cy="bullet-header-status-id9"
-          >
-            <p
-              className="MuiTypography-root MuiTypography-body1"
-            >
-              200
-            </p>
-          </div>
-          <img
-            alt="TODO"
-            aria-describedby={null}
-            className="makeStyles-downCarret-117 "
-            data-cy="bullet-header-collapse-id9"
-            onBlur={[Function]}
-            onClick={[Function]}
-            onFocus={[Function]}
-            onMouseLeave={[Function]}
-            onMouseOver={[Function]}
-            onTouchEnd={[Function]}
-            onTouchStart={[Function]}
-            src="down_carret.svg"
-            title="TODO"
-          />
-        </div>
-        <div
-          className="MuiCollapse-container MuiCollapse-hidden"
-          style={
-            Object {
-              "minHeight": "0px",
-            }
-          }
-        >
-          <div
-            className="MuiCollapse-wrapper"
-          >
-            <div
-              className="MuiCollapse-wrapperInner"
-            >
-              <div
-                className="MuiBox-root MuiBox-root-455 makeStyles-root-125"
-                data-cy="bullet-desc-id9"
-              >
-                <div
-                  className="MuiBox-root MuiBox-root-456 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-457 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-458 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Request
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-459 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-460"
-                  data-cy="bullet-desc-req-headers-id9"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-461 makeStyles-title-134"
-                    data-cy="bullet-desc-req-headers-id9-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-462 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id9-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-463"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id9-line-0-key"
-                        >
-                          requestHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id9-line-0-value"
-                        >
-                          "
-                          requestHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-464 makeStyles-values-135"
-                    data-cy="bullet-desc-req-headers-id9-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-465"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-req-headers-id9-line-1-key"
-                        >
-                          requestHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-req-headers-id9-line-1-value"
-                        >
-                          "
-                          requestHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-466"
-                  data-cy="bullet-desc-req-body-id9"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-467 makeStyles-title-134"
-                    data-cy="bullet-desc-req-body-id9-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-468 makeStyles-values-135"
-                    data-cy="bullet-desc-req-body-id9-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-469"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {requestKey: 'requestValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-470 makeStyles-root-127"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-471 makeStyles-border-128"
-                  />
-                  <div
-                    className="MuiBox-root MuiBox-root-472 makeStyles-title-129"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Response
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-473 makeStyles-border-128"
-                  />
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-474"
-                  data-cy="bullet-desc-res-headers-id9"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-475 makeStyles-title-134"
-                    data-cy="bullet-desc-res-headers-id9-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Headers
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-476 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id9-line-0"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-477"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id9-line-0-key"
-                        >
-                          responseHeader1
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id9-line-0-value"
-                        >
-                          "
-                          responseHeader1 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-478 makeStyles-values-135"
-                    data-cy="bullet-desc-res-headers-id9-line-1"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-479"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        <span
-                          data-cy="bullet-desc-res-headers-id9-line-1-key"
-                        >
-                          responseHeader2
-                        </span>
-                         
-                        :
-                         
-                        <span
-                          data-cy="bullet-desc-res-headers-id9-line-1-value"
-                        >
-                          "
-                          responseHeader2 value
-                          "
-                        </span>
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-                <div
-                  className="MuiBox-root MuiBox-root-480"
-                  data-cy="bullet-desc-res-body-id9"
-                >
-                  <div
-                    className="MuiBox-root MuiBox-root-481 makeStyles-title-134"
-                    data-cy="bullet-desc-res-body-id9-title"
-                  >
-                    <h6
-                      className="MuiTypography-root MuiTypography-subtitle2"
-                    >
-                      Body
-                    </h6>
-                  </div>
-                  <div
-                    className="MuiBox-root MuiBox-root-482 makeStyles-values-135"
-                    data-cy="bullet-desc-res-body-id9-value"
-                  >
-                    <div
-                      className="MuiBox-root MuiBox-root-483"
-                    >
-                      <h6
-                        className="MuiTypography-root MuiTypography-subtitle2"
-                      >
-                        {responseKey: 'responseValue'}
-                      </h6>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div
-      className="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-6"
-      data-cy="main-pannel-right-grid-bullet-id9"
-    >
-      script
-    </div>
+      className="simplebar-scrollbar"
+    />
   </div>
 </div>
 `;
