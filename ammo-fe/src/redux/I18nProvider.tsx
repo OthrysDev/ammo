@@ -4,11 +4,14 @@ import { useSelector } from 'react-redux';
 import { RootReducer } from 'redux/reducers';
 
 interface I18nProviderProps {
-    children: React.ReactNode;
+    children: JSX.Element;
     onError?: () => void;
 }
 
-const I18nProvider = ({ children, onError }: I18nProviderProps) => {
+const I18nProvider = ({
+    children,
+    onError,
+}: I18nProviderProps): JSX.Element => {
     const language = useSelector((state: RootReducer) => state.i18n.language);
     const messages = useSelector((state: RootReducer) => state.i18n.messages);
 

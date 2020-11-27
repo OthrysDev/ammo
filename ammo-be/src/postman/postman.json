@@ -1,0 +1,38 @@
+{
+	"info": {
+		"_postman_id": "dcf525fd-8088-4bc0-b701-868172692763",
+		"name": "Ammo",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ammo",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\"data\":{\n    \"url\": \"http://localhost:3000/user\",\n    \"method\": \"POST\",\n    \"request\": {\n        \"headers\": {\n            \"host\": \"localhost:3000\",\n            \"connection\": \"keep-alive\",\n            \"content-length\": \"417873\",\n            \"accept\": \"application/json, text/plain, */*\",\n            \"authorization\": \"Bearer c9da47d8f9bf16af86e325adc1e191ffa6f535f3\",\n            \"client-uuid\": \"3T3iVH_DKKSHlbD9dETTvZTqUApkxNKMdlY-b0z\",\n            \"user-agent\":\n                \"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\",\n            \"content-type\":\n                \"multipart/form-data; boundary=----WebKitFormBoundarylgQY9Tli7bNsE3LG\",\n            \"origin\": \"http://localhost:3001\",\n            \"sec-fetch-site\": \"same-site\",\n            \"sec-fetch-mode\": \"cors\",\n            \"sec-fetch-dest\": \"empty\",\n            \"referer\": \"http://localhost:3001/\",\n            \"accept-encoding\": \"gzip, deflate, br\",\n            \"accept-language\": \"fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7\"\n        },\n        \"body\": {\n            \"user\":\n                \"{\\\"firstName\\\":\\\"foo\\\",\\\"name\\\":\\\"bar\\\",\\\"email\\\":\\\"foo@bar.fr\\\",\\\"password\\\":\\\"123456789\\\",\\\"hasAcceptedMails\\\":true,\\\"captcha\\\":\\\"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil\\\"}\"\n        }\n    },\n    \"response\": {\n        \"headers\": {\n            \"x-powered-by\": \"Express\",\n            \"access-control-allow-origin\": \"http://localhost:3001\",\n            \"vary\": \"Origin\",\n            \"access-control-allow-credentials\": \"true\",\n            \"access-control-expose-headers\": \"jwtToken\",\n            \"content-type\": \"application/json; charset=utf-8\",\n            \"content-length\": \"229\",\n            \"etag\": \"W/\\\"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8\\\"\"\n        },\n        \"body\":\n            \"{\\\"success\\\":true,\\\"message\\\":{\\\"user\\\":{\\\"_id\\\":\\\"5fb3a5ae5be2f60fc786d90b\\\",\\\"firstName\\\":\\\"apekrzark\\\",\\\"name\\\":\\\"ozkeropazk\\\",\\\"email\\\":\\\"zeoazk@zeork.fr\\\",\\\"hasAcceptedMails\\\":true,\\\"picture\\\":{\\\"id\\\":\\\"5fb3a5ae5be2f60fc786d90d\\\",\\\"name\\\":\\\"_ Img-2.png\\\"}}}}\",\n        \"status\": 200\n    }\n}}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3001/",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3001",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}

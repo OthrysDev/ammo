@@ -8,4 +8,5 @@ module.exports = {
     moduleFileExtensions: ['js', 'ts'],
     collectCoverage: true, // Generate the coverage/ directory. May slow down the tests runs
     moduleDirectories: ['node_modules', 'src'],
+    testEnvironment: 'node',
 };

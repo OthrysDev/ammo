@@ -1,12 +1,19 @@
 import express from 'express';
+import bodyParser from 'body-parser';
+
+import cors from 'cors';
+import bulletRouter from 'routers/bulletRouter/tests';
+import { initWS } from 'webSocket';
 
 const app = express();
-const port = 3001;
+app.use(cors({ origin: 'http://localhost:3000' }));
 
-app.get('/', (req, res) => {
-    res.send('Hello World!');
-});
+const server = app.listen(3001);
+initWS(server);
 
-app.listen(port, () => {
-    console.log(`Example app listening at http://localhost:${port}`);
-});
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
+
+app.use(bulletRouter);
+
+export default server;
