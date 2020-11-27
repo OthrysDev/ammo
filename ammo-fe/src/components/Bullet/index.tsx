@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 import Grow from '@material-ui/core/Grow';
 import BulletHeader from 'components/Bullet/BulletHeader';
 import BulletDesc from 'components/Bullet/BulletDesc';
-import { Bullet as IBullet } from 'shared/typings/Bullet';
+import { Bullet as IBullet } from 'shared/types/Bullet';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -24,7 +24,7 @@ export interface BulletProps {
 
 const Bullet = ({ bullet }: BulletProps): ReactElement => {
     const classes = useStyles();
-    const [collapse, setCollapse] = useState(true);
+    const [collapse, setCollapse] = useState<boolean>(true);
 
     const toggleCollapse = (): void => setCollapse((prevState) => !prevState);
 

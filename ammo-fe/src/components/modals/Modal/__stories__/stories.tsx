@@ -18,16 +18,14 @@ const ModalTemplate: Story<ModalProps> = ({
     children,
     ariaLabelledby,
     ariaDescribedby,
-}) => {
-    return (
-        <Modal
-            open={open}
-            children={children}
-            ariaLabelledby={ariaLabelledby}
-            ariaDescribedby={ariaDescribedby}
-        />
-    );
-};
+}) => (
+    <Modal
+        open={open}
+        children={children}
+        ariaLabelledby={ariaLabelledby}
+        ariaDescribedby={ariaDescribedby}
+    />
+);
 
 export const Default = ModalTemplate.bind({});
 Default.storyName = 'Modal';

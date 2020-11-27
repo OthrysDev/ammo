@@ -1,8 +1,5 @@
 import { createOverweight } from 'shared/mocks/Bullets';
-import {
-    isValidUrl,
-    weightValidator,
-} from 'utils/validationUtils/validationUtils';
+import { isValidUrl, hasValidWeight } from 'utils/validationUtils';
 
 describe('Email validation regex', () => {
     it('Is a valid email', () => {
@@ -20,10 +17,10 @@ describe('Email validation regex', () => {
 
 describe('Weight validation', () => {
     it('Pass a valid sized string', () => {
-        expect(weightValidator('A not so long string')).toMatchSnapshot();
+        expect(hasValidWeight('A not so long string')).toMatchSnapshot();
     });
 
     it('Pass an oversized string', () => {
-        expect(() => weightValidator(createOverweight())).toThrow();
+        expect(() => hasValidWeight(createOverweight())).toThrow();
     });
 });

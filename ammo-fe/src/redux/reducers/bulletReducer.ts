@@ -1,4 +1,4 @@
-import { Bullet } from 'shared/typings/Bullet';
+import { Bullet } from 'shared/types/Bullet';
 
 type BulletReducerAction = {
     type: 'RECEIVED_BULLET' | 'RECEIVED_BULLETS';

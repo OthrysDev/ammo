@@ -5,7 +5,7 @@ import Box from '@material-ui/core/Box';
 import ToolTip from 'components/misc/ToolTip';
 import DownCarret from 'assets/down_carret.svg';
 import useI18n from 'hooks/useI18n';
-import { Bullet } from 'shared/typings/Bullet';
+import { Bullet } from 'shared/types/Bullet';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -84,12 +84,12 @@ const BulletHeader = ({
             <Box
                 data-cy={`bullet-header-filler-${bullet.id}`}
                 className={classes.filler}
-            ></Box>
+            />
             <Box
                 data-cy={`bullet-header-status-${bullet.id}`}
                 className={classes.statusBadge}
             >
-                <Typography>{bullet.response?.status}</Typography>
+                <Typography>{bullet.response.status}</Typography>
             </Box>
             <ToolTip
                 uuid={`bullet-header-collapse-tooltip-${bullet.id}`}

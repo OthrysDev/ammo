@@ -19,6 +19,12 @@ module.exports = {
         'comma-dangle': 0,
         'object-curly-newline': 0,
         'import/no-mutable-exports': 0,
+        'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+        ],
     },
     settings: {
         'import/resolver': {

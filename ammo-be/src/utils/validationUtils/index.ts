@@ -4,7 +4,8 @@ const isValidUrl = new RegExp(
     /((([A-Za-z]{3,9}:(?:\/\/)?)(?:[-;:&=+$,\w]+@)?[A-Za-z0-9.-]+|(?:www\.|[-;:&=+$,\w]+@)[A-Za-z0-9.-]+)((?:\/[+~%/.\w\-_]*)?\??(?:[-+=&;%@.\w_]*)#?(?:[.!/\\\w]*))?)/
 );
 
-const weightValidator = (value: string): string => {
+// For Joi to work we must return the object's value, not a boolean
+const hasValidWeight = (value: string): string => {
     // Sizeof calculations of bytes based
     const size = Sizeof(value);
 
@@ -12,7 +13,8 @@ const weightValidator = (value: string): string => {
     if (size > 50000) {
         throw new Error('your string is too heavy, max 50Ko');
     }
+
     return value;
 };
 
-export { isValidUrl, weightValidator };
+export { isValidUrl, hasValidWeight };

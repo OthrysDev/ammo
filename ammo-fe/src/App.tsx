@@ -3,9 +3,9 @@ import Layout from 'components/Layout';
 import MainPannel from 'components/MainPannel';
 import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
 import RouterFallback from 'RouterFallback';
-import useWS from 'hook/useWS';
+import useWS from 'hooks/useWS';
 
-function App(): React.ReactElement {
+const App = (): React.ReactElement => {
     useWS();
 
     return (
@@ -22,6 +22,6 @@ function App(): React.ReactElement {
             </Switch>
         </Router>
     );
-}
+};
 
 export default App;

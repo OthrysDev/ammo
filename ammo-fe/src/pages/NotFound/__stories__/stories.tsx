@@ -7,9 +7,7 @@ export default {
     component: NotFound,
 };
 
-const NotFoundTemplate: Story = () => {
-    return <NotFound />;
-};
+const NotFoundTemplate: Story = () => <NotFound />;
 
 export const Default = NotFoundTemplate.bind({});
 Default.storyName = 'NotFound';

@@ -1,7 +1,8 @@
 import express from 'express';
 import { ioServer } from 'webSocket/index';
 import bulletSchema from 'validators/bulletValidator';
-import { Bullet } from 'shared/typings/Bullet';
+import { Bullet } from 'shared/types/Bullet';
+import { nanoid } from 'nanoid';
 
 const bulletRouter = express.Router();
 
@@ -17,6 +18,9 @@ bulletRouter.post(
             if (error) throw new Error(error.details[0].message);
 
             ioServer.emit('bullet', { bullet });
+
+            bullet.date = new Date();
+            bullet.id = nanoid();
 
             return res.status(200).json({ bullet });
         } catch ({ message }) {

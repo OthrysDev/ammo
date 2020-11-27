@@ -2,12 +2,10 @@ import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Collapse from '@material-ui/core/Collapse';
 import Box from '@material-ui/core/Box';
-import {
-    TitleAndKeyValuesDesc,
-    TitleAndRawValueDesc,
-    Delimiter,
-} from 'components/Bullet/utils';
-import { Bullet } from 'shared/typings/Bullet';
+import { Bullet } from 'shared/types/Bullet';
+import Headers from 'components/Bullet/Headers';
+import Body from 'components/Bullet/Body';
+import Delimiter from 'components/Bullet/Delimiter';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -36,35 +34,23 @@ const BulletDesc = ({
                     className={classes.root}
                 >
                     <Delimiter title="Request" />
-                    {bullet.request.headers && (
-                        <TitleAndKeyValuesDesc
-                            uuid={`bullet-desc-req-headers-${bullet.id}`}
-                            title="Headers"
-                            obj={bullet.request.headers}
-                        />
-                    )}
-                    {bullet.request.body && (
-                        <TitleAndRawValueDesc
-                            uuid={`bullet-desc-req-body-${bullet.id}`}
-                            title="Body"
-                            obj={bullet.request.body}
-                        />
-                    )}
+                    <Headers
+                        uuid={`bullet-desc-req-headers-${bullet.id}`}
+                        headers={bullet.request.headers}
+                    />
+                    <Body
+                        uuid={`bullet-desc-req-body-${bullet.id}`}
+                        body={bullet.request.body}
+                    />
                     <Delimiter title="Response" />
-                    {bullet.response.headers && (
-                        <TitleAndKeyValuesDesc
-                            uuid={`bullet-desc-res-headers-${bullet.id}`}
-                            title="Headers"
-                            obj={bullet.response.headers}
-                        />
-                    )}
-                    {bullet.response.body && (
-                        <TitleAndRawValueDesc
-                            uuid={`bullet-desc-res-body-${bullet.id}`}
-                            title="Body"
-                            obj={bullet.response.body}
-                        />
-                    )}
+                    <Headers
+                        uuid={`bullet-desc-res-headers-${bullet.id}`}
+                        headers={bullet.response.headers}
+                    />
+                    <Body
+                        uuid={`bullet-desc-res-body-${bullet.id}`}
+                        body={bullet.response.body}
+                    />
                 </Box>
             )}
         </Collapse>

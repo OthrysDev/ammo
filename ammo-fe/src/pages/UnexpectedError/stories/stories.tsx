@@ -7,9 +7,7 @@ export default {
     component: UnexpectedError,
 };
 
-const UnexpectedErrorTemplate: Story = () => {
-    return <UnexpectedError />;
-};
+const UnexpectedErrorTemplate: Story = () => <UnexpectedError />;
 
 export const Default = UnexpectedErrorTemplate.bind({});
 Default.storyName = 'UnexpectedError';

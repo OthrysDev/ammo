@@ -10,5 +10,4 @@ export default {
 const MainPannelTemplate: Story = () => <MainPannel />;
 
 export const Default = MainPannelTemplate.bind({});
-
 Default.storyName = 'MainPannel';

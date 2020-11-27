@@ -20,6 +20,19 @@ const theme = createMuiTheme({
     typography: {
         // Specify your fonts here, docs : https://material-ui.com/customization/typography/
         fontFamily: 'Arial',
+        h1: {},
+        h2: {},
+        h3: {},
+        h4: {},
+        h5: {},
+        h6: {},
+        subtitle1: {},
+        subtitle2: {},
+        body1: {},
+        body2: {},
+        button: {},
+        caption: {},
+        overline: {},
     },
     overrides: {
         //* Example of Input customisation

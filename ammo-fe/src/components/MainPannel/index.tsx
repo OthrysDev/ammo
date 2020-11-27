@@ -34,31 +34,30 @@ const MainPannel = (): ReactElement => {
             ) : (
                 <div data-cy="ws-not-connected">Not connected</div>
             )}
+
             <Box data-cy="main-pannel" className={classes.root}>
-                {bullets.map((b) => {
-                    return (
+                {bullets.map((b) => (
+                    <Grid
+                        data-cy={`main-pannel-outer-grid-bullet-${b.id}`}
+                        key={b.id}
+                        container
+                    >
                         <Grid
-                            data-cy={`main-pannel-outer-grid-bullet-${b.id}`}
-                            key={b.id}
-                            container
+                            data-cy={`main-pannel-left-grid-bullet-${b.id}`}
+                            item
+                            xs={6}
                         >
-                            <Grid
-                                data-cy={`main-pannel-left-grid-bullet-${b.id}`}
-                                item
-                                xs={6}
-                            >
-                                <Bullet bullet={b} />
-                            </Grid>
-                            <Grid
-                                data-cy={`main-pannel-right-grid-bullet-${b.id}`}
-                                item
-                                xs={6}
-                            >
-                                script
-                            </Grid>
+                            <Bullet bullet={b} />
                         </Grid>
-                    );
-                })}
+                        <Grid
+                            data-cy={`main-pannel-right-grid-bullet-${b.id}`}
+                            item
+                            xs={6}
+                        >
+                            script
+                        </Grid>
+                    </Grid>
+                ))}
             </Box>
         </SimpleBar>
     );

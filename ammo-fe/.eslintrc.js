@@ -25,6 +25,12 @@ module.exports = {
         'comma-dangle': 0,
         '@typescript-eslint/ban-ts-comment': 0,
         'no-underscore-dangle': 0,
+        'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+        ],
     },
     settings: {
         'import/resolver': {

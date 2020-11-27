@@ -14,7 +14,7 @@ const useStyles = makeStyles(() => ({
 }));
 
 interface LayoutProps {
-    children?: ReactNode;
+    children: ReactNode;
 }
 
 const Layout = ({ children }: LayoutProps): ReactElement => {

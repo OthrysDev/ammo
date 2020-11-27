@@ -8,9 +8,9 @@ export default {
     title: 'Components/Bullet',
 };
 
-const BulletTemplate: Story<BulletProps> = ({ bullet }) => {
-    return <Bullet bullet={bullet} />;
-};
+const BulletTemplate: Story<BulletProps> = ({ bullet }) => (
+    <Bullet bullet={bullet} />
+);
 
 export const Default = BulletTemplate.bind({});
 Default.storyName = 'Bullet';

@@ -1,8 +1,5 @@
 import Joi from 'joi';
-import {
-    isValidUrl,
-    weightValidator,
-} from 'utils/validationUtils/validationUtils';
+import { isValidUrl, hasValidWeight } from 'utils/validationUtils';
 
 const bulletSchema = Joi.object({
     url: Joi.string().regex(isValidUrl).required(),
@@ -23,11 +20,11 @@ const bulletSchema = Joi.object({
         .required(),
     request: Joi.object().keys({
         headers: Joi.object().unknown(),
-        body: Joi.custom(weightValidator),
+        body: Joi.custom(hasValidWeight),
     }),
     response: Joi.object().keys({
         headers: Joi.object().unknown().required(),
-        body: Joi.custom(weightValidator),
+        body: Joi.custom(hasValidWeight),
         status: Joi.number().required(),
     }),
 });

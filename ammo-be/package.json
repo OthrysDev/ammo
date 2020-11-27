@@ -33,6 +33,7 @@
     "cors": "^2.8.5",
     "express": "^4.17.1",
     "joi": "^17.3.0",
+    "nanoid": "^3.1.18",
     "nodemon": "^2.0.6",
     "object-sizeof": "^1.6.1",
     "socket.io": "^3.0.2",

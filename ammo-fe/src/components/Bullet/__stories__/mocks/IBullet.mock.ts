@@ -1,4 +1,4 @@
-import { Bullet } from 'shared/typings/Bullet';
+import { Bullet } from 'shared/types/Bullet';
 import { bulletMock } from 'shared/mocks/Bullets';
 
 const generateMockBullet = (index = 0): Bullet => {
