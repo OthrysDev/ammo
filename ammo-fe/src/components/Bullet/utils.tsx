@@ -22,7 +22,7 @@ const useStyles = makeStyles((theme) => ({
 interface TitleAndKeyValuesDescProps {
     uuid: string;
     title: i18n;
-    obj: Record<string, string>;
+    obj: Record<string, string | string[]>;
 }
 
 export const TitleAndKeyValuesDesc = ({
@@ -70,7 +70,7 @@ export const TitleAndKeyValuesDesc = ({
 interface TitleAndRawValueDescProps {
     uuid: string;
     title: i18n;
-    obj: string;
+    obj: unknown;
 }
 
 export const TitleAndRawValueDesc = ({
@@ -90,7 +90,9 @@ export const TitleAndRawValueDesc = ({
             {obj && (
                 <Box data-cy={`${uuid}-value`} className={classes.values}>
                     <Box>
-                        <Typography variant="subtitle2">{obj}</Typography>
+                        <Typography variant="subtitle2">
+                            {JSON.stringify(obj)}
+                        </Typography>
                     </Box>
                 </Box>
             )}

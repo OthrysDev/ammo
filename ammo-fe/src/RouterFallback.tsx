@@ -1,10 +1,10 @@
 import * as React from 'react';
-import { useHistory } from 'react-router-dom';
+// import { useHistory } from 'react-router-dom';
 
-const RouterFallback = () => {
-    const history = useHistory();
+const RouterFallback = (): JSX.Element => {
+    // const history = useHistory();
 
-    const returnToHome = () => history.push('/');
+    // const returnToHome = (): void => history.push('/');
 
     return <div>404 Route didn't match</div>;
 };

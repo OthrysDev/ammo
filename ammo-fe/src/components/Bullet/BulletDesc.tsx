@@ -2,12 +2,12 @@ import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Collapse from '@material-ui/core/Collapse';
 import Box from '@material-ui/core/Box';
-import IBullet from 'imported/IBullet';
 import {
     TitleAndKeyValuesDesc,
     TitleAndRawValueDesc,
     Delimiter,
 } from 'components/Bullet/utils';
+import { Bullet } from 'shared/typings/Bullet';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -18,7 +18,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export interface BulletDescProps {
-    bullet: IBullet;
+    bullet: Bullet;
     collapse?: boolean;
 }
 

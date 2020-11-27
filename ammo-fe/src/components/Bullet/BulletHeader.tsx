@@ -3,9 +3,9 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ToolTip from 'components/misc/ToolTip';
-import IBullet from 'imported/IBullet';
 import DownCarret from 'assets/down_carret.svg';
 import useI18n from 'hooks/useI18n';
+import { Bullet } from 'shared/typings/Bullet';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -49,7 +49,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export interface BulletHeaderProps {
-    bullet: IBullet;
+    bullet: Bullet;
     collapse?: boolean;
     onClick: () => void;
 }
@@ -61,6 +61,7 @@ const BulletHeader = ({
 }: BulletHeaderProps): ReactElement => {
     const classes = useStyles();
     const i18n = useI18n();
+
     return (
         <Box data-cy={`bullet-header-${bullet.id}`} className={classes.root}>
             <Box data-cy={`bullet-header-ms-${bullet.id}`}>

@@ -1,5 +1,7 @@
 export type Bullet = {
+    id: string;
     url: string;
+    date: Date;
     method:
         | 'GET'
         | 'PUT'

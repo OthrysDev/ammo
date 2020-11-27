@@ -16,18 +16,21 @@ export default class ErrorBoundary extends React.Component<IProps, IState> {
         this.state = { hasError: false };
     }
 
-    static getDerivedStateFromError(error: unknown) {
+    static getDerivedStateFromError(): { hasError: boolean } {
         // Update state so the next render will show the fallback UI.
         return { hasError: true };
     }
 
-    componentDidCatch(error: unknown, errorInfo: unknown) {
+    // eslint-disable-next-line class-methods-use-this
+    componentDidCatch(error: unknown, errorInfo: unknown): void {
         // You can also log the error to an error reporting service
+        console.error(error);
+        console.error(errorInfo);
     }
 
-    refreshApp = () => window.location.reload();
+    refreshApp = (): void => window.location.reload();
 
-    render() {
+    render(): React.ReactNode {
         if (this.state.hasError) {
             // You can render any custom fallback UI
             return <h1>Something went wrong.</h1>;

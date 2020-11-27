@@ -3,8 +3,9 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Grid from '@material-ui/core/Grid';
 import Box from '@material-ui/core/Box';
 import Bullet from 'components/Bullet';
-import IBullet from 'imported/IBullet';
 import SimpleBar from 'simplebar-react';
+import { useSelector } from 'react-redux';
+import { RootReducer } from 'redux/reducers';
 import 'simplebar/dist/simplebar.min.css';
 
 const useStyles = makeStyles((theme) => ({
@@ -20,15 +21,19 @@ const useStyles = makeStyles((theme) => ({
     },
 }));
 
-export interface MainPannelProps {
-    bullets?: IBullet[];
-}
-
-const MainPannel = ({ bullets = [] }: MainPannelProps): ReactElement => {
+const MainPannel = (): ReactElement => {
     const classes = useStyles();
+
+    const connected = useSelector((state: RootReducer) => state.ws.connected);
+    const bullets = useSelector((state: RootReducer) => state.bullets);
 
     return (
         <SimpleBar className={classes.scrollbar}>
+            {connected ? (
+                <div data-cy="ws-connected">Connected</div>
+            ) : (
+                <div data-cy="ws-not-connected">Not connected</div>
+            )}
             <Box data-cy="main-pannel" className={classes.root}>
                 {bullets.map((b) => {
                     return (

@@ -1,10 +1,10 @@
-import React, { ReactElement, ReactNode } from 'react';
+import React, { ReactElement } from 'react';
 import Tooltip from '@material-ui/core/Tooltip';
 
 interface ToolTipProps {
     uuid: string;
     title: string;
-    children: ReactElement<any, any>;
+    children: ReactElement;
 }
 
 const ToolTip = ({ uuid, title, children }: ToolTipProps): ReactElement => {

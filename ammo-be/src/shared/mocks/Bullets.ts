@@ -68,6 +68,8 @@ const RESPONSE = {
 //* =============================== MOCKS =======================================
 
 const bulletMock: Bullet = {
+    id: '1',
+    date: new Date('2020-10-10 10:00:00'),
     url: 'http://localhost:3000/user',
     method: 'POST',
     request: REQUEST,
