@@ -8,7 +8,7 @@
     "test": "jest --watch --runInBand",
     "lint": "eslint --max-warnings=0 --ext .ts src/ ",
     "noWatchJest": "jest --runInBand",
-    "precommit" : "npm run lint && npm run noWatchJest"
+    "precommit": "npm run lint && npm run noWatchJest"
   },
   "author": "Othrys",
   "license": "MIT",
