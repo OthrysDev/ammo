@@ -1,13 +1,13 @@
 import englishMessages from 'i18n/en';
 import frenchMessages from 'i18n/fr';
 
-const findMessages = (language: string) => {
+const findMessages = (language: string): Record<string, string> => {
     if (language === 'fr') return frenchMessages;
-    else if (language === 'en') return englishMessages;
-    else return frenchMessages;
+    if (language === 'en') return englishMessages;
+    return frenchMessages;
 };
 
-const getLanguage = () => {
+const getLanguage = (): string => {
     // I18n config. By default, as long as we don't have the user's preferences, check the browser lang and stick to it
     let language = navigator.language || navigator.languages[0];
 

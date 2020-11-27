@@ -1,5 +1,3 @@
-const frenchMessages = {
-    Hello: 'Bonjour',
-};
+const frenchMessages = {};
 
 export default frenchMessages;
