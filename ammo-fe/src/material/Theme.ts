@@ -35,17 +35,16 @@ const theme = createMuiTheme({
         overline: {},
     },
     overrides: {
-        //* Example of Input customisation
-        // MuiOutlinedInput: {
-        //     input: {
-        //         padding: '7px 14px',
-        //     },
-        // },
-        // MuiInputLabel: {
-        //     outlined:{
-        //         transform: 'translate(14px, 10px) scale(1)'
-        //     }
-        // }
+        MuiCircularProgress: {
+            colorPrimary: {
+                color: '#AD2831 !important',
+            },
+        },
+        MuiSnackbarContent: {
+            root: {
+                minWidth: '0 !important',
+            },
+        },
     },
 });
 

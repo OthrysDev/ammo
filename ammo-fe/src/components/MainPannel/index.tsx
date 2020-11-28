@@ -24,17 +24,10 @@ const useStyles = makeStyles((theme) => ({
 const MainPannel = (): ReactElement => {
     const classes = useStyles();
 
-    const connected = useSelector((state: RootReducer) => state.ws.connected);
     const bullets = useSelector((state: RootReducer) => state.bullets);
 
     return (
         <SimpleBar className={classes.scrollbar}>
-            {connected ? (
-                <div data-cy="ws-connected">Connected</div>
-            ) : (
-                <div data-cy="ws-not-connected">Not connected</div>
-            )}
-
             <Box data-cy="main-pannel" className={classes.root}>
                 {bullets.map((b) => (
                     <Grid

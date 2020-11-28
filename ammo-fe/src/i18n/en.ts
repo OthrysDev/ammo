@@ -14,6 +14,7 @@ const englishMessages = {
     'Pages.UnexpectedError.Title': 'Ooooops!',
     'Pages.UnexpectedError.Content': 'Sorry, something unexpected happened.',
     'Pages.UnexpectedError.Button': 'Homepage',
+    ReconnectionToast: 'Connecting to server',
 };
 
 export default englishMessages;

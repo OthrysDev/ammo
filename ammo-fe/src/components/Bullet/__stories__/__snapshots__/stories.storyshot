@@ -33,6 +33,7 @@ exports[`Storyshots Components/Bullet Bullet 1`] = `
           "Pages.UnexpectedError.Button": "Homepage",
           "Pages.UnexpectedError.Content": "Sorry, something unexpected happened.",
           "Pages.UnexpectedError.Title": "Ooooops!",
+          "ReconnectionToast": "Connecting to server",
           "Request": "Request",
           "Response": "Response",
           "Uncollapse": "Uncollapse",
@@ -78,7 +79,18 @@ exports[`Storyshots Components/Bullet Bullet 1`] = `
                 "minHeight": 56,
               },
             },
-            "overrides": Object {},
+            "overrides": Object {
+              "MuiCircularProgress": Object {
+                "colorPrimary": Object {
+                  "color": "#AD2831 !important",
+                },
+              },
+              "MuiSnackbarContent": Object {
+                "root": Object {
+                  "minWidth": "0 !important",
+                },
+              },
+            },
             "palette": Object {
               "action": Object {
                 "activatedOpacity": 0.12,

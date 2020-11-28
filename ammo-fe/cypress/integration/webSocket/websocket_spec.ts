@@ -23,7 +23,7 @@ describe('WebSocket', () => {
     });
 
     it('Must connect properly to the server', () => {
-        cy.get('[data-cy=ws-connected]');
+        cy.get('[data-cy=ws-reconnection-toast]').should('not.exist');
     });
 
     it('Server sends a bullet, must see the bullet on the UI', () => {
@@ -35,7 +35,7 @@ describe('WebSocket', () => {
     it('Disconnect the webSocket - Ui must change accordingly', () => {
         cy.window().its('store').invoke('dispatch', { type: 'DISCONNECTED' });
 
-        cy.get('[data-cy=ws-not-connected]');
+        cy.get('[data-cy=ws-reconnection-toast]');
     });
 });
 

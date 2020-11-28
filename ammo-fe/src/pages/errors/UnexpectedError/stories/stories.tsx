@@ -1,9 +1,9 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
-import UnexpectedError from 'pages/UnexpectedError';
+import UnexpectedError from 'pages/errors/UnexpectedError';
 
 export default {
-    title: 'Pages/UnexpectedError',
+    title: 'Pages/errors/UnexpectedError',
     component: UnexpectedError,
 };
 

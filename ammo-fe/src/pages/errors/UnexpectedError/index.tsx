@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Error from 'pages/Error';
+import Error from 'pages/errors/Error';
 
 function UnexpectedError(): ReactElement {
     return (

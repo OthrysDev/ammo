@@ -1,9 +1,9 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
-import Error, { ErrorProps } from 'pages/Error';
+import Error, { ErrorProps } from 'pages/errors/Error';
 
 export default {
-    title: 'Pages/Error',
+    title: 'Pages/errors/Error',
     component: Error,
 };
 
