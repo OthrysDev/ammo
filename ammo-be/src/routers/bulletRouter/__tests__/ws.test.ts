@@ -2,11 +2,21 @@ import app from 'index';
 import request from 'supertest';
 import { Bullet } from 'shared/types/Bullet';
 import { io, Socket } from 'socket.io-client';
-import { bulletMock, incorrectBulletMock } from 'shared/mocks/Bullets';
+import MockDate from 'mockdate';
+import {
+    connectorRequestMock,
+    incorrectConnectorRequestMock,
+} from 'shared/mocks/ConnectorRequest';
 
 let socket: Socket;
 
+jest.mock('nanoid', () => ({
+    nanoid: (): string => 'AMockedNanoId',
+}));
+
 beforeAll((done) => {
+    MockDate.set(new Date('2020-10-10 10:00:00'));
+
     try {
         // Simulate a client connecting to our socket
         socket = io('http://localhost:3001');
@@ -24,6 +34,8 @@ afterAll((done) => {
 
     if (socket.connected) socket.disconnect();
 
+    MockDate.reset();
+
     done();
 });
 
@@ -38,14 +50,17 @@ describe('Testing WebSockets', () => {
         done();
     });
 
-    // FIXME
-    // it('Make an API call, the WebSocket must trigger and return a bullet', async (done) => {
-    // socket.on('bullet', ({ bullet }: Record<string, Bullet>) => {
-    //     expect(bullet).toMatchSnapshot();
-    //     done();
-    // });
-    // await request(app).post('/').send({ data: bulletMock }).expect(200);
-    // });
+    it('Make an API call, the WebSocket must trigger and return a bullet', async (done) => {
+        socket.on('bullet', ({ bullet }: Record<string, Bullet>) => {
+            expect(bullet).toMatchSnapshot();
+            done();
+        });
+
+        await request(app)
+            .post('/')
+            .send({ data: connectorRequestMock })
+            .expect(200);
+    });
 
     it('Make an API call with an incorrect mock - Should catch error', async (done) => {
         socket.on('bullet', () => {
@@ -54,7 +69,7 @@ describe('Testing WebSockets', () => {
 
         await request(app)
             .post('/')
-            .send({ data: incorrectBulletMock })
+            .send({ data: incorrectConnectorRequestMock })
             .expect(400);
 
         done();

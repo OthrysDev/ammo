@@ -3,6 +3,7 @@ import { ioServer } from 'webSocket/index';
 import bulletSchema from 'validators/bulletValidator';
 import { Bullet } from 'shared/types/Bullet';
 import { nanoid } from 'nanoid';
+import { ConnectorRequest } from 'shared/types/ConnectorRequest';
 
 const bulletRouter = express.Router();
 
@@ -10,17 +11,17 @@ bulletRouter.post(
     '/',
     (req, res): express.Response => {
         try {
-            const potentialBullet: Bullet = { ...req.body.data };
+            const connectorRequest: ConnectorRequest = { ...req.body.data };
 
-            const { error, value: bullet } = bulletSchema.validate(
-                potentialBullet
-            );
+            const { error, value } = bulletSchema.validate(connectorRequest);
             if (error) throw new Error(error.details[0].message);
 
-            ioServer.emit('bullet', { bullet });
+            const bullet: Bullet = { ...value };
 
             bullet.date = new Date();
             bullet.id = nanoid();
+
+            ioServer.emit('bullet', { bullet });
 
             return res.status(200).json({ bullet });
         } catch ({ message }) {

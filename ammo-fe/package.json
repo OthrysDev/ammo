@@ -76,8 +76,7 @@
     "test:e2e": "cypress open",
     "runCyp": "cypress run",
     "lint": "eslint --max-warnings=0 --ext .tsx src/ ",
-    "startServer": "http-server -p 3000 -c-1",
-    "precommit": "run-p --race start runCyp",
+    "precommit": "npm run lint",
     "storybook": "start-storybook -p 6006 -s public --no-dll",
     "build-storybook": "build-storybook -s public --no-dll"
   },

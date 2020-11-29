@@ -1,4 +1,4 @@
-import { Bullet } from 'shared/types/Bullet';
+import { ConnectorRequest } from 'shared/types/ConnectorRequest';
 
 export const createOverweight = (): string => {
     let string = '';
@@ -67,22 +67,20 @@ const RESPONSE = {
 
 //* =============================== MOCKS =======================================
 
-const bulletMock: Bullet = {
-    id: '1',
-    date: new Date('2020-10-10 10:00:00'),
+const connectorRequestMock: ConnectorRequest = {
     url: 'http://localhost:3000/user',
     method: 'POST',
     request: REQUEST,
     response: RESPONSE,
 };
 
-const incorrectBulletMock = {
-    ...bulletMock,
+const incorrectConnectorRequestMock = {
+    ...connectorRequestMock,
     method: undefined,
 };
 
-const overweightedBulletMock = {
-    ...bulletMock,
+const overweightedConnectorRequestMock = {
+    ...connectorRequestMock,
     request: {
         headers: REQUEST_HEADERS,
         body: {
@@ -91,11 +89,14 @@ const overweightedBulletMock = {
     },
 };
 
-const invalidUrlBulletMock = { ...bulletMock, url: 'AfakeUrlWhosGonnaMiss' };
+const invalidUrlConnectorRequestMock = {
+    ...connectorRequestMock,
+    url: 'AfakeUrlWhosGonnaMiss',
+};
 
 export {
-    bulletMock,
-    incorrectBulletMock,
-    overweightedBulletMock,
-    invalidUrlBulletMock,
+    connectorRequestMock,
+    incorrectConnectorRequestMock,
+    overweightedConnectorRequestMock,
+    invalidUrlConnectorRequestMock,
 };

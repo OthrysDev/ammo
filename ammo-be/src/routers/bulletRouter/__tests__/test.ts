@@ -1,11 +1,12 @@
 import app from 'index';
 import request from 'supertest';
+import MockDate from 'mockdate';
 import {
-    bulletMock,
-    incorrectBulletMock,
-    overweightedBulletMock,
-    invalidUrlBulletMock,
-} from 'shared/mocks/Bullets';
+    connectorRequestMock,
+    incorrectConnectorRequestMock,
+    overweightedConnectorRequestMock,
+    invalidUrlConnectorRequestMock,
+} from 'shared/mocks/ConnectorRequest';
 
 interface HTTPError {
     error: {
@@ -19,38 +20,45 @@ interface HTTPError {
     };
 }
 
+jest.mock('nanoid', () => ({
+    nanoid: (): string => 'AMockedNanoId',
+}));
+
+beforeAll(() => {
+    MockDate.set(new Date('2020-10-10 10:00:00'));
+});
+
 afterAll(() => {
+    MockDate.reset();
     app.close();
 });
 
 describe('Testing endpoints', () => {
-    // FIXME
-    // test('Send correct data', async () => {
-    // await request(app)
-    //     .post('/')
-    //     .send({ data: bulletMock })
-    //     .expect(200)
-    //     .expect((r) => {
-    //         const { bullet } = r.body;
-    //         expect(bullet).toMatchSnapshot();
-    //     });
-    // });
+    test('Send correct data', async () => {
+        await request(app)
+            .post('/')
+            .send({ data: connectorRequestMock })
+            .expect(200)
+            .expect((r) => {
+                const { bullet } = r.body;
+                expect(bullet).toMatchSnapshot();
+            });
+    });
 
-    // FIXME
-    // it('Send incorrect data - Joi must throw error as method is missing', async () => {
-    // await request(app)
-    //     .post('/')
-    //     .send({ data: incorrectBulletMock })
-    //     .expect(400)
-    //     .expect((r: HTTPError) => {
-    //         expect(r.error.text).toContain('\\"method\\" is required');
-    //     });
-    // });
+    it('Send incorrect data - Joi must throw error as method is missing', async () => {
+        await request(app)
+            .post('/')
+            .send({ data: incorrectConnectorRequestMock })
+            .expect(400)
+            .expect((r: HTTPError) => {
+                expect(r.error.text).toContain('\\"method\\" is required');
+            });
+    });
 
     it('Send an overweighted body - Joi must throw error', async () => {
         await request(app)
             .post('/')
-            .send({ data: overweightedBulletMock })
+            .send({ data: overweightedConnectorRequestMock })
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toMatchSnapshot();
@@ -60,7 +68,7 @@ describe('Testing endpoints', () => {
     it('Send a fake url - Joi must throw error', async () => {
         await request(app)
             .post('/')
-            .send({ data: invalidUrlBulletMock })
+            .send({ data: invalidUrlConnectorRequestMock })
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toMatchSnapshot();
