@@ -14,6 +14,7 @@ export default function bulletReducer(
 ): BulletReducerState {
     switch (action.type) {
         case 'RECEIVED_BULLET':
+            console.log('action', action);
             return [...state, action.bullet];
         case 'RECEIVED_BULLETS':
             return [...state, ...action.bullets];

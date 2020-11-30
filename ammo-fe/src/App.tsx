@@ -1,14 +1,23 @@
 import React, { ReactElement } from 'react';
-import { BrowserRouter as Router, Switch, Route } from 'react-router-dom';
+import { Router, Switch, Route } from 'react-router-dom';
 import RouterFallback from 'RouterFallback';
 import useWS from 'hooks/useWS';
 import Home from 'pages/Home';
+
+import { createBrowserHistory } from 'history';
+
+const history = createBrowserHistory();
+// @ts-ignore
+if (window.Cypress) {
+    // @ts-ignore
+    window.routerHistory = history;
+}
 
 const App = (): ReactElement => {
     useWS();
 
     return (
-        <Router>
+        <Router history={history}>
             <Switch>
                 <Route exact path="/">
                     <Home />
