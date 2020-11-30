@@ -1,7 +1,7 @@
-import MockedSocket from 'socket.io-mock';
 import { bulletMock } from '../../../src/shared/mocks/Bullets';
+import WS from '../../../src/network/WS';
 
-const socket = new MockedSocket();
+const socket = WS.getInstance('http://localhost:3001');
 
 describe('WebSocket', () => {
     before(() => {
@@ -27,7 +27,7 @@ describe('WebSocket', () => {
     });
 
     it('Server sends a bullet, must see the bullet on the UI', () => {
-        socket.socketClient.emit('bullet', { bullet: bulletMock });
+        socket.emit('bullet', { bullet: bulletMock });
 
         cy.get('[data-cy=main-pannel]').children().should('have.length', 1);
     });
