@@ -7,7 +7,7 @@ describe('Error boundary behaviors', () => {
     });
 
     it('Should redirect to home in case of a 404 - Bullets must be visible', () => {
-        cy.goToRoute('/randomUrl');
+        cy.pushHistory('/randomUrl');
 
         cy.get('[data-cy=error-button]').click();
 

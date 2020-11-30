@@ -41,9 +41,9 @@ declare namespace Cypress {
         /**
          * Goes to a route using react router and **without** reloading the page!
          * @example
-         * cy.goToRoute('/home')
+         * cy.pushHistory('/home')
          */
-        goToRoute: typeof goToRoute;
+        pushHistory: typeof pushHistory;
     }
 }
 
@@ -64,7 +64,7 @@ const reachErrorBoundary = (): Cypress.Chainable<unknown> => {
 
 Cypress.Commands.add('reachErrorBoundary', reachErrorBoundary);
 
-const goToRoute = (route: string): Cypress.Chainable<unknown> =>
+const pushHistory = (route: string): Cypress.Chainable<unknown> =>
     cy.window().its('routerHistory').invoke('push', route);
 
-Cypress.Commands.add('goToRoute', goToRoute);
+Cypress.Commands.add('pushHistory', pushHistory);
