@@ -17,7 +17,7 @@ const useStyles = makeStyles((theme) => ({
 
 interface BodyProps {
     uuid: string;
-    body: unknown;
+    body?: unknown;
 }
 
 const Body = ({ uuid, body }: BodyProps): ReactElement => {
@@ -30,13 +30,13 @@ const Body = ({ uuid, body }: BodyProps): ReactElement => {
                     <FormattedMessage id="Body" />
                 </Typography>
             </Box>
-            <Box data-cy={`${uuid}-value`} className={classes.values}>
-                <Box>
+            {body && (
+                <Box data-cy={`${uuid}-value`} className={classes.values}>
                     <Typography variant="subtitle2">
                         {JSON.stringify(body)}
                     </Typography>
                 </Box>
-            </Box>
+            )}
         </Box>
     );
 };
