@@ -3,7 +3,7 @@ import { ioServer } from 'webSocket/index';
 import bulletSchema from 'validators/bulletValidator';
 import { Bullet } from 'shared/types/Bullet';
 import { nanoid } from 'nanoid';
-import { ConnectorRequest } from 'shared/types/ConnectorRequest';
+import { ConnectorRequest } from 'types/ConnectorRequest';
 
 const bulletRouter = express.Router();
 
