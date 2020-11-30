@@ -6,7 +6,7 @@ const RouterFallback = (): JSX.Element => {
 
     // const returnToHome = (): void => history.push('/');
 
-    return <div>404 Route didn't match</div>;
+    return <div data-cy="404-root">404 Route didn't match</div>;
 };
 
 export default RouterFallback;
