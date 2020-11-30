@@ -16,10 +16,7 @@ bulletRouter.post(
             const { error, value } = bulletSchema.validate(connectorRequest);
             if (error) throw new Error(error.details[0].message);
 
-            const bullet: Bullet = { ...value };
-
-            bullet.date = new Date();
-            bullet.id = nanoid();
+            const bullet: Bullet = { ...value, date: new Date(), id: nanoid() };
 
             ioServer.emit('bullet', { bullet });
 
