@@ -1,4 +1,4 @@
-import { ConnectorRequest } from 'shared/types/ConnectorRequest';
+import { ConnectorRequest } from 'types/ConnectorRequest';
 
 export const createOverweight = (): string => {
     let string = '';
