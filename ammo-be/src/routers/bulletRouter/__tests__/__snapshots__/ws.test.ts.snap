@@ -1,0 +1,46 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Testing WebSockets Make an API call, the WebSocket must trigger and return a bullet 1`] = `
+Object {
+  "date": "2020-10-10T08:00:00.000Z",
+  "id": "AMockedNanoId",
+  "method": "POST",
+  "request": Object {
+    "body": Object {
+      "user": "{\\"firstName\\":\\"foo\\",\\"name\\":\\"bar\\",\\"email\\":\\"baz@bar.fr\\",\\"password\\":\\"123456789\\",\\"hasAcceptedMails\\":true,\\"captcha\\":\\"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil\\"}",
+    },
+    "headers": Object {
+      "accept": "application/json, text/plain, */*",
+      "accept-encoding": "gzip, deflate, br",
+      "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer c9da47d8f9bf16af86e325adc1e191ffa6f535f3",
+      "client-uuid": "3T3iVH_DKKSHlbD9dETTvZTqUApkxNKMdlY-b0z",
+      "connection": "keep-alive",
+      "content-length": "417873",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarylgQY9Tli7bNsE3LG",
+      "host": "localhost:3000",
+      "origin": "http://localhost:3001",
+      "referer": "http://localhost:3001/",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-site",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+    },
+  },
+  "response": Object {
+    "body": "{\\"success\\":true,\\"message\\":{\\"user\\":{\\"_id\\":\\"5fb3a5ae5be2f60fc786d90b\\",\\"firstName\\":\\"foo\\",\\"name\\":\\"bar\\",\\"email\\":\\"baz@bar.fr\\",\\"hasAcceptedMails\\":true,\\"picture\\":{\\"id\\":\\"5fb3a5ae5be2f60fc786d90d\\",\\"name\\":\\"_ Img-2.png\\"}}}}",
+    "headers": Object {
+      "access-control-allow-credentials": "true",
+      "access-control-allow-origin": "http://localhost:3001",
+      "access-control-expose-headers": "jwtToken",
+      "content-length": "229",
+      "content-type": "application/json; charset=utf-8",
+      "etag": "W/\\"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8\\"",
+      "vary": "Origin",
+      "x-powered-by": "Express",
+    },
+    "status": 200,
+  },
+  "url": "http://localhost:3000/user",
+}
+`;

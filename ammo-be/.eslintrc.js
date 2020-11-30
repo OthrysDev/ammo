@@ -4,7 +4,11 @@ module.exports = {
         es6: true,
         jest: true,
     },
-    extends: ['airbnb-base', 'plugin:@typescript-eslint/recommended'],
+    extends: [
+        'airbnb-base',
+        'plugin:@typescript-eslint/recommended',
+        'plugin:prettier/recommended',
+    ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 11,
@@ -19,6 +23,12 @@ module.exports = {
         'comma-dangle': 0,
         'object-curly-newline': 0,
         'import/no-mutable-exports': 0,
+        'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+        ],
     },
     settings: {
         'import/resolver': {

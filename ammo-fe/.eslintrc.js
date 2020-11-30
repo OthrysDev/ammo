@@ -8,6 +8,7 @@ module.exports = {
         'airbnb-base',
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
+        'plugin:cypress/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
@@ -25,6 +26,13 @@ module.exports = {
         'comma-dangle': 0,
         '@typescript-eslint/ban-ts-comment': 0,
         'no-underscore-dangle': 0,
+        'prettier/prettier': [
+            'error',
+            {
+                endOfLine: 'auto',
+            },
+        ],
+        '@typescript-eslint/no-namespace': 0,
     },
     settings: {
         'import/resolver': {

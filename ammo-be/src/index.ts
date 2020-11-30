@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 import cors from 'cors';
-import bulletRouter from 'routers/bulletRouter/tests';
+import bulletRouter from 'routers/bulletRouter';
 import { initWS } from 'webSocket';
 
 const app = express();

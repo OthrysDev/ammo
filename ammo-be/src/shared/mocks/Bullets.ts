@@ -1,4 +1,4 @@
-import { Bullet } from 'shared/typings/Bullet';
+import { Bullet } from 'shared/types/Bullet';
 
 export const createOverweight = (): string => {
     let string = '';
@@ -68,6 +68,8 @@ const RESPONSE = {
 //* =============================== MOCKS =======================================
 
 const bulletMock: Bullet = {
+    id: '1',
+    date: new Date('2020-10-10 10:00:00'),
     url: 'http://localhost:3000/user',
     method: 'POST',
     request: REQUEST,

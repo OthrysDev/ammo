@@ -7,6 +7,7 @@ import store from 'redux/store';
 import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import theme from 'material/Theme';
 import I18nProvider from 'redux/I18nProvider';
+import ErrorBoundary from 'components/ErrorBoundary';
 
 ReactDOM.render(
     <React.StrictMode>
@@ -14,7 +15,9 @@ ReactDOM.render(
             <I18nProvider>
                 <ThemeProvider theme={theme}>
                     <CssBaseline>
-                        <App />
+                        <ErrorBoundary>
+                            <App />
+                        </ErrorBoundary>
                     </CssBaseline>
                 </ThemeProvider>
             </I18nProvider>
