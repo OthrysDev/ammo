@@ -1,3 +1,7 @@
+/**
+ * @jest-environment node
+ */
+
 import React from 'react';
 import initStoryshots, {
     multiSnapshotWithOptions,
@@ -11,7 +15,7 @@ import { OldPlugin } from 'pretty-format';
 import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 
 // We need to use enzyme for storybook to handle properly React Portals feature
-import { mount, configure } from 'enzyme';
+import { render, configure } from 'enzyme';
 import { createSerializer } from 'enzyme-to-json';
 
 configure({ adapter: new Adapter() });
@@ -32,6 +36,6 @@ addDecorator((storyFn) => (
 initStoryshots({
     snapshotSerializers: [(createSerializer() as unknown) as OldPlugin],
     test: multiSnapshotWithOptions({
-        renderer: mount,
+        renderer: render,
     }),
 });
