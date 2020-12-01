@@ -79,7 +79,7 @@
     "jest" : "npm test -- --watchAll=false",
     "test:e2e": "cypress open",
     "cy:run" :"cypress run",
-    "cypress": "start-server-and-test start http://localhost:3000 cy:run",
+    "cypress": "start-server-and-test start http://localhost:3000 'cypress run'",
     "lint": "eslint --max-warnings=0 --ext .tsx src/ ",
     "precommit": "npm run lint && npm run jest && npm run cypress",
     "storybook": "start-storybook -p 6006 -s public --no-dll",
