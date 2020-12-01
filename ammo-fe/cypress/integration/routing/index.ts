@@ -1,29 +1,35 @@
 describe('Routing', () => {
-    it('Should lead to the layout page', () => {
-        cy.visit('/');
+    beforeEach(() => cy.visit('/'));
 
+    it('Should lead to the layout page', () => {
         cy.get('[data-cy=layout-root]').should('exist');
     });
 
     it('Should lead to the 404 page', () => {
         cy.visit('/aRandomUrl');
 
-        cy.get('[data-cy=404-root]').should('exist');
+        cy.get('[data-cy=not-found-page]').should('exist');
     });
-});
 
-describe('Errors fallback', () => {
-    beforeEach(() => cy.visit('/'));
+    it('Should redirect to home page', () => {
+        cy.visit('/aRandomUrl');
+
+        cy.get('[data-cy=error-button]').click();
+
+        cy.location('pathname').should('eq', '/');
+    });
 
     it('Should lead to the error boudary UI', () => {
-        cy.on('uncaught:exception', () => {
-            return false;
-        });
+        cy.reachErrorBoundary();
 
-        cy.window()
-            .its('store')
-            .invoke('dispatch', { type: 'RECEIVED_BULLET', bullet: undefined });
+        cy.get('[data-cy=unexpected-error-page').should('exist');
+    });
 
-        cy.get('[data-cy=error-boundary-root]').should('exist');
+    it('Should redirect to home page', () => {
+        cy.visit('/aRandomUrl');
+
+        cy.get('[data-cy=error-button]').click();
+
+        cy.location('pathname').should('eq', '/');
     });
 });

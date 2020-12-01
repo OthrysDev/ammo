@@ -42,13 +42,14 @@ export interface ErrorProps {
     title: i18n;
     content: i18n;
     button: i18n;
+    onReset: () => void;
 }
 
-function Error({ title, content, button }: ErrorProps): ReactElement {
+function Error({ title, content, button, onReset }: ErrorProps): ReactElement {
     const classes = useStyles();
 
     return (
-        <Box data-cy="not-found" className={classes.root}>
+        <Box className={classes.root}>
             <Box className={classes.centered}>
                 <Box className={classes.title}>
                     <Typography variant="h4">
@@ -61,7 +62,11 @@ function Error({ title, content, button }: ErrorProps): ReactElement {
                     </Typography>
                 </Box>
 
-                <Button className={classes.button}>
+                <Button
+                    data-cy="error-button"
+                    className={classes.button}
+                    onClick={onReset}
+                >
                     <HomeIcon className={classes.icon} />
                     <Typography variant="subtitle2">
                         <FormattedMessage id={button} />

@@ -1,4 +1,5 @@
 import * as React from 'react';
+import UnexpectedError from 'pages/errors/UnexpectedError';
 
 type IState = {
     hasError: boolean;
@@ -33,7 +34,7 @@ export default class ErrorBoundary extends React.Component<IProps, IState> {
     render(): React.ReactNode {
         if (this.state.hasError) {
             // You can render any custom fallback UI
-            return <h1 data-cy="error-boundary-root">Something went wrong.</h1>;
+            return <UnexpectedError />;
         }
 
         return this.props.children;

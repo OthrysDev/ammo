@@ -38,5 +38,3 @@ describe('WebSocket', () => {
         cy.get('[data-cy=ws-reconnection-toast]');
     });
 });
-
-/* Call the mocked ws here, and link the app with the real ws */
