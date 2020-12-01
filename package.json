@@ -7,13 +7,13 @@
     "script"
   ],
   "scripts": {
-    "start": "(cd ammo-be && npm start) & (cd ammo-fe && npm start)",
+    "start": "(cd ammo-be && npm start) && (cd ammo-fe && npm start)",
     "install": "(cd ammo-be && npm install) && (cd ammo-fe && npm install)",
     "export": "ncp ammo-be/src/shared ammo-fe/src/shared --stoponErr"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "(cd ammo-fe && npm run precommit) & (cd ammo-be && npm run precommit)"
+      "pre-commit": "(cd ammo-be && npm run precommit) && (cd ammo-fe && npm run precommit)"
     }
   },
   "lint-staged": {
