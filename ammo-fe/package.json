@@ -80,7 +80,7 @@
     "cy:run": "cypress run",
     "startAndRun": "start-server-and-test start http://localhost:3000 cy:run",
     "lint": "eslint --max-warnings=0 --ext .tsx src/ ",
-    "precommit": "npm run lint && startAndRun",
+    "precommit": "npm run lint && npm run startAndRun",
     "storybook": "start-storybook -p 6006 -s public --no-dll",
     "build-storybook": "build-storybook -s public --no-dll"
   },
