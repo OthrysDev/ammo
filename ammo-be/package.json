@@ -7,8 +7,8 @@
     "start": "tsc && nodemon",
     "test": "jest --watch --runInBand",
     "lint": "eslint --max-warnings=0 --ext .ts src/ ",
-    "noWatchJest": "jest --runInBand",
-    "precommit": "npm run lint && npm run noWatchJest"
+    "test:precommit": "jest --runInBand",
+    "precommit": "npm run lint && npm run test:precommit"
   },
   "author": "Othrys",
   "license": "MIT",
