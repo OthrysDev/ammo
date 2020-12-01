@@ -1,5 +1,5 @@
-import UnexpectedError from 'pages/errors/UnexpectedError';
 import * as React from 'react';
+import UnexpectedError from 'pages/errors/UnexpectedError';
 
 type IState = {
     hasError: boolean;

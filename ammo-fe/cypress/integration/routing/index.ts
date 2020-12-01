@@ -4,9 +4,7 @@ describe('Routing', () => {
     it('Should lead to the layout page', () => {
         cy.get('[data-cy=layout-root]').should('exist');
     });
-});
 
-describe('404 page behavior', () => {
     it('Should lead to the 404 page', () => {
         cy.visit('/aRandomUrl');
 
@@ -20,9 +18,7 @@ describe('404 page behavior', () => {
 
         cy.location('pathname').should('eq', '/');
     });
-});
 
-describe('Error boundary page behavior', () => {
     it('Should lead to the error boudary UI', () => {
         cy.reachErrorBoundary();
 
