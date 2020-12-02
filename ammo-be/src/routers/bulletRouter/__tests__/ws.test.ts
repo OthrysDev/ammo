@@ -7,6 +7,7 @@ import {
     connectorRequestMock,
     incorrectConnectorRequestMock,
 } from 'shared/mocks/ConnectorRequest';
+import { isRecording, ioServer } from 'webSocket';
 
 let socket: Socket;
 
@@ -40,11 +41,11 @@ afterAll((done) => {
 });
 
 afterEach(() => {
-    socket.offAny();
+    socket.off('bullet');
 });
 
 describe('Testing WebSockets', () => {
-    it('Socket mut be connected properly', (done) => {
+    it('Socket must be connected properly', (done) => {
         expect(socket.connected).toBe(true);
 
         done();
@@ -72,6 +73,63 @@ describe('Testing WebSockets', () => {
             .send({ data: incorrectConnectorRequestMock })
             .expect(400);
 
+        done();
+    });
+
+    it('The recording state must be initialized to true', () => {
+        expect(isRecording).toBe(true);
+    });
+
+    it('Should change the recording state to false', (done) => {
+        socket.emit('toggleRecord', (result: boolean) => {
+            expect(result).toBe(false);
+            expect(isRecording).toBe(false);
+            done();
+        });
+    });
+
+    it('Should not be emitting if the recording state is false', async (done) => {
+        const emitSpy = jest.spyOn(ioServer, 'emit');
+
+        await request(app)
+            .post('/')
+            .send({ data: connectorRequestMock })
+            .expect(200);
+
+        expect(emitSpy).toBeCalledTimes(0);
+        done();
+    });
+
+    it('Should be returning a clear message if the recording state is false', async (done) => {
+        await request(app)
+            .post('/')
+            .send({ data: connectorRequestMock })
+            .expect(200)
+            .expect((r) => {
+                const { message } = r.body;
+                expect(message).toMatchSnapshot();
+
+                done();
+            });
+    });
+
+    it('Should change the recording state to true', (done) => {
+        socket.emit('toggleRecord', (result: boolean) => {
+            expect(result).toBe(true);
+            expect(isRecording).toBe(true);
+            done();
+        });
+    });
+
+    it('Should now be emitting back', async (done) => {
+        const emitSpy = jest.spyOn(ioServer, 'emit');
+
+        await request(app)
+            .post('/')
+            .send({ data: connectorRequestMock })
+            .expect(200);
+
+        expect(emitSpy).toBeCalledTimes(1);
         done();
     });
 });

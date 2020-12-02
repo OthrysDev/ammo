@@ -1,7 +1,9 @@
-import io from 'socket.io';
+import io, { Socket } from 'socket.io';
 import http from 'http';
 
 let ioServer: io.Server;
+
+let isRecording = false;
 
 const initWS = (server: http.Server): void => {
     ioServer = new io.Server(server, {
@@ -9,6 +11,15 @@ const initWS = (server: http.Server): void => {
             origin: ['http://localhost:3000'],
         },
     });
+
+    isRecording = true;
+
+    ioServer.on('connection', (s: Socket) => {
+        s.on('toggleRecord', (cbk) => {
+            isRecording = !isRecording;
+            cbk(isRecording);
+        });
+    });
 };
 
-export { initWS, ioServer };
+export { initWS, ioServer, isRecording };

@@ -9,6 +9,7 @@ const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
 
 const server = app.listen(3001);
+
 initWS(server);
 
 app.use(bodyParser.urlencoded({ extended: false }));
