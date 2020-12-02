@@ -10,10 +10,11 @@ import 'simplebar/dist/simplebar.min.css';
 
 const useStyles = makeStyles((theme) => ({
     scrollbar: {
-        height: '100vh',
+        height: 'calc(100vh - 74px)',
+        marginTop: '74px',
     },
     root: {
-        minHeight: '100vh',
+        minHeight: 'calc(100vh - 74px)',
         width: '100%',
         background: `linear-gradient(90deg, ${theme.palette.primary.dark} 50%, ${theme.palette.primary.main} 50%)`,
         color: 'white',

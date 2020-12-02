@@ -56,7 +56,7 @@ exports[`Storyshots Components/Bullet Bullet 1`] = `
     </div>
     <img
       alt="Down carret"
-      class="makeStyles-downCarret "
+      class="makeStyles-downCarretIcon "
       data-cy="bullet-header-collapse-id0"
       src="down_carret.svg"
       title="Uncollapse"

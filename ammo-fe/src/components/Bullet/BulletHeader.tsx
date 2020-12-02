@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ToolTip from 'components/misc/ToolTip';
-import DownCarret from 'assets/down_carret.svg';
+import DownCarretIcon from 'assets/down_carret.svg';
 import useI18n from 'hooks/useI18n';
 import { Bullet } from 'shared/types/Bullet';
 
@@ -38,7 +38,7 @@ const useStyles = makeStyles((theme) => ({
     filler: {
         flexGrow: 1,
     },
-    downCarret: {
+    downCarretIcon: {
         '&:hover': {
             cursor: 'pointer',
         },
@@ -97,11 +97,13 @@ const BulletHeader = ({
             >
                 <img
                     data-cy={`bullet-header-collapse-${bullet.id}`}
-                    src={DownCarret}
+                    src={DownCarretIcon}
                     alt={i18n(
-                        collapse ? 'Img.Alt.DownCarret' : 'Img.Alt.UpCarret'
+                        collapse
+                            ? 'Img.Alt.DownCarretIcon'
+                            : 'Img.Alt.UpCarretIcon'
                     )}
-                    className={`${classes.downCarret} ${
+                    className={`${classes.downCarretIcon} ${
                         collapse ? '' : classes.flipY
                     }`}
                     onClick={onClick}
