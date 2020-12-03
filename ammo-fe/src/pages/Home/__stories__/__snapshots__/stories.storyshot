@@ -7,6 +7,30 @@ Array [
     data-cy="layout-root"
   >
     <div
+      class="MuiBox-root MuiBox-root makeStyles-root"
+      data-cy="bar"
+    >
+      <div
+        class="MuiBox-root MuiBox-root makeStyles-root"
+        data-cy="recorder-button"
+      >
+        <div
+          class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
+        >
+          <div
+            class="MuiBox-root MuiBox-root makeStyles-insideButton "
+          >
+            <img
+              alt="Record"
+              class="makeStyles-icon"
+              data-cy="recording-button-record"
+              src="rec.svg"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
       class="makeStyles-scrollbar"
       data-simplebar="true"
     >
