@@ -2,7 +2,10 @@ import Joi from 'joi';
 import { isValidUrl, hasValidWeight } from 'utils/validationUtils';
 
 const bulletSchema = Joi.object({
-    url: Joi.string().regex(isValidUrl).required(),
+    url: Joi.string()
+        .regex(isValidUrl)
+        .message('The url you provided does not match the expected pattern')
+        .required(),
     method: Joi.string()
         .valid(
             ...[

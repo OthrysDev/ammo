@@ -56,6 +56,10 @@ const RecorderButton = (): ReactElement => {
     const connected = useSelector((state: RootReducer) => state.ws.connected);
     const [recording, setRecording] = useState(false);
 
+    const toggleRecording = (): void => {
+        if (connected) setRecording((prevState) => !prevState);
+    };
+
     return (
         <Box className={classes.root} data-cy="recorder-button">
             <Box
@@ -68,9 +72,7 @@ const RecorderButton = (): ReactElement => {
                         connected ? classes.clickable : ''
                     }`}
                     boxShadow={2}
-                    onClick={(): void => {
-                        if (connected) setRecording(!recording);
-                    }}
+                    onClick={toggleRecording}
                 >
                     {recording ? (
                         <img

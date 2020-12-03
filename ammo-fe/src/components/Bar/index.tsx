@@ -19,7 +19,7 @@ const Bar = (): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box className={classes.root} boxShadow={2} data-cy={'bar'}>
+        <Box className={classes.root} boxShadow={2} data-cy="bar">
             <RecorderButton />
         </Box>
     );
