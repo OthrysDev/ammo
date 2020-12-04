@@ -14,12 +14,12 @@ export default class MockedSocket {
     connect = (): void => {
         this.connected = true;
 
-        this.cache.connect();
+        if (this.cache.connect) this.cache.connect();
     };
 
     disconnect = (): void => {
         this.connected = false;
 
-        this.cache.disconnect();
+        if (this.cache.disconnect) this.cache.disconnect();
     };
 }
