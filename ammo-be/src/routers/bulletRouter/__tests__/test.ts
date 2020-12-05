@@ -3,10 +3,11 @@ import request from 'supertest';
 import MockDate from 'mockdate';
 import {
     connectorRequestMock,
-    incorrectConnectorRequestMock,
-    overweightedConnectorRequestMock,
+    noMethodConnectorRequestMock,
+    heavyConnectorRequestMock,
     invalidUrlConnectorRequestMock,
-} from 'shared/mocks/ConnectorRequest';
+    minimalConnectorRequestMock,
+} from 'routers/bulletRouter/__tests__/mocks/ConnectorRequest.mock';
 
 interface HTTPError {
     error: {
@@ -45,27 +46,38 @@ describe('Testing endpoints', () => {
             });
     });
 
-    it('Send incorrect data - Joi must throw error as method is missing', async () => {
+    test('Send minimal data', async () => {
         await request(app)
             .post('/')
-            .send({ data: incorrectConnectorRequestMock })
+            .send({ data: minimalConnectorRequestMock })
+            .expect(200)
+            .expect((r) => {
+                const { bullet } = r.body;
+                expect(bullet).toMatchSnapshot();
+            });
+    });
+
+    it('Send incorrect data with missing method - Joi must throw error as method is missing', async () => {
+        await request(app)
+            .post('/')
+            .send({ data: noMethodConnectorRequestMock })
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toContain('\\"method\\" is required');
             });
     });
 
-    it('Send an overweighted body - Joi must throw error', async () => {
+    it('Send a heavy payload - Joi must throw error', async () => {
         await request(app)
             .post('/')
-            .send({ data: overweightedConnectorRequestMock })
+            .send({ data: heavyConnectorRequestMock })
             .expect(400)
             .expect((r: HTTPError) => {
                 expect(r.error.text).toMatchSnapshot();
             });
     });
 
-    it('Send a fake url - Joi must throw error', async () => {
+    it('Send an invalid url - Joi must throw error', async () => {
         await request(app)
             .post('/')
             .send({ data: invalidUrlConnectorRequestMock })

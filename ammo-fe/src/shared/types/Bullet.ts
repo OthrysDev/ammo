@@ -1,6 +1,4 @@
-// Here's the documentation used to figure out the mandatory fields of the HTTP protocol : https://quicwg.org/base-drafts/draft-ietf-quic-http.html#name-http-request-lifecycle
-
-//* Side note, we cannot combine the ConnectorRequest type here, as this file is exported to the front-end, it'll not resolve the path to ConnectorRequest
+// /!\ We cannot extend ConnectorRequest here, as this file is exported to the front-end, whereas ConnectorRequest is not
 
 export type Bullet = {
     id: string;
@@ -23,6 +21,6 @@ export type Bullet = {
     response: {
         headers: Record<string, string | string[]>;
         body?: unknown;
-        status: number;
+        status?: number;
     };
 };
