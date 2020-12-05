@@ -8,17 +8,20 @@ import { CssBaseline, ThemeProvider } from '@material-ui/core';
 import theme from 'material/Theme';
 import I18nProvider from 'redux/I18nProvider';
 import ErrorBoundary from 'components/ErrorBoundary';
+import { ProvideWS } from 'hooks/useWS';
 
 ReactDOM.render(
     <React.StrictMode>
         <Provider store={store}>
             <I18nProvider>
                 <ThemeProvider theme={theme}>
-                    <CssBaseline>
-                        <ErrorBoundary>
-                            <App />
-                        </ErrorBoundary>
-                    </CssBaseline>
+                    <ProvideWS>
+                        <CssBaseline>
+                            <ErrorBoundary>
+                                <App />
+                            </ErrorBoundary>
+                        </CssBaseline>
+                    </ProvideWS>
                 </ThemeProvider>
             </I18nProvider>
         </Provider>
