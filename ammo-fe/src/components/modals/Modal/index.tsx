@@ -1,6 +1,8 @@
 import React, { ReactElement, ReactNode } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Dialog from '@material-ui/core/Dialog';
+import useI18n from 'hooks/useI18n';
+import i18n from 'types/i18n';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -15,8 +17,8 @@ const useStyles = makeStyles((theme) => ({
 export interface ModalProps {
     open?: boolean;
     children: ReactNode;
-    ariaLabelledby: string;
-    ariaDescribedby: string;
+    ariaLabelledby: i18n;
+    ariaDescribedby: i18n;
 }
 
 const Modal = ({
@@ -26,13 +28,15 @@ const Modal = ({
     ariaDescribedby,
 }: ModalProps): ReactElement => {
     const classes = useStyles();
+    const locI18n = useI18n();
+
     return (
         <Dialog
             data-cy="modal"
             PaperProps={{ className: classes.root }}
             open={open}
-            aria-labelledby={ariaLabelledby}
-            aria-describedby={ariaDescribedby}
+            aria-labelledby={locI18n(ariaLabelledby)}
+            aria-describedby={locI18n(ariaDescribedby)}
         >
             {children}
         </Dialog>

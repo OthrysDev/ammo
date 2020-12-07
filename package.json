@@ -1,19 +1,29 @@
 {
+  "name": "ammo",
+  "version": "0.0.0",
   "keywords": [
     "stress test",
     "gatling",
     "ammo",
     "load test",
-    "script"
+    "script",
+    "scala"
   ],
   "scripts": {
-    "start": "(cd ammo-be && npm start) && (cd ammo-fe && npm start)",
-    "install": "(cd ammo-be && npm install) && (cd ammo-fe && npm install)",
-    "export": "ncp ammo-be/src/shared ammo-fe/src/shared --stoponErr"
+    "start:be": "cd ammo-be && npm start",
+    "start:fe": "cd ammo-fe && npm start",
+    "start": "run-p start:be start:fe",
+    "install:be": "cd ammo-be && npm install",
+    "install:fe": "cd ammo-fe && npm install",
+    "install": "run-p install:be install:fe",
+    "export": "copyfiles --up 2 ammo-be/src/shared/** ammo-fe/src/",
+    "test:be": "cd ammo-be && npm run precommit",
+    "test:fe": "cd ammo-fe && npm run precommit",
+    "test": "run-p test:be test:fe"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "(cd ammo-be && npm run precommit) && (cd ammo-fe && npm run precommit)"
+      "pre-commit": "npm run test"
     }
   },
   "lint-staged": {
@@ -21,11 +31,12 @@
     "*.{js,css,md}": "prettier --write"
   },
   "devDependencies": {
+    "copyfiles": "^2.4.1",
     "husky": "^4.3.0",
     "lint-staged": "^10.5.1",
     "mockdate": "^3.0.2"
   },
   "dependencies": {
-    "ncp": "^2.0.0"
+    "npm-run-all": "^4.1.5"
   }
 }

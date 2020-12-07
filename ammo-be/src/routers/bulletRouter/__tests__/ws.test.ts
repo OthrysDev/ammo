@@ -5,8 +5,8 @@ import { io, Socket } from 'socket.io-client';
 import MockDate from 'mockdate';
 import {
     connectorRequestMock,
-    incorrectConnectorRequestMock,
-} from 'shared/mocks/ConnectorRequest';
+    noMethodConnectorRequestMock,
+} from 'routers/bulletRouter/__tests__/mocks/ConnectorRequest.mock';
 
 let socket: Socket;
 
@@ -69,7 +69,7 @@ describe('Testing WebSockets', () => {
 
         await request(app)
             .post('/')
-            .send({ data: incorrectConnectorRequestMock })
+            .send({ data: noMethodConnectorRequestMock })
             .expect(400);
 
         done();
