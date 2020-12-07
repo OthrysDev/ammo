@@ -4,15 +4,15 @@ import { useDispatch } from 'react-redux';
 import { Bullet } from 'shared/types/Bullet';
 import WS from 'network/WS';
 
-type returnValue = {
+type WSProvider = {
     init: () => void;
     emit: (event: string, ...args: unknown[]) => void;
     connected: boolean;
 };
 
-const WsContext = createContext({});
+const WSContext = createContext({});
 
-const useProvideWS = (): returnValue => {
+const useWSProvider = (): WSProvider => {
     const dispatch = useDispatch();
     const [connected, setConnected] = React.useState(false);
 
@@ -59,16 +59,16 @@ const useProvideWS = (): returnValue => {
     };
 };
 
-export const ProvideWS = ({
+export const WSProvider = ({
     children,
 }: {
     children: JSX.Element;
 }): JSX.Element => {
-    const ws = useProvideWS();
+    const ws = useWSProvider();
 
-    return <WsContext.Provider value={ws}>{children}</WsContext.Provider>;
+    return <WSContext.Provider value={ws}>{children}</WSContext.Provider>;
 };
 
-const useWS = (): returnValue => useContext(WsContext) as returnValue;
+const useWS = (): WSProvider => useContext(WSContext) as WSProvider;
 
 export default useWS;
