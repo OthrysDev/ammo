@@ -1,4 +1,4 @@
-import { bulletMock } from '../../../src/shared/mocks/Bullets';
+import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
 
 describe('Error boundary behaviors', () => {
     beforeEach(() => {

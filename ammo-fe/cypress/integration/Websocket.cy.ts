@@ -1,5 +1,5 @@
-import { bulletMock } from '../../../src/shared/mocks/Bullets';
-import WS from '../../../src/network/WS';
+import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
+import WS from '../../src/network/WS';
 
 const socket = WS.getSocket('http://localhost:3001');
 

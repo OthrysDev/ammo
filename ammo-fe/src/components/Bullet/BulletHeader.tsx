@@ -85,12 +85,14 @@ const BulletHeader = ({
                 data-cy={`bullet-header-filler-${bullet.id}`}
                 className={classes.filler}
             />
-            <Box
-                data-cy={`bullet-header-status-${bullet.id}`}
-                className={classes.statusBadge}
-            >
-                <Typography>{bullet.response.status}</Typography>
-            </Box>
+            {bullet.response.status && (
+                <Box
+                    data-cy={`bullet-header-status-${bullet.id}`}
+                    className={classes.statusBadge}
+                >
+                    <Typography>{bullet.response.status}</Typography>
+                </Box>
+            )}
             <ToolTip
                 uuid={`bullet-header-collapse-tooltip-${bullet.id}`}
                 title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
