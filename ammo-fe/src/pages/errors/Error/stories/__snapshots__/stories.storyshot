@@ -2,55 +2,59 @@
 
 exports[`Storyshots Pages/errors/Error Error 1`] = `
 <div
-  class="MuiBox-root MuiBox-root makeStyles-root"
+  style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-centered"
+    class="MuiBox-root MuiBox-root makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-title"
+      class="MuiBox-root MuiBox-root makeStyles-centered"
     >
-      <h4
-        class="MuiTypography-root MuiTypography-h4"
+      <div
+        class="MuiBox-root MuiBox-root makeStyles-title"
       >
-        Default.Title
-      </h4>
-    </div>
-    <div
-      class="MuiBox-root MuiBox-root makeStyles-content"
-    >
-      <p
-        class="MuiTypography-root MuiTypography-body1"
-      >
-        Default.Content
-      </p>
-    </div>
-    <button
-      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button"
-      data-cy="error-button"
-      tabindex="0"
-      type="button"
-    >
-      <span
-        class="MuiButton-label"
-      >
-        <svg
-          aria-hidden="true"
-          class="MuiSvgIcon-root makeStyles-icon"
-          focusable="false"
-          viewBox="0 0 24 24"
+        <h4
+          class="MuiTypography-root MuiTypography-h4"
         >
-          <path
-            d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-          />
-        </svg>
-        <h6
-          class="MuiTypography-root MuiTypography-subtitle2"
+          Default.Title
+        </h4>
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root makeStyles-content"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1"
         >
-          Default.Button
-        </h6>
-      </span>
-    </button>
+          Default.Content
+        </p>
+      </div>
+      <button
+        class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button"
+        data-cy="error-button"
+        tabindex="0"
+        type="button"
+      >
+        <span
+          class="MuiButton-label"
+        >
+          <svg
+            aria-hidden="true"
+            class="MuiSvgIcon-root makeStyles-icon"
+            focusable="false"
+            viewBox="0 0 24 24"
+          >
+            <path
+              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+            />
+          </svg>
+          <h6
+            class="MuiTypography-root MuiTypography-subtitle2"
+          >
+            Default.Button
+          </h6>
+        </span>
+      </button>
+    </div>
   </div>
 </div>
 `;

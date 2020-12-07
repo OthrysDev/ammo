@@ -11,7 +11,6 @@ import 'simplebar/dist/simplebar.min.css';
 const useStyles = makeStyles((theme) => ({
     scrollbar: {
         height: 'calc(100vh - 74px)',
-        marginTop: '74px',
     },
     root: {
         minHeight: 'calc(100vh - 74px)',
@@ -24,7 +23,6 @@ const useStyles = makeStyles((theme) => ({
 
 const MainPannel = (): ReactElement => {
     const classes = useStyles();
-
     const bullets = useSelector((state: RootReducer) => state.bullets);
 
     return (

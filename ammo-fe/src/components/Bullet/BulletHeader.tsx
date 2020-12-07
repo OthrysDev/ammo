@@ -3,7 +3,7 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import ToolTip from 'components/misc/ToolTip';
-import DownCarretIcon from 'assets/down_carret.svg';
+import DownCarretIcon from 'assets/icons/down_carret.svg';
 import useI18n from 'hooks/useI18n';
 import { Bullet } from 'shared/types/Bullet';
 

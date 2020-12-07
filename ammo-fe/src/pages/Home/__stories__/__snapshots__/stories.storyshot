@@ -1,136 +1,146 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`Storyshots Pages/Home Home 1`] = `
-Array [
+<div
+  style="transform:scale(1);height:100vh"
+>
   <div
     class="MuiBox-root MuiBox-root makeStyles-root"
     data-cy="layout-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="bar"
+      class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter"
+      data-cy="ws-reconnection-toast"
+    >
+      <div
+        class="MuiPaper-root MuiSnackbarContent-root makeStyles-root MuiPaper-elevation6"
+        direction="up"
+        role="alert"
+        style="opacity:0;transform:scale(0.75, 0.5625)"
+      >
+        <div
+          class="MuiSnackbarContent-message"
+        >
+          <div
+            class="MuiBox-root MuiBox-root"
+          >
+            <div
+              class="MuiBox-root MuiBox-root makeStyles-circular"
+            >
+              <div
+                class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                role="progressbar"
+                style="width:30px;height:30px"
+              >
+                <svg
+                  class="MuiCircularProgress-svg"
+                  viewBox="22 22 44 44"
+                >
+                  <circle
+                    class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                    cx="44"
+                    cy="44"
+                    fill="none"
+                    r="20.2"
+                    stroke-width="3.6"
+                  />
+                </svg>
+              </div>
+            </div>
+            <div
+              class="MuiBox-root MuiBox-root makeStyles-message"
+            >
+              Connecting to server
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-fullWidth makeStyles-fixedTop"
     >
       <div
         class="MuiBox-root MuiBox-root makeStyles-root"
-        data-cy="recorder-button"
+        data-cy="bar"
       >
         <div
-          class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
+          class="MuiBox-root MuiBox-root makeStyles-root"
+          data-cy="recorder-button"
         >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-insideButton "
+            class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
           >
-            <img
-              alt="Record"
-              class="makeStyles-icon"
-              data-cy="recording-button-record"
-              src="rec.svg"
-            />
+            <div
+              class="MuiBox-root MuiBox-root makeStyles-insideButton "
+            >
+              <img
+                alt="Record"
+                class="makeStyles-icon"
+                data-cy="recording-button-record"
+                src="rec.svg"
+              />
+            </div>
           </div>
         </div>
       </div>
     </div>
     <div
-      class="makeStyles-scrollbar"
-      data-simplebar="true"
+      class="MuiBox-root MuiBox-root makeStyles-marginTop"
     >
       <div
-        class="simplebar-wrapper"
+        class="makeStyles-scrollbar"
+        data-simplebar="true"
       >
         <div
-          class="simplebar-height-auto-observer-wrapper"
+          class="simplebar-wrapper"
         >
           <div
-            class="simplebar-height-auto-observer"
-          />
-        </div>
-        <div
-          class="simplebar-mask"
-        >
-          <div
-            class="simplebar-offset"
+            class="simplebar-height-auto-observer-wrapper"
           >
             <div
-              class="simplebar-content-wrapper"
+              class="simplebar-height-auto-observer"
+            />
+          </div>
+          <div
+            class="simplebar-mask"
+          >
+            <div
+              class="simplebar-offset"
             >
               <div
-                class="simplebar-content"
+                class="simplebar-content-wrapper"
               >
                 <div
-                  class="MuiBox-root MuiBox-root makeStyles-root"
-                  data-cy="main-pannel"
-                />
+                  class="simplebar-content"
+                >
+                  <div
+                    class="MuiBox-root MuiBox-root makeStyles-root"
+                    data-cy="main-pannel"
+                  />
+                </div>
               </div>
             </div>
           </div>
+          <div
+            class="simplebar-placeholder"
+          />
         </div>
         <div
-          class="simplebar-placeholder"
-        />
-      </div>
-      <div
-        class="simplebar-track simplebar-horizontal"
-      >
-        <div
-          class="simplebar-scrollbar"
-        />
-      </div>
-      <div
-        class="simplebar-track simplebar-vertical"
-      >
-        <div
-          class="simplebar-scrollbar"
-        />
-      </div>
-    </div>
-  </div>,
-  <div
-    class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter"
-    data-cy="ws-reconnection-toast"
-  >
-    <div
-      class="MuiPaper-root MuiSnackbarContent-root makeStyles-root MuiPaper-elevation6"
-      direction="up"
-      role="alert"
-      style="opacity:0;transform:scale(0.75, 0.5625)"
-    >
-      <div
-        class="MuiSnackbarContent-message"
-      >
-        <div
-          class="MuiBox-root MuiBox-root"
+          class="simplebar-track simplebar-horizontal"
         >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-circular"
-          >
-            <div
-              class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
-              role="progressbar"
-              style="width:30px;height:30px"
-            >
-              <svg
-                class="MuiCircularProgress-svg"
-                viewBox="22 22 44 44"
-              >
-                <circle
-                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
-                  cx="44"
-                  cy="44"
-                  fill="none"
-                  r="20.2"
-                  stroke-width="3.6"
-                />
-              </svg>
-            </div>
-          </div>
+            class="simplebar-scrollbar"
+          />
+        </div>
+        <div
+          class="simplebar-track simplebar-vertical"
+        >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-message"
-          >
-            Connecting to server
-          </div>
+            class="simplebar-scrollbar"
+          />
         </div>
       </div>
     </div>
-  </div>,
-]
+  </div>
+</div>
 `;

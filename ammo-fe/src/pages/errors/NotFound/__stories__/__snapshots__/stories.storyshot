@@ -2,59 +2,63 @@
 
 exports[`Storyshots Pages/errors/NotFound NotFound 1`] = `
 <div
-  class="MuiBox-root MuiBox-root"
-  data-cy="not-found-page"
+  style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
+    class="MuiBox-root MuiBox-root"
+    data-cy="not-found-page"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-centered"
+      class="MuiBox-root MuiBox-root makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-title"
+        class="MuiBox-root MuiBox-root makeStyles-centered"
       >
-        <h4
-          class="MuiTypography-root MuiTypography-h4"
+        <div
+          class="MuiBox-root MuiBox-root makeStyles-title"
         >
-          404
-        </h4>
-      </div>
-      <div
-        class="MuiBox-root MuiBox-root makeStyles-content"
-      >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
-        >
-          Sorry, the page you are looking for could not be found.
-        </p>
-      </div>
-      <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button"
-        data-cy="error-button"
-        tabindex="0"
-        type="button"
-      >
-        <span
-          class="MuiButton-label"
-        >
-          <svg
-            aria-hidden="true"
-            class="MuiSvgIcon-root makeStyles-icon"
-            focusable="false"
-            viewBox="0 0 24 24"
+          <h4
+            class="MuiTypography-root MuiTypography-h4"
           >
-            <path
-              d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
-            />
-          </svg>
-          <h6
-            class="MuiTypography-root MuiTypography-subtitle2"
+            404
+          </h4>
+        </div>
+        <div
+          class="MuiBox-root MuiBox-root makeStyles-content"
+        >
+          <p
+            class="MuiTypography-root MuiTypography-body1"
           >
-            Homepage
-          </h6>
-        </span>
-      </button>
+            Sorry, the page you are looking for could not be found.
+          </p>
+        </div>
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button"
+          data-cy="error-button"
+          tabindex="0"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root makeStyles-icon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
+              />
+            </svg>
+            <h6
+              class="MuiTypography-root MuiTypography-subtitle2"
+            >
+              Homepage
+            </h6>
+          </span>
+        </button>
+      </div>
     </div>
   </div>
 </div>
