@@ -1,24 +1,14 @@
 import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
 import WS from '../../src/network/WS';
 
-const socket = WS.getInstance('http://localhost:3001');
+const socket = WS.getSocket('http://localhost:3001');
 
 describe('WebSocket', () => {
     before(() => {
         cy.visit('/');
-
-        /* Add the listener to intercept the bullet the will be send by the test
-            and dispatch it to Redux jsut like the App do
-        */
-        socket.on('bullet', ({ bullet }) => {
-            cy.window()
-                .its('store')
-                .invoke('dispatch', { type: 'RECEIVED_BULLET', bullet });
-        });
     });
 
     after(() => {
-        socket.removeAllListeners();
         socket.disconnect();
     });
 
