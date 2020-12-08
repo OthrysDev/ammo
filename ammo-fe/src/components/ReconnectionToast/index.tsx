@@ -10,6 +10,7 @@ const useStyles = makeStyles((theme) => ({
     root: {
         border: `1px solid ${theme.palette.secondary.main}`,
         backgroundColor: theme.palette.primary.dark,
+        justifyContent: 'center',
     },
     circular: {
         display: 'inline-block',

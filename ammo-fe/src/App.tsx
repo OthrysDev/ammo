@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import RouterFallback from 'RouterFallback';
 import useWS from 'hooks/useWS';
@@ -7,6 +7,7 @@ import Home from 'pages/Home';
 import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
+
 // @ts-ignore
 if (window.Cypress) {
     // @ts-ignore
@@ -14,7 +15,11 @@ if (window.Cypress) {
 }
 
 const App = (): ReactElement => {
-    useWS();
+    const { init } = useWS();
+
+    useEffect(() => {
+        init();
+    }, []);
 
     return (
         <Router history={history}>

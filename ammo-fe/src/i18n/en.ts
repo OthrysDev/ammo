@@ -5,8 +5,8 @@ const englishMessages = {
     Request: 'Request',
     Collapse: 'Collapse',
     Uncollapse: 'Uncollapse',
-    'Img.Alt.DownCarret': 'Down carret',
-    'Img.Alt.UpCarret': 'Up carret',
+    'Img.Alt.DownCarretIcon': 'Down carret',
+    'Img.Alt.UpCarretIcon': 'Up carret',
     'Pages.NotFound.Title': '404',
     'Pages.NotFound.Content':
         'Sorry, the page you are looking for could not be found.',
@@ -15,6 +15,8 @@ const englishMessages = {
     'Pages.UnexpectedError.Content': 'Sorry, something unexpected happened.',
     'Pages.UnexpectedError.Button': 'Homepage',
     ReconnectionToast: 'Connecting to server',
+    'Img.Alt.RecordIcon': 'Record',
+    'Img.Alt.PauseIcon': 'Pause',
 };
 
 export default englishMessages;

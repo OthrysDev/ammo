@@ -38,19 +38,23 @@ const BulletDesc = ({
                         uuid={`bullet-desc-req-headers-${bullet.id}`}
                         headers={bullet.request.headers}
                     />
-                    <Body
-                        uuid={`bullet-desc-req-body-${bullet.id}`}
-                        body={bullet.request.body}
-                    />
+                    {bullet.request.body && (
+                        <Body
+                            uuid={`bullet-desc-req-body-${bullet.id}`}
+                            body={bullet.request.body}
+                        />
+                    )}
                     <Delimiter title="Response" />
                     <Headers
                         uuid={`bullet-desc-res-headers-${bullet.id}`}
                         headers={bullet.response.headers}
                     />
-                    <Body
-                        uuid={`bullet-desc-res-body-${bullet.id}`}
-                        body={bullet.response.body}
-                    />
+                    {bullet.response.body && (
+                        <Body
+                            uuid={`bullet-desc-res-body-${bullet.id}`}
+                            body={bullet.response.body}
+                        />
+                    )}
                 </Box>
             )}
         </Collapse>

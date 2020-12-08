@@ -1,11 +1,13 @@
 import React, { ReactElement, ReactNode } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Box from '@material-ui/core/Box';
+import Bar from 'components/Bar';
 
 const useStyles = makeStyles(() => ({
     root: {
         height: '100vh',
         width: '100%',
+        overflowY: 'hidden',
     },
     grid: {
         height: '100%',
@@ -22,6 +24,8 @@ const Layout = ({ children }: LayoutProps): ReactElement => {
 
     return (
         <Box data-cy="layout-root" className={classes.root}>
+            <Bar />
+
             {children}
         </Box>
     );

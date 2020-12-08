@@ -3,16 +3,16 @@
 exports[`Storyshots Components/Bullet Bullet 1`] = `
 <div
   class="MuiBox-root MuiBox-root makeStyles-root"
-  data-cy="bullet-id0"
+  data-cy="bullet-1"
   style="opacity:0;transform:scale(0.75, 0.5625)"
 >
   <div
     class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="bullet-header-id0"
+    data-cy="bullet-header-1"
   >
     <div
       class="MuiBox-root MuiBox-root"
-      data-cy="bullet-header-ms-id0"
+      data-cy="bullet-header-ms-1"
     >
       <p
         class="MuiTypography-root MuiTypography-body1"
@@ -22,7 +22,7 @@ exports[`Storyshots Components/Bullet Bullet 1`] = `
     </div>
     <div
       class="MuiBox-root MuiBox-root makeStyles-methodBadge"
-      data-cy="bullet-header-method-id0"
+      data-cy="bullet-header-method-1"
     >
       <p
         class="MuiTypography-root MuiTypography-body1"
@@ -32,7 +32,7 @@ exports[`Storyshots Components/Bullet Bullet 1`] = `
     </div>
     <div
       class="MuiBox-root MuiBox-root makeStyles-url"
-      data-cy="bullet-header-url-id0"
+      data-cy="bullet-header-url-1"
     >
       <p
         class="MuiTypography-root MuiTypography-body1"
@@ -42,11 +42,11 @@ exports[`Storyshots Components/Bullet Bullet 1`] = `
     </div>
     <div
       class="MuiBox-root MuiBox-root makeStyles-filler"
-      data-cy="bullet-header-filler-id0"
+      data-cy="bullet-header-filler-1"
     />
     <div
       class="MuiBox-root MuiBox-root makeStyles-statusBadge"
-      data-cy="bullet-header-status-id0"
+      data-cy="bullet-header-status-1"
     >
       <p
         class="MuiTypography-root MuiTypography-body1"
@@ -56,8 +56,75 @@ exports[`Storyshots Components/Bullet Bullet 1`] = `
     </div>
     <img
       alt="Down carret"
-      class="makeStyles-downCarret "
-      data-cy="bullet-header-collapse-id0"
+      class="makeStyles-downCarretIcon "
+      data-cy="bullet-header-collapse-1"
+      src="down_carret.svg"
+      title="Uncollapse"
+    />
+  </div>
+  <div
+    class="MuiCollapse-container MuiCollapse-hidden"
+    style="min-height:0px"
+  >
+    <div
+      class="MuiCollapse-wrapper"
+    >
+      <div
+        class="MuiCollapse-wrapperInner"
+      />
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Bullet Minimal 1`] = `
+<div
+  class="MuiBox-root MuiBox-root makeStyles-root"
+  data-cy="bullet-1"
+  style="opacity:0;transform:scale(0.75, 0.5625)"
+>
+  <div
+    class="MuiBox-root MuiBox-root makeStyles-root"
+    data-cy="bullet-header-1"
+  >
+    <div
+      class="MuiBox-root MuiBox-root"
+      data-cy="bullet-header-ms-1"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        ::0
+      </p>
+    </div>
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-methodBadge"
+      data-cy="bullet-header-method-1"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        POST
+      </p>
+    </div>
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-url"
+      data-cy="bullet-header-url-1"
+    >
+      <p
+        class="MuiTypography-root MuiTypography-body1"
+      >
+        http://localhost:3000/user
+      </p>
+    </div>
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-filler"
+      data-cy="bullet-header-filler-1"
+    />
+    <img
+      alt="Down carret"
+      class="makeStyles-downCarretIcon "
+      data-cy="bullet-header-collapse-1"
       src="down_carret.svg"
       title="Uncollapse"
     />
