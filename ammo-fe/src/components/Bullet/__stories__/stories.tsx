@@ -13,7 +13,6 @@ const BulletTemplate: Story<BulletProps> = ({ bullet }) => (
 );
 
 export const Default = BulletTemplate.bind({});
-Default.storyName = 'Bullet';
 Default.args = {
     bullet: bulletMock,
 };
@@ -22,4 +21,15 @@ export const Minimal = BulletTemplate.bind({});
 Minimal.storyName = 'Minimal';
 Minimal.args = {
     bullet: minimalBulletMock,
+};
+
+export const IPhone5 = BulletTemplate.bind({});
+IPhone5.storyName = 'iPhone 5/SE - vertical';
+IPhone5.args = {
+    bullet: bulletMock,
+};
+IPhone5.parameters = {
+    viewport: {
+        defaultViewport: 'iPhone5Ver',
+    },
 };

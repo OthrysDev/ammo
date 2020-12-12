@@ -1,3 +1,0 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
-
-exports[`Object size validation Pass a valid sized string 1`] = `"A not so long string"`;

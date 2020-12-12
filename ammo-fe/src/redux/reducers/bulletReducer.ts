@@ -1,7 +1,11 @@
 import { Bullet } from 'shared/types/Bullet';
 
+export enum BulletReducerActionType {
+    RECEIVED_BULLET = 'RECEIVED_BULLET',
+}
+
 type BulletReducerAction = {
-    type: 'RECEIVED_BULLET';
+    type: BulletReducerActionType;
     bullet?: Bullet;
 };
 
@@ -12,7 +16,7 @@ export default function bulletReducer(
     action: BulletReducerAction
 ): BulletReducerState {
     switch (action.type) {
-        case 'RECEIVED_BULLET':
+        case BulletReducerActionType.RECEIVED_BULLET:
             return [...state, action.bullet];
         default:
             return state;

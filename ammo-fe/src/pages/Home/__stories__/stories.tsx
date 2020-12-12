@@ -10,4 +10,11 @@ export default {
 const HomeTemplate: Story = () => <Home />;
 
 export const Default = HomeTemplate.bind({});
-Default.storyName = 'Home';
+
+export const IPhone5 = HomeTemplate.bind({});
+IPhone5.storyName = 'iPhone 5/SE - vertical';
+IPhone5.parameters = {
+    viewport: {
+        defaultViewport: 'iPhone5Ver',
+    },
+};

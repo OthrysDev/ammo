@@ -7,7 +7,7 @@ import {
     heavyConnectorRequestMock,
     invalidUrlConnectorRequestMock,
     minimalConnectorRequestMock,
-} from 'routers/bulletRouter/__tests__/mocks/ConnectorRequest.mock';
+} from 'routers/BulletRouter/__tests__/mocks/ConnectorRequest.mock';
 
 interface HTTPError {
     error: {
@@ -34,8 +34,8 @@ afterAll(() => {
     app.close();
 });
 
-describe('Testing endpoints', () => {
-    test('Send correct data', async () => {
+describe('BulletRouter', () => {
+    test('Sending a valid connectorRequest - should respond with valid bullet', async () => {
         await request(app)
             .post('/')
             .send({ data: connectorRequestMock })
@@ -46,7 +46,7 @@ describe('Testing endpoints', () => {
             });
     });
 
-    test('Send minimal data', async () => {
+    test('Send a minimal connectorRequest - should respond with a valid, minimal bullet', async () => {
         await request(app)
             .post('/')
             .send({ data: minimalConnectorRequestMock })
@@ -57,7 +57,7 @@ describe('Testing endpoints', () => {
             });
     });
 
-    it('Send incorrect data with missing method - Joi must throw error as method is missing', async () => {
+    test('Send an invalid connectorRequest with missing method - Joi should throw', async () => {
         await request(app)
             .post('/')
             .send({ data: noMethodConnectorRequestMock })
@@ -67,7 +67,7 @@ describe('Testing endpoints', () => {
             });
     });
 
-    it('Send a heavy payload - Joi must throw error', async () => {
+    test('Send an invalid connectorRequest with a heavy payload - Joi should throw', async () => {
         await request(app)
             .post('/')
             .send({ data: heavyConnectorRequestMock })
@@ -77,7 +77,7 @@ describe('Testing endpoints', () => {
             });
     });
 
-    it('Send an invalid url - Joi must throw error', async () => {
+    test('Send a connectorRequest with an invalid url - Joi should throw', async () => {
         await request(app)
             .post('/')
             .send({ data: invalidUrlConnectorRequestMock })

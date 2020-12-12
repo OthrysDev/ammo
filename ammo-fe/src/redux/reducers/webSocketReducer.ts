@@ -1,5 +1,11 @@
+export enum WebSocketReducerActionType {
+    CONNECTED = 'CONNECTED',
+    DISCONNECTED = 'DISCONNECTED',
+}
+
 type WebSocketReducerAction = {
-    type: 'CONNECTED' | 'DISCONNECTED' | 'RECEIVED_BULLET';
+    type: WebSocketReducerActionType;
+    connected: boolean;
 };
 
 export type WebSocketReducerState = {
@@ -11,9 +17,9 @@ export default function webSocketReducer(
     action: WebSocketReducerAction
 ): WebSocketReducerState {
     switch (action.type) {
-        case 'CONNECTED':
+        case WebSocketReducerActionType.CONNECTED:
             return { ...state, connected: true };
-        case 'DISCONNECTED':
+        case WebSocketReducerActionType.DISCONNECTED:
             return { ...state, connected: false };
         default:
             return state;

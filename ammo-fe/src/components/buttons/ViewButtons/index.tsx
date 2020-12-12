@@ -33,14 +33,20 @@ interface ViewButtonProps {
     icon: string;
     alt: i18n;
     uuid: i18n;
+    onClick: () => void;
 }
 
-const ViewButton = ({ icon, alt, uuid }: ViewButtonProps): ReactElement => {
+const ViewButton = ({
+    icon,
+    alt,
+    uuid,
+    onClick,
+}: ViewButtonProps): ReactElement => {
     const classes = useStyles();
     const locI18n = useI18n();
 
     return (
-        <Box className={classes.root} data-cy={uuid}>
+        <Box className={classes.root} data-cy={uuid} onClick={onClick}>
             <img
                 data-cy={`recording-button-pause`}
                 src={icon}
@@ -55,9 +61,16 @@ const ViewButton = ({ icon, alt, uuid }: ViewButtonProps): ReactElement => {
 // ================================== BULLETS / REQUESTS VIEW =======================================
 // ==================================================================================================
 
-export const BulletsViewButton = (): ReactElement => {
+interface BulletsViewButtonProps {
+    onClick: () => void;
+}
+
+export const BulletsViewButton = ({
+    onClick,
+}: BulletsViewButtonProps): ReactElement => {
     return (
         <ViewButton
+            onClick={onClick}
             uuid="bullets-view-button"
             icon={RequestIcon}
             alt="Img.Alt.RequestIcon"
@@ -69,9 +82,16 @@ export const BulletsViewButton = (): ReactElement => {
 // ================================== BULLETS / REQUESTS VIEW =======================================
 // ==================================================================================================
 
-export const ScriptsViewButton = (): ReactElement => {
+interface ScriptsViewButtonProps {
+    onClick: () => void;
+}
+
+export const ScriptsViewButton = ({
+    onClick,
+}: ScriptsViewButtonProps): ReactElement => {
     return (
         <ViewButton
+            onClick={onClick}
             uuid="scripts-view-button"
             icon={ScriptIcon}
             alt="Img.Alt.ScriptIcon"

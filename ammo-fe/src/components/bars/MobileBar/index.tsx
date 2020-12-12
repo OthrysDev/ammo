@@ -6,6 +6,8 @@ import {
     BulletsViewButton,
     ScriptsViewButton,
 } from 'components/buttons/ViewButtons';
+import { useDispatch } from 'react-redux';
+import { UIReducerActionType, MainPannelView } from 'redux/reducers/uiReducer';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -20,12 +22,24 @@ const useStyles = makeStyles((theme) => ({
 
 const MobileBar = (): ReactElement => {
     const classes = useStyles();
+    const dispatch = useDispatch();
+
+    const onSelectView = (view: MainPannelView): void => {
+        dispatch({
+            type: UIReducerActionType.CHANGE_MAIN_SELECTED_PANNEL,
+            view,
+        });
+    };
 
     return (
         <Box className={classes.root} boxShadow={2} data-cy="bar">
-            <BulletsViewButton />
+            <BulletsViewButton
+                onClick={(): void => onSelectView(MainPannelView.BULLETS)}
+            />
             <RecorderButton />
-            <ScriptsViewButton />
+            <ScriptsViewButton
+                onClick={(): void => onSelectView(MainPannelView.SCRIPTS)}
+            />
         </Box>
     );
 };

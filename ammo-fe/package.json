@@ -7,6 +7,7 @@
         "@material-ui/icons": "^4.9.1",
         "@material-ui/styles": "^4.11.1",
         "@reduxjs/toolkit": "^1.4.0",
+        "@storybook/addon-actions": "^6.1.10",
         "@storybook/addon-storyshots": "^6.1.5",
         "@storybook/react": "^6.1.5",
         "@testing-library/jest-dom": "^5.11.4",
@@ -38,7 +39,6 @@
     },
     "devDependencies": {
         "@babel/core": "^7.12.3",
-        "@storybook/addon-actions": "^6.1.5",
         "@storybook/addon-essentials": "^6.1.5",
         "@storybook/addon-links": "^6.1.5",
         "@storybook/addon-viewport": "^6.1.10",

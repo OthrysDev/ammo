@@ -6,6 +6,8 @@ import ToolTip from 'components/misc/ToolTip';
 import DownCarretIcon from 'assets/icons/down_carret.svg';
 import useI18n from 'hooks/useI18n';
 import { Bullet } from 'shared/types/Bullet';
+import useMQ from 'hooks/useMQ';
+import urlWithoutOrigin from 'util/NetUtil';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -16,8 +18,11 @@ const useStyles = makeStyles((theme) => ({
         flexDirection: 'row',
         maxWidth: '100%',
     },
+    ms: {
+        marginRight: '12px',
+    },
     methodBadge: {
-        margin: '0 12px',
+        margin: '0 12px 0 0',
         padding: '0 9px',
         borderRadius: '3px',
         backgroundColor: theme.palette.primary.main,
@@ -60,15 +65,21 @@ const BulletHeader = ({
     onClick,
 }: BulletHeaderProps): ReactElement => {
     const classes = useStyles();
+    const { isSMDown } = useMQ();
     const i18n = useI18n();
 
     return (
         <Box data-cy={`bullet-header-${bullet.id}`} className={classes.root}>
-            <Box data-cy={`bullet-header-ms-${bullet.id}`}>
-                <Typography>
-                    ::{new Date(bullet.date).getMilliseconds()}
-                </Typography>
-            </Box>
+            {!isSMDown && (
+                <Box
+                    data-cy={`bullet-header-ms-${bullet.id}`}
+                    className={classes.ms}
+                >
+                    <Typography>
+                        ::{new Date(bullet.date).getMilliseconds()}
+                    </Typography>
+                </Box>
+            )}
             <Box
                 data-cy={`bullet-header-method-${bullet.id}`}
                 className={classes.methodBadge}
@@ -79,7 +90,9 @@ const BulletHeader = ({
                 data-cy={`bullet-header-url-${bullet.id}`}
                 className={classes.url}
             >
-                <Typography>{bullet.url}</Typography>
+                <Typography>
+                    {isSMDown ? urlWithoutOrigin(bullet.url) : bullet.url}
+                </Typography>
             </Box>
             <Box
                 data-cy={`bullet-header-filler-${bullet.id}`}

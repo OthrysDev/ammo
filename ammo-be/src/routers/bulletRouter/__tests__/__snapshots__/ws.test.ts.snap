@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing WebSockets Make an API call, the WebSocket must trigger and return a bullet 1`] = `
+exports[`[WS] BulletRouter Sending a connectorRequest - ws should return a bullet 1`] = `
 Object {
   "date": "2020-10-10T08:00:00.000Z",
   "id": "AMockedNanoId",

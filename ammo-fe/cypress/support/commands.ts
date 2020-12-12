@@ -1,3 +1,5 @@
+import { BulletReducerActionType } from '../../src/redux/reducers/bulletReducer';
+
 // ***********************************************
 // This example commands.js shows you how to
 // create various custom commands and overwrite
@@ -44,14 +46,26 @@ declare namespace Cypress {
          * cy.pushHistory('/home')
          */
         pushHistory: typeof pushHistory;
+        /**
+         * Tests if a DOM element is within the viewport
+         * @example
+         * cy.shouldBeInViewport('[data-cy^=some-element]');
+         */
+        shouldBeInViewport: typeof shouldBeInViewport;
+        /**
+         * Tests if a DOM element is NOT within the viewport
+         * @example
+         * cy.shouldNotBeInViewport('[data-cy^=some-element]');
+         */
+        shouldNotBeInViewport: typeof shouldNotBeInViewport;
     }
 }
 
 const createBullet = (bullet): Cypress.Chainable<unknown> => {
-    return cy
-        .window()
-        .its('store')
-        .invoke('dispatch', { type: 'RECEIVED_BULLET', bullet });
+    return cy.window().its('store').invoke('dispatch', {
+        type: BulletReducerActionType.RECEIVED_BULLET,
+        bullet,
+    });
 };
 
 Cypress.Commands.add('createBullet', createBullet);
@@ -68,3 +82,43 @@ const pushHistory = (route: string): Cypress.Chainable<unknown> =>
     cy.window().its('routerHistory').invoke('push', route);
 
 Cypress.Commands.add('pushHistory', pushHistory);
+
+const isWithinWindow = (el): boolean => {
+    const windowBounds = {
+        top: 0,
+        right: Cypress.$(cy.state('window')).width(),
+        bottom: Cypress.$(cy.state('window')).height(),
+        left: 0,
+    };
+
+    const elementRect = el[0].getBoundingClientRect();
+
+    const elementBounds = {
+        top: elementRect.y,
+        right: elementRect.x + elementRect.width,
+        bottom: elementRect.x + elementRect.height,
+        left: elementRect.x,
+    };
+
+    return !(
+        elementBounds.left >= windowBounds.right ||
+        elementBounds.right <= windowBounds.left ||
+        elementBounds.top >= windowBounds.bottom ||
+        elementBounds.bottom <= windowBounds.top
+    );
+};
+
+// https://github.com/cypress-io/cypress/issues/877#issuecomment-490504922
+const shouldNotBeInViewport = (element): Cypress.Chainable<unknown> => {
+    cy.get(element).should(($el) => {
+        expect(isWithinWindow($el)).to.equal(false);
+    });
+};
+Cypress.Commands.add('shouldNotBeInViewport', shouldNotBeInViewport);
+
+const shouldBeInViewport = (element): Cypress.Chainable<unknown> => {
+    cy.get(element).should(($el) => {
+        expect(isWithinWindow($el)).to.equal(true);
+    });
+};
+Cypress.Commands.add('shouldBeInViewport', shouldBeInViewport);
