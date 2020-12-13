@@ -1,7 +1,7 @@
 import { isValidUrl, hasValidWeight } from 'utils/ValidationUtil';
 
 describe('ValidationUtil', () => {
-    describe('URL validation regex', () => {
+    describe('isValidUrl', () => {
         test('Feeding a valid URL - should return URL', () => {
             const url = 'http://localhost:3000/user';
             expect(isValidUrl(url)).toBe(url);
@@ -16,7 +16,7 @@ describe('ValidationUtil', () => {
         });
     });
 
-    describe('Object size validation', () => {
+    describe('hasValidWeight', () => {
         test('Feeding a valid sized string - should return string', () => {
             expect(hasValidWeight('A not so long string')).toMatchSnapshot();
         });
