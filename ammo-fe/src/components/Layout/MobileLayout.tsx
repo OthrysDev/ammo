@@ -5,14 +5,12 @@ import MobileBar from 'components/bars/MobileBar';
 import MainPannel from 'components/MainPannel';
 
 const useStyles = makeStyles(() => ({
-    fullWidth: {
+    bar: {
         width: '100%',
-    },
-    fixedBottom: {
         position: 'fixed',
         bottom: 0,
     },
-    marginBottom: {
+    pannel: {
         marginBottom: '74px',
     },
 }));
@@ -22,11 +20,11 @@ const MobileLayout = (): ReactElement => {
 
     return (
         <>
-            <Box className={`${classes.fullWidth} ${classes.fixedBottom}`}>
+            <Box className={classes.bar}>
                 <MobileBar />
             </Box>
 
-            <Box className={classes.marginBottom}>
+            <Box className={classes.pannel}>
                 <MainPannel />
             </Box>
         </>

@@ -5,14 +5,12 @@ import Bar from 'components/bars/Bar';
 import MainPannel from 'components/MainPannel';
 
 const useStyles = makeStyles(() => ({
-    fullWidth: {
+    bar: {
         width: '100%',
-    },
-    fixedTop: {
         position: 'fixed',
         top: 0,
     },
-    marginTop: {
+    pannel: {
         marginTop: '74px',
     },
 }));
@@ -22,11 +20,11 @@ const DesktopLayout = (): ReactElement => {
 
     return (
         <>
-            <Box className={`${classes.fullWidth} ${classes.fixedTop}`}>
+            <Box className={classes.bar}>
                 <Bar />
             </Box>
 
-            <Box className={classes.marginTop}>
+            <Box className={classes.pannel}>
                 <MainPannel />
             </Box>
         </>

@@ -57,7 +57,7 @@ exports[`Storyshots Components/Layout Default 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-fullWidth makeStyles-fixedTop"
+      class="MuiBox-root MuiBox-root makeStyles-bar"
     >
       <div
         class="MuiBox-root MuiBox-root makeStyles-root"
@@ -85,7 +85,7 @@ exports[`Storyshots Components/Layout Default 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-marginTop"
+      class="MuiBox-root MuiBox-root makeStyles-pannel"
     >
       <div
         class="makeStyles-scrollbar"
@@ -202,7 +202,7 @@ exports[`Storyshots Components/Layout iPhone 5/SE - vertical 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-fullWidth makeStyles-fixedTop"
+      class="MuiBox-root MuiBox-root makeStyles-bar"
     >
       <div
         class="MuiBox-root MuiBox-root makeStyles-root"
@@ -230,7 +230,7 @@ exports[`Storyshots Components/Layout iPhone 5/SE - vertical 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-marginTop"
+      class="MuiBox-root MuiBox-root makeStyles-pannel"
     >
       <div
         class="makeStyles-scrollbar"

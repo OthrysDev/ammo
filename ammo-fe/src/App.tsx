@@ -1,4 +1,4 @@
-import React, { ReactElement } from 'react';
+import React, { ReactElement, useEffect } from 'react';
 import { Router, Switch, Route } from 'react-router-dom';
 import RouterFallback from 'RouterFallback';
 import useWS from 'hooks/useWS';
@@ -14,7 +14,11 @@ if (window.Cypress) {
 }
 
 const App = (): ReactElement => {
-    useWS();
+    const { init } = useWS();
+
+    useEffect(() => {
+        init();
+    }, []);
 
     return (
         <Router history={history}>
