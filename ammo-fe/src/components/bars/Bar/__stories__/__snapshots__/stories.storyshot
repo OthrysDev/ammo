@@ -1,0 +1,32 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/bars/Bar Bar 1`] = `
+<div
+  style="transform:scale(1);height:100vh"
+>
+  <div
+    class="MuiBox-root MuiBox-root makeStyles-root"
+    data-cy="bar"
+  >
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-root"
+      data-cy="recorder-button"
+    >
+      <div
+        class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
+      >
+        <div
+          class="MuiBox-root MuiBox-root makeStyles-insideButton "
+        >
+          <img
+            alt="Record"
+            class="makeStyles-icon"
+            data-cy="recording-button-record"
+            src="rec.svg"
+          />
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+`;

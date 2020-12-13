@@ -17,6 +17,8 @@ const englishMessages = {
     ReconnectionToast: 'Connecting to server',
     'Img.Alt.RecordIcon': 'Record',
     'Img.Alt.PauseIcon': 'Pause',
+    'Img.Alt.RequestIcon': 'Requests',
+    'Img.Alt.ScriptIcon': 'Scripts',
 };
 
 export default englishMessages;

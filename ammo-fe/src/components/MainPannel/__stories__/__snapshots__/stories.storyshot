@@ -2,56 +2,60 @@
 
 exports[`Storyshots Components/MainPannel MainPannel 1`] = `
 <div
-  class="makeStyles-scrollbar"
-  data-simplebar="true"
+  style="transform:scale(1);height:100vh"
 >
   <div
-    class="simplebar-wrapper"
+    class="makeStyles-scrollbar"
+    data-simplebar="true"
   >
     <div
-      class="simplebar-height-auto-observer-wrapper"
+      class="simplebar-wrapper"
     >
       <div
-        class="simplebar-height-auto-observer"
-      />
-    </div>
-    <div
-      class="simplebar-mask"
-    >
-      <div
-        class="simplebar-offset"
+        class="simplebar-height-auto-observer-wrapper"
       >
         <div
-          class="simplebar-content-wrapper"
+          class="simplebar-height-auto-observer"
+        />
+      </div>
+      <div
+        class="simplebar-mask"
+      >
+        <div
+          class="simplebar-offset"
         >
           <div
-            class="simplebar-content"
+            class="simplebar-content-wrapper"
           >
             <div
-              class="MuiBox-root MuiBox-root makeStyles-root"
-              data-cy="main-pannel"
-            />
+              class="simplebar-content"
+            >
+              <div
+                class="MuiBox-root MuiBox-root makeStyles-root"
+                data-cy="main-pannel"
+              />
+            </div>
           </div>
         </div>
       </div>
+      <div
+        class="simplebar-placeholder"
+      />
     </div>
     <div
-      class="simplebar-placeholder"
-    />
-  </div>
-  <div
-    class="simplebar-track simplebar-horizontal"
-  >
+      class="simplebar-track simplebar-horizontal"
+    >
+      <div
+        class="simplebar-scrollbar"
+      />
+    </div>
     <div
-      class="simplebar-scrollbar"
-    />
-  </div>
-  <div
-    class="simplebar-track simplebar-vertical"
-  >
-    <div
-      class="simplebar-scrollbar"
-    />
+      class="simplebar-track simplebar-vertical"
+    >
+      <div
+        class="simplebar-scrollbar"
+      />
+    </div>
   </div>
 </div>
 `;

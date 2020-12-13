@@ -33,6 +33,9 @@ module.exports = {
             },
         ],
         '@typescript-eslint/no-namespace': 0,
+        // https://stackoverflow.com/questions/63961803/eslint-says-all-enums-in-typescript-app-are-already-declared-in-the-upper-scope
+        'no-shadow': 'off',
+        '@typescript-eslint/no-shadow': ['error'],
     },
     settings: {
         'import/resolver': {

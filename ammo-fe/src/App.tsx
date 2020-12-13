@@ -7,7 +7,6 @@ import Home from 'pages/Home';
 import { createBrowserHistory } from 'history';
 
 const history = createBrowserHistory();
-
 // @ts-ignore
 if (window.Cypress) {
     // @ts-ignore

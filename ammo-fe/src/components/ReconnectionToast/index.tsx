@@ -3,6 +3,7 @@ import Snackbar from '@material-ui/core/Snackbar';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { FormattedMessage } from 'react-intl';
+import useMQ from 'hooks/useMQ';
 
 import Box from '@material-ui/core/Box';
 
@@ -11,6 +12,9 @@ const useStyles = makeStyles((theme) => ({
         border: `1px solid ${theme.palette.secondary.main}`,
         backgroundColor: theme.palette.primary.dark,
         justifyContent: 'center',
+    },
+    marginBottom: {
+        bottom: '82px',
     },
     circular: {
         display: 'inline-block',
@@ -27,13 +31,17 @@ const useStyles = makeStyles((theme) => ({
 
 const ReconnectionToast = (): ReactElement => {
     const classes = useStyles();
+    const { isSMDown } = useMQ();
 
     return (
         <Snackbar
             data-cy="ws-reconnection-toast"
             anchorOrigin={{ vertical: 'bottom', horizontal: 'center' }}
-            open={true}
-            ContentProps={{ className: classes.root }}
+            open
+            className={isSMDown ? classes.marginBottom : ''}
+            ContentProps={{
+                className: classes.root,
+            }}
             message={
                 <Box>
                     <Box className={classes.circular}>
