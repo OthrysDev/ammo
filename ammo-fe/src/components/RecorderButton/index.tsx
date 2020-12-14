@@ -1,11 +1,13 @@
 import React, { ReactElement, useState } from 'react';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import RecIcon from 'assets/rec.svg';
 import PauseIcon from 'assets/pause.svg';
 import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
 import { useSelector } from 'react-redux';
+import WS from 'network/WS';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -55,41 +57,45 @@ const RecorderButton = (): ReactElement => {
     const i18n = useI18n();
     const connected = useSelector((state: RootReducer) => state.ws.connected);
     const [recording, setRecording] = useState(false);
+    const socket = WS.getSocket('http://localhost:3000');
 
     const toggleRecording = (): void => {
-        if (connected) setRecording((prevState) => !prevState);
+        socket.emit('toggleRecord', () => {
+            setRecording((prevState) => !prevState);
+        });
     };
 
     return (
-        <Box className={classes.root} data-cy="recorder-button">
+        <Box className={classes.root}>
             <Box
                 className={`${classes.insideGutter} ${
                     connected ? '' : classes.disabled
                 }`}
             >
-                <Box
+                <Button
+                    data-cy="recorder-button"
                     className={`${classes.insideButton} ${
                         connected ? classes.clickable : ''
                     }`}
-                    boxShadow={2}
                     onClick={toggleRecording}
+                    disabled={!connected}
                 >
                     {recording ? (
                         <img
-                            data-cy={`recording-button-pause`}
+                            data-cy="recording-button-pause"
                             src={PauseIcon}
                             alt={i18n('Img.Alt.PauseIcon')}
                             className={classes.icon}
                         />
                     ) : (
                         <img
-                            data-cy={`recording-button-record`}
+                            data-cy="recording-button-record"
                             src={RecIcon}
                             alt={i18n('Img.Alt.RecordIcon')}
                             className={classes.icon}
                         />
                     )}
-                </Box>
+                </Button>
             </Box>
         </Box>
     );

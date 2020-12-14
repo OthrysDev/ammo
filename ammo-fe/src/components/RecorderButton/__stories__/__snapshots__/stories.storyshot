@@ -3,21 +3,28 @@
 exports[`Storyshots Components/RecorderButton RecorderButton 1`] = `
 <div
   class="MuiBox-root MuiBox-root makeStyles-root"
-  data-cy="recorder-button"
 >
   <div
     class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
   >
-    <div
-      class="MuiBox-root MuiBox-root makeStyles-insideButton "
+    <button
+      class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton  MuiButton-disabled MuiButtonBase-disabled"
+      data-cy="recorder-button"
+      disabled=""
+      tabindex="-1"
+      type="button"
     >
-      <img
-        alt="Record"
-        class="makeStyles-icon"
-        data-cy="recording-button-record"
-        src="rec.svg"
-      />
-    </div>
+      <span
+        class="MuiButton-label"
+      >
+        <img
+          alt="Record"
+          class="makeStyles-icon"
+          data-cy="recording-button-record"
+          src="rec.svg"
+        />
+      </span>
+    </button>
   </div>
 </div>
 `;

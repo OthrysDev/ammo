@@ -8,8 +8,11 @@ interface Socket {
     connect(): void;
     disconnect(): void;
 }
+
 class WS {
-    static getSocket = (url: string): Socket => {
+    static connection = null;
+
+    static getSocket(url: string): Socket {
         // @ts-ignore
         if (window.Cypress) {
             // @ts-ignore
@@ -17,8 +20,10 @@ class WS {
             // @ts-ignore
             return window.Cypress.io;
         }
-        return io(url);
-    };
+
+        if (!this.connection) this.connection = io(url);
+        return this.connection;
+    }
 }
 
 export default WS;
