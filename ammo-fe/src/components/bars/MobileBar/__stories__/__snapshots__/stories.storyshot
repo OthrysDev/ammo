@@ -1,0 +1,61 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/bars/MobileBar MobileBar 1`] = `
+<div
+  style="transform:scale(1);height:100vh"
+>
+  <div
+    class="MuiBox-root MuiBox-root makeStyles-root"
+    data-cy="bar"
+  >
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-root"
+      data-cy="bullets-view-button"
+    >
+      <img
+        alt="Requests"
+        class="makeStyles-icon"
+        data-cy="recording-button-pause"
+        src="request.svg"
+      />
+    </div>
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-root"
+    >
+      <div
+        class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton  MuiButton-disabled MuiButtonBase-disabled"
+          data-cy="recorder-button"
+          disabled=""
+          tabindex="-1"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <img
+              alt="Record"
+              class="makeStyles-icon"
+              data-cy="recording-button-record"
+              src="rec.svg"
+            />
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-root"
+      data-cy="scripts-view-button"
+    >
+      <img
+        alt="Scripts"
+        class="makeStyles-icon"
+        data-cy="recording-button-pause"
+        src="script.svg"
+      />
+    </div>
+  </div>
+</div>
+`;

@@ -44,14 +44,14 @@ afterEach(() => {
     socket.off('bullet');
 });
 
-describe('Testing WebSockets', () => {
-    it('Socket must be connected properly', (done) => {
+describe('[WS] BulletRouter', () => {
+    test('Starting the application - ws should be connected', (done) => {
         expect(socket.connected).toBe(true);
 
         done();
     });
 
-    it('Make an API call, the WebSocket must trigger and return a bullet', async (done) => {
+    test('Sending a connectorRequest - ws should return a bullet', async (done) => {
         socket.on('bullet', ({ bullet }: Record<string, Bullet>) => {
             expect(bullet).toMatchSnapshot();
             done();
@@ -63,7 +63,7 @@ describe('Testing WebSockets', () => {
             .expect(200);
     });
 
-    it('Make an API call with an incorrect mock - Should catch error', async (done) => {
+    test('Sending an incorrect connectorRequest - ws should not return a bullet', async (done) => {
         socket.on('bullet', () => {
             done.fail('Should not catch a bullet as the data is incorrect.');
         });

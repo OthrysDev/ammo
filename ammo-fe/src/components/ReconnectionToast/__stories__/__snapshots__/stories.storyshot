@@ -2,48 +2,52 @@
 
 exports[`Storyshots Components/ReconnectionToast ReconnectionToast 1`] = `
 <div
-  class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter"
-  data-cy="ws-reconnection-toast"
+  style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiPaper-root MuiSnackbarContent-root makeStyles-root MuiPaper-elevation6"
-    direction="up"
-    role="alert"
-    style="opacity:0;transform:scale(0.75, 0.5625)"
+    class="MuiSnackbar-root MuiSnackbar-anchorOriginBottomCenter"
+    data-cy="ws-reconnection-toast"
   >
     <div
-      class="MuiSnackbarContent-message"
+      class="MuiPaper-root MuiSnackbarContent-root makeStyles-root MuiPaper-elevation6"
+      direction="up"
+      role="alert"
+      style="opacity:0;transform:scale(0.75, 0.5625)"
     >
       <div
-        class="MuiBox-root MuiBox-root"
+        class="MuiSnackbarContent-message"
       >
         <div
-          class="MuiBox-root MuiBox-root makeStyles-circular"
+          class="MuiBox-root MuiBox-root"
         >
           <div
-            class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
-            role="progressbar"
-            style="width:30px;height:30px"
+            class="MuiBox-root MuiBox-root makeStyles-circular"
           >
-            <svg
-              class="MuiCircularProgress-svg"
-              viewBox="22 22 44 44"
+            <div
+              class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+              role="progressbar"
+              style="width:30px;height:30px"
             >
-              <circle
-                class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
-                cx="44"
-                cy="44"
-                fill="none"
-                r="20.2"
-                stroke-width="3.6"
-              />
-            </svg>
+              <svg
+                class="MuiCircularProgress-svg"
+                viewBox="22 22 44 44"
+              >
+                <circle
+                  class="MuiCircularProgress-circle MuiCircularProgress-circleIndeterminate"
+                  cx="44"
+                  cy="44"
+                  fill="none"
+                  r="20.2"
+                  stroke-width="3.6"
+                />
+              </svg>
+            </div>
           </div>
-        </div>
-        <div
-          class="MuiBox-root MuiBox-root makeStyles-message"
-        >
-          Connecting to server
+          <div
+            class="MuiBox-root MuiBox-root makeStyles-message"
+          >
+            Connecting to server
+          </div>
         </div>
       </div>
     </div>

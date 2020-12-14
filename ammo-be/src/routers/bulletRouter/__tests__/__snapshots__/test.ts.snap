@@ -1,10 +1,50 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`Testing endpoints Send a heavy payload - Joi must throw error 1`] = `"{\\"message\\":\\"request body is too heavy (50 Ko max)\\"}"`;
+exports[`BulletRouter Send a connectorRequest with an invalid url - Joi should throw 1`] = `"{\\"message\\":\\"url is invalid\\"}"`;
 
-exports[`Testing endpoints Send an invalid url - Joi must throw error 1`] = `"{\\"message\\":\\"url is invalid\\"}"`;
+exports[`BulletRouter Send a minimal connectorRequest - should respond with a valid, minimal bullet 1`] = `
+Object {
+  "date": "2020-10-10T08:00:00.000Z",
+  "id": "AMockedNanoId",
+  "method": "POST",
+  "request": Object {
+    "headers": Object {
+      "accept": "application/json, text/plain, */*",
+      "accept-encoding": "gzip, deflate, br",
+      "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
+      "authorization": "Bearer c9da47d8f9bf16af86e325adc1e191ffa6f535f3",
+      "client-uuid": "3T3iVH_DKKSHlbD9dETTvZTqUApkxNKMdlY-b0z",
+      "connection": "keep-alive",
+      "content-length": "417873",
+      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarylgQY9Tli7bNsE3LG",
+      "host": "localhost:3000",
+      "origin": "http://localhost:3001",
+      "referer": "http://localhost:3001/",
+      "sec-fetch-dest": "empty",
+      "sec-fetch-mode": "cors",
+      "sec-fetch-site": "same-site",
+      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
+    },
+  },
+  "response": Object {
+    "headers": Object {
+      "access-control-allow-credentials": "true",
+      "access-control-allow-origin": "http://localhost:3001",
+      "access-control-expose-headers": "jwtToken",
+      "content-length": "229",
+      "content-type": "application/json; charset=utf-8",
+      "etag": "W/\\"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8\\"",
+      "vary": "Origin",
+      "x-powered-by": "Express",
+    },
+  },
+  "url": "http://localhost:3000/user",
+}
+`;
 
-exports[`Testing endpoints Send correct data 1`] = `
+exports[`BulletRouter Send an invalid connectorRequest with a heavy payload - Joi should throw 1`] = `"{\\"message\\":\\"request body is too heavy (50 Ko max)\\"}"`;
+
+exports[`BulletRouter Sending a valid connectorRequest - should respond with valid bullet 1`] = `
 Object {
   "date": "2020-10-10T08:00:00.000Z",
   "id": "AMockedNanoId",
@@ -42,46 +82,6 @@ Object {
       "x-powered-by": "Express",
     },
     "status": 200,
-  },
-  "url": "http://localhost:3000/user",
-}
-`;
-
-exports[`Testing endpoints Send minimal data 1`] = `
-Object {
-  "date": "2020-10-10T08:00:00.000Z",
-  "id": "AMockedNanoId",
-  "method": "POST",
-  "request": Object {
-    "headers": Object {
-      "accept": "application/json, text/plain, */*",
-      "accept-encoding": "gzip, deflate, br",
-      "accept-language": "fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7",
-      "authorization": "Bearer c9da47d8f9bf16af86e325adc1e191ffa6f535f3",
-      "client-uuid": "3T3iVH_DKKSHlbD9dETTvZTqUApkxNKMdlY-b0z",
-      "connection": "keep-alive",
-      "content-length": "417873",
-      "content-type": "multipart/form-data; boundary=----WebKitFormBoundarylgQY9Tli7bNsE3LG",
-      "host": "localhost:3000",
-      "origin": "http://localhost:3001",
-      "referer": "http://localhost:3001/",
-      "sec-fetch-dest": "empty",
-      "sec-fetch-mode": "cors",
-      "sec-fetch-site": "same-site",
-      "user-agent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36",
-    },
-  },
-  "response": Object {
-    "headers": Object {
-      "access-control-allow-credentials": "true",
-      "access-control-allow-origin": "http://localhost:3001",
-      "access-control-expose-headers": "jwtToken",
-      "content-length": "229",
-      "content-type": "application/json; charset=utf-8",
-      "etag": "W/\\"e5-L2Zax/+Z+lIbnuvKRq1seHacyG8\\"",
-      "vary": "Origin",
-      "x-powered-by": "Express",
-    },
   },
   "url": "http://localhost:3000/user",
 }

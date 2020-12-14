@@ -2,8 +2,8 @@ import React, { ReactElement, useState } from 'react';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import RecIcon from 'assets/rec.svg';
-import PauseIcon from 'assets/pause.svg';
+import RecIcon from 'assets/icons/rec.svg';
+import PauseIcon from 'assets/icons/pause.svg';
 import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
 import { useSelector } from 'react-redux';
@@ -15,7 +15,6 @@ const useStyles = makeStyles((theme) => ({
         height: '74px',
         backgroundColor: theme.palette.secondary.dark,
         overflow: 'hidden',
-        margin: '0 auto',
     },
     insideGutter: {
         height: '64px',
