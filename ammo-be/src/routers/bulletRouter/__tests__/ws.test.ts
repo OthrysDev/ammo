@@ -44,34 +44,38 @@ afterEach(() => {
 });
 
 describe('[WS] BulletRouter', () => {
-    test('Starting the application - ws should be connected', (done) => {
-        expect(socket.connected).toBe(true);
+    describe('post("/")', () => {
+        test('Starting the application - ws should be connected', (done) => {
+            expect(socket.connected).toBe(true);
 
-        done();
-    });
-
-    test('Sending a connectorRequest - ws should return a bullet', async (done) => {
-        socket.on('bullet', ({ bullet }: Record<string, Bullet>) => {
-            expect(bullet).toMatchSnapshot();
             done();
         });
 
-        await request(app)
-            .post('/')
-            .send({ data: connectorRequestMock })
-            .expect(200);
-    });
+        test('Sending a connectorRequest - ws should return a bullet', async (done) => {
+            socket.on('bullet', ({ bullet }: Record<string, Bullet>) => {
+                expect(bullet).toMatchSnapshot();
+                done();
+            });
 
-    test('Sending an incorrect connectorRequest - ws should not return a bullet', async (done) => {
-        socket.on('bullet', () => {
-            done.fail('Should not catch a bullet as the data is incorrect.');
+            await request(app)
+                .post('/')
+                .send({ data: connectorRequestMock })
+                .expect(200);
         });
 
-        await request(app)
-            .post('/')
-            .send({ data: noMethodConnectorRequestMock })
-            .expect(400);
+        test('Sending an incorrect connectorRequest - ws should not return a bullet', async (done) => {
+            socket.on('bullet', () => {
+                done.fail(
+                    'Should not catch a bullet as the data is incorrect.'
+                );
+            });
 
-        done();
+            await request(app)
+                .post('/')
+                .send({ data: noMethodConnectorRequestMock })
+                .expect(400);
+
+            done();
+        });
     });
 });

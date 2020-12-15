@@ -29,13 +29,6 @@ ReactDOM.render(
     document.getElementById('root')
 );
 
-/* If Cypress is running, expose the redux store do we can manipulate it in inside Cypress */
-// @ts-ignore
-if (window.Cypress) {
-    // @ts-ignore
-    window.store = store;
-}
-
 /**
  * Is a perfermance measurement tool, refer to the doc : https://create-react-app.dev/docs/measuring-performance/
  * Can be useful to gather some client related metrics, need to pass a function

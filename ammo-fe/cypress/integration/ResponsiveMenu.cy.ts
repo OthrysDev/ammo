@@ -8,7 +8,7 @@ describe('Responsiveness of the main layout', () => {
     before(() => {
         cy.visit('/');
 
-        cy.createBullet(bulletMock);
+        cy.emitBullet(bulletMock);
     });
 
     it('Visiting root URL and receiving a bullet - should display the responsive root layout with only the bullets visible', () => {
