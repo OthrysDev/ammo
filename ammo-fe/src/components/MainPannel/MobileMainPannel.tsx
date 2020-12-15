@@ -8,6 +8,7 @@ import { RootReducer } from 'redux/reducers';
 import 'simplebar/dist/simplebar.min.css';
 import { Bullet as IBullet } from 'shared/types/Bullet';
 import { MainPannelView } from 'redux/reducers/uiReducer';
+import Script from 'components/Script';
 
 const useMobileStyles = makeStyles((theme) => ({
     fullHeightMinusBar: {
@@ -52,7 +53,6 @@ const useMobileStyles = makeStyles((theme) => ({
         left: '-100vw',
         width: '200vw',
         height: '100%',
-        paddingTop: 4,
     },
     doubleWide: {
         width: '200vw',
@@ -134,7 +134,7 @@ const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
                                     data-cy={`main-pannel-right-grid-bullet-${b.id}`}
                                     className={classes.column}
                                 >
-                                    script
+                                    <Script />
                                 </Box>
                             </Box>
                         ))}

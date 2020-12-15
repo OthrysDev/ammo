@@ -8,7 +8,7 @@ import { Bullet as IBullet } from 'shared/types/Bullet';
 
 const useStyles = makeStyles((theme) => ({
     root: {
-        margin: '3px 7px',
+        margin: '2px 2px 0',
         backgroundColor: theme.palette.primary.main,
     },
     desc: {

@@ -1,0 +1,33 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/Script Script 1`] = `
+<div
+  style="transform:scale(1);height:100vh"
+>
+  <div
+    class="MuiBox-root MuiBox-root makeStyles-root"
+  >
+    // Get user
+val login =
+    exec(
+        http("[AUTH] Login")
+        .post("/auth/login")
+        // Inject previously saved var '__ACCESS_TOKEN__'
+        .header("Authorization", "Bearer \${__ACCESS_TOKEN__}")
+            .body(StringBody("""{ 
+                "email": "\${email}",
+                "password": "hello5678"
+        }""")).asJson
+        .check(bodyString.saveAs("__BODY__"))
+        // Save var 'jwtToken' for later use
+        .check(header("jwtToken").saveAs("__JWT_TOKEN__"))
+    )
+    // Debug mode
+    .exec(session =&gt; {
+        Util.debug("[AUTH] Login", session("__JWT_TOKEN__").as[String])
+        session
+    })
+
+  </div>
+</div>
+`;

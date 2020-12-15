@@ -6,6 +6,7 @@ import Bullet from 'components/Bullet';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import { Bullet as IBullet } from 'shared/types/Bullet';
+import Script from 'components/Script';
 
 const useDesktopStyles = makeStyles((theme) => ({
     scrollbar: {
@@ -51,7 +52,7 @@ const DesktopMainPannel = ({
                                 item
                                 xs={6}
                             >
-                                script
+                                <Script />
                             </Grid>
                         </Grid>
                     ))}
