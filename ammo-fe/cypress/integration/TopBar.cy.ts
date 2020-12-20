@@ -12,22 +12,22 @@ describe('Top bar', () => {
         cy.get('[data-cy=recorder-button]').should('be.enabled');
     });
 
-    it('Recorder button first image must be play', () => {
-        cy.get('[data-cy=recording-button-record]').should('be.visible');
+    it('Recorder button first image must be pause', () => {
+        cy.get('[data-cy=recording-button-pause]').should('not.be.visible');
     });
 
     it('Recorder button must switch inner images on toggle', () => {
         cy.get('[data-cy=recorder-button]').click();
 
-        cy.get('[data-cy=recording-button-record]').should('not.be.visible');
-
-        cy.get('[data-cy=recording-button-pause]').should('be.visible');
-
-        cy.get('[data-cy=recorder-button]').click();
-
         cy.get('[data-cy=recording-button-record]').should('be.visible');
 
         cy.get('[data-cy=recording-button-pause]').should('not.be.visible');
+
+        cy.get('[data-cy=recorder-button]').click();
+
+        cy.get('[data-cy=recording-button-record]').should('not.be.visible');
+
+        cy.get('[data-cy=recording-button-pause]').should('be.visible');
     });
 
     it('Pause the recorder and emit a bullet - Must not appear in the UI', () => {
@@ -57,5 +57,9 @@ describe('Top bar', () => {
         socket.emit('disconnect');
 
         cy.get('[data-cy=recorder-button]').should('not.be.enabled');
+    });
+
+    it('Recorder button image must be back to the initial value as we are disconnected', () => {
+        cy.get('[data-cy=recording-button-record]').should('be.visible');
     });
 });

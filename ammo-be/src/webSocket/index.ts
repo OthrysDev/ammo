@@ -19,6 +19,10 @@ const initWS = (server: http.Server): void => {
             isRecording = !isRecording;
             cbk(isRecording);
         });
+
+        s.on('disconnecting', () => {
+            isRecording = false;
+        });
     });
 };
 

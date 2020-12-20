@@ -1,4 +1,4 @@
-import { io } from 'socket.io-client';
+import { io, Manager } from 'socket.io-client';
 import MockedSocket from './MockedSocket';
 
 interface Socket {
@@ -8,6 +8,8 @@ interface Socket {
     connect(): void;
     disconnect(): void;
 }
+
+export const manager = new Manager('http://localhost:3001');
 
 class WS {
     static connection = null;

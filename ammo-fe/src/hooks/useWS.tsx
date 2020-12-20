@@ -2,9 +2,10 @@ import * as React from 'react';
 import { createContext, useContext } from 'react';
 import { useDispatch } from 'react-redux';
 import { Bullet } from 'shared/types/Bullet';
-import WS from 'network/WS';
+import WS, { manager } from 'network/WS';
 import { WebSocketReducerActionType } from 'redux/reducers/webSocketReducer';
 import { BulletReducerActionType } from 'redux/reducers/bulletReducer';
+import { UIReducerActionType } from 'redux/reducers/uiReducer';
 
 type WSProvider = {
     init: () => void;
@@ -30,6 +31,15 @@ const useWSProvider = (): WSProvider => {
             dispatch({ type: WebSocketReducerActionType.CONNECTED });
         else dispatch({ type: WebSocketReducerActionType.DISCONNECTED });
 
+        // Only the manager is able to listen on the connection error, as this is the one who handle connection
+        manager.on('error', () => {
+            // Whenever the socket fail connecting we toggle off the recorder
+            dispatch({
+                type: UIReducerActionType.TOGGLE_RECORD,
+                recording: false,
+            });
+        });
+
         socket.on('connect', () => {
             setConnected(true);
             dispatch({ type: WebSocketReducerActionType.CONNECTED });
@@ -42,6 +52,11 @@ const useWSProvider = (): WSProvider => {
         // For a list of all reasons why the ws can disconnect : https://socket.io/docs/v3/client-api/#Event-%E2%80%98disconnect%E2%80%99
         socket.on('disconnect', (reason: string) => {
             dispatch({ type: WebSocketReducerActionType.DISCONNECTED });
+
+            dispatch({
+                type: UIReducerActionType.TOGGLE_RECORD,
+                recording: false,
+            });
             setConnected(false);
             if (reason === 'io server disconnect') {
                 // the disconnection was initiated by the server, you need to reconnect manually

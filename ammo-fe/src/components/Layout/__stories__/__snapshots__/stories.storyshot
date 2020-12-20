@@ -80,10 +80,10 @@ exports[`Storyshots Components/Layout Default 1`] = `
                 class="MuiButton-label"
               >
                 <img
-                  alt="Record"
+                  alt="Pause"
                   class="makeStyles-icon"
-                  data-cy="recording-button-record"
-                  src="rec.svg"
+                  data-cy="recording-button-pause"
+                  src="pause.svg"
                 />
               </span>
             </button>
@@ -232,10 +232,10 @@ exports[`Storyshots Components/Layout iPhone 5/SE - vertical 1`] = `
                 class="MuiButton-label"
               >
                 <img
-                  alt="Record"
+                  alt="Pause"
                   class="makeStyles-icon"
-                  data-cy="recording-button-record"
-                  src="rec.svg"
+                  data-cy="recording-button-pause"
+                  src="pause.svg"
                 />
               </span>
             </button>

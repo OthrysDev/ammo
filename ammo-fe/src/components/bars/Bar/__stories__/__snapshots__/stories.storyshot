@@ -25,10 +25,10 @@ exports[`Storyshots Components/bars/Bar Bar 1`] = `
             class="MuiButton-label"
           >
             <img
-              alt="Record"
+              alt="Pause"
               class="makeStyles-icon"
-              data-cy="recording-button-record"
-              src="rec.svg"
+              data-cy="recording-button-pause"
+              src="pause.svg"
             />
           </span>
         </button>
