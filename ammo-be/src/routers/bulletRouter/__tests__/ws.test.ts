@@ -6,7 +6,7 @@ import MockDate from 'mockdate';
 import {
     connectorRequestMock,
     noMethodConnectorRequestMock,
-} from 'routers/BulletRouter/__tests__/mocks/ConnectorRequest.mock';
+} from 'routers/bulletRouter/__tests__/mocks/ConnectorRequest.mock';
 
 let socket: Socket;
 

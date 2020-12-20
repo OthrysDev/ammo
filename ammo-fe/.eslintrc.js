@@ -9,13 +9,14 @@ module.exports = {
         'plugin:@typescript-eslint/recommended',
         'plugin:prettier/recommended',
         'plugin:cypress/recommended',
+        'plugin:jsx-a11y/recommended',
     ],
     parser: '@typescript-eslint/parser',
     parserOptions: {
         ecmaVersion: 11,
         sourceType: 'module',
     },
-    plugins: ['@typescript-eslint'],
+    plugins: ['@typescript-eslint', 'jsx-a11y'],
     rules: {
         // indent: ['error', 4],
         'no-use-before-define': 'off',

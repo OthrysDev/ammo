@@ -1,6 +1,6 @@
 import express from 'express';
-import { ioServer } from 'WebSocket/index';
-import bulletSchema from 'validators/BulletValidator';
+import { ioServer } from 'webSocket/index';
+import bulletSchema from 'validators/bulletValidator';
 import { Bullet } from 'shared/types/Bullet';
 import { nanoid } from 'nanoid';
 import { ConnectorRequest } from 'types/ConnectorRequest';
