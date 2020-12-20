@@ -5,9 +5,10 @@
     "main": "src/index",
     "scripts": {
         "start": "tsc && nodemon",
-        "test": "jest --watch --runInBand",
+        "test": "jest --watch --runInBand --coverage=false",
+        "coverage": "jest --runInBand",
         "lint": "eslint --max-warnings=0 --ext .ts src/ ",
-        "test:precommit": "jest --runInBand",
+        "test:precommit": "npm run coverage",
         "precommit": "npm run lint && npm run test:precommit"
     },
     "author": "Othrys",

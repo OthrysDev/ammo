@@ -1,8 +1,8 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BulletRouter Send a connectorRequest with an invalid url - Joi should throw 1`] = `"{\\"message\\":\\"url is invalid\\"}"`;
+exports[`BulletRouter post("/") Send a connectorRequest with an invalid url - Joi should throw 1`] = `"{\\"message\\":\\"url is invalid\\"}"`;
 
-exports[`BulletRouter Send a minimal connectorRequest - should respond with a valid, minimal bullet 1`] = `
+exports[`BulletRouter post("/") Send a minimal connectorRequest - should respond with a valid, minimal bullet 1`] = `
 Object {
   "date": "2020-10-10T08:00:00.000Z",
   "id": "AMockedNanoId",
@@ -42,9 +42,9 @@ Object {
 }
 `;
 
-exports[`BulletRouter Send an invalid connectorRequest with a heavy payload - Joi should throw 1`] = `"{\\"message\\":\\"request body is too heavy (50 Ko max)\\"}"`;
+exports[`BulletRouter post("/") Send an invalid connectorRequest with a heavy payload - Joi should throw 1`] = `"{\\"message\\":\\"request body is too heavy (50 Ko max)\\"}"`;
 
-exports[`BulletRouter Sending a valid connectorRequest - should respond with valid bullet 1`] = `
+exports[`BulletRouter post("/") Sending a valid connectorRequest - should respond with valid bullet 1`] = `
 Object {
   "date": "2020-10-10T08:00:00.000Z",
   "id": "AMockedNanoId",

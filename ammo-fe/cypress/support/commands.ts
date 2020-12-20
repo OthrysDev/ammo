@@ -1,4 +1,4 @@
-import { BulletReducerActionType } from '../../src/redux/reducers/bulletReducer';
+import WS from '../../src/network/WS';
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -35,11 +35,11 @@ declare namespace Cypress {
          */
         reachErrorBoundary: typeof reachErrorBoundary;
         /**
-         * Dispatch a bullet to redux
+         * Emits a bullet (mocking the BE)
          * @example
-         * cy.createBullet(bullet)
+         * cy.emitBullet(bullet)
          */
-        createBullet: typeof createBullet;
+        emitBullet: typeof emitBullet;
         /**
          * Goes to a route using react router and **without** reloading the page!
          * @example
@@ -61,19 +61,18 @@ declare namespace Cypress {
     }
 }
 
-const createBullet = (bullet): Cypress.Chainable<unknown> => {
-    return cy.window().its('store').invoke('dispatch', {
-        type: BulletReducerActionType.RECEIVED_BULLET,
-        bullet,
-    });
+const socket = WS.getSocket('http://localhost:3001');
+
+const emitBullet = (bullet): Cypress.Chainable<unknown> => {
+    return socket.emit('bullet', { bullet });
 };
 
-Cypress.Commands.add('createBullet', createBullet);
+Cypress.Commands.add('emitBullet', emitBullet);
 
 const reachErrorBoundary = (): Cypress.Chainable<unknown> => {
     cy.on('uncaught:exception', () => false);
 
-    return createBullet(undefined);
+    return emitBullet(undefined);
 };
 
 Cypress.Commands.add('reachErrorBoundary', reachErrorBoundary);
