@@ -7,7 +7,7 @@ import { isRecording, ioServer } from 'webSocket';
 import {
     connectorRequestMock,
     noMethodConnectorRequestMock,
-} from 'routers/bulletRouter/__tests__/mocks/ConnectorRequest.mock';
+} from 'routers/BulletRouter/__tests__/mocks/ConnectorRequest.mock';
 
 let socket: Socket;
 
@@ -80,60 +80,62 @@ describe('[WS] BulletRouter', () => {
         });
     });
 
-    it('The recording state must be initialized to true', () => {
-        expect(isRecording).toBe(true);
-    });
-
-    it('Should change the recording state to false', (done) => {
-        socket.emit('toggleRecord', (result: boolean) => {
-            expect(result).toBe(false);
-            expect(isRecording).toBe(false);
-            done();
+    describe('toggleRecord', () => {
+        it('Check initial recording value - Must be true', () => {
+            expect(isRecording).toBe(true);
         });
-    });
 
-    it('Should not be emitting if the recording state is false', async (done) => {
-        const emitSpy = jest.spyOn(ioServer, 'emit');
-
-        await request(app)
-            .post('/')
-            .send({ data: connectorRequestMock })
-            .expect(200);
-
-        expect(emitSpy).toBeCalledTimes(0);
-        done();
-    });
-
-    it('Should be returning a clear message if the recording state is false', async (done) => {
-        await request(app)
-            .post('/')
-            .send({ data: connectorRequestMock })
-            .expect(200)
-            .expect((r) => {
-                const { message } = r.body;
-                expect(message).toMatchSnapshot();
-
+        it('Toggle the record - Recording state must be false', (done) => {
+            socket.emit('toggleRecord', (result: boolean) => {
+                expect(result).toBe(false);
+                expect(isRecording).toBe(false);
                 done();
             });
-    });
+        });
 
-    it('Should change the recording state to true', (done) => {
-        socket.emit('toggleRecord', (result: boolean) => {
-            expect(result).toBe(true);
-            expect(isRecording).toBe(true);
+        it('Receive a Bullet while recording is off - Must not be emitted to front-end', async (done) => {
+            const emitSpy = jest.spyOn(ioServer, 'emit');
+
+            await request(app)
+                .post('/')
+                .send({ data: connectorRequestMock })
+                .expect(200);
+
+            expect(emitSpy).toBeCalledTimes(0);
             done();
         });
-    });
 
-    it('Should now be emitting back', async (done) => {
-        const emitSpy = jest.spyOn(ioServer, 'emit');
+        it('Return a message to connector if not recording', async (done) => {
+            await request(app)
+                .post('/')
+                .send({ data: connectorRequestMock })
+                .expect(200)
+                .expect((r) => {
+                    const { message } = r.body;
+                    expect(message).toMatchSnapshot();
 
-        await request(app)
-            .post('/')
-            .send({ data: connectorRequestMock })
-            .expect(200);
+                    done();
+                });
+        });
 
-        expect(emitSpy).toBeCalledTimes(1);
-        done();
+        it('Toggle the record -  Recording state must be true', (done) => {
+            socket.emit('toggleRecord', (result: boolean) => {
+                expect(result).toBe(true);
+                expect(isRecording).toBe(true);
+                done();
+            });
+        });
+
+        it('Receive a Bullet while recording is on - Must be emitted to front-end', async (done) => {
+            const emitSpy = jest.spyOn(ioServer, 'emit');
+
+            await request(app)
+                .post('/')
+                .send({ data: connectorRequestMock })
+                .expect(200);
+
+            expect(emitSpy).toBeCalledTimes(1);
+            done();
+        });
     });
 });

@@ -43,4 +43,4 @@ Object {
 }
 `;
 
-exports[`[WS] BulletRouter Should be returning a clear message if the recording state is false 1`] = `"The recorder has been paused, we will not process your request any further"`;
+exports[`[WS] BulletRouter toggleRecord Return a message to connector if not recording 1`] = `"The recorder has been paused, we will not process your request any further"`;

@@ -7,7 +7,7 @@ import {
     heavyConnectorRequestMock,
     invalidUrlConnectorRequestMock,
     minimalConnectorRequestMock,
-} from 'routers/bulletRouter/__tests__/mocks/ConnectorRequest.mock';
+} from 'routers/BulletRouter/__tests__/mocks/ConnectorRequest.mock';
 
 interface HTTPError {
     error: {

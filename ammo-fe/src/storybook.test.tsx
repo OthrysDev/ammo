@@ -18,7 +18,7 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 import { render, configure } from 'enzyme';
 import { createSerializer } from 'enzyme-to-json';
 
-// Need to avoid
+// Need to avoid : https://stackoverflow.com/questions/58070996/how-to-fix-the-warning-uselayouteffect-does-nothing-on-the-server
 React.useLayoutEffect = React.useEffect;
 
 configure({ adapter: new Adapter() });

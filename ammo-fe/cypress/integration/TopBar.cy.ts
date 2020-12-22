@@ -30,7 +30,7 @@ describe('Top bar', () => {
         cy.get('[data-cy=recording-button-pause]').should('be.visible');
     });
 
-    it('Pause the recorder and emit a bullet - Must not appear in the UI', () => {
+    it('Pause the recorder and emit a bullet - Should not appear in the UI', () => {
         cy.get('[data-cy=recorder-button]')
             .click()
             .then(() => {
@@ -42,7 +42,7 @@ describe('Top bar', () => {
             });
     });
 
-    it('Start the recorder and emit a bullet - Must appear in the UI', () => {
+    it('Start the recorder and emit a bullet - Should appear in the UI', () => {
         cy.get('[data-cy=recorder-button]')
             .click()
             .then(() => {
@@ -53,7 +53,7 @@ describe('Top bar', () => {
             });
     });
 
-    it('Recorder button must not be clickable as we are disconnected', () => {
+    it('Socket disconnects - recorder button should no longer be clickable', () => {
         socket.emit('disconnect');
 
         cy.get('[data-cy=recorder-button]').should('not.be.enabled');

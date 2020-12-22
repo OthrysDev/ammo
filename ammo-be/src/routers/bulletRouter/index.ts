@@ -13,26 +13,25 @@ bulletRouter.post(
         try {
             const connectorRequest: ConnectorRequest = { ...req.body.data };
 
-            if (isRecording) {
-                const { error, value } = bulletSchema.validate(
-                    connectorRequest
-                );
-                if (error) throw new Error(error.details[0].message);
-
-                const bullet: Bullet = {
-                    ...value,
-                    date: new Date(),
-                    id: nanoid(),
-                };
-
-                ioServer.emit('bullet', { bullet });
-
-                return res.status(200).json({ bullet });
+            if (!isRecording) {
+                return res.status(200).json({
+                    message:
+                        'The recorder has been paused, we will not process your request any further',
+                });
             }
-            return res.status(200).json({
-                message:
-                    'The recorder has been paused, we will not process your request any further',
-            });
+
+            const { error, value } = bulletSchema.validate(connectorRequest);
+            if (error) throw new Error(error.details[0].message);
+
+            const bullet: Bullet = {
+                ...value,
+                date: new Date(),
+                id: nanoid(),
+            };
+
+            ioServer.emit('bullet', { bullet });
+
+            return res.status(200).json({ bullet });
         } catch ({ message }) {
             return res.status(400).json({ message });
         }
