@@ -6,28 +6,701 @@ exports[`Storyshots Components/Script Script 1`] = `
 >
   <div
     class="MuiBox-root MuiBox-root makeStyles-root"
+    style="opacity:0;transform:scale(0.75, 0.5625)"
   >
-    // Get user
-val login =
-    exec(
-        http("[AUTH] Login")
-        .post("/auth/login")
-        // Inject previously saved var '__ACCESS_TOKEN__'
-        .header("Authorization", "Bearer \${__ACCESS_TOKEN__}")
-            .body(StringBody("""{ 
-                "email": "\${email}",
-                "password": "hello5678"
-        }""")).asJson
-        .check(bodyString.saveAs("__BODY__"))
-        // Save var 'jwtToken' for later use
-        .check(header("jwtToken").saveAs("__JWT_TOKEN__"))
-    )
-    // Debug mode
-    .exec(session =&gt; {
-        Util.debug("[AUTH] Login", session("__JWT_TOKEN__").as[String])
-        session
-    })
+    <pre
+      style="color:#f8f8f2;background:none;text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none;padding:0;margin:0;overflow:auto;border-radius:0.3em"
+    >
+      <code
+        class="language-scala"
+        style="color:#f8f8f2;background:none;text-shadow:0 1px rgba(0, 0, 0, 0.3);font-family:Consolas, Monaco, 'Andale Mono', 'Ubuntu Mono', monospace;font-size:1em;text-align:left;white-space:pre;word-spacing:normal;word-break:normal;word-wrap:normal;line-height:1.5;-moz-tab-size:4;-o-tab-size:4;tab-size:4;-webkit-hyphens:none;-moz-hyphens:none;-ms-hyphens:none;hyphens:none"
+      >
+        <span
+          class="token"
+          style="color:#8292a2"
+        >
+          // Get user
+        </span>
+        <span>
+          
 
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          1
+        </span>
+        <span />
+        <span
+          class="token"
+          style="color:#66d9ef"
+        >
+          val
+        </span>
+        <span>
+           login 
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          =
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          2
+        </span>
+        <span>
+              exec
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          3
+        </span>
+        <span>
+                  http
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "[AUTH] Login"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          4
+        </span>
+        <span>
+                  
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          post
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "/auth/login"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          5
+        </span>
+        <span>
+                  
+        </span>
+        <span
+          class="token"
+          style="color:#8292a2"
+        >
+          // Inject previously saved var '__ACCESS_TOKEN__'
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          6
+        </span>
+        <span>
+                  
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          header
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "Authorization"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          ,
+        </span>
+        <span>
+           
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "Bearer \${__ACCESS_TOKEN__}"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          7
+        </span>
+        <span>
+                      
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          body
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span>
+          StringBody
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token triple-quoted-string"
+          style="color:#a6e22e"
+        >
+          """{ 
+
+        </span>
+        <span
+          class="token triple-quoted-string"
+          style="color:#a6e22e"
+        >
+          <span
+            class="linenumber react-syntax-highlighter-line-number"
+            style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+          >
+            8
+          </span>
+                          "email": "\${email}",
+
+        </span>
+        <span
+          class="token triple-quoted-string"
+          style="color:#a6e22e"
+        >
+          <span
+            class="linenumber react-syntax-highlighter-line-number"
+            style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+          >
+            9
+          </span>
+                          "password": "hello5678"
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          10
+        </span>
+        <span
+          class="token triple-quoted-string"
+          style="color:#a6e22e"
+        >
+                  }"""
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          asJson
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          11
+        </span>
+        <span>
+                  
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          check
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span>
+          bodyString
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          saveAs
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "__BODY__"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          12
+        </span>
+        <span>
+                  
+        </span>
+        <span
+          class="token"
+          style="color:#8292a2"
+        >
+          // Save var 'jwtToken' for later use
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          13
+        </span>
+        <span>
+                  
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          check
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span>
+          header
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "jwtToken"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          saveAs
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "__JWT_TOKEN__"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          14
+        </span>
+        <span>
+              
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          15
+        </span>
+        <span>
+              
+        </span>
+        <span
+          class="token"
+          style="color:#8292a2"
+        >
+          // Debug mode
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          16
+        </span>
+        <span>
+              
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          exec
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span>
+          session 
+        </span>
+        <span
+          class="token"
+          style="color:#66d9ef"
+        >
+          =&gt;
+        </span>
+        <span>
+           
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          {
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          17
+        </span>
+        <span>
+                  Util
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          debug
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "[AUTH] Login"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          ,
+        </span>
+        <span>
+           session
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          (
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          "__JWT_TOKEN__"
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          .
+        </span>
+        <span>
+          as
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          [
+        </span>
+        <span
+          class="token"
+          style="color:#a6e22e"
+        >
+          String
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          ]
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          18
+        </span>
+                session
+
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          19
+        </span>
+        <span>
+              
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          }
+        </span>
+        <span
+          class="token"
+          style="color:#f8f8f2"
+        >
+          )
+        </span>
+        <span>
+          
+
+        </span>
+        <span
+          class="linenumber react-syntax-highlighter-line-number"
+          style="display:inline-block;min-width:2em;padding-right:1em;text-align:right;user-select:none;color:#8292a2"
+        >
+          20
+        </span>
+        
+
+      </code>
+    </pre>
   </div>
 </div>
 `;

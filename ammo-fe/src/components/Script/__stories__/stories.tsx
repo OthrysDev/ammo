@@ -7,10 +7,12 @@ export default {
     title: 'Components/Script',
 };
 
-const ScriptTemplate: Story<ScriptProps> = () => <Script />;
+const ScriptTemplate: Story<ScriptProps> = ({
+    previousScriptLength,
+}: ScriptProps) => <Script previousScriptLength={previousScriptLength} />;
 
 export const Default = ScriptTemplate.bind({});
 Default.storyName = 'Script';
-// Default.args = {
-//     previousScriptLength: 0,
-// };
+Default.args = {
+    previousScriptLength: 0,
+};

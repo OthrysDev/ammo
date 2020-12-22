@@ -1,8 +1,12 @@
 import React, { ReactElement } from 'react';
 import Box from '@material-ui/core/Box';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-// import { Prism as SyntaxHighlighter } from 'react-syntax-highlighter';
-// import { okaidia } from 'react-syntax-highlighter/dist/esm/styles/prism';
+import { PrismLight } from 'react-syntax-highlighter';
+import scala from 'react-syntax-highlighter/dist/cjs/languages/prism/scala';
+import okaidia from 'react-syntax-highlighter/dist/cjs/styles/prism/okaidia';
+import Grow from '@material-ui/core/Grow';
+
+PrismLight.registerLanguage('scala', scala);
 
 // For syntax highlighting : https://www.npmjs.com/package/react-syntax-highlighter
 // along with Prism : https://prismjs.com/
@@ -21,7 +25,7 @@ export interface ScriptProps {
     previousScriptLength: number;
 }
 
-const Script = (): ReactElement => {
+const Script = ({ previousScriptLength }: ScriptProps): ReactElement => {
     const classes = useStyles();
 
     const fakeScript = `// Get user
@@ -47,18 +51,20 @@ val login =
 `;
 
     return (
-        <Box className={classes.root}>
-            {/* <SyntaxHighlighter
-                language="scala"
-                style={okaidia}
-                customStyle={{ margin: 0, padding: 0, background: 'none' }}
-                lineNumberStyle={{ minWidth: '2em', textAlign: 'right' }}
-                showLineNumbers
-                startingLineNumber={previousScriptLength}
-            > */}
-            {fakeScript}
-            {/* </SyntaxHighlighter> */}
-        </Box>
+        <Grow in>
+            <Box className={classes.root}>
+                <PrismLight
+                    language="scala"
+                    style={okaidia}
+                    customStyle={{ margin: 0, padding: 0, background: 'none' }}
+                    lineNumberStyle={{ minWidth: '2em', textAlign: 'right' }}
+                    showLineNumbers
+                    startingLineNumber={previousScriptLength}
+                >
+                    {fakeScript}
+                </PrismLight>
+            </Box>
+        </Grow>
     );
 };
 

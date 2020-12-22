@@ -119,7 +119,7 @@ const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
                     className={`${classes.container} ${pannelClassName} ${classes.fullHeightMinusBar}`}
                 >
                     {bullets &&
-                        bullets.map((b) => (
+                        bullets.map((b, i) => (
                             <Box
                                 data-cy={`main-pannel-outer-grid-bullet-${b.id}`}
                                 key={b.id}
@@ -134,7 +134,7 @@ const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
                                     data-cy={`main-pannel-right-grid-bullet-${b.id}`}
                                     className={classes.column}
                                 >
-                                    <Script />
+                                    <Script previousScriptLength={i * 21 + 1} />
                                 </Box>
                             </Box>
                         ))}
