@@ -8,7 +8,7 @@ import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
 import { useDispatch, useSelector } from 'react-redux';
 import WS from 'network/WS';
-import { UIReducerActionType } from 'redux/reducers/uiReducer';
+import { toggleRecord } from 'redux/actions/uiActions';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -65,10 +65,7 @@ const RecorderButton = (): ReactElement => {
 
     const toggleRecording = (): void => {
         socket.emit('toggleRecord', (isRecording: boolean) => {
-            dispatch({
-                type: UIReducerActionType.TOGGLE_RECORD,
-                recording: isRecording,
-            });
+            dispatch(toggleRecord(isRecording));
         });
     };
 
