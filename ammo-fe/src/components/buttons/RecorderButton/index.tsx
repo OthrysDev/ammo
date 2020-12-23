@@ -6,9 +6,9 @@ import RecIcon from 'assets/icons/rec.svg';
 import PauseIcon from 'assets/icons/pause.svg';
 import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
+import useActions from 'hooks/useActions';
 import { useSelector } from 'react-redux';
 import WS from 'network/WS';
-import useActions from 'hooks/useActions';
 
 const useStyles = makeStyles((theme) => ({
     root: {
