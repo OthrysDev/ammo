@@ -5,9 +5,9 @@ import { Bullet } from 'shared/types/Bullet';
 import { nanoid } from 'nanoid';
 import { ConnectorRequest } from 'types/ConnectorRequest';
 
-const bulletRouter = express.Router();
+const BulletRouter = express.Router();
 
-bulletRouter.post(
+BulletRouter.post(
     '/',
     (req, res): express.Response => {
         try {
@@ -38,4 +38,4 @@ bulletRouter.post(
     }
 );
 
-export default bulletRouter;
+export default BulletRouter;

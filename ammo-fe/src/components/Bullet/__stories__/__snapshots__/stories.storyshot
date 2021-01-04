@@ -57,13 +57,17 @@ exports[`Storyshots Components/Bullet Default 1`] = `
           200
         </p>
       </div>
-      <img
-        alt="Down carret"
-        class="makeStyles-downCarretIcon "
+      <div
+        class="MuiBox-root MuiBox-root"
         data-cy="bullet-header-collapse-1"
-        src="down_carret.svg"
         title="Uncollapse"
-      />
+      >
+        <img
+          alt="Down carret"
+          class="makeStyles-downCarretIcon "
+          src="down_carret.svg"
+        />
+      </div>
     </div>
     <div
       class="MuiCollapse-container MuiCollapse-hidden"
@@ -128,13 +132,17 @@ exports[`Storyshots Components/Bullet Minimal 1`] = `
         class="MuiBox-root MuiBox-root makeStyles-filler"
         data-cy="bullet-header-filler-1"
       />
-      <img
-        alt="Down carret"
-        class="makeStyles-downCarretIcon "
+      <div
+        class="MuiBox-root MuiBox-root"
         data-cy="bullet-header-collapse-1"
-        src="down_carret.svg"
         title="Uncollapse"
-      />
+      >
+        <img
+          alt="Down carret"
+          class="makeStyles-downCarretIcon "
+          src="down_carret.svg"
+        />
+      </div>
     </div>
     <div
       class="MuiCollapse-container MuiCollapse-hidden"
@@ -209,13 +217,17 @@ exports[`Storyshots Components/Bullet iPhone 5/SE - vertical 1`] = `
           200
         </p>
       </div>
-      <img
-        alt="Down carret"
-        class="makeStyles-downCarretIcon "
+      <div
+        class="MuiBox-root MuiBox-root"
         data-cy="bullet-header-collapse-1"
-        src="down_carret.svg"
         title="Uncollapse"
-      />
+      >
+        <img
+          alt="Down carret"
+          class="makeStyles-downCarretIcon "
+          src="down_carret.svg"
+        />
+      </div>
     </div>
     <div
       class="MuiCollapse-container MuiCollapse-hidden"

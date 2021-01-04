@@ -110,19 +110,23 @@ const BulletHeader = ({
                 uuid={`bullet-header-collapse-tooltip-${bullet.id}`}
                 title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
             >
-                <img
-                    data-cy={`bullet-header-collapse-${bullet.id}`}
-                    src={DownCarretIcon}
-                    alt={i18n(
-                        collapse
-                            ? 'Img.Alt.DownCarretIcon'
-                            : 'Img.Alt.UpCarretIcon'
-                    )}
-                    className={`${classes.downCarretIcon} ${
-                        collapse ? '' : classes.flipY
-                    }`}
+                <Box
                     onClick={onClick}
-                />
+                    onKeyDown={onClick}
+                    data-cy={`bullet-header-collapse-${bullet.id}`}
+                >
+                    <img
+                        src={DownCarretIcon}
+                        alt={i18n(
+                            collapse
+                                ? 'Img.Alt.DownCarretIcon'
+                                : 'Img.Alt.UpCarretIcon'
+                        )}
+                        className={`${classes.downCarretIcon} ${
+                            collapse ? '' : classes.flipY
+                        }`}
+                    />
+                </Box>
             </ToolTip>
         </Box>
     );

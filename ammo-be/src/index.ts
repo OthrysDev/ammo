@@ -2,7 +2,7 @@ import express from 'express';
 import bodyParser from 'body-parser';
 
 import cors from 'cors';
-import bulletRouter from 'routers/BulletRouter';
+import BulletRouter from 'routers/BulletRouter';
 import { initWS } from 'WebSocket';
 
 const app = express();
@@ -15,6 +15,6 @@ initWS(server);
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.use(bulletRouter);
+app.use(BulletRouter);
 
 export default server;

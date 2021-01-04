@@ -13,20 +13,19 @@ describe('Top bar', () => {
     });
 
     it('Recorder button first image must be pause', () => {
-        cy.get('[data-cy=recording-button-pause]').should('not.be.visible');
+        cy.get('[data-cy=recording-button]').should('not.be.visible');
+        cy.get('[data-cy=recording-button-pause]').should('be.visible');
     });
 
     it('Recorder button must switch inner images on toggle', () => {
         cy.get('[data-cy=recorder-button]').click();
 
         cy.get('[data-cy=recording-button-record]').should('be.visible');
-
         cy.get('[data-cy=recording-button-pause]').should('not.be.visible');
 
         cy.get('[data-cy=recorder-button]').click();
 
         cy.get('[data-cy=recording-button-record]').should('not.be.visible');
-
         cy.get('[data-cy=recording-button-pause]').should('be.visible');
     });
 
