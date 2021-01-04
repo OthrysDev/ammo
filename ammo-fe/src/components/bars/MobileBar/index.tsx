@@ -6,8 +6,8 @@ import {
     BulletsViewButton,
     ScriptsViewButton,
 } from 'components/buttons/ViewButtons';
-import { useDispatch } from 'react-redux';
-import { UIReducerActionType, MainPannelView } from 'redux/reducers/uiReducer';
+import { MainPannelView } from 'redux/reducers/uiReducer';
+import useActions from 'hooks/useActions';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -22,13 +22,10 @@ const useStyles = makeStyles((theme) => ({
 
 const MobileBar = (): ReactElement => {
     const classes = useStyles();
-    const dispatch = useDispatch();
+    const { ui } = useActions();
 
     const onSelectView = (view: MainPannelView): void => {
-        dispatch({
-            type: UIReducerActionType.CHANGE_MAIN_SELECTED_PANNEL,
-            view,
-        });
+        ui.changeMainPannelAction(view);
     };
 
     return (

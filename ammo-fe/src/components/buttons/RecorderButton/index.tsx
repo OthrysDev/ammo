@@ -1,11 +1,14 @@
-import React, { ReactElement, useState } from 'react';
+import React, { ReactElement } from 'react';
 import Box from '@material-ui/core/Box';
+import Button from '@material-ui/core/Button';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import RecIcon from 'assets/icons/rec.svg';
 import PauseIcon from 'assets/icons/pause.svg';
 import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
+import useActions from 'hooks/useActions';
 import { useSelector } from 'react-redux';
+import WS from 'network/WS';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -21,11 +24,13 @@ const useStyles = makeStyles((theme) => ({
         backgroundColor: theme.palette.primary.light,
         borderRadius: '3px',
         overflow: 'hidden',
+        display: 'flex',
+        justifyContent: 'center',
+        alignItems: 'center',
     },
     insideButton: {
         height: '44px',
         width: '70px',
-        margin: '10px auto',
         backgroundColor: theme.palette.secondary.main,
         borderRadius: '3px',
     },
@@ -52,43 +57,49 @@ const useStyles = makeStyles((theme) => ({
 const RecorderButton = (): ReactElement => {
     const classes = useStyles();
     const i18n = useI18n();
+    const { ui } = useActions();
     const connected = useSelector((state: RootReducer) => state.ws.connected);
-    const [recording, setRecording] = useState(false);
+    const recording = useSelector((state: RootReducer) => state.ui.recording);
+
+    const socket = WS.getSocket('http://localhost:3000');
 
     const toggleRecording = (): void => {
-        if (connected) setRecording((prevState) => !prevState);
+        socket.emit('toggleRecord', (isRecording: boolean) => {
+            ui.toggleRecordAction(isRecording);
+        });
     };
 
     return (
-        <Box className={classes.root} data-cy="recorder-button">
+        <Box className={classes.root}>
             <Box
                 className={`${classes.insideGutter} ${
                     connected ? '' : classes.disabled
                 }`}
             >
-                <Box
+                <Button
+                    data-cy="recorder-button"
                     className={`${classes.insideButton} ${
                         connected ? classes.clickable : ''
                     }`}
-                    boxShadow={2}
                     onClick={toggleRecording}
+                    disabled={!connected}
                 >
                     {recording ? (
                         <img
-                            data-cy={`recording-button-pause`}
+                            data-cy="recording-button-pause"
                             src={PauseIcon}
                             alt={i18n('Img.Alt.PauseIcon')}
                             className={classes.icon}
                         />
                     ) : (
                         <img
-                            data-cy={`recording-button-record`}
+                            data-cy="recording-button-record"
                             src={RecIcon}
                             alt={i18n('Img.Alt.RecordIcon')}
                             className={classes.icon}
                         />
                     )}
-                </Box>
+                </Button>
             </Box>
         </Box>
     );

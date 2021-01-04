@@ -1,5 +1,5 @@
 /**
- * @jest-environment node
+ * @jest-environment jsdom
  */
 
 import React from 'react';
@@ -17,6 +17,9 @@ import Adapter from '@wojtekmaj/enzyme-adapter-react-17';
 // We need to use enzyme for storybook to handle properly React Portals feature
 import { render, configure } from 'enzyme';
 import { createSerializer } from 'enzyme-to-json';
+
+// Need to avoid : https://stackoverflow.com/questions/58070996/how-to-fix-the-warning-uselayouteffect-does-nothing-on-the-server
+React.useLayoutEffect = React.useEffect;
 
 configure({ adapter: new Adapter() });
 
