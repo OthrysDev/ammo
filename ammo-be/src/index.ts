@@ -3,7 +3,7 @@ import bodyParser from 'body-parser';
 
 import cors from 'cors';
 import bulletRouter from 'routers/BulletRouter';
-import { initWS } from 'webSocket';
+import { initWS } from 'WebSocket';
 
 const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
