@@ -6,9 +6,9 @@ import RecIcon from 'assets/icons/rec.svg';
 import PauseIcon from 'assets/icons/pause.svg';
 import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
-import { useDispatch, useSelector } from 'react-redux';
+import useActions from 'hooks/useActions';
+import { useSelector } from 'react-redux';
 import WS from 'network/WS';
-import { toggleRecord } from 'redux/actions/uiActions';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -57,15 +57,15 @@ const useStyles = makeStyles((theme) => ({
 const RecorderButton = (): ReactElement => {
     const classes = useStyles();
     const i18n = useI18n();
+    const { ui } = useActions();
     const connected = useSelector((state: RootReducer) => state.ws.connected);
     const recording = useSelector((state: RootReducer) => state.ui.recording);
 
-    const dispatch = useDispatch();
     const socket = WS.getSocket('http://localhost:3000');
 
     const toggleRecording = (): void => {
         socket.emit('toggleRecord', (isRecording: boolean) => {
-            dispatch(toggleRecord(isRecording));
+            ui.toggleRecordAction(isRecording);
         });
     };
 
