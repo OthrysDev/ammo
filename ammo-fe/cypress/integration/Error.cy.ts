@@ -1,7 +1,7 @@
 import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
 
 describe('Error boundary behaviors', () => {
-    beforeEach(() => {
+    before(() => {
         cy.visit('/');
         cy.emitBullet(bulletMock);
     });

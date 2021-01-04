@@ -7,7 +7,8 @@ import {
     ScriptsViewButton,
 } from 'components/buttons/ViewButtons';
 import { useDispatch } from 'react-redux';
-import { UIReducerActionType, MainPannelView } from 'redux/reducers/uiReducer';
+import { MainPannelView } from 'redux/reducers/uiReducer';
+import { changeMainPannel } from 'redux/actions/uiActions';
 
 const useStyles = makeStyles((theme) => ({
     root: {
@@ -25,10 +26,7 @@ const MobileBar = (): ReactElement => {
     const dispatch = useDispatch();
 
     const onSelectView = (view: MainPannelView): void => {
-        dispatch({
-            type: UIReducerActionType.CHANGE_MAIN_SELECTED_PANNEL,
-            view,
-        });
+        dispatch(changeMainPannel(view));
     };
 
     return (

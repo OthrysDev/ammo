@@ -42,3 +42,5 @@ Object {
   "url": "http://localhost:3000/user",
 }
 `;
+
+exports[`[WS] BulletRouter toggleRecord Return a message to connector if not recording 1`] = `"The recorder has been paused, we will not process your request any further"`;
