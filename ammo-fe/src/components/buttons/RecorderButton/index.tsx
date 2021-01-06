@@ -6,22 +6,28 @@ import RecIcon from 'assets/icons/rec.svg';
 import PauseIcon from 'assets/icons/pause.svg';
 import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
-import useActions from 'hooks/useActions';
+import useUIActions from 'redux/actions/useUIActions';
 import { useSelector } from 'react-redux';
+import Palette from 'material/Palette';
 import WS from 'network/WS';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         width: '100px',
         height: '74px',
-        backgroundColor: theme.palette.secondary.dark,
         overflow: 'hidden',
+    },
+    off: {
+        filter: 'grayscale(100%) !important',
+        '&:hover': {
+            filter: 'grayscale(0%)',
+        },
     },
     insideGutter: {
         height: '64px',
         width: '90px',
         margin: '5px auto',
-        backgroundColor: theme.palette.primary.light,
+        backgroundColor: Palette.BLACK_MED,
         borderRadius: '3px',
         overflow: 'hidden',
         display: 'flex',
@@ -31,8 +37,11 @@ const useStyles = makeStyles((theme) => ({
     insideButton: {
         height: '44px',
         width: '70px',
-        backgroundColor: theme.palette.secondary.main,
+        backgroundColor: Palette.BLUE_DARK,
         borderRadius: '3px',
+        '&:hover': {
+            backgroundColor: Palette.BLUE_MED,
+        },
     },
     clickable: {
         '&:hover': {
@@ -57,7 +66,7 @@ const useStyles = makeStyles((theme) => ({
 const RecorderButton = (): ReactElement => {
     const classes = useStyles();
     const i18n = useI18n();
-    const { ui } = useActions();
+    const { toggleRecordAction } = useUIActions();
     const connected = useSelector((state: RootReducer) => state.ws.connected);
     const recording = useSelector((state: RootReducer) => state.ui.recording);
 
@@ -65,7 +74,7 @@ const RecorderButton = (): ReactElement => {
 
     const toggleRecording = (): void => {
         socket.emit('toggleRecord', (isRecording: boolean) => {
-            ui.toggleRecordAction(isRecording);
+            toggleRecordAction(isRecording);
         });
     };
 
@@ -78,9 +87,9 @@ const RecorderButton = (): ReactElement => {
             >
                 <Button
                     data-cy="recorder-button"
-                    className={`${classes.insideButton} ${
-                        connected ? classes.clickable : ''
-                    }`}
+                    className={`${classes.insideButton} 
+                        ${connected ? classes.clickable : ''} 
+                        ${recording ? '' : classes.off}`}
                     onClick={toggleRecording}
                     disabled={!connected}
                 >

@@ -5,19 +5,20 @@ import { PrismLight } from 'react-syntax-highlighter';
 import scala from 'react-syntax-highlighter/dist/cjs/languages/prism/scala';
 import okaidia from 'react-syntax-highlighter/dist/cjs/styles/prism/okaidia';
 import Grow from '@material-ui/core/Grow';
+import Palette from 'material/Palette';
 
 PrismLight.registerLanguage('scala', scala);
 
 // For syntax highlighting : https://www.npmjs.com/package/react-syntax-highlighter
 // along with Prism : https://prismjs.com/
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         width: '100%',
-        borderTop: `1px solid ${theme.palette.primary.dark}`,
+        borderTop: `1px solid ${Palette.BLACK_DARK}`,
         padding: '4px 9px',
         margin: '1px 0',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: Palette.BLACK_MED,
     },
 }));
 
@@ -60,6 +61,7 @@ val login =
                     lineNumberStyle={{ minWidth: '2em', textAlign: 'right' }}
                     showLineNumbers
                     startingLineNumber={previousScriptLength}
+                    tabIndex={0}
                 >
                     {fakeScript}
                 </PrismLight>

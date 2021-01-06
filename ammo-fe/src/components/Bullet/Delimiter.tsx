@@ -4,17 +4,19 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { FormattedMessage } from 'react-intl';
 import i18n from 'types/i18n';
+import Palette from 'material/Palette';
 
-const useDelimiterStyles = makeStyles((theme) => ({
+const useDelimiterStyles = makeStyles(() => ({
     root: {
         display: 'flex',
         width: '100%',
         flexDirection: 'row',
         justifyContent: 'space-between',
-        marginTop: '12px 0',
+        marginTop: '12px',
+        color: Palette.GREY_DARK,
     },
     border: {
-        borderTop: `1px solid ${theme.palette.secondary.dark}`,
+        borderTop: `1px solid ${Palette.GREY_DARK}`,
         width: '100%',
         marginTop: '10px',
     },

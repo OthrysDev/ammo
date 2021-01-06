@@ -48,7 +48,7 @@ exports[`Storyshots Components/Bullet Default 1`] = `
         data-cy="bullet-header-filler-1"
       />
       <div
-        class="MuiBox-root MuiBox-root makeStyles-statusBadge"
+        class="MuiBox-root MuiBox-root makeStyles-statusBadge makeStyles-successStatusBadge"
         data-cy="bullet-header-status-1"
       >
         <p
@@ -208,7 +208,7 @@ exports[`Storyshots Components/Bullet iPhone 5/SE - vertical 1`] = `
         data-cy="bullet-header-filler-1"
       />
       <div
-        class="MuiBox-root MuiBox-root makeStyles-statusBadge"
+        class="MuiBox-root MuiBox-root makeStyles-statusBadge makeStyles-successStatusBadge"
         data-cy="bullet-header-status-1"
       >
         <p

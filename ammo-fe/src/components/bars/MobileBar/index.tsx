@@ -7,13 +7,14 @@ import {
     ScriptsViewButton,
 } from 'components/buttons/ViewButtons';
 import { MainPannelView } from 'redux/reducers/uiReducer';
-import useActions from 'hooks/useActions';
+import useUIActions from 'redux/actions/useUIActions';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         height: '74px',
         width: '100%',
-        backgroundColor: theme.palette.secondary.dark,
+        backgroundColor: Palette.BLACK_LIGHT,
         zIndex: 9999,
         display: 'flex',
         justifyContent: 'space-evenly',
@@ -22,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
 
 const MobileBar = (): ReactElement => {
     const classes = useStyles();
-    const { ui } = useActions();
+    const { changeMainPannelAction } = useUIActions();
 
     const onSelectView = (view: MainPannelView): void => {
-        ui.changeMainPannelAction(view);
+        changeMainPannelAction(view);
     };
 
     return (

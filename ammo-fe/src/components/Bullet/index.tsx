@@ -5,14 +5,15 @@ import Grow from '@material-ui/core/Grow';
 import BulletHeader from 'components/Bullet/BulletHeader';
 import BulletDesc from 'components/Bullet/BulletDesc';
 import { Bullet as IBullet } from 'shared/types/Bullet';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         margin: '2px 2px 0',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: Palette.BLACK_MED,
     },
     desc: {
-        color: theme.palette.secondary.main,
+        color: Palette.WHITE,
         padding: '7px 16px 24px 16px',
         lineHeight: '24px',
     },

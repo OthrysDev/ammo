@@ -8,9 +8,10 @@ import { RootReducer } from 'redux/reducers';
 import 'simplebar/dist/simplebar.min.css';
 import { Bullet as IBullet } from 'shared/types/Bullet';
 import { MainPannelView } from 'redux/reducers/uiReducer';
+import Palette from 'material/Palette';
 import Script from 'components/Script';
 
-const useMobileStyles = makeStyles((theme) => ({
+const useMobileStyles = makeStyles(() => ({
     fullHeightMinusBar: {
         height: 'calc(calc(var(--vh, 1vh) * 100) - 74px)',
     },
@@ -23,7 +24,7 @@ const useMobileStyles = makeStyles((theme) => ({
         overflowY: 'auto',
     },
     gradientBg: {
-        background: `linear-gradient(90deg, ${theme.palette.primary.dark} 50%, ${theme.palette.primary.main} 50%)`,
+        background: `linear-gradient(90deg, ${Palette.BLACK_DARK} 50%, ${Palette.BLACK_MED} 50%)`,
         backgroundSize: '200% 100%',
     },
     showLeftBg: {
@@ -109,6 +110,7 @@ const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
         <Box
             data-cy="main-pannel"
             className={`${classes.root} ${classes.gradientBg} ${bgClassName} ${classes.doubleWide} ${classes.fullHeightMinusBar}`}
+            tabIndex={0}
         >
             <SimpleBar
                 className={`${classes.scrollbar} ${classes.fullHeightMinusBar}`}

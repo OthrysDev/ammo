@@ -29,8 +29,10 @@ exports[`Storyshots Pages/Home Default 1`] = `
             >
               <div
                 class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                id="circular-load-bar"
                 role="progressbar"
                 style="width:30px;height:30px"
+                title="Reconnecting to the server"
               >
                 <svg
                   class="MuiCircularProgress-svg"
@@ -70,7 +72,9 @@ exports[`Storyshots Pages/Home Default 1`] = `
             class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton  MuiButton-disabled MuiButtonBase-disabled"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton 
+                         
+                         MuiButton-disabled MuiButtonBase-disabled"
               data-cy="recorder-button"
               disabled=""
               tabindex="-1"
@@ -123,6 +127,7 @@ exports[`Storyshots Pages/Home Default 1`] = `
                   <div
                     class="MuiBox-root MuiBox-root makeStyles-root"
                     data-cy="main-pannel"
+                    tabindex="0"
                   />
                 </div>
               </div>
@@ -181,8 +186,10 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
             >
               <div
                 class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
+                id="circular-load-bar"
                 role="progressbar"
                 style="width:30px;height:30px"
+                title="Reconnecting to the server"
               >
                 <svg
                   class="MuiCircularProgress-svg"
@@ -222,7 +229,9 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
             class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton  MuiButton-disabled MuiButtonBase-disabled"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton 
+                         
+                         MuiButton-disabled MuiButtonBase-disabled"
               data-cy="recorder-button"
               disabled=""
               tabindex="-1"
@@ -275,6 +284,7 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
                   <div
                     class="MuiBox-root MuiBox-root makeStyles-root"
                     data-cy="main-pannel"
+                    tabindex="0"
                   />
                 </div>
               </div>

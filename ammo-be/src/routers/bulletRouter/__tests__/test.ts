@@ -8,18 +8,7 @@ import {
     invalidUrlConnectorRequestMock,
     minimalConnectorRequestMock,
 } from 'routers/BulletRouter/__tests__/mocks/ConnectorRequest.mock';
-
-interface HTTPError {
-    error: {
-        name: string;
-        message: string;
-        stack?: string;
-        status: number;
-        text: string;
-        method: string;
-        path: string;
-    };
-}
+import HTTPError from 'types/HTTPError';
 
 jest.mock('nanoid', () => ({
     nanoid: (): string => 'AMockedNanoId',

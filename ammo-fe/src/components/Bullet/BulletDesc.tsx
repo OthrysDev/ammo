@@ -6,10 +6,11 @@ import { Bullet } from 'shared/types/Bullet';
 import Headers from 'components/Bullet/Headers';
 import Body from 'components/Bullet/Body';
 import Delimiter from 'components/Bullet/Delimiter';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
-        color: theme.palette.secondary.main,
+        color: Palette.GREY_LIGHT,
         padding: '7px 16px 24px 16px',
         lineHeight: '24px',
     },

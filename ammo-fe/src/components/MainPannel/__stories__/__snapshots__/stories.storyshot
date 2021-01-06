@@ -33,6 +33,7 @@ exports[`Storyshots Components/MainPannel MainPannel 1`] = `
               <div
                 class="MuiBox-root MuiBox-root makeStyles-root"
                 data-cy="main-pannel"
+                tabindex="0"
               />
             </div>
           </div>
