@@ -3,13 +3,14 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Dialog from '@material-ui/core/Dialog';
 import useI18n from 'hooks/useI18n';
 import i18n from 'types/i18n';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         bacgroundColor: 'white',
-        backgroundColor: theme.palette.primary.main,
+        backgroundColor: Palette.BLACK_MED,
         '& *': {
-            color: theme.palette.secondary.main,
+            color: Palette.WHITE,
         },
     },
 }));

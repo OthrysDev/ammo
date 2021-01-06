@@ -3,15 +3,17 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { FormattedMessage } from 'react-intl';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     title: {
-        color: theme.palette.secondary.light,
+        color: Palette.GREY_DARK,
         margin: '8px 0',
     },
-    values: {
+    value: {
         marginLeft: '24px',
         wordBreak: 'break-word',
+        color: Palette.WHITE,
     },
 }));
 
@@ -31,7 +33,7 @@ const Body = ({ uuid, body }: BodyProps): ReactElement => {
                 </Typography>
             </Box>
             {body && (
-                <Box data-cy={`${uuid}-value`} className={classes.values}>
+                <Box data-cy={`${uuid}-value`} className={classes.value}>
                     <Typography variant="subtitle2">
                         {JSON.stringify(body)}
                     </Typography>

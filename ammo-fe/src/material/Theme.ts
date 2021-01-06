@@ -1,20 +1,15 @@
 import { createMuiTheme } from '@material-ui/core/styles';
+import Palette from 'material/Palette';
 
 //* Need help customizing the colors ? ----> https://material-ui.com/customization/color/#color-tool
 
 const theme = createMuiTheme({
     palette: {
         primary: {
-            // Primary color - Dark tones
-            light: '#640D14',
-            main: '#38040E',
-            dark: '#250902',
+            main: '#fff',
         },
         secondary: {
-            // Secondary color - Lighter tones (mostly for fonts)
-            light: '#FF7780',
-            main: '#AD2831',
-            dark: '#800E13',
+            main: '#fff',
         },
     },
     typography: {
@@ -37,7 +32,7 @@ const theme = createMuiTheme({
     overrides: {
         MuiCircularProgress: {
             colorPrimary: {
-                color: '#AD2831 !important',
+                color: `${Palette.RED_LIGHT} !important`,
             },
         },
         MuiSnackbarContent: {

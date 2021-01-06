@@ -7,12 +7,13 @@ import DownCarretIcon from 'assets/icons/down_carret.svg';
 import useI18n from 'hooks/useI18n';
 import { Bullet } from 'shared/types/Bullet';
 import useMQ from 'hooks/useMQ';
-import urlWithoutOrigin from 'util/NetUtil';
+import Palette from 'material/Palette';
+import { urlWithoutOrigin, isHttpErrorCode } from 'util/NetUtil';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
-        backgroundColor: theme.palette.primary.light,
-        color: theme.palette.secondary.light,
+        backgroundColor: Palette.BLACK_LIGHT,
+        color: Palette.WHITE,
         padding: '2px 7px',
         display: 'flex',
         flexDirection: 'row',
@@ -20,13 +21,14 @@ const useStyles = makeStyles((theme) => ({
     },
     ms: {
         marginRight: '12px',
+        color: Palette.WHITE,
     },
     methodBadge: {
         margin: '0 12px 0 0',
         padding: '0 9px',
         borderRadius: '3px',
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.secondary.main,
+        backgroundColor: Palette.BLUE_DARKER,
+        color: Palette.BLUE_LIGHTER,
     },
     url: {
         textOverflow: 'ellipsis',
@@ -37,13 +39,20 @@ const useStyles = makeStyles((theme) => ({
         margin: '0 12px',
         padding: '0 3px',
         borderRadius: '3px',
-        backgroundColor: theme.palette.primary.main,
-        color: theme.palette.secondary.dark,
+    },
+    successStatusBadge: {
+        backgroundColor: Palette.GREEN_DARKER,
+        color: Palette.GREEN_LIGHT,
+    },
+    errorStatusBadge: {
+        backgroundColor: Palette.RED_DARKER,
+        color: Palette.RED_MED,
     },
     filler: {
         flexGrow: 1,
     },
     downCarretIcon: {
+        marginTop: '6px',
         '&:hover': {
             cursor: 'pointer',
         },
@@ -67,6 +76,10 @@ const BulletHeader = ({
     const classes = useStyles();
     const { isSMDown } = useMQ();
     const i18n = useI18n();
+
+    const statusBadgeClassName = isHttpErrorCode(bullet.response.status)
+        ? classes.errorStatusBadge
+        : classes.successStatusBadge;
 
     return (
         <Box data-cy={`bullet-header-${bullet.id}`} className={classes.root}>
@@ -101,7 +114,7 @@ const BulletHeader = ({
             {bullet.response.status && (
                 <Box
                     data-cy={`bullet-header-status-${bullet.id}`}
-                    className={classes.statusBadge}
+                    className={`${classes.statusBadge} ${statusBadgeClassName}`}
                 >
                     <Typography>{bullet.response.status}</Typography>
                 </Box>

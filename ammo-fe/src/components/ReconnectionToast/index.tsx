@@ -3,14 +3,16 @@ import Snackbar from '@material-ui/core/Snackbar';
 import CircularProgress from '@material-ui/core/CircularProgress';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { FormattedMessage } from 'react-intl';
+import Palette from 'material/Palette';
 import useMQ from 'hooks/useMQ';
+import useI18n from 'hooks/useI18n';
 
 import Box from '@material-ui/core/Box';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
-        border: `1px solid ${theme.palette.secondary.main}`,
-        backgroundColor: theme.palette.primary.dark,
+        border: `1px solid ${Palette.RED_LIGHT}`,
+        backgroundColor: Palette.BLACK_DARK,
         justifyContent: 'center',
     },
     marginBottom: {
@@ -25,13 +27,14 @@ const useStyles = makeStyles((theme) => ({
         display: 'inline-block',
         verticalAlign: 'top',
         lineHeight: '35px',
-        color: theme.palette.secondary.main,
+        color: Palette.RED_LIGHT,
     },
 }));
 
 const ReconnectionToast = (): ReactElement => {
     const classes = useStyles();
     const { isSMDown } = useMQ();
+    const i18n = useI18n();
 
     return (
         <Snackbar
@@ -45,7 +48,13 @@ const ReconnectionToast = (): ReactElement => {
             message={
                 <Box>
                     <Box className={classes.circular}>
-                        <CircularProgress size={30} />
+                        <CircularProgress
+                            id="circular-load-bar"
+                            size={30}
+                            title={i18n(
+                                'ReconnectionToast.CircularProgress.Title'
+                            )}
+                        />
                     </Box>
                     <Box className={classes.message}>
                         <FormattedMessage id="ReconnectionToast" />

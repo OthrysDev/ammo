@@ -3,4 +3,9 @@ const urlWithoutOrigin = (url: string): string => {
     return u.toString().replace(u.origin, '');
 };
 
-export default urlWithoutOrigin;
+const isHttpErrorCode = (code: number): boolean => {
+    // https://developer.mozilla.org/fr/docs/Web/HTTP/Status
+    return code >= 400;
+};
+
+export { urlWithoutOrigin, isHttpErrorCode };

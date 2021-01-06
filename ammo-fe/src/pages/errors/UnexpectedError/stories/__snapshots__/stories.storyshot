@@ -51,11 +51,11 @@ exports[`Storyshots Pages/errors/UnexpectedError UnexpectedError 1`] = `
                 d="M10 20v-6h4v6h5v-8h3L12 3 2 12h3v8z"
               />
             </svg>
-            <h6
-              class="MuiTypography-root MuiTypography-subtitle2"
+            <span
+              class="MuiTypography-root MuiTypography-button"
             >
               Homepage
-            </h6>
+            </span>
           </span>
         </button>
       </div>

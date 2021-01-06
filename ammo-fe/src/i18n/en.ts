@@ -19,6 +19,7 @@ const englishMessages = {
     'Img.Alt.PauseIcon': 'Pause',
     'Img.Alt.RequestIcon': 'Requests',
     'Img.Alt.ScriptIcon': 'Scripts',
+    'ReconnectionToast.CircularProgress.Title': 'Reconnecting to the server',
 };
 
 export default englishMessages;

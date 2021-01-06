@@ -42,7 +42,7 @@
      id="namedview6"
      showgrid="false"
      inkscape:zoom="20.081833"
-     inkscape:cx="4.4188872"
+     inkscape:cx="-3.6730036"
      inkscape:cy="6.8630451"
      inkscape:window-x="-8"
      inkscape:window-y="-8"
@@ -50,7 +50,7 @@
      inkscape:current-layer="svg4" />
   <text
      xml:space="preserve"
-     style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:11.59199429px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Heavy';letter-spacing:0px;word-spacing:0px;fill:#ad2831;fill-opacity:1;stroke:none;stroke-width:0.28979984;"
+     style="font-style:normal;font-variant:normal;font-weight:900;font-stretch:normal;font-size:11.59199429px;line-height:1.25;font-family:Arial;-inkscape-font-specification:'Arial Heavy';letter-spacing:0px;word-spacing:0px;fill:#858585;fill-opacity:1;stroke:none;stroke-width:0.28979984;"
      x="1.8171785"
      y="9.7386341"
      id="text14"><tspan
@@ -58,5 +58,5 @@
        id="tspan12"
        x="1.8171785"
        y="9.7386341"
-       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.28979984;fill:#ad2831;fill-opacity:1;">&lt;/&gt;</tspan></text>
+       style="font-style:normal;font-variant:normal;font-weight:bold;font-stretch:normal;font-family:Arial;-inkscape-font-specification:'Arial Bold';stroke-width:0.28979984;fill:#858585;fill-opacity:1;">&lt;/&gt;</tspan></text>
 </svg>

@@ -3,15 +3,19 @@ import makeStyles from '@material-ui/core/styles/makeStyles';
 import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { FormattedMessage } from 'react-intl';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     title: {
-        color: theme.palette.secondary.light,
+        color: Palette.GREY_DARK,
         margin: '8px 0',
     },
     values: {
         marginLeft: '24px',
         wordBreak: 'break-word',
+    },
+    headerValue: {
+        color: Palette.WHITE,
     },
 }));
 
@@ -38,7 +42,10 @@ const Headers = ({ uuid, headers }: HeadersProps): ReactElement => {
                 >
                     <Typography variant="subtitle2">
                         <span data-cy={`${uuid}-line-${i}-key`}>{key}</span> :{' '}
-                        <span data-cy={`${uuid}-line-${i}-value`}>
+                        <span
+                            data-cy={`${uuid}-line-${i}-value`}
+                            className={classes.headerValue}
+                        >
                             "{headers[key]}"
                         </span>
                     </Typography>

@@ -6,12 +6,13 @@ import Typography from '@material-ui/core/Typography';
 import HomeIcon from '@material-ui/icons/Home';
 import { FormattedMessage } from 'react-intl';
 import i18n from 'types/i18n';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         height: '100vh',
         width: '100vw',
-        backgroundColor: theme.palette.primary.dark,
+        backgroundColor: Palette.BLACK_DARK,
         position: 'absolute',
     },
     centered: {
@@ -22,16 +23,16 @@ const useStyles = makeStyles((theme) => ({
         textAlign: 'center',
     },
     title: {
-        color: theme.palette.secondary.main,
+        color: Palette.WHITE,
         marginBottom: '12px',
     },
     content: {
-        color: theme.palette.secondary.dark,
+        color: Palette.GREY_LIGHT,
         marginBottom: '18px',
     },
     button: {
-        color: theme.palette.secondary.dark,
-        border: `1px solid ${theme.palette.secondary.dark}`,
+        color: Palette.GREY_LIGHT,
+        border: `1px solid ${Palette.GREY_LIGHT}`,
     },
     icon: {
         marginRight: '7px',
@@ -68,7 +69,7 @@ function Error({ title, content, button, onReset }: ErrorProps): ReactElement {
                     onClick={onReset}
                 >
                     <HomeIcon className={classes.icon} />
-                    <Typography variant="subtitle2">
+                    <Typography variant="button">
                         <FormattedMessage id={button} />
                     </Typography>
                 </Button>

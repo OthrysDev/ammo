@@ -5,21 +5,22 @@ import RequestIcon from 'assets/icons/request.svg';
 import ScriptIcon from 'assets/icons/script.svg';
 import useI18n from 'hooks/useI18n';
 import i18n from 'types/i18n';
+import Palette from 'material/Palette';
 
-const useStyles = makeStyles((theme) => ({
+const useStyles = makeStyles(() => ({
     root: {
         height: '64px',
         width: '25%',
         margin: '5px 0',
         textAlign: 'center',
         borderRadius: '4px',
-        backgroundColor: theme.palette.secondary.dark,
+        backgroundColor: Palette.BLACK_LIGHT,
         '&:active': {
-            backgroundColor: theme.palette.primary.light,
+            backgroundColor: Palette.BLACK_MED,
         },
         '&:hover': {
             cursor: 'pointer',
-            backgroundColor: theme.palette.primary.light,
+            backgroundColor: Palette.BLACK_MED,
         },
     },
     icon: {

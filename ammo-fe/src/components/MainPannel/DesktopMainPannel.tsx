@@ -7,15 +7,16 @@ import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import { Bullet as IBullet } from 'shared/types/Bullet';
 import Script from 'components/Script';
+import Palette from 'material/Palette';
 
-const useDesktopStyles = makeStyles((theme) => ({
+const useDesktopStyles = makeStyles(() => ({
     scrollbar: {
         height: 'calc(100vh - 74px)',
     },
     root: {
         minHeight: 'calc(100vh - 74px)',
         width: '100%',
-        background: `linear-gradient(90deg, ${theme.palette.primary.dark} 50%, ${theme.palette.primary.main} 50%)`,
+        background: `linear-gradient(90deg, ${Palette.BLACK_DARK} 50%, ${Palette.BLACK_MED} 50%)`,
         color: 'white',
         overflowY: 'auto',
     },
@@ -32,7 +33,7 @@ const DesktopMainPannel = ({
 
     return (
         <SimpleBar className={classes.scrollbar}>
-            <Box data-cy="main-pannel" className={classes.root}>
+            <Box data-cy="main-pannel" className={classes.root} tabIndex={0}>
                 {bullets &&
                     bullets.map((b, i) => (
                         <Grid
