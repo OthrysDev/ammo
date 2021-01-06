@@ -78,6 +78,12 @@ const RecorderButton = (): ReactElement => {
         });
     };
 
+    let buttonClassname = classes.insideButton;
+    // Connected : button is clickable
+    if (connected) buttonClassname += ` ${classes.clickable}`;
+    // Not recording : button is greyed out
+    if (!recording) buttonClassname += ` ${classes.off}`;
+
     return (
         <Box className={classes.root}>
             <Box
@@ -87,9 +93,7 @@ const RecorderButton = (): ReactElement => {
             >
                 <Button
                     data-cy="recorder-button"
-                    className={`${classes.insideButton} 
-                        ${connected ? classes.clickable : ''} 
-                        ${recording ? '' : classes.off}`}
+                    className={buttonClassname}
                     onClick={toggleRecording}
                     disabled={!connected}
                 >

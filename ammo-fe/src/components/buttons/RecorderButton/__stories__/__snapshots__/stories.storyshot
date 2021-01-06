@@ -11,9 +11,7 @@ exports[`Storyshots Components/buttons/RecorderButton RecorderButton 1`] = `
       class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
     >
       <button
-        class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton 
-                         
-                         MuiButton-disabled MuiButtonBase-disabled"
+        class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton MuiButton-disabled MuiButtonBase-disabled"
         data-cy="recorder-button"
         disabled=""
         tabindex="-1"

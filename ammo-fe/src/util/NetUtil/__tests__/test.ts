@@ -16,53 +16,43 @@ describe('NetUtil', () => {
 
     describe('isHttpErrorCode', () => {
         test('Testing informative response status (lower limit) - should return false', () => {
-            const res = isHttpErrorCode(100);
-            expect(res).toEqual(false);
+            expect(isHttpErrorCode(100)).toEqual(false);
         });
 
         test('Testing informative response status (upper limit) - should return false', () => {
-            const res = isHttpErrorCode(103);
-            expect(res).toEqual(false);
+            expect(isHttpErrorCode(103)).toEqual(false);
         });
 
         test('Testing success response status (lower limit) - should return false', () => {
-            const res = isHttpErrorCode(200);
-            expect(res).toEqual(false);
+            expect(isHttpErrorCode(200)).toEqual(false);
         });
 
         test('Testing success response status (upper limit) - should return false', () => {
-            const res = isHttpErrorCode(226);
-            expect(res).toEqual(false);
+            expect(isHttpErrorCode(226)).toEqual(false);
         });
 
         test('Testing redirection response status (lower limit) - should return false', () => {
-            const res = isHttpErrorCode(300);
-            expect(res).toEqual(false);
+            expect(isHttpErrorCode(300)).toEqual(false);
         });
 
         test('Testing redirection response status (upper limit) - should return false', () => {
-            const res = isHttpErrorCode(308);
-            expect(res).toEqual(false);
+            expect(isHttpErrorCode(308)).toEqual(false);
         });
 
         test('Testing client error response status (lower limit) - should return true', () => {
-            const res = isHttpErrorCode(400);
-            expect(res).toEqual(true);
+            expect(isHttpErrorCode(400)).toEqual(true);
         });
 
         test('Testing client error response status (upper limit) - should return true', () => {
-            const res = isHttpErrorCode(451);
-            expect(res).toEqual(true);
+            expect(isHttpErrorCode(451)).toEqual(true);
         });
 
         test('Testing server error response status (lower limit) - should return true', () => {
-            const res = isHttpErrorCode(500);
-            expect(res).toEqual(true);
+            expect(isHttpErrorCode(500)).toEqual(true);
         });
 
         test('Testing server error response status (upper limit) - should return true', () => {
-            const res = isHttpErrorCode(511);
-            expect(res).toEqual(true);
+            expect(isHttpErrorCode(511)).toEqual(true);
         });
     });
 });
