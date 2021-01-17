@@ -64,7 +64,7 @@ declare namespace Cypress {
 const socket = WS.getSocket('http://localhost:3001');
 
 const emitBullet = (bullet): Cypress.Chainable<unknown> => {
-    return socket.emit('bullet', { bullet });
+    return socket.emit('bullets::emit', { bullet });
 };
 
 Cypress.Commands.add('emitBullet', emitBullet);
@@ -77,8 +77,9 @@ const reachErrorBoundary = (): Cypress.Chainable<unknown> => {
 
 Cypress.Commands.add('reachErrorBoundary', reachErrorBoundary);
 
-const pushHistory = (route: string): Cypress.Chainable<unknown> =>
+const pushHistory = (route: string): Cypress.Chainable<unknown> => {
     cy.window().its('routerHistory').invoke('push', route);
+};
 
 Cypress.Commands.add('pushHistory', pushHistory);
 

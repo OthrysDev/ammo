@@ -1,72 +1,91 @@
-import * as React from 'react';
-import { createContext, useContext } from 'react';
+import React, { useState, useEffect, useContext } from 'react';
 import { Bullet } from 'shared/types/Bullet';
 import WS, { manager } from 'network/WS';
-import useUIActions from 'redux/actions/useUIActions';
-import useWSActions from 'redux/actions/useWSActions';
+import { useSelector } from 'react-redux';
 import useBulletActions from 'redux/actions/useBulletActions';
+import { RootReducer } from 'redux/reducers';
 
 type WSProvider = {
     init: () => void;
-    emit: (event: string, ...args: unknown[]) => void;
     connected: boolean;
 };
 
-const WSContext = createContext({});
+const WSContext = React.createContext({});
 
 const useWSProvider = (): WSProvider => {
-    const [connected, setConnected] = React.useState(false);
-    const { toggleRecordAction } = useUIActions();
-    const { connectAction, disconnectAction } = useWSActions();
+    const [connected, setConnected] = useState(false);
     const { addBulletAction } = useBulletActions();
+    const [subbedToBullets, setSubbedToBullets] = useState(false);
+    const [loading, setLoading] = useState(false);
+    const recBtnToggled = useSelector(
+        (state: RootReducer) => state.ui.recBtnToggled
+    );
 
     let initialized = false;
     const socket = WS.getSocket('http://localhost:3001');
 
     const init = (): void => {
+        // Already init. Return
         if (initialized) return;
+
         initialized = true;
 
         // This part is for the mocked WS, figure out a way to remove it
-        if (socket.connected) connectAction();
-        else disconnectAction();
+        if (socket.connected) setConnected(true);
+        else setConnected(false);
 
-        // Only the manager is able to listen on the connection error, as this is the one who handle connection
-        manager.on('error', () => {
-            // Whenever the socket fail connecting we toggle off the recorder
-            toggleRecordAction(false);
+        // Only the manager is able to listen on the connection error, as this is the one who handles the connection
+        manager.on('error', (err) => {
+            console.error('[WS] An unexpected error happened', err);
         });
 
         socket.on('connect', () => {
             setConnected(true);
-            connectAction();
-        });
-
-        socket.on('bullet', ({ bullet }: { bullet: Bullet }) => {
-            addBulletAction(bullet);
         });
 
         // For a list of all reasons why the ws can disconnect : https://socket.io/docs/v3/client-api/#Event-%E2%80%98disconnect%E2%80%99
         socket.on('disconnect', (reason: string) => {
-            disconnectAction();
-
-            toggleRecordAction(false);
             setConnected(false);
+
             if (reason === 'io server disconnect') {
-                // the disconnection was initiated by the server, you need to reconnect manually
+                // Disconnection was initiated by the server, you need to reconnect manually
                 socket.connect();
-                connectAction();
             }
-            // else the socket will automatically try to reconnect
+            // Else the socket will automatically try to reconnect
+        });
+
+        socket.on('bullets::emit', ({ bullet }: { bullet: Bullet }) => {
+            addBulletAction(bullet);
         });
     };
 
-    const emit = (event: string, ...args: unknown[]): void =>
-        socket.emit(event, ...args);
+    const subToBullets = (sub: boolean): void => {
+        if (loading) return;
+
+        setLoading(true);
+
+        socket.emit('bullets::sub', { sub }, (subbed: boolean) => {
+            setSubbedToBullets(subbed);
+            setLoading(false);
+        });
+    };
+
+    useEffect(() => {
+        const isBulletSubSynchedWithServer = subbedToBullets === recBtnToggled;
+
+        // No longer connected. Set sub state to false
+        if (!connected) {
+            setSubbedToBullets(false);
+        }
+        // Connected: make sure sub (server) state and rec btn state are the same
+        else if (!isBulletSubSynchedWithServer) {
+            // Send network state sync
+            subToBullets(recBtnToggled);
+        }
+    }, [connected, recBtnToggled]);
 
     return {
         init,
-        emit,
         connected,
     };
 };

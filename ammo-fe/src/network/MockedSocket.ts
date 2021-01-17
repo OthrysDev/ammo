@@ -1,10 +1,10 @@
 // Arguments can be either a callback function (in the case of the toggleRecord for example), or a list of unknowned arguments
-type Arguments = unknown[] | ((recording: boolean) => void);
+type Arguments = unknown[];
 
 export default class MockedSocket {
     private cache: Record<string, (...args: unknown[]) => void> = {};
 
-    private isRecording = true;
+    public isSubbedToBullets = true;
 
     public connected = true;
 
@@ -12,18 +12,18 @@ export default class MockedSocket {
         this.cache[event] = listener;
     };
 
-    emit = (event: string, args: Arguments): void => {
-        // When we toggle, we save the new value and invoke the callback given just like the server would do
-        if (event === 'toggleRecord') {
-            this.isRecording = !this.isRecording;
-            if (typeof args === 'function') {
-                args(this.isRecording);
-            }
-            return undefined;
+    emit = (event: string, args: Arguments, cbk: unknown): void => {
+        // Sub to bullets channel
+        if (event === 'bullets::sub') {
+            const { sub } = (args as unknown) as { sub: boolean };
+            this.__handleBulletsSub(sub, cbk as (subbed: boolean) => void);
+
+            return;
         }
         // For now, we only block the bullet event when the recorder is paused
-        if (!this.isRecording && event === 'bullet') return undefined;
-        return this.cache[event](args);
+        if (!this.isSubbedToBullets && event === 'bullets::emit') return;
+
+        this.cache[event](args);
     };
 
     connect = (): void => {
@@ -34,7 +34,21 @@ export default class MockedSocket {
 
     disconnect = (): void => {
         this.connected = false;
+        this.isSubbedToBullets = false;
 
         if (this.cache.disconnect) this.cache.disconnect();
+    };
+
+    // ================================================================
+    // ================================================================
+    // ================================================================
+
+    __handleBulletsSub = (
+        sub: boolean,
+        cbk: (subbed: boolean) => void
+    ): void => {
+        this.isSubbedToBullets = sub;
+
+        cbk(this.isSubbedToBullets);
     };
 }

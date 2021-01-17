@@ -3,7 +3,15 @@ import http from 'http';
 
 let ioServer: io.Server;
 
-let isRecording = false;
+// Bullets sub statuts
+let isSubbedToBullets = false;
+const getIsSubbedToBullets = (): boolean => isSubbedToBullets;
+
+// Disconnect callbacks. Can be useful for testing
+const disconnectCbks: { (): void }[] = [];
+const addDisconnectCbk = (cbk: { (): void }): void => {
+    disconnectCbks.push(cbk);
+};
 
 const initWS = (server: http.Server): void => {
     ioServer = new io.Server(server, {
@@ -12,18 +20,20 @@ const initWS = (server: http.Server): void => {
         },
     });
 
-    isRecording = true;
+    ioServer.on('connect', (s: Socket) => {
+        s.on('bullets::sub', ({ sub }, cbk) => {
+            // Switch to new sub state
+            isSubbedToBullets = sub;
 
-    ioServer.on('connection', (s: Socket) => {
-        s.on('toggleRecord', (cbk) => {
-            isRecording = !isRecording;
-            cbk(isRecording);
+            cbk(isSubbedToBullets);
         });
 
-        s.on('disconnecting', () => {
-            isRecording = false;
+        s.on('disconnect', () => {
+            isSubbedToBullets = false;
+
+            disconnectCbks.forEach((cbk) => cbk());
         });
     });
 };
 
-export { initWS, ioServer, isRecording };
+export { initWS, ioServer, getIsSubbedToBullets, addDisconnectCbk };

@@ -1,5 +1,5 @@
 import express from 'express';
-import { ioServer, isRecording } from 'WebSocket/index';
+import { ioServer, getIsSubbedToBullets } from 'WebSocket/index';
 import bulletSchema from 'validators/BulletValidator';
 import { Bullet } from 'shared/types/Bullet';
 import { nanoid } from 'nanoid';
@@ -13,10 +13,9 @@ BulletRouter.post(
         try {
             const connectorRequest: ConnectorRequest = { ...req.body.data };
 
-            if (!isRecording) {
+            if (!getIsSubbedToBullets()) {
                 return res.status(200).json({
-                    message:
-                        'The recorder has been paused, we will not process your request any further',
+                    message: 'The recorder is paused',
                 });
             }
 
@@ -29,7 +28,7 @@ BulletRouter.post(
                 id: nanoid(),
             };
 
-            ioServer.emit('bullet', { bullet });
+            ioServer.emit('bullets::emit', { bullet });
 
             return res.status(200).json({ bullet });
         } catch ({ message }) {

@@ -9,7 +9,9 @@ import { initWS } from 'WebSocket';
 const app = express();
 app.use(cors({ origin: 'http://localhost:3000' }));
 
-const server = app.listen(3001);
+const server = app.listen(3001, () => {
+    console.log('Ammo-be started & listening on port 3001');
+});
 
 initWS(server);
 
