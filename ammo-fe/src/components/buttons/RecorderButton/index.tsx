@@ -61,18 +61,18 @@ const useStyles = makeStyles(() => ({
 const RecorderButton = (): ReactElement => {
     const classes = useStyles();
     const i18n = useI18n();
-    const { toggleRecBtnAction } = useUIActions();
-    const recBtnToggled = useSelector(
-        (state: RootReducer) => state.ui.recBtnToggled
+    const { toggleRecorderButtonAction } = useUIActions();
+    const recorderButtonToggled = useSelector(
+        (state: RootReducer) => state.ui.recorderButtonToggled
     );
 
-    const toggleRecBtn = (): void => {
-        toggleRecBtnAction(!recBtnToggled);
+    const toggleRecorderButton = (): void => {
+        toggleRecorderButtonAction(!recorderButtonToggled);
     };
 
     let buttonClassname = classes.insideButton;
     // Not recording : button is greyed out
-    if (!recBtnToggled) buttonClassname += ` ${classes.off}`;
+    if (!recorderButtonToggled) buttonClassname += ` ${classes.off}`;
 
     return (
         <Box className={classes.root}>
@@ -80,9 +80,9 @@ const RecorderButton = (): ReactElement => {
                 <Button
                     data-cy="recorder-button"
                     className={buttonClassname}
-                    onClick={toggleRecBtn}
+                    onClick={toggleRecorderButton}
                 >
-                    {recBtnToggled ? (
+                    {recorderButtonToggled ? (
                         <img
                             data-cy="recording-button-pause"
                             src={PauseIcon}

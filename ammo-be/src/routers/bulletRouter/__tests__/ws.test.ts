@@ -3,11 +3,16 @@ import request from 'supertest';
 import { Bullet } from 'shared/types/Bullet';
 import { io, Socket } from 'socket.io-client';
 import MockDate from 'mockdate';
-import { getIsSubbedToBullets, addDisconnectCbk, ioServer } from 'WebSocket';
+import {
+    getIsSubscribedToBullets,
+    addDisconnectCbk,
+    ioServer,
+} from 'WebSocket';
 import {
     connectorRequestMock,
     noMethodConnectorRequestMock,
 } from 'routers/BulletRouter/__tests__/mocks/ConnectorRequest.mock';
+import WSBulletsEvent from 'shared/types/WSBulletsEvent';
 
 let socket: Socket;
 
@@ -23,8 +28,10 @@ beforeAll((done) => {
         socket = io('http://localhost:3001');
 
         socket.on('connect', () => {
-            // By default, sub to bullets chan
-            socket.emit('bullets::sub', { sub: true }, () => done());
+            // By default, subscribe to bullets chan
+            socket.emit(WSBulletsEvent.SUBSCRIBE, { subscribe: true }, () =>
+                done()
+            );
         });
     } catch (error) {
         // Keep the console.log for debugging purpose
@@ -33,19 +40,17 @@ beforeAll((done) => {
     }
 });
 
-afterAll((done) => {
+afterAll(() => {
     app.close();
 
     if (socket.connected) socket.disconnect();
 
     MockDate.reset();
-
-    done();
 });
 
 afterEach(() => {
     // Clear emitted bullets
-    socket.off('bullets::emit');
+    socket.off(WSBulletsEvent.EMIT);
 });
 
 describe('[WS] BulletRouter', () => {
@@ -57,10 +62,13 @@ describe('[WS] BulletRouter', () => {
         });
 
         test('Sending a connectorRequest - ws should return a bullet', async (done) => {
-            socket.on('bullets::emit', ({ bullet }: Record<string, Bullet>) => {
-                expect(bullet).toMatchSnapshot();
-                done();
-            });
+            socket.on(
+                WSBulletsEvent.EMIT,
+                ({ bullet }: Record<string, Bullet>) => {
+                    expect(bullet).toMatchSnapshot();
+                    done();
+                }
+            );
 
             await request(app)
                 .post('/')
@@ -69,7 +77,7 @@ describe('[WS] BulletRouter', () => {
         });
 
         test('Sending an incorrect connectorRequest - ws should not return a bullet', async (done) => {
-            socket.on('bullets::emit', () => {
+            socket.on(WSBulletsEvent.EMIT, () => {
                 done.fail(
                     'Should not catch a bullet as the data is incorrect.'
                 );
@@ -84,20 +92,24 @@ describe('[WS] BulletRouter', () => {
         });
     });
 
-    describe('isSubbedToBullets', () => {
-        it('Check recording value - should be true as we subbed', () => {
-            expect(getIsSubbedToBullets()).toBe(true);
+    describe('post("/") - WS & subscribe state', () => {
+        it('Check subscribe state - should be true as we subscribed', () => {
+            expect(getIsSubscribedToBullets()).toBe(true);
         });
 
-        it('Unsubbing from bullet channel - sub state should be false', (done) => {
-            socket.emit('bullets::sub', { sub: false }, (subbed: boolean) => {
-                expect(subbed).toBe(false);
-                expect(getIsSubbedToBullets()).toBe(false);
-                done();
-            });
+        it('Unsubscribing from bullet channel - subscribe state should be false', (done) => {
+            socket.emit(
+                WSBulletsEvent.SUBSCRIBE,
+                { subscribe: false },
+                (subscribed: boolean) => {
+                    expect(subscribed).toBe(false);
+                    expect(getIsSubscribedToBullets()).toBe(false);
+                    done();
+                }
+            );
         });
 
-        it('Receive a Bullet while unsubbed - should not be emitted to front-end', async (done) => {
+        it('Receive a Bullet while unsubscribed - should not be emitted to front-end', async (done) => {
             const emitSpy = jest.spyOn(ioServer, 'emit');
 
             await request(app)
@@ -109,7 +121,7 @@ describe('[WS] BulletRouter', () => {
             done();
         });
 
-        it('Return a message to connector if not subbed', async (done) => {
+        it('Return a message to connector if not subscribed', async (done) => {
             await request(app)
                 .post('/')
                 .send({ data: connectorRequestMock })
@@ -122,15 +134,19 @@ describe('[WS] BulletRouter', () => {
                 });
         });
 
-        it('Sub to bullets chan - sub state should be true', (done) => {
-            socket.emit('bullets::sub', { sub: true }, (subbed: boolean) => {
-                expect(subbed).toBe(true);
-                expect(getIsSubbedToBullets()).toBe(true);
-                done();
-            });
+        it('Subscribe to bullets chan - subscribe state should be true', (done) => {
+            socket.emit(
+                WSBulletsEvent.SUBSCRIBE,
+                { subscribe: true },
+                (subscribed: boolean) => {
+                    expect(subscribed).toBe(true);
+                    expect(getIsSubscribedToBullets()).toBe(true);
+                    done();
+                }
+            );
         });
 
-        it('Receive a Bullet while subbed - should be emitted to front-end', async (done) => {
+        it('Receive a Bullet while subscribed - should be emitted to front-end', async (done) => {
             const emitSpy = jest.spyOn(ioServer, 'emit');
 
             await request(app)
@@ -142,11 +158,12 @@ describe('[WS] BulletRouter', () => {
             done();
         });
 
-        it('Disconnecting socket - sub state should be false', (done) => {
+        it('Disconnecting socket - subscribe state should be false', (done) => {
             addDisconnectCbk((): void => {
-                expect(getIsSubbedToBullets()).toBe(false);
+                expect(getIsSubscribedToBullets()).toBe(false);
                 done();
             });
+
             socket.disconnect();
         });
     });

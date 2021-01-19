@@ -10,6 +10,7 @@ import {
 } from 'routers/BulletRouter/__tests__/mocks/ConnectorRequest.mock';
 import HTTPError from 'types/HTTPError';
 import { io, Socket } from 'socket.io-client';
+import WSBulletsEvent from 'shared/types/WSBulletsEvent';
 
 let socket: Socket;
 
@@ -25,8 +26,10 @@ beforeAll((done) => {
         socket = io('http://localhost:3001');
 
         socket.on('connect', () => {
-            // By default, sub to bullets chan
-            socket.emit('bullets::sub', { sub: true }, () => done());
+            // By default, subscribe to bullets chan
+            socket.emit(WSBulletsEvent.SUBSCRIBE, { subscribe: true }, () =>
+                done()
+            );
         });
     } catch (error) {
         // Keep the console.log for debugging purpose
@@ -35,14 +38,12 @@ beforeAll((done) => {
     }
 });
 
-afterAll((done) => {
+afterAll(() => {
     MockDate.reset();
 
     if (socket.connected) socket.disconnect();
 
     app.close();
-
-    done();
 });
 
 describe('BulletRouter', () => {
@@ -99,16 +100,32 @@ describe('BulletRouter', () => {
                 });
         });
 
-        test('Unsub from channel - should return that recorder is paused', async () => {
-            socket.emit('bullets::sub', { sub: false }, async () => {
-                await request(app)
-                    .post('/')
-                    .send({ data: invalidUrlConnectorRequestMock })
-                    .expect(400)
-                    .expect((r: HTTPError) => {
-                        expect(r).toMatchSnapshot();
-                    });
-            });
+        test('Unsubscribed from channel, sending a connector request - should return that recorder is paused', (done) => {
+            socket.emit(
+                WSBulletsEvent.SUBSCRIBE,
+                { subscribe: false },
+                async () => {
+                    await request(app)
+                        .post('/')
+                        .send({ data: connectorRequestMock })
+                        .expect(200)
+                        .expect((res) => {
+                            expect(res.body).toMatchSnapshot();
+                        });
+
+                    done();
+                }
+            );
+        });
+
+        test('Unsubscribed from channel, sending an invalid connector request - should return Joi error even if paused', async () => {
+            await request(app)
+                .post('/')
+                .send({ data: invalidUrlConnectorRequestMock })
+                .expect(400)
+                .expect((r: HTTPError) => {
+                    expect(r.error.text).toMatchSnapshot();
+                });
         });
     });
 });

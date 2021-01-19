@@ -9,7 +9,7 @@ export interface Socket {
     disconnect(): void;
 
     // For test purposes
-    isSubbedToBullets: boolean;
+    isSubscribedToBullets: boolean;
 }
 
 export const manager = new Manager('http://localhost:3001');

@@ -1,11 +1,12 @@
 import io, { Socket } from 'socket.io';
 import http from 'http';
+import WSBulletsEvent from 'shared/types/WSBulletsEvent';
 
 let ioServer: io.Server;
 
-// Bullets sub statuts
-let isSubbedToBullets = false;
-const getIsSubbedToBullets = (): boolean => isSubbedToBullets;
+// Bullets subscribe statuts
+let isSubscribedToBullets = false;
+const getIsSubscribedToBullets = (): boolean => isSubscribedToBullets;
 
 // Disconnect callbacks. Can be useful for testing
 const disconnectCbks: { (): void }[] = [];
@@ -21,19 +22,19 @@ const initWS = (server: http.Server): void => {
     });
 
     ioServer.on('connect', (s: Socket) => {
-        s.on('bullets::sub', ({ sub }, cbk) => {
+        s.on(WSBulletsEvent.SUBSCRIBE, ({ subscribe }, cbk) => {
             // Switch to new sub state
-            isSubbedToBullets = sub;
+            isSubscribedToBullets = subscribe;
 
-            cbk(isSubbedToBullets);
+            cbk(isSubscribedToBullets);
         });
 
         s.on('disconnect', () => {
-            isSubbedToBullets = false;
+            isSubscribedToBullets = false;
 
             disconnectCbks.forEach((cbk) => cbk());
         });
     });
 };
 
-export { initWS, ioServer, getIsSubbedToBullets, addDisconnectCbk };
+export { initWS, ioServer, getIsSubscribedToBullets, addDisconnectCbk };

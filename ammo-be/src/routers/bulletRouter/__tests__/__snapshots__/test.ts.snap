@@ -86,3 +86,11 @@ Object {
   "url": "http://localhost:3000/user",
 }
 `;
+
+exports[`BulletRouter post("/") Unsubscribed from channel, sending a connector request - should return that recorder is paused 1`] = `
+Object {
+  "message": "The recorder is paused",
+}
+`;
+
+exports[`BulletRouter post("/") Unsubscribed from channel, sending an invalid connector request - should return Joi error even if paused 1`] = `"{\\"message\\":\\"url is invalid\\"}"`;

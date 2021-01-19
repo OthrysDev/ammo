@@ -1,10 +1,32 @@
-// Arguments can be either a callback function (in the case of the toggleRecord for example), or a list of unknowned arguments
-type Arguments = unknown[];
+import { Bullet } from 'shared/types/Bullet';
+// Must use relative path because of Cypress
+import WSBulletsEvent from '../shared/types/WSBulletsEvent';
+
+type SubscribeCbk = (subscribed: boolean) => void;
+
+type Subscribe = {
+    subscribe: boolean;
+};
+
+type SendBullet = {
+    bullet: Bullet;
+};
+
+// Let's type emit arguments more accurately
+type Arguments = Subscribe | SendBullet;
+
+// Will provide the proper casting
+function isSubscribeEvent(
+    event: WSBulletsEvent,
+    args: Arguments
+): args is Subscribe {
+    return event === WSBulletsEvent.SUBSCRIBE;
+}
 
 export default class MockedSocket {
     private cache: Record<string, (...args: unknown[]) => void> = {};
 
-    public isSubbedToBullets = true;
+    public isSubscribedToBullets = true;
 
     public connected = true;
 
@@ -12,16 +34,22 @@ export default class MockedSocket {
         this.cache[event] = listener;
     };
 
-    emit = (event: string, args: Arguments, cbk: unknown): void => {
-        // Sub to bullets channel
-        if (event === 'bullets::sub') {
-            const { sub } = (args as unknown) as { sub: boolean };
-            this.__handleBulletsSub(sub, cbk as (subbed: boolean) => void);
+    emit = (
+        event: WSBulletsEvent,
+        args: Arguments,
+        cbk: SubscribeCbk
+    ): void => {
+        // Subscribe to bullets channel
+        if (isSubscribeEvent(event, args)) {
+            const { subscribe } = args;
+            this.__handleBulletsSubscribe(subscribe, cbk);
 
             return;
         }
+
         // For now, we only block the bullet event when the recorder is paused
-        if (!this.isSubbedToBullets && event === 'bullets::emit') return;
+        if (!this.isSubscribedToBullets && event === WSBulletsEvent.EMIT)
+            return;
 
         this.cache[event](args);
     };
@@ -34,7 +62,7 @@ export default class MockedSocket {
 
     disconnect = (): void => {
         this.connected = false;
-        this.isSubbedToBullets = false;
+        this.isSubscribedToBullets = false;
 
         if (this.cache.disconnect) this.cache.disconnect();
     };
@@ -43,12 +71,12 @@ export default class MockedSocket {
     // ================================================================
     // ================================================================
 
-    __handleBulletsSub = (
-        sub: boolean,
-        cbk: (subbed: boolean) => void
+    __handleBulletsSubscribe = (
+        subscribe: boolean,
+        cbk: SubscribeCbk
     ): void => {
-        this.isSubbedToBullets = sub;
+        this.isSubscribedToBullets = subscribe;
 
-        cbk(this.isSubbedToBullets);
+        cbk(this.isSubscribedToBullets);
     };
 }

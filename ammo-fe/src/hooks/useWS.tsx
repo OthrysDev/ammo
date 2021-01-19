@@ -4,6 +4,7 @@ import WS, { manager } from 'network/WS';
 import { useSelector } from 'react-redux';
 import useBulletActions from 'redux/actions/useBulletActions';
 import { RootReducer } from 'redux/reducers';
+import WSBulletsEvent from 'shared/types/WSBulletsEvent';
 
 type WSProvider = {
     init: () => void;
@@ -15,10 +16,10 @@ const WSContext = React.createContext({});
 const useWSProvider = (): WSProvider => {
     const [connected, setConnected] = useState(false);
     const { addBulletAction } = useBulletActions();
-    const [subbedToBullets, setSubbedToBullets] = useState(false);
+    const [subscribedToBullets, setSubscribedToBullets] = useState(false);
     const [loading, setLoading] = useState(false);
-    const recBtnToggled = useSelector(
-        (state: RootReducer) => state.ui.recBtnToggled
+    const recorderButtonToggled = useSelector(
+        (state: RootReducer) => state.ui.recorderButtonToggled
     );
 
     let initialized = false;
@@ -54,35 +55,40 @@ const useWSProvider = (): WSProvider => {
             // Else the socket will automatically try to reconnect
         });
 
-        socket.on('bullets::emit', ({ bullet }: { bullet: Bullet }) => {
+        socket.on(WSBulletsEvent.EMIT, ({ bullet }: { bullet: Bullet }) => {
             addBulletAction(bullet);
         });
     };
 
-    const subToBullets = (sub: boolean): void => {
+    const subscribeToBullets = (subscribe: boolean): void => {
         if (loading) return;
 
         setLoading(true);
 
-        socket.emit('bullets::sub', { sub }, (subbed: boolean) => {
-            setSubbedToBullets(subbed);
-            setLoading(false);
-        });
+        socket.emit(
+            WSBulletsEvent.SUBSCRIBE,
+            { subscribe },
+            (subscribed: boolean) => {
+                setSubscribedToBullets(subscribed);
+                setLoading(false);
+            }
+        );
     };
 
     useEffect(() => {
-        const isBulletSubSynchedWithServer = subbedToBullets === recBtnToggled;
+        const isBulletSubcriptionSynchedWithServer =
+            subscribedToBullets === recorderButtonToggled;
 
         // No longer connected. Set sub state to false
         if (!connected) {
-            setSubbedToBullets(false);
+            setSubscribedToBullets(false);
         }
         // Connected: make sure sub (server) state and rec btn state are the same
-        else if (!isBulletSubSynchedWithServer) {
+        else if (!isBulletSubcriptionSynchedWithServer) {
             // Send network state sync
-            subToBullets(recBtnToggled);
+            subscribeToBullets(recorderButtonToggled);
         }
-    }, [connected, recBtnToggled]);
+    }, [connected, recorderButtonToggled]);
 
     return {
         init,

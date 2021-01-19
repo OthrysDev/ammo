@@ -94,11 +94,11 @@ describe('Top bar', () => {
     it('Socket reconnects, receiving a bullet - bullet should display', () => {
         socket.connect();
 
-        // Use this assertion to wait for the bullets chan to re-sub.
-        // As the re-sub is triggered in a useEffect it's async, so use
+        // Use this assertion to wait for the bullets chan to re-subscribe.
+        // As the re-subscription is triggered in a useEffect it's async, so use
         // 'should' to check async data state
         cy.get(socket).should(($socket) => {
-            expect($socket[0].isSubbedToBullets).to.equal(true);
+            expect($socket[0].isSubscribedToBullets).to.equal(true);
         });
 
         cy.emitBullet(bulletMock);
