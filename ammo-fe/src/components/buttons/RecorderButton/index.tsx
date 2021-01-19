@@ -1,15 +1,14 @@
 import React, { ReactElement } from 'react';
 import Box from '@material-ui/core/Box';
 import Button from '@material-ui/core/Button';
+import { useSelector } from 'react-redux';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import RecIcon from 'assets/icons/rec.svg';
 import PauseIcon from 'assets/icons/pause.svg';
 import useI18n from 'hooks/useI18n';
 import { RootReducer } from 'redux/reducers';
 import useUIActions from 'redux/actions/useUIActions';
-import { useSelector } from 'react-redux';
 import Palette from 'material/Palette';
-import WS from 'network/WS';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -41,10 +40,6 @@ const useStyles = makeStyles(() => ({
         borderRadius: '3px',
         '&:hover': {
             backgroundColor: Palette.BLUE_MED,
-        },
-    },
-    clickable: {
-        '&:hover': {
             cursor: 'pointer',
             margin: '9px auto',
         },
@@ -66,38 +61,28 @@ const useStyles = makeStyles(() => ({
 const RecorderButton = (): ReactElement => {
     const classes = useStyles();
     const i18n = useI18n();
-    const { toggleRecordAction } = useUIActions();
-    const connected = useSelector((state: RootReducer) => state.ws.connected);
-    const recording = useSelector((state: RootReducer) => state.ui.recording);
+    const { toggleRecorderButtonAction } = useUIActions();
+    const recorderButtonToggled = useSelector(
+        (state: RootReducer) => state.ui.recorderButtonToggled
+    );
 
-    const socket = WS.getSocket('http://localhost:3000');
-
-    const toggleRecording = (): void => {
-        socket.emit('toggleRecord', (isRecording: boolean) => {
-            toggleRecordAction(isRecording);
-        });
+    const toggleRecorderButton = (): void => {
+        toggleRecorderButtonAction(!recorderButtonToggled);
     };
 
     let buttonClassname = classes.insideButton;
-    // Connected : button is clickable
-    if (connected) buttonClassname += ` ${classes.clickable}`;
     // Not recording : button is greyed out
-    if (!recording) buttonClassname += ` ${classes.off}`;
+    if (!recorderButtonToggled) buttonClassname += ` ${classes.off}`;
 
     return (
         <Box className={classes.root}>
-            <Box
-                className={`${classes.insideGutter} ${
-                    connected ? '' : classes.disabled
-                }`}
-            >
+            <Box className={classes.insideGutter}>
                 <Button
                     data-cy="recorder-button"
                     className={buttonClassname}
-                    onClick={toggleRecording}
-                    disabled={!connected}
+                    onClick={toggleRecorderButton}
                 >
-                    {recording ? (
+                    {recorderButtonToggled ? (
                         <img
                             data-cy="recording-button-pause"
                             src={PauseIcon}

@@ -17,6 +17,7 @@ const App = (): ReactElement => {
     const { init } = useWS();
 
     useEffect(() => {
+        // The one and only place where ws should be init
         init();
     }, []);
 

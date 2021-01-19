@@ -69,13 +69,12 @@ exports[`Storyshots Components/Layout Default 1`] = `
           class="MuiBox-root MuiBox-root makeStyles-root"
         >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
+            class="MuiBox-root MuiBox-root makeStyles-insideGutter"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton MuiButton-disabled MuiButtonBase-disabled"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton"
               data-cy="recorder-button"
-              disabled=""
-              tabindex="-1"
+              tabindex="0"
               type="button"
             >
               <span
@@ -224,13 +223,12 @@ exports[`Storyshots Components/Layout iPhone 5/SE - vertical 1`] = `
           class="MuiBox-root MuiBox-root makeStyles-root"
         >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
+            class="MuiBox-root MuiBox-root makeStyles-insideGutter"
           >
             <button
-              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton MuiButton-disabled MuiButtonBase-disabled"
+              class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton"
               data-cy="recorder-button"
-              disabled=""
-              tabindex="-1"
+              tabindex="0"
               type="button"
             >
               <span

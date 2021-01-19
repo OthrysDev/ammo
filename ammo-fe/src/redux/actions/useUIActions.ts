@@ -2,19 +2,19 @@ import { useDispatch } from 'react-redux';
 import { MainPannelView, UIReducerActionType } from 'redux/reducers/uiReducer';
 
 type UiActions = {
-    toggleRecordAction: (isRecording: boolean) => Record<string, unknown>;
+    toggleRecorderButtonAction: (toogled: boolean) => Record<string, unknown>;
     changeMainPannelAction: (view: MainPannelView) => Record<string, unknown>;
 };
 
 const useUIActions = (): UiActions => {
     const dispatch = useDispatch();
 
-    const toggleRecordAction = (
-        isRecording: boolean
+    const toggleRecorderButtonAction = (
+        toogled: boolean
     ): Record<string, unknown> => {
         return dispatch({
-            type: UIReducerActionType.TOGGLE_RECORD,
-            recording: isRecording,
+            type: UIReducerActionType.TOGGLE_REC_BTN,
+            recorderButtonToggled: toogled,
         });
     };
 
@@ -28,7 +28,7 @@ const useUIActions = (): UiActions => {
     };
 
     return {
-        toggleRecordAction,
+        toggleRecorderButtonAction,
         changeMainPannelAction,
     };
 };

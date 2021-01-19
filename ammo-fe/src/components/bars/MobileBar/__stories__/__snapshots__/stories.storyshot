@@ -23,13 +23,12 @@ exports[`Storyshots Components/bars/MobileBar MobileBar 1`] = `
       class="MuiBox-root MuiBox-root makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-insideGutter makeStyles-disabled"
+        class="MuiBox-root MuiBox-root makeStyles-insideGutter"
       >
         <button
-          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton MuiButton-disabled MuiButtonBase-disabled"
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton"
           data-cy="recorder-button"
-          disabled=""
-          tabindex="-1"
+          tabindex="0"
           type="button"
         >
           <span

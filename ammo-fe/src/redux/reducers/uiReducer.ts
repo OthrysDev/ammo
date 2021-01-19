@@ -1,6 +1,6 @@
 export enum UIReducerActionType {
     CHANGE_MAIN_SELECTED_PANNEL = 'CHANGE_MAIN_SELECTED_PANNEL',
-    TOGGLE_RECORD = 'TOGGLE_RECORD',
+    TOGGLE_REC_BTN = 'TOGGLE_REC_BTN',
 }
 
 export enum MainPannelView {
@@ -11,20 +11,26 @@ export enum MainPannelView {
 type UIReducerAction = {
     type: UIReducerActionType;
     view: MainPannelView;
-    recording?: boolean;
+    recorderButtonToggled?: boolean;
 };
 
-export type UIReducerState = { view: MainPannelView; recording: boolean };
+export type UIReducerState = {
+    view: MainPannelView;
+    recorderButtonToggled: boolean;
+};
 
 export default function uiReducer(
-    state = { view: MainPannelView.BULLETS, recording: true },
+    state = { view: MainPannelView.BULLETS, recorderButtonToggled: true },
     action: UIReducerAction
 ): UIReducerState {
     switch (action.type) {
         case UIReducerActionType.CHANGE_MAIN_SELECTED_PANNEL:
             return { ...state, view: action.view };
-        case UIReducerActionType.TOGGLE_RECORD:
-            return { ...state, recording: action.recording };
+        case UIReducerActionType.TOGGLE_REC_BTN:
+            return {
+                ...state,
+                recorderButtonToggled: action.recorderButtonToggled,
+            };
         default:
             return state;
     }

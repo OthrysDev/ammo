@@ -1,5 +1,7 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`[WS] BulletRouter post("/") - WS & subscribe state Return a message to connector if not subscribed 1`] = `"The recorder is paused"`;
+
 exports[`[WS] BulletRouter post("/") Sending a connectorRequest - ws should return a bullet 1`] = `
 Object {
   "date": "2020-10-10T08:00:00.000Z",
@@ -42,5 +44,3 @@ Object {
   "url": "http://localhost:3000/user",
 }
 `;
-
-exports[`[WS] BulletRouter toggleRecord Return a message to connector if not recording 1`] = `"The recorder has been paused, we will not process your request any further"`;
