@@ -1,4 +1,4 @@
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 
 export enum BulletReducerActionType {
     RECEIVED_BULLET = 'RECEIVED_BULLET',

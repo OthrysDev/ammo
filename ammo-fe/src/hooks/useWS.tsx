@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useContext } from 'react';
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 import WS, { manager } from 'network/WS';
 import { useSelector } from 'react-redux';
 import useBulletActions from 'redux/actions/useBulletActions';

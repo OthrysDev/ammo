@@ -1,4 +1,4 @@
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 
 // =============================== HTTP FRAGMENT MOCKS =======================================
 

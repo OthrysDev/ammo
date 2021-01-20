@@ -1,6 +1,7 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
 import Script, { ScriptProps } from 'components/Script';
+import { bulletMock } from 'shared/mocks/Bullet.mock';
 
 export default {
     component: Script,
@@ -8,11 +9,15 @@ export default {
 };
 
 const ScriptTemplate: Story<ScriptProps> = ({
+    bullet,
     previousScriptLength,
-}: ScriptProps) => <Script previousScriptLength={previousScriptLength} />;
+}: ScriptProps) => (
+    <Script bullet={bullet} previousScriptLength={previousScriptLength} />
+);
 
 export const Default = ScriptTemplate.bind({});
 Default.storyName = 'Script';
 Default.args = {
+    bullet: bulletMock,
     previousScriptLength: 0,
 };

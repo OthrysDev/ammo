@@ -4,7 +4,7 @@ import Box from '@material-ui/core/Box';
 import Grow from '@material-ui/core/Grow';
 import BulletHeader from 'components/Bullet/BulletHeader';
 import BulletDesc from 'components/Bullet/BulletDesc';
-import { Bullet as IBullet } from 'shared/types/Bullet';
+import IBullet from 'shared/types/Bullet';
 import Palette from 'material/Palette';
 
 const useStyles = makeStyles(() => ({
