@@ -2,7 +2,7 @@ import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Collapse from '@material-ui/core/Collapse';
 import Box from '@material-ui/core/Box';
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 import Headers from 'components/Bullet/Headers';
 import Body from 'components/Bullet/Body';
 import Delimiter from 'components/Bullet/Delimiter';

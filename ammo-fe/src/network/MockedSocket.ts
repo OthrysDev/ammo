@@ -1,4 +1,4 @@
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 // Must use relative path because of Cypress
 import WSBulletsEvent from '../shared/types/WSBulletsEvent';
 

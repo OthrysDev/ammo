@@ -5,7 +5,7 @@ import Grid from '@material-ui/core/Grid';
 import Bullet from 'components/Bullet';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
-import { Bullet as IBullet } from 'shared/types/Bullet';
+import IBullet from 'shared/types/Bullet';
 import Script from 'components/Script';
 import Palette from 'material/Palette';
 
@@ -53,7 +53,10 @@ const DesktopMainPannel = ({
                                 item
                                 xs={6}
                             >
-                                <Script previousScriptLength={i * 21 + 1} />
+                                <Script
+                                    bullet={b}
+                                    previousScriptLength={i * 21 + 1}
+                                />
                             </Grid>
                         </Grid>
                     ))}

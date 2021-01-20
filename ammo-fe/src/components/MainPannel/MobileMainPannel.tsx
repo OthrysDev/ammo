@@ -6,7 +6,7 @@ import SimpleBar from 'simplebar-react';
 import { useSelector } from 'react-redux';
 import { RootReducer } from 'redux/reducers';
 import 'simplebar/dist/simplebar.min.css';
-import { Bullet as IBullet } from 'shared/types/Bullet';
+import IBullet from 'shared/types/Bullet';
 import { MainPannelView } from 'redux/reducers/uiReducer';
 import Palette from 'material/Palette';
 import Script from 'components/Script';
@@ -136,7 +136,10 @@ const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
                                     data-cy={`main-pannel-right-grid-bullet-${b.id}`}
                                     className={classes.column}
                                 >
-                                    <Script previousScriptLength={i * 21 + 1} />
+                                    <Script
+                                        bullet={b}
+                                        previousScriptLength={i * 21 + 1}
+                                    />
                                 </Box>
                             </Box>
                         ))}

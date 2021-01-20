@@ -1,5 +1,5 @@
 import { useDispatch } from 'react-redux';
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 import { BulletReducerActionType } from 'redux/reducers/bulletReducer';
 
 type BulletActions = {

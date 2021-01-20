@@ -2,7 +2,7 @@ import HttpMethod from 'shared/types/HttpMethod';
 
 // /!\ We cannot extend ConnectorRequest here, as this file is exported to the front-end, whereas ConnectorRequest is not
 
-export type Bullet = {
+type Bullet = {
     id: string;
     date: Date;
     url: string;
@@ -17,3 +17,5 @@ export type Bullet = {
         status?: number;
     };
 };
+
+export default Bullet;

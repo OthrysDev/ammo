@@ -1,7 +1,7 @@
 import express from 'express';
 import { ioServer, getIsSubscribedToBullets } from 'WebSocket/index';
 import bulletSchema from 'validators/BulletValidator';
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 import { nanoid } from 'nanoid';
 import { ConnectorRequest } from 'types/ConnectorRequest';
 import WSBulletsEvent from 'shared/types/WSBulletsEvent';

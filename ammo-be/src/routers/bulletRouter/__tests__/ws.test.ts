@@ -1,6 +1,6 @@
 import app from 'index';
 import request from 'supertest';
-import { Bullet } from 'shared/types/Bullet';
+import Bullet from 'shared/types/Bullet';
 import { io, Socket } from 'socket.io-client';
 import MockDate from 'mockdate';
 import {
