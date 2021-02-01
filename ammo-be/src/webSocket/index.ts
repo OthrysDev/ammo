@@ -1,6 +1,7 @@
 import io, { Socket } from 'socket.io';
 import http from 'http';
 import WSBulletsEvent from 'shared/types/WSBulletsEvent';
+import Config from 'util/Config';
 
 let ioServer: io.Server;
 
@@ -17,7 +18,7 @@ const addDisconnectCbk = (cbk: { (): void }): void => {
 const initWS = (server: http.Server): void => {
     ioServer = new io.Server(server, {
         cors: {
-            origin: ['http://localhost:3000'],
+            origin: [Config.feUrl],
         },
     });
 

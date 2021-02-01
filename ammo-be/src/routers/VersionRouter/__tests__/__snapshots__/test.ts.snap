@@ -2,6 +2,6 @@
 
 exports[`VersionRouter get("/") Get version - should return version 1`] = `
 Object {
-  "version": "0.0.1",
+  "version": "0.0.0",
 }
 `;

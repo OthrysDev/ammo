@@ -12,22 +12,27 @@ export interface Socket {
     isSubscribedToBullets: boolean;
 }
 
-export const manager = new Manager('http://localhost:3001');
-
 class WS {
     static socket = null;
 
-    static getSocket(url: string): Socket {
+    static manager = null;
+
+    static getSocketAndManager(
+        url: string
+    ): { socket: Socket; manager: Manager } {
+        if (!this.manager) this.manager = new Manager(url);
+
         // @ts-ignore
         if (window.Cypress) {
             // @ts-ignore
             if (!window.Cypress.io) window.Cypress.io = new MockedSocket();
             // @ts-ignore
-            return window.Cypress.io;
+            return { socket: window.Cypress.io, manager: this.manager };
         }
 
         if (!this.socket) this.socket = io(url);
-        return this.socket;
+
+        return { socket: this.socket, manager: this.manager };
     }
 }
 

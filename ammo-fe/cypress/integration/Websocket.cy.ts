@@ -1,7 +1,8 @@
 import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
+import Config from '../../src/util/Config';
 import WS from '../../src/network/WS';
 
-const socket = WS.getSocket('http://localhost:3001');
+const { socket } = WS.getSocketAndManager(Config.beUrl);
 
 describe('WebSocket', () => {
     before(() => {
