@@ -1,7 +1,6 @@
 import React, { ReactElement, useMemo, useState } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Box from '@material-ui/core/Box';
-import Grow from '@material-ui/core/Grow';
 import BulletHeader from 'components/Bullet/BulletHeader';
 import BulletDesc from 'components/Bullet/BulletDesc';
 import IBullet from 'shared/types/Bullet';
@@ -25,23 +24,21 @@ export interface BulletProps {
 
 const Bullet = ({ bullet }: BulletProps): ReactElement => {
     const classes = useStyles();
-    const [collapse, setCollapse] = useState<boolean>(true);
+    const [collapse, setCollapse] = useState<boolean>(true); // TODO: set value back to 'true'
 
     const toggleCollapse = (): void => setCollapse((prevState) => !prevState);
 
     return useMemo(() => {
         return (
-            <Grow in>
-                <Box data-cy={`bullet-${bullet.id}`} className={classes.root}>
-                    <BulletHeader
-                        bullet={bullet}
-                        collapse={collapse}
-                        onClick={toggleCollapse}
-                    />
+            <Box data-cy={`bullet-${bullet.id}`} className={classes.root}>
+                <BulletHeader
+                    bullet={bullet}
+                    collapse={collapse}
+                    onClick={toggleCollapse}
+                />
 
-                    <BulletDesc bullet={bullet} collapse={collapse} />
-                </Box>
-            </Grow>
+                <BulletDesc bullet={bullet} collapse={collapse} />
+            </Box>
         );
     }, [bullet, collapse]);
 };

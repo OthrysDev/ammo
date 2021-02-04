@@ -19,10 +19,6 @@ const useStyles = makeStyles(() => ({
         flexDirection: 'row',
         maxWidth: '100%',
     },
-    ms: {
-        marginRight: '12px',
-        color: Palette.WHITE,
-    },
     methodBadge: {
         margin: '0 12px 0 0',
         padding: '0 9px',
@@ -83,16 +79,6 @@ const BulletHeader = ({
 
     return (
         <Box data-cy={`bullet-header-${bullet.id}`} className={classes.root}>
-            {!isSMDown && (
-                <Box
-                    data-cy={`bullet-header-ms-${bullet.id}`}
-                    className={classes.ms}
-                >
-                    <Typography>
-                        ::{new Date(bullet.date).getMilliseconds()}
-                    </Typography>
-                </Box>
-            )}
             <Box
                 data-cy={`bullet-header-method-${bullet.id}`}
                 className={classes.methodBadge}

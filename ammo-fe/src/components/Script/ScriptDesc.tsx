@@ -7,6 +7,8 @@ import okaidia from 'react-syntax-highlighter/dist/cjs/styles/prism/okaidia';
 import Collapse from '@material-ui/core/Collapse';
 import Palette from 'material/Palette';
 import Bullet from 'shared/types/Bullet';
+import GatlingScripter from 'scripters/GatlingScripter';
+import SimpleBar from 'simplebar-react';
 
 PrismLight.registerLanguage('scala', scala);
 
@@ -24,39 +26,21 @@ const useStyles = makeStyles(() => ({
 }));
 
 export interface ScriptDescProps {
+    index: number;
     bullet: Bullet;
     previousScriptLength: number;
     collapse?: boolean;
 }
 
 const ScriptDesc = ({
+    index,
     bullet,
     previousScriptLength,
     collapse = false,
 }: ScriptDescProps): ReactElement => {
     const classes = useStyles();
 
-    const fakeScript = `// Get user
-val login =
-    exec(
-        http("[AUTH] Login")
-        .post("/auth/login")
-        // Inject previously saved var '__ACCESS_TOKEN__'
-        .header("Authorization", "Bearer \${__ACCESS_TOKEN__}")
-            .body(StringBody("""{ 
-                "email": "\${email}",
-                "password": "hello5678"
-        }""")).asJson
-        .check(bodyString.saveAs("__BODY__"))
-        // Save var 'jwtToken' for later use
-        .check(header("jwtToken").saveAs("__JWT_TOKEN__"))
-    )
-    // Debug mode
-    .exec(session => {
-        Util.debug("[AUTH] Login", session("__JWT_TOKEN__").as[String])
-        session
-    })
-`;
+    const script = GatlingScripter.script(index, bullet);
 
     return (
         <Collapse in={!collapse}>
@@ -65,24 +49,27 @@ val login =
                     className={classes.root}
                     data-cy={`script-desc-${bullet.id}`}
                 >
-                    <PrismLight
-                        language="scala"
-                        style={okaidia}
-                        customStyle={{
-                            margin: 0,
-                            padding: 0,
-                            background: 'none',
-                        }}
-                        lineNumberStyle={{
-                            minWidth: '2em',
-                            textAlign: 'right',
-                        }}
-                        showLineNumbers
-                        startingLineNumber={previousScriptLength}
-                        tabIndex={0}
-                    >
-                        {fakeScript}
-                    </PrismLight>
+                    <SimpleBar>
+                        <PrismLight
+                            language="scala"
+                            style={okaidia}
+                            customStyle={{
+                                margin: 0,
+                                padding: 0,
+                                background: 'none',
+                                overflow: 'hidden !important',
+                            }}
+                            lineNumberStyle={{
+                                minWidth: '2em',
+                                textAlign: 'right',
+                            }}
+                            showLineNumbers
+                            startingLineNumber={previousScriptLength}
+                            tabIndex={0}
+                        >
+                            {script}
+                        </PrismLight>
+                    </SimpleBar>
                 </Box>
             )}
         </Collapse>

@@ -7,7 +7,6 @@ exports[`Storyshots Components/Script Script 1`] = `
   <div
     class="MuiBox-root MuiBox-root makeStyles-root"
     data-cy="script-1"
-    style="opacity:0;transform:scale(0.75, 0.5625)"
   >
     <div
       class="MuiBox-root MuiBox-root makeStyles-root"
@@ -20,7 +19,60 @@ exports[`Storyshots Components/Script Script 1`] = `
         <p
           class="MuiTypography-root MuiTypography-body1"
         >
-          &lt;/&gt;
+          post_user_0
+        </p>
+      </div>
+      <div
+        class="MuiBox-root MuiBox-root makeStyles-filler"
+      />
+      <div
+        class="MuiBox-root MuiBox-root"
+        data-cy="script-header-collapse-tooltip-1"
+        title="Uncollapse"
+      >
+        <img
+          alt="Down carret"
+          class="makeStyles-downCarretIcon "
+          src="down_carret.svg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height:0px"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Script Script with XML body 1`] = `
+<div
+  style="transform:scale(1);height:100vh"
+>
+  <div
+    class="MuiBox-root MuiBox-root makeStyles-root"
+    data-cy="script-1"
+  >
+    <div
+      class="MuiBox-root MuiBox-root makeStyles-root"
+      data-cy="script-header-1"
+    >
+      <div
+        class="MuiBox-root MuiBox-root"
+        data-cy="script-header-code-1"
+      >
+        <p
+          class="MuiTypography-root MuiTypography-body1"
+        >
+          post_user_1
         </p>
       </div>
       <div

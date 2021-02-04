@@ -54,6 +54,7 @@ const DesktopMainPannel = ({
                                 xs={6}
                             >
                                 <Script
+                                    index={i + 1}
                                     bullet={b}
                                     previousScriptLength={i * 21 + 1}
                                 />

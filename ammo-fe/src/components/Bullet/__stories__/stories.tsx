@@ -1,7 +1,11 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
 import Bullet, { BulletProps } from 'components/Bullet';
-import { bulletMock, minimalBulletMock } from 'shared/mocks/Bullet.mock';
+import {
+    bulletMock,
+    xmlBulletMock,
+    minimalBulletMock,
+} from 'shared/mocks/Bullet.mock';
 
 export default {
     component: Bullet,
@@ -15,6 +19,12 @@ const BulletTemplate: Story<BulletProps> = ({ bullet }) => (
 export const Default = BulletTemplate.bind({});
 Default.args = {
     bullet: bulletMock,
+};
+
+export const XML = BulletTemplate.bind({});
+XML.storyName = 'Default with XML bodies';
+XML.args = {
+    bullet: xmlBulletMock,
 };
 
 export const Minimal = BulletTemplate.bind({});

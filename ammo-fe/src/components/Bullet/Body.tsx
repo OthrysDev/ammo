@@ -4,6 +4,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 import { FormattedMessage } from 'react-intl';
 import Palette from 'material/Palette';
+import { isJSON, prettifyJSON } from 'util/StringUtil';
 
 const useStyles = makeStyles(() => ({
     title: {
@@ -15,6 +16,11 @@ const useStyles = makeStyles(() => ({
         wordBreak: 'break-word',
         color: Palette.WHITE,
     },
+    pre: {
+        fontSize: '0.875rem',
+        fontFamily: 'Arial',
+        whiteSpace: 'pre-wrap',
+    },
 }));
 
 interface BodyProps {
@@ -24,6 +30,15 @@ interface BodyProps {
 
 const Body = ({ uuid, body }: BodyProps): ReactElement => {
     const classes = useStyles();
+
+    // Try to display the body nicely. Only prettifying JSON  for now
+    const prettify = (obj: unknown): ReactElement => {
+        return obj && isJSON(obj) ? (
+            <pre className={classes.pre}>{prettifyJSON(obj as string)}</pre>
+        ) : (
+            <>{obj}</>
+        );
+    };
 
     return (
         <Box data-cy={uuid}>
@@ -35,7 +50,7 @@ const Body = ({ uuid, body }: BodyProps): ReactElement => {
             {body && (
                 <Box data-cy={`${uuid}-value`} className={classes.value}>
                     <Typography variant="subtitle2">
-                        {JSON.stringify(body)}
+                        {prettify(body)}
                     </Typography>
                 </Box>
             )}

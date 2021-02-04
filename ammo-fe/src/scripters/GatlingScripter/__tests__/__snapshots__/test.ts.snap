@@ -1,0 +1,113 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`GatlingScripter _reqBody Feeding a valid bullet - should return the scripted body 1`] = `
+".body(StringBody(\\"\\"\\"{
+    \\"user\\": {
+        \\"firstName\\": \\"Foo\\",
+        \\"name\\": \\"Bar\\",
+        \\"email\\": \\"foo.bar@mail.com\\",
+        \\"password\\": \\"123456789\\",
+        \\"captcha\\": \\"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil\\"
+    }
+}\\"\\"\\")).asJson"
+`;
+
+exports[`GatlingScripter _reqBody Feeding a valid bullet with a non-JSON body - should return raw body 1`] = `
+".body(StringBody(\\"\\"\\"
+    <parentRequestTag>
+        <childTag1>Value 1</childTag1>
+        <childTag2>Value 2</childTag2>
+        <childTag3>Value 3</childTag3>
+    </parentRequestTag>
+\\"\\"\\"))"
+`;
+
+exports[`GatlingScripter script Feeding a valid bullet - should return a valid Scala / Gatling script 1`] = `
+"val post_user_1 =
+	exec(
+		http(\\"POST user\\")
+		.post(\\"http://localhost:3000/user\\")
+		// Request headers
+		.header(\\"host\\", \\"localhost:3000\\")
+		.header(\\"connection\\", \\"keep-alive\\")
+		.header(\\"content-length\\", \\"417873\\")
+		.header(\\"accept\\", \\"application/json, text/plain, */*\\")
+		.header(\\"authorization\\", \\"Bearer c9da47d8f9bf16af86e896adc1e191ffa6f535f3\\")
+		.header(\\"client-uuid\\", \\"3T3iVH_DKKSHlbD9dETTvZTqUApkxNKMdlY-b0z\\")
+		.header(\\"user-agent\\", \\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\\")
+		.header(\\"content-type\\", \\"multipart/form-data; boundary=----WebKitFormBoundarylgQY9Tli7bNsE3LG\\")
+		.header(\\"origin\\", \\"http://localhost:3001\\")
+		.header(\\"sec-fetch-site\\", \\"same-site\\")
+		.header(\\"sec-fetch-mode\\", \\"cors\\")
+		.header(\\"sec-fetch-dest\\", \\"empty\\")
+		.header(\\"referer\\", \\"http://localhost:3001/\\")
+		.header(\\"accept-encoding\\", \\"gzip, deflate, br\\")
+		.header(\\"accept-language\\", \\"fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7\\")
+		// Request body
+		.body(StringBody(\\"\\"\\"{
+    \\"user\\": {
+        \\"firstName\\": \\"Foo\\",
+        \\"name\\": \\"Bar\\",
+        \\"email\\": \\"foo.bar@mail.com\\",
+        \\"password\\": \\"123456789\\",
+        \\"captcha\\": \\"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil\\"
+    }
+}\\"\\"\\")).asJson
+"
+`;
+
+exports[`GatlingScripter script Feeding a valid bullet with XML bodies - should return a valid Scala / Gatling script 1`] = `
+"val post_user_1 =
+	exec(
+		http(\\"POST user\\")
+		.post(\\"http://localhost:3000/user\\")
+		// Request headers
+		.header(\\"host\\", \\"localhost:3000\\")
+		.header(\\"connection\\", \\"keep-alive\\")
+		.header(\\"content-length\\", \\"417873\\")
+		.header(\\"accept\\", \\"application/json, text/plain, */*\\")
+		.header(\\"authorization\\", \\"Bearer c9da47d8f9bf16af86e896adc1e191ffa6f535f3\\")
+		.header(\\"client-uuid\\", \\"3T3iVH_DKKSHlbD9dETTvZTqUApkxNKMdlY-b0z\\")
+		.header(\\"user-agent\\", \\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\\")
+		.header(\\"content-type\\", \\"multipart/form-data; boundary=----WebKitFormBoundarylgQY9Tli7bNsE3LG\\")
+		.header(\\"origin\\", \\"http://localhost:3001\\")
+		.header(\\"sec-fetch-site\\", \\"same-site\\")
+		.header(\\"sec-fetch-mode\\", \\"cors\\")
+		.header(\\"sec-fetch-dest\\", \\"empty\\")
+		.header(\\"referer\\", \\"http://localhost:3001/\\")
+		.header(\\"accept-encoding\\", \\"gzip, deflate, br\\")
+		.header(\\"accept-language\\", \\"fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7\\")
+		// Request body
+		.body(StringBody(\\"\\"\\"
+    <parentRequestTag>
+        <childTag1>Value 1</childTag1>
+        <childTag2>Value 2</childTag2>
+        <childTag3>Value 3</childTag3>
+    </parentRequestTag>
+\\"\\"\\"))
+"
+`;
+
+exports[`GatlingScripter script Feeding a valid bullet with a null body - should return a valid Scala / Gatling script with no body 1`] = `
+"val post_user_1 =
+	exec(
+		http(\\"POST user\\")
+		.post(\\"http://localhost:3000/user\\")
+		// Request headers
+		.header(\\"host\\", \\"localhost:3000\\")
+		.header(\\"connection\\", \\"keep-alive\\")
+		.header(\\"content-length\\", \\"417873\\")
+		.header(\\"accept\\", \\"application/json, text/plain, */*\\")
+		.header(\\"authorization\\", \\"Bearer c9da47d8f9bf16af86e896adc1e191ffa6f535f3\\")
+		.header(\\"client-uuid\\", \\"3T3iVH_DKKSHlbD9dETTvZTqUApkxNKMdlY-b0z\\")
+		.header(\\"user-agent\\", \\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/86.0.4240.198 Safari/537.36\\")
+		.header(\\"content-type\\", \\"multipart/form-data; boundary=----WebKitFormBoundarylgQY9Tli7bNsE3LG\\")
+		.header(\\"origin\\", \\"http://localhost:3001\\")
+		.header(\\"sec-fetch-site\\", \\"same-site\\")
+		.header(\\"sec-fetch-mode\\", \\"cors\\")
+		.header(\\"sec-fetch-dest\\", \\"empty\\")
+		.header(\\"referer\\", \\"http://localhost:3001/\\")
+		.header(\\"accept-encoding\\", \\"gzip, deflate, br\\")
+		.header(\\"accept-language\\", \\"fr-FR,fr;q=0.9,en-US;q=0.8,en;q=0.7\\")
+"
+`;

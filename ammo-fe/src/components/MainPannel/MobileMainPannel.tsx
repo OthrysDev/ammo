@@ -137,6 +137,7 @@ const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
                                     className={classes.column}
                                 >
                                     <Script
+                                        index={i + 1}
                                         bullet={b}
                                         previousScriptLength={i * 21 + 1}
                                     />
