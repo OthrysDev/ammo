@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Error from 'pages/errors/Error';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 
 function UnexpectedError(): ReactElement {
     const onReset = (): void => window.location.reload();

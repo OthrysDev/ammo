@@ -5,29 +5,25 @@ exports[`Storyshots Components/Script Script 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="script-1"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="script-header-1"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="script-header-code-1"
+        class="undefined"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           post_user_0
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-filler"
+        class="makeStyles-filler"
       />
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="script-header-collapse-tooltip-1"
+        class=""
         title="Uncollapse"
       >
         <img
@@ -58,29 +54,25 @@ exports[`Storyshots Components/Script Script with XML body 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="script-1"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="script-header-1"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="script-header-code-1"
+        class="undefined"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           post_user_1
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-filler"
+        class="makeStyles-filler"
       />
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="script-header-collapse-tooltip-1"
+        class=""
         title="Uncollapse"
       >
         <img

@@ -5,50 +5,43 @@ exports[`Storyshots Components/Bullet Default 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="bullet-1"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="bullet-header-1"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-methodBadge"
-        data-cy="bullet-header-method-1"
+        class="makeStyles-methodBadge"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           POST
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-url"
-        data-cy="bullet-header-url-1"
+        class="makeStyles-url"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           http://localhost:3000/user
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-filler"
-        data-cy="bullet-header-filler-1"
+        class="makeStyles-filler"
       />
       <div
-        class="MuiBox-root MuiBox-root makeStyles-statusBadge makeStyles-successStatusBadge"
-        data-cy="bullet-header-status-1"
+        class="makeStyles-statusBadge makeStyles-successStatusBadge"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           200
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="bullet-header-collapse-1"
+        class=""
         title="Uncollapse"
       >
         <img
@@ -79,50 +72,43 @@ exports[`Storyshots Components/Bullet Default with XML bodies 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="bullet-1"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="bullet-header-1"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-methodBadge"
-        data-cy="bullet-header-method-1"
+        class="makeStyles-methodBadge"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           POST
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-url"
-        data-cy="bullet-header-url-1"
+        class="makeStyles-url"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           http://localhost:3000/user
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-filler"
-        data-cy="bullet-header-filler-1"
+        class="makeStyles-filler"
       />
       <div
-        class="MuiBox-root MuiBox-root makeStyles-statusBadge makeStyles-successStatusBadge"
-        data-cy="bullet-header-status-1"
+        class="makeStyles-statusBadge makeStyles-successStatusBadge"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           200
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="bullet-header-collapse-1"
+        class=""
         title="Uncollapse"
       >
         <img
@@ -153,40 +139,34 @@ exports[`Storyshots Components/Bullet Minimal 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="bullet-1"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="bullet-header-1"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-methodBadge"
-        data-cy="bullet-header-method-1"
+        class="makeStyles-methodBadge"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           POST
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-url"
-        data-cy="bullet-header-url-1"
+        class="makeStyles-url"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           http://localhost:3000/user
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-filler"
-        data-cy="bullet-header-filler-1"
+        class="makeStyles-filler"
       />
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="bullet-header-collapse-1"
+        class=""
         title="Uncollapse"
       >
         <img
@@ -217,50 +197,43 @@ exports[`Storyshots Components/Bullet iPhone 5/SE - vertical 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="bullet-1"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="bullet-header-1"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-methodBadge"
-        data-cy="bullet-header-method-1"
+        class="makeStyles-methodBadge"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           POST
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-url"
-        data-cy="bullet-header-url-1"
+        class="makeStyles-url"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           http://localhost:3000/user
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-filler"
-        data-cy="bullet-header-filler-1"
+        class="makeStyles-filler"
       />
       <div
-        class="MuiBox-root MuiBox-root makeStyles-statusBadge makeStyles-successStatusBadge"
-        data-cy="bullet-header-status-1"
+        class="makeStyles-statusBadge makeStyles-successStatusBadge"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
           200
-        </p>
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="bullet-header-collapse-1"
+        class=""
         title="Uncollapse"
       >
         <img

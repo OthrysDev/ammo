@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import Button from '@material-ui/core/Button';
 import { useSelector } from 'react-redux';
 import makeStyles from '@material-ui/core/styles/makeStyles';

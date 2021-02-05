@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import RequestIcon from 'assets/icons/request.svg';
 import ScriptIcon from 'assets/icons/script.svg';
@@ -48,12 +48,7 @@ const ViewButton = ({
 
     return (
         <Box className={classes.root} data-cy={uuid} onClick={onClick}>
-            <img
-                data-cy={`recording-button-pause`}
-                src={icon}
-                alt={locI18n(alt)}
-                className={classes.icon}
-            />
+            <img src={icon} alt={locI18n(alt)} className={classes.icon} />
         </Box>
     );
 };

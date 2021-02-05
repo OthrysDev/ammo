@@ -1,7 +1,6 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Box from '@material-ui/core/Box';
-import Bullet from 'components/Bullet';
+import Box from 'material/Box';
 import SimpleBar from 'simplebar-react';
 import { useSelector } from 'react-redux';
 import { RootReducer } from 'redux/reducers';
@@ -9,9 +8,9 @@ import 'simplebar/dist/simplebar.min.css';
 import IBullet from 'shared/types/Bullet';
 import { MainPannelView } from 'redux/reducers/uiReducer';
 import Palette from 'material/Palette';
-import Script from 'components/Script';
+import MobileBulletScriptRow from 'components/MainPannel/MobileBulletScriptRow';
 
-const useMobileStyles = makeStyles(() => ({
+const useStyles = makeStyles(() => ({
     fullHeightMinusBar: {
         height: 'calc(calc(var(--vh, 1vh) * 100) - 74px)',
     },
@@ -64,11 +63,6 @@ const useMobileStyles = makeStyles(() => ({
     showRightPannel: {
         animation: `$slideContentRight 300ms forwards`,
     },
-    column: {
-        display: 'inline-block',
-        verticalAlign: 'top',
-        width: '100vw',
-    },
     '@keyframes slideContentLeft': {
         '0%': {
             left: '-100vw',
@@ -93,7 +87,7 @@ interface MobileMainPannelProps {
 }
 
 const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
-    const classes = useMobileStyles();
+    const classes = useStyles();
     const view = useSelector((state: RootReducer) => state.ui.view);
 
     // Background color
@@ -117,32 +111,15 @@ const MobileMainPannel = ({ bullets }: MobileMainPannelProps): ReactElement => {
                 forceVisible="y"
             >
                 <Box
-                    data-cy="main-pannel-mobile-container"
                     className={`${classes.container} ${pannelClassName} ${classes.fullHeightMinusBar}`}
                 >
                     {bullets &&
                         bullets.map((b, i) => (
-                            <Box
-                                data-cy={`main-pannel-outer-grid-bullet-${b.id}`}
-                                key={b.id}
-                            >
-                                <Box
-                                    data-cy={`main-pannel-left-grid-bullet-${b.id}`}
-                                    className={classes.column}
-                                >
-                                    <Bullet bullet={b} />
-                                </Box>
-                                <Box
-                                    data-cy={`main-pannel-right-grid-bullet-${b.id}`}
-                                    className={classes.column}
-                                >
-                                    <Script
-                                        index={i + 1}
-                                        bullet={b}
-                                        previousScriptLength={i * 21 + 1}
-                                    />
-                                </Box>
-                            </Box>
+                            <MobileBulletScriptRow
+                                key={`mobile-bullet-script-row-${b.id}`}
+                                bullet={b}
+                                index={i}
+                            />
                         ))}
                 </Box>
             </SimpleBar>

@@ -5,7 +5,7 @@ exports[`Storyshots Pages/Home Default 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
+    class="makeStyles-root"
     data-cy="layout-root"
   >
     <div
@@ -22,10 +22,10 @@ exports[`Storyshots Pages/Home Default 1`] = `
           class="MuiSnackbarContent-message"
         >
           <div
-            class="MuiBox-root MuiBox-root"
+            class="undefined"
           >
             <div
-              class="MuiBox-root MuiBox-root makeStyles-circular"
+              class="makeStyles-circular"
             >
               <div
                 class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
@@ -50,7 +50,7 @@ exports[`Storyshots Pages/Home Default 1`] = `
               </div>
             </div>
             <div
-              class="MuiBox-root MuiBox-root makeStyles-message"
+              class="makeStyles-message"
             >
               Connecting to server
             </div>
@@ -59,17 +59,16 @@ exports[`Storyshots Pages/Home Default 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-bar"
+      class="makeStyles-bar"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-root"
-        data-cy="bar"
+        class="makeStyles-root makeStyles-boxShadow2"
       >
         <div
-          class="MuiBox-root MuiBox-root makeStyles-root"
+          class="makeStyles-root"
         >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-insideGutter"
+            class="makeStyles-insideGutter"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton"
@@ -93,7 +92,7 @@ exports[`Storyshots Pages/Home Default 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-pannel"
+      class="makeStyles-pannel"
     >
       <div
         class="makeStyles-scrollbar"
@@ -122,7 +121,7 @@ exports[`Storyshots Pages/Home Default 1`] = `
                   class="simplebar-content"
                 >
                   <div
-                    class="MuiBox-root MuiBox-root makeStyles-root"
+                    class="makeStyles-root"
                     data-cy="main-pannel"
                     tabindex="0"
                   />
@@ -159,7 +158,7 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
+    class="makeStyles-root"
     data-cy="layout-root"
   >
     <div
@@ -176,10 +175,10 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
           class="MuiSnackbarContent-message"
         >
           <div
-            class="MuiBox-root MuiBox-root"
+            class="undefined"
           >
             <div
-              class="MuiBox-root MuiBox-root makeStyles-circular"
+              class="makeStyles-circular"
             >
               <div
                 class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
@@ -204,7 +203,7 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
               </div>
             </div>
             <div
-              class="MuiBox-root MuiBox-root makeStyles-message"
+              class="makeStyles-message"
             >
               Connecting to server
             </div>
@@ -213,17 +212,16 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-bar"
+      class="makeStyles-bar"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-root"
-        data-cy="bar"
+        class="makeStyles-root makeStyles-boxShadow2"
       >
         <div
-          class="MuiBox-root MuiBox-root makeStyles-root"
+          class="makeStyles-root"
         >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-insideGutter"
+            class="makeStyles-insideGutter"
           >
             <button
               class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton"
@@ -247,7 +245,7 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-pannel"
+      class="makeStyles-pannel"
     >
       <div
         class="makeStyles-scrollbar"
@@ -276,7 +274,7 @@ exports[`Storyshots Pages/Home iPhone 5/SE - vertical 1`] = `
                   class="simplebar-content"
                 >
                   <div
-                    class="MuiBox-root MuiBox-root makeStyles-root"
+                    class="makeStyles-root"
                     data-cy="main-pannel"
                     tabindex="0"
                   />

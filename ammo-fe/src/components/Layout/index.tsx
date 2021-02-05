@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import useMQ from 'hooks/useMQ';
 import ReconnectionToast from 'components/ReconnectionToast';
 import MobileLayout from 'components/Layout/MobileLayout';

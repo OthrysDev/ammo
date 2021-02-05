@@ -5,32 +5,32 @@ exports[`Storyshots Pages/errors/UnexpectedError UnexpectedError 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root"
+    class="undefined"
     data-cy="unexpected-error-page"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-centered"
+        class="makeStyles-centered"
       >
         <div
-          class="MuiBox-root MuiBox-root makeStyles-title"
+          class="makeStyles-title"
         >
-          <h4
-            class="MuiTypography-root MuiTypography-h4"
+          <span
+            class="makeStyles-h4"
           >
             Ooooops!
-          </h4>
+          </span>
         </div>
         <div
-          class="MuiBox-root MuiBox-root makeStyles-content"
+          class="makeStyles-content"
         >
-          <p
-            class="MuiTypography-root MuiTypography-body1"
+          <span
+            class="makeStyles-subtitle1"
           >
             Sorry, something unexpected happened.
-          </p>
+          </span>
         </div>
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button"
@@ -52,7 +52,7 @@ exports[`Storyshots Pages/errors/UnexpectedError UnexpectedError 1`] = `
               />
             </svg>
             <span
-              class="MuiTypography-root MuiTypography-button"
+              class="makeStyles-button"
             >
               Homepage
             </span>

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+// import Typography from '@material-ui/core/Typography.Subtitle1';
+import Box from 'material/Box';
 import ToolTip from 'components/misc/ToolTip';
 import DownCarretIcon from 'assets/icons/down_carret.svg';
 import useI18n from 'hooks/useI18n';
@@ -9,6 +9,7 @@ import Bullet from 'shared/types/Bullet';
 import useMQ from 'hooks/useMQ';
 import Palette from 'material/Palette';
 import { urlWithoutOrigin, isHttpErrorCode } from 'util/NetUtil';
+import Typography from 'material/Typography';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -78,42 +79,25 @@ const BulletHeader = ({
         : classes.successStatusBadge;
 
     return (
-        <Box data-cy={`bullet-header-${bullet.id}`} className={classes.root}>
-            <Box
-                data-cy={`bullet-header-method-${bullet.id}`}
-                className={classes.methodBadge}
-            >
+        <Box className={classes.root}>
+            <Box className={classes.methodBadge}>
                 <Typography>{bullet.method.toUpperCase()}</Typography>
             </Box>
-            <Box
-                data-cy={`bullet-header-url-${bullet.id}`}
-                className={classes.url}
-            >
+            <Box className={classes.url}>
                 <Typography>
                     {isSMDown ? urlWithoutOrigin(bullet.url) : bullet.url}
                 </Typography>
             </Box>
-            <Box
-                data-cy={`bullet-header-filler-${bullet.id}`}
-                className={classes.filler}
-            />
+            <Box className={classes.filler} />
             {bullet.response.status && (
                 <Box
-                    data-cy={`bullet-header-status-${bullet.id}`}
                     className={`${classes.statusBadge} ${statusBadgeClassName}`}
                 >
                     <Typography>{bullet.response.status}</Typography>
                 </Box>
             )}
-            <ToolTip
-                uuid={`bullet-header-collapse-tooltip-${bullet.id}`}
-                title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
-            >
-                <Box
-                    onClick={onClick}
-                    onKeyDown={onClick}
-                    data-cy={`bullet-header-collapse-${bullet.id}`}
-                >
+            <ToolTip title={i18n(collapse ? 'Uncollapse' : 'Collapse')}>
+                <Box onClick={onClick} onKeyDown={onClick}>
                     <img
                         src={DownCarretIcon}
                         alt={i18n(

@@ -1,12 +1,12 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import Button from '@material-ui/core/Button';
-import Typography from '@material-ui/core/Typography';
 import HomeIcon from '@material-ui/icons/Home';
 import { FormattedMessage } from 'react-intl';
 import i18n from 'types/i18n';
 import Palette from 'material/Palette';
+import Typography from 'material/Typography';
 
 const useStyles = makeStyles(() => ({
     root: {

@@ -31,7 +31,7 @@ exports[`Storyshots Components/MainPannel MainPannel 1`] = `
               class="simplebar-content"
             >
               <div
-                class="MuiBox-root MuiBox-root makeStyles-root"
+                class="makeStyles-root"
                 data-cy="main-pannel"
                 tabindex="0"
               />

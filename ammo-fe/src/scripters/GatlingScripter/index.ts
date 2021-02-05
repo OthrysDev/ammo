@@ -3,7 +3,6 @@ import Bullet from 'shared/types/Bullet';
 import { urlWithoutOrigin } from 'util/NetUtil';
 import { isString, isJSON, prettifyJSON } from 'util/StringUtil';
 
-// TODO : perfs! useMemo!
 // TODO : fix line numbers
 class GatlingScripter implements IScripter {
     script = (index: number, bullet: Bullet): string => {

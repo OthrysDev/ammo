@@ -10,7 +10,7 @@ const useStyles = makeStyles(() => ({
         bacgroundColor: 'white',
         backgroundColor: Palette.BLACK_MED,
         '& *': {
-            color: Palette.WHITE,
+            color: `${Palette.WHITE} !important`,
         },
     },
 }));
@@ -33,7 +33,6 @@ const Modal = ({
 
     return (
         <Dialog
-            data-cy="modal"
             PaperProps={{ className: classes.root }}
             open={open}
             aria-labelledby={locI18n(ariaLabelledby)}

@@ -5,13 +5,12 @@ exports[`Storyshots Components/buttons/ViewButtons BulletsViewButton 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
+    class="makeStyles-root"
     data-cy="bullets-view-button"
   >
     <img
       alt="Requests"
       class="makeStyles-icon"
-      data-cy="recording-button-pause"
       src="request.svg"
     />
   </div>
@@ -23,13 +22,12 @@ exports[`Storyshots Components/buttons/ViewButtons ScriptsViewButton 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
+    class="makeStyles-root"
     data-cy="scripts-view-button"
   >
     <img
       alt="Scripts"
       class="makeStyles-icon"
-      data-cy="recording-button-pause"
       src="script.svg"
     />
   </div>

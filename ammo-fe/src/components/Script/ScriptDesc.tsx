@@ -1,5 +1,5 @@
 import React, { ReactElement } from 'react';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import { PrismLight } from 'react-syntax-highlighter';
 import scala from 'react-syntax-highlighter/dist/cjs/languages/prism/scala';
@@ -45,10 +45,7 @@ const ScriptDesc = ({
     return (
         <Collapse in={!collapse}>
             {!collapse && (
-                <Box
-                    className={classes.root}
-                    data-cy={`script-desc-${bullet.id}`}
-                >
+                <Box className={classes.root}>
                     <SimpleBar>
                         <PrismLight
                             language="scala"
@@ -63,7 +60,6 @@ const ScriptDesc = ({
                                 minWidth: '2em',
                                 textAlign: 'right',
                             }}
-                            showLineNumbers
                             startingLineNumber={previousScriptLength}
                             tabIndex={0}
                         >

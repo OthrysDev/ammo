@@ -1,6 +1,6 @@
-import React, { ReactElement, useState, useMemo } from 'react';
+import React, { ReactElement, useState } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import Palette from 'material/Palette';
 import ScriptHeader from 'components/Script/ScriptHeader';
 import ScriptDesc from 'components/Script/ScriptDesc';
@@ -25,29 +25,27 @@ const Script = ({
     previousScriptLength,
 }: ScriptProps): ReactElement => {
     const classes = useStyles();
-    const [collapse, setCollapse] = useState<boolean>(true); // TODO: set value back to 'true'
+    const [collapse, setCollapse] = useState<boolean>(true);
 
     const toggleCollapse = (): void => setCollapse((prevState) => !prevState);
 
-    return useMemo(() => {
-        return (
-            <Box data-cy={`script-${bullet.id}`} className={classes.root}>
-                <ScriptHeader
-                    index={index}
-                    bullet={bullet}
-                    collapse={collapse}
-                    onClick={toggleCollapse}
-                />
+    return (
+        <Box className={classes.root}>
+            <ScriptHeader
+                index={index}
+                bullet={bullet}
+                collapse={collapse}
+                onClick={toggleCollapse}
+            />
 
-                <ScriptDesc
-                    index={index}
-                    bullet={bullet}
-                    previousScriptLength={previousScriptLength}
-                    collapse={collapse}
-                />
-            </Box>
-        );
-    }, [index, bullet, previousScriptLength, collapse]);
+            <ScriptDesc
+                index={index}
+                bullet={bullet}
+                previousScriptLength={previousScriptLength}
+                collapse={collapse}
+            />
+        </Box>
+    );
 };
 
 export default Script;

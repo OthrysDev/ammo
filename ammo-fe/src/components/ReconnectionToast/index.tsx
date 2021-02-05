@@ -7,7 +7,7 @@ import Palette from 'material/Palette';
 import useMQ from 'hooks/useMQ';
 import useI18n from 'hooks/useI18n';
 
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 
 const useStyles = makeStyles(() => ({
     root: {

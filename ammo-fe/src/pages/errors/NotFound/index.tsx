@@ -1,6 +1,6 @@
 import React, { ReactElement } from 'react';
 import Error from 'pages/errors/Error';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import { useHistory } from 'react-router-dom';
 
 const NotFound = (): ReactElement => {

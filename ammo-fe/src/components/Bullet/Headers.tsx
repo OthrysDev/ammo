@@ -1,9 +1,10 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Typography from 'material/Typography';
+import Box from 'material/Box';
 import { FormattedMessage } from 'react-intl';
 import Palette from 'material/Palette';
+import Header from 'components/Bullet/Header';
 
 const useStyles = makeStyles(() => ({
     title: {
@@ -20,36 +21,21 @@ const useStyles = makeStyles(() => ({
 }));
 
 interface HeadersProps {
-    uuid: string;
     headers: Record<string, string | string[]>;
 }
 
-const Headers = ({ uuid, headers }: HeadersProps): ReactElement => {
+const Headers = ({ headers }: HeadersProps): ReactElement => {
     const classes = useStyles();
 
     return (
-        <Box data-cy={uuid}>
-            <Box data-cy={`${uuid}-title`} className={classes.title}>
+        <Box>
+            <Box className={classes.title}>
                 <Typography variant="subtitle2">
                     <FormattedMessage id="Headers" />
                 </Typography>
             </Box>
-            {Object.keys(headers).map((key, i) => (
-                <Box
-                    data-cy={`${uuid}-line-${i}`}
-                    key={`${uuid}-value-${i}`}
-                    className={classes.values}
-                >
-                    <Typography variant="subtitle2">
-                        <span data-cy={`${uuid}-line-${i}-key`}>{key}</span> :{' '}
-                        <span
-                            data-cy={`${uuid}-line-${i}-value`}
-                            className={classes.headerValue}
-                        >
-                            "{headers[key]}"
-                        </span>
-                    </Typography>
-                </Box>
+            {Object.keys(headers).map((key) => (
+                <Header headerKey={key} headerValue={headers[key]} />
             ))}
         </Box>
     );

@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Typography from 'material/Typography';
+import Box from 'material/Box';
 import { FormattedMessage } from 'react-intl';
 import Palette from 'material/Palette';
 import { isJSON, prettifyJSON } from 'util/StringUtil';
@@ -24,11 +24,10 @@ const useStyles = makeStyles(() => ({
 }));
 
 interface BodyProps {
-    uuid: string;
     body?: unknown;
 }
 
-const Body = ({ uuid, body }: BodyProps): ReactElement => {
+const Body = ({ body }: BodyProps): ReactElement => {
     const classes = useStyles();
 
     // Try to display the body nicely. Only prettifying JSON  for now
@@ -41,14 +40,14 @@ const Body = ({ uuid, body }: BodyProps): ReactElement => {
     };
 
     return (
-        <Box data-cy={uuid}>
-            <Box data-cy={`${uuid}-title`} className={classes.title}>
+        <Box>
+            <Box className={classes.title}>
                 <Typography variant="subtitle2">
                     <FormattedMessage id="Body" />
                 </Typography>
             </Box>
             {body && (
-                <Box data-cy={`${uuid}-value`} className={classes.value}>
+                <Box className={classes.value}>
                     <Typography variant="subtitle2">
                         {prettify(body)}
                     </Typography>

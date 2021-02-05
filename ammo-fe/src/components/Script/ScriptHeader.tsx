@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import Typography from 'material/Typography';
+import Box from 'material/Box';
 import ToolTip from 'components/misc/ToolTip';
 import DownCarretIcon from 'assets/icons/down_carret.svg';
 import useI18n from 'hooks/useI18n';
@@ -51,15 +51,12 @@ const ScriptHeader = ({
     const varName = GatlingScripter.varName(index, bullet);
 
     return (
-        <Box data-cy={`script-header-${bullet.id}`} className={classes.root}>
-            <Box data-cy={`script-header-code-${bullet.id}`}>
+        <Box className={classes.root}>
+            <Box>
                 <Typography>{varName}</Typography>
             </Box>
             <Box className={classes.filler} />
-            <ToolTip
-                uuid={`script-header-collapse-tooltip-${bullet.id}`}
-                title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
-            >
+            <ToolTip title={i18n(collapse ? 'Uncollapse' : 'Collapse')}>
                 <Box onClick={onClick} onKeyDown={onClick}>
                     <img
                         src={DownCarretIcon}
