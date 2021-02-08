@@ -1,9 +1,13 @@
 import IScripter from 'scripters/IScripter';
 import Bullet from 'shared/types/Bullet';
 import { urlWithoutOrigin } from 'util/NetUtil';
-import { isString, isJSON, prettifyJSON } from 'util/StringUtil';
+import {
+    isString,
+    isJSON,
+    prettifyJSON,
+    removeNonAlphaNumeric,
+} from 'util/StringUtil';
 
-// TODO : fix line numbers
 class GatlingScripter implements IScripter {
     script = (index: number, bullet: Bullet): string => {
         const varName = this.varName(index, bullet);
@@ -34,10 +38,18 @@ class GatlingScripter implements IScripter {
 
     varName = (index: number, bullet: Bullet): string => {
         const method = bullet.method.toLowerCase();
-        const object = urlWithoutOrigin(bullet.url).split('/')[1];
+
+        // Run through URL and try to find meaningful words. Use the first one
+        const splittedUrl = urlWithoutOrigin(bullet.url).split('/');
+        let object;
+        // eslint-disable-next-line no-restricted-syntax
+        for (const urlFragment of splittedUrl) {
+            object = removeNonAlphaNumeric(urlFragment);
+            if (object && object !== '') break;
+        }
 
         let result = `${method}`;
-        if (object) result += `_${object}`;
+        if (object && object !== '') result += `_${object}`;
         result += `_${index}`;
 
         return result;

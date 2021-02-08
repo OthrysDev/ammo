@@ -15,4 +15,8 @@ const prettifyJSON = (json: string): string => {
     return JSON.stringify(JSON.parse(json), null, 4);
 };
 
-export { isString, isJSON, prettifyJSON };
+const removeNonAlphaNumeric = (str: string): string => {
+    return str.replace(/[^0-9a-z]/gi, '');
+};
+
+export { isString, isJSON, prettifyJSON, removeNonAlphaNumeric };

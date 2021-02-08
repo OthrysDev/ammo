@@ -24,6 +24,7 @@ exports[`Storyshots Components/Script Script 1`] = `
       />
       <div
         class=""
+        data-cy="script-header-collapse-button-1"
         title="Uncollapse"
       >
         <img
@@ -73,6 +74,7 @@ exports[`Storyshots Components/Script Script with XML body 1`] = `
       />
       <div
         class=""
+        data-cy="script-header-collapse-button-1"
         title="Uncollapse"
       >
         <img

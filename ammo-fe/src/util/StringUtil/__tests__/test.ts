@@ -1,4 +1,4 @@
-import { isString, isJSON } from 'util/StringUtil';
+import { isString, isJSON, removeNonAlphaNumeric } from 'util/StringUtil';
 
 describe('StringUtil', () => {
     describe('isString', () => {
@@ -25,6 +25,16 @@ describe('StringUtil', () => {
         });
         test('Feeding a random string - should return false', () => {
             expect(isJSON('foobar100')).toEqual(false);
+        });
+    });
+
+    describe('removeNonAlphaNumeric', () => {
+        test('Feeding a regular string - should return said string', () => {
+            expect(removeNonAlphaNumeric('test')).toEqual('test');
+        });
+
+        test('Feeding a string with special chars - should return string purged from special chars', () => {
+            expect(removeNonAlphaNumeric('t&e@=s))t,;/_')).toEqual('test');
         });
     });
 });

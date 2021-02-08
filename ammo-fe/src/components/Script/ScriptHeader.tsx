@@ -56,8 +56,15 @@ const ScriptHeader = ({
                 <Typography>{varName}</Typography>
             </Box>
             <Box className={classes.filler} />
-            <ToolTip title={i18n(collapse ? 'Uncollapse' : 'Collapse')}>
-                <Box onClick={onClick} onKeyDown={onClick}>
+            <ToolTip
+                uuid={`script-header-collapse-button-tooltip-${bullet.id}`}
+                title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
+            >
+                <Box
+                    data-cy={`script-header-collapse-button-${bullet.id}`}
+                    onClick={onClick}
+                    onKeyDown={onClick}
+                >
                     <img
                         src={DownCarretIcon}
                         alt={i18n(

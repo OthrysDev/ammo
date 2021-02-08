@@ -16,14 +16,9 @@ const useStyles = makeStyles(() => ({
 export interface ScriptProps {
     index: number;
     bullet: Bullet;
-    previousScriptLength: number;
 }
 
-const Script = ({
-    index,
-    bullet,
-    previousScriptLength,
-}: ScriptProps): ReactElement => {
+const Script = ({ index, bullet }: ScriptProps): ReactElement => {
     const classes = useStyles();
     const [collapse, setCollapse] = useState<boolean>(true);
 
@@ -38,12 +33,7 @@ const Script = ({
                 onClick={toggleCollapse}
             />
 
-            <ScriptDesc
-                index={index}
-                bullet={bullet}
-                previousScriptLength={previousScriptLength}
-                collapse={collapse}
-            />
+            <ScriptDesc index={index} bullet={bullet} collapse={collapse} />
         </Box>
     );
 };

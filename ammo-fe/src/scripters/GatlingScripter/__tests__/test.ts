@@ -84,6 +84,47 @@ describe('GatlingScripter', () => {
                 GatlingScripter.varName(6, (bullet as unknown) as Bullet)
             ).toEqual('options_6');
         });
+
+        test('Feeding a bullet with special chars in URL - should remove them from var name', () => {
+            const bullet = {
+                url:
+                    'https://avatars.dicebear.com/4.4/api/human/tsHF6_D5oQ.svg',
+                method: 'GET',
+            };
+            expect(
+                GatlingScripter.varName(7, (bullet as unknown) as Bullet)
+            ).toEqual('get_44_7');
+        });
+
+        test('Feeding a bullet with special chars and no regular char in URL - should remove them from var name', () => {
+            const bullet = {
+                url: 'https://avatars.dicebear.com/#@.',
+                method: 'GET',
+            };
+            expect(
+                GatlingScripter.varName(7, (bullet as unknown) as Bullet)
+            ).toEqual('get_7');
+        });
+
+        test('Feeding a bullet with a double slash in URL start - should ignore them in var name', () => {
+            const bullet = {
+                url: 'https://avatars.dicebear.com//api/human/tsHF6_D5oQ.svg',
+                method: 'GET',
+            };
+            expect(
+                GatlingScripter.varName(8, (bullet as unknown) as Bullet)
+            ).toEqual('get_api_8');
+        });
+
+        test('Feeding a bullet with a double underscore in URL start - should ignore them in var name', () => {
+            const bullet = {
+                url: 'http://localhost:3000/__cypress/iframes/__all',
+                method: 'GET',
+            };
+            expect(
+                GatlingScripter.varName(9, (bullet as unknown) as Bullet)
+            ).toEqual('get_cypress_9');
+        });
     });
 
     describe('_description', () => {

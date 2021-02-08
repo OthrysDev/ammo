@@ -35,7 +35,11 @@ const Headers = ({ headers }: HeadersProps): ReactElement => {
                 </Typography>
             </Box>
             {Object.keys(headers).map((key) => (
-                <Header headerKey={key} headerValue={headers[key]} />
+                <Header
+                    key={`header-${key}`}
+                    headerKey={key}
+                    headerValue={headers[key]}
+                />
             ))}
         </Box>
     );

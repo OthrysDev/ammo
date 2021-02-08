@@ -8,16 +8,8 @@ export default {
     title: 'Components/Script',
 };
 
-const ScriptTemplate: Story<ScriptProps> = ({
-    index,
-    bullet,
-    previousScriptLength,
-}: ScriptProps) => (
-    <Script
-        index={index}
-        bullet={bullet}
-        previousScriptLength={previousScriptLength}
-    />
+const ScriptTemplate: Story<ScriptProps> = ({ index, bullet }: ScriptProps) => (
+    <Script index={index} bullet={bullet} />
 );
 
 export const Default = ScriptTemplate.bind({});
@@ -25,7 +17,6 @@ Default.storyName = 'Script';
 Default.args = {
     index: 0,
     bullet: bulletMock,
-    previousScriptLength: 0,
 };
 
 export const XML = ScriptTemplate.bind({});
@@ -33,5 +24,4 @@ XML.storyName = 'Script with XML body';
 XML.args = {
     index: 1,
     bullet: xmlBulletMock,
-    previousScriptLength: 0,
 };

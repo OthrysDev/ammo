@@ -28,14 +28,12 @@ const useStyles = makeStyles(() => ({
 export interface ScriptDescProps {
     index: number;
     bullet: Bullet;
-    previousScriptLength: number;
     collapse?: boolean;
 }
 
 const ScriptDesc = ({
     index,
     bullet,
-    previousScriptLength,
     collapse = false,
 }: ScriptDescProps): ReactElement => {
     const classes = useStyles();
@@ -60,7 +58,7 @@ const ScriptDesc = ({
                                 minWidth: '2em',
                                 textAlign: 'right',
                             }}
-                            startingLineNumber={previousScriptLength}
+                            showLineNumbers
                             tabIndex={0}
                         >
                             {script}

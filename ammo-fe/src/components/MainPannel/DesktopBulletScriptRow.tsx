@@ -20,11 +20,7 @@ export default memo(function DesktopBulletScriptRow({
                 <Bullet bullet={bullet} />
             </Grid>
             <Grid item xs={6}>
-                <Script
-                    index={index + 1}
-                    bullet={bullet}
-                    previousScriptLength={index * 21 + 1}
-                />
+                <Script index={index + 1} bullet={bullet} />
             </Grid>
         </Grid>
     );

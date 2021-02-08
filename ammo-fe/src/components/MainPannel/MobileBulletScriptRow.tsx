@@ -37,11 +37,7 @@ const MobileBulletScriptRox = ({
                 className={classes.column}
                 data-cy={`main-pannel-right-grid-bullet-${bullet.id}`}
             >
-                <Script
-                    index={index + 1}
-                    bullet={bullet}
-                    previousScriptLength={index * 21 + 1}
-                />
+                <Script index={index + 1} bullet={bullet} />
             </Box>
         </Box>
     );
