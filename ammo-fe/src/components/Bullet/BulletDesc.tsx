@@ -1,7 +1,7 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Collapse from '@material-ui/core/Collapse';
-import Box from '@material-ui/core/Box';
+import Box from 'material/Box';
 import Bullet from 'shared/types/Bullet';
 import Headers from 'components/Bullet/Headers';
 import Body from 'components/Bullet/Body';
@@ -30,31 +30,14 @@ const BulletDesc = ({
     return (
         <Collapse in={!collapse}>
             {!collapse && (
-                <Box
-                    data-cy={`bullet-desc-${bullet.id}`}
-                    className={classes.root}
-                >
+                <Box className={classes.root}>
                     <Delimiter title="Request" />
-                    <Headers
-                        uuid={`bullet-desc-req-headers-${bullet.id}`}
-                        headers={bullet.request.headers}
-                    />
-                    {bullet.request.body && (
-                        <Body
-                            uuid={`bullet-desc-req-body-${bullet.id}`}
-                            body={bullet.request.body}
-                        />
-                    )}
+                    <Headers headers={bullet.request.headers} />
+                    {bullet.request.body && <Body body={bullet.request.body} />}
                     <Delimiter title="Response" />
-                    <Headers
-                        uuid={`bullet-desc-res-headers-${bullet.id}`}
-                        headers={bullet.response.headers}
-                    />
+                    <Headers headers={bullet.response.headers} />
                     {bullet.response.body && (
-                        <Body
-                            uuid={`bullet-desc-res-body-${bullet.id}`}
-                            body={bullet.response.body}
-                        />
+                        <Body body={bullet.response.body} />
                     )}
                 </Box>
             )}

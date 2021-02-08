@@ -5,25 +5,23 @@ exports[`Storyshots Components/bars/MobileBar MobileBar 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="bar"
+    class="makeStyles-root makeStyles-boxShadow2"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
+      class="makeStyles-root"
       data-cy="bullets-view-button"
     >
       <img
         alt="Requests"
         class="makeStyles-icon"
-        data-cy="recording-button-pause"
         src="request.svg"
       />
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-insideGutter"
+        class="makeStyles-insideGutter"
       >
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton"
@@ -45,13 +43,12 @@ exports[`Storyshots Components/bars/MobileBar MobileBar 1`] = `
       </div>
     </div>
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
+      class="makeStyles-root"
       data-cy="scripts-view-button"
     >
       <img
         alt="Scripts"
         class="makeStyles-icon"
-        data-cy="recording-button-pause"
         src="script.svg"
       />
     </div>

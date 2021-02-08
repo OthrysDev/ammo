@@ -34,10 +34,26 @@ const RESPONSE_HEADERS = {
 };
 
 const REQUEST_BODY =
-    '{ user: {"firstName":"Foo","name":"Bar","email":"foo.bar@mail.com","password":"123456789","captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}}';
+    '{ "user": {"firstName":"Foo","name":"Bar","email":"foo.bar@mail.com","password":"123456789","captcha":"03AGdBq24FhhL7ma6BDSXC75oSQ3_uKKSYSID3XJyoPQCkwUkkvnZqrEqShLhqus2RMpWWDHq3wXHTXm5qmA9x7mZQup0XYYN9bHj_sFH_i-EmSXfnaH5C3QwImPUd_o-E3f8Zfd6mCIPe98O9_qDHNM-GJ387Fgajj5PbFZZuj4QG2iTPeEM1IoaQdO3Zn-XmMYqU3YU18O3rMMfpLiVtk7i2k8zLPpFHiDp3US3Tc91fr0ot2xUYOGTPwM58LgnWrX31X-oezUEk8EagkPD2IAwgh0vu55DHE7HOSaARFatfeoUgNwgVTnsRmfhN1gGnxGIUKG8iklaVEYG34Vg4CZ800uxQIUALLGdbNnFV5Pwxkf4XiaOiKY-XUXoTBNu_THbbNES08Itj2N_Qj7BhTG8mvVV3sjVsS0iVHkGxnssuRZaFbZ6JciD6QJG8cB1fksMYf5_CBCil"}}';
 
 const RESPONSE_BODY =
     '{"success":true,"message":{"user":{"_id":"5fb3a5ae5be2f60fc786d90b","firstName":"Foo","name":"Bar","email":"foo.bar@mail.com"}}}';
+
+const XML_REQUEST_BODY = `
+    <parentRequestTag>
+        <childTag1>Value 1</childTag1>
+        <childTag2>Value 2</childTag2>
+        <childTag3>Value 3</childTag3>
+    </parentRequestTag>
+`;
+
+const XML_RESPONSE_BODY = `
+    <parentResponseTag>
+        <childTag1>Value 1</childTag1>
+        <childTag2>Value 2</childTag2>
+        <childTag3>Value 3</childTag3>
+    </parentResponseTag>
+`;
 
 const REQUEST = {
     headers: REQUEST_HEADERS,
@@ -61,6 +77,18 @@ const bulletMock: Bullet = {
     response: RESPONSE,
 };
 
+const xmlBulletMock: Bullet = {
+    ...bulletMock,
+    request: {
+        ...REQUEST,
+        body: XML_REQUEST_BODY,
+    },
+    response: {
+        ...RESPONSE,
+        body: XML_RESPONSE_BODY,
+    },
+};
+
 const minimalBulletMock: Bullet = {
     id: '1',
     date: new Date('2020-10-10 10:00:00'),
@@ -77,4 +105,4 @@ const minimalBulletMock: Bullet = {
     },
 };
 
-export { bulletMock, minimalBulletMock };
+export { bulletMock, minimalBulletMock, xmlBulletMock };

@@ -1,13 +1,11 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-import Box from '@material-ui/core/Box';
-import Grid from '@material-ui/core/Grid';
-import Bullet from 'components/Bullet';
+import Box from 'material/Box';
 import SimpleBar from 'simplebar-react';
 import 'simplebar/dist/simplebar.min.css';
 import IBullet from 'shared/types/Bullet';
-import Script from 'components/Script';
 import Palette from 'material/Palette';
+import DesktopBulletScriptRow from 'components/MainPannel/DesktopBulletScriptRow';
 
 const useDesktopStyles = makeStyles(() => ({
     scrollbar: {
@@ -36,29 +34,11 @@ const DesktopMainPannel = ({
             <Box data-cy="main-pannel" className={classes.root} tabIndex={0}>
                 {bullets &&
                     bullets.map((b, i) => (
-                        <Grid
-                            data-cy={`main-pannel-outer-grid-bullet-${b.id}`}
-                            key={b.id}
-                            container
-                        >
-                            <Grid
-                                data-cy={`main-pannel-left-grid-bullet-${b.id}`}
-                                item
-                                xs={6}
-                            >
-                                <Bullet bullet={b} />
-                            </Grid>
-                            <Grid
-                                data-cy={`main-pannel-right-grid-bullet-${b.id}`}
-                                item
-                                xs={6}
-                            >
-                                <Script
-                                    bullet={b}
-                                    previousScriptLength={i * 21 + 1}
-                                />
-                            </Grid>
-                        </Grid>
+                        <DesktopBulletScriptRow
+                            key={`desktop-bullet-script-row-${b.id}`}
+                            bullet={b}
+                            index={i}
+                        />
                     ))}
             </Box>
         </SimpleBar>

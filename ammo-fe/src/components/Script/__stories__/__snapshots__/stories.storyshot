@@ -5,30 +5,76 @@ exports[`Storyshots Components/Script Script 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
-    data-cy="script-1"
-    style="opacity:0;transform:scale(0.75, 0.5625)"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
-      data-cy="script-header-1"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="script-header-code-1"
+        class="undefined"
       >
-        <p
-          class="MuiTypography-root MuiTypography-body1"
+        <span
+          class="makeStyles-subtitle1"
         >
-          &lt;/&gt;
-        </p>
+          post_user_0
+        </span>
       </div>
       <div
-        class="MuiBox-root MuiBox-root makeStyles-filler"
+        class="makeStyles-filler"
       />
       <div
-        class="MuiBox-root MuiBox-root"
-        data-cy="script-header-collapse-tooltip-1"
+        class=""
+        data-cy="script-header-collapse-button-1"
+        title="Uncollapse"
+      >
+        <img
+          alt="Down carret"
+          class="makeStyles-downCarretIcon "
+          src="down_carret.svg"
+        />
+      </div>
+    </div>
+    <div
+      class="MuiCollapse-container MuiCollapse-hidden"
+      style="min-height:0px"
+    >
+      <div
+        class="MuiCollapse-wrapper"
+      >
+        <div
+          class="MuiCollapse-wrapperInner"
+        />
+      </div>
+    </div>
+  </div>
+</div>
+`;
+
+exports[`Storyshots Components/Script Script with XML body 1`] = `
+<div
+  style="transform:scale(1);height:100vh"
+>
+  <div
+    class="makeStyles-root"
+  >
+    <div
+      class="makeStyles-root"
+    >
+      <div
+        class="undefined"
+      >
+        <span
+          class="makeStyles-subtitle1"
+        >
+          post_user_1
+        </span>
+      </div>
+      <div
+        class="makeStyles-filler"
+      />
+      <div
+        class=""
+        data-cy="script-header-collapse-button-1"
         title="Uncollapse"
       >
         <img

@@ -5,32 +5,32 @@ exports[`Storyshots Pages/errors/NotFound NotFound 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root"
+    class="undefined"
     data-cy="not-found-page"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-root"
+      class="makeStyles-root"
     >
       <div
-        class="MuiBox-root MuiBox-root makeStyles-centered"
+        class="makeStyles-centered"
       >
         <div
-          class="MuiBox-root MuiBox-root makeStyles-title"
+          class="makeStyles-title"
         >
-          <h4
-            class="MuiTypography-root MuiTypography-h4"
+          <span
+            class="makeStyles-h4"
           >
             404
-          </h4>
+          </span>
         </div>
         <div
-          class="MuiBox-root MuiBox-root makeStyles-content"
+          class="makeStyles-content"
         >
-          <p
-            class="MuiTypography-root MuiTypography-body1"
+          <span
+            class="makeStyles-subtitle1"
           >
             Sorry, the page you are looking for could not be found.
-          </p>
+          </span>
         </div>
         <button
           class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-button"
@@ -52,7 +52,7 @@ exports[`Storyshots Pages/errors/NotFound NotFound 1`] = `
               />
             </svg>
             <span
-              class="MuiTypography-root MuiTypography-button"
+              class="makeStyles-button"
             >
               Homepage
             </span>

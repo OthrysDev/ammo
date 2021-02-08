@@ -5,10 +5,10 @@ exports[`Storyshots Components/buttons/RecorderButton RecorderButton 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="MuiBox-root MuiBox-root makeStyles-root"
+    class="makeStyles-root"
   >
     <div
-      class="MuiBox-root MuiBox-root makeStyles-insideGutter"
+      class="makeStyles-insideGutter"
     >
       <button
         class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-insideButton"

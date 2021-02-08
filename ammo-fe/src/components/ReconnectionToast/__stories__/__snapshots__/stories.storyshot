@@ -18,10 +18,10 @@ exports[`Storyshots Components/ReconnectionToast ReconnectionToast 1`] = `
         class="MuiSnackbarContent-message"
       >
         <div
-          class="MuiBox-root MuiBox-root"
+          class="undefined"
         >
           <div
-            class="MuiBox-root MuiBox-root makeStyles-circular"
+            class="makeStyles-circular"
           >
             <div
               class="MuiCircularProgress-root MuiCircularProgress-colorPrimary MuiCircularProgress-indeterminate"
@@ -46,7 +46,7 @@ exports[`Storyshots Components/ReconnectionToast ReconnectionToast 1`] = `
             </div>
           </div>
           <div
-            class="MuiBox-root MuiBox-root makeStyles-message"
+            class="makeStyles-message"
           >
             Connecting to server
           </div>
