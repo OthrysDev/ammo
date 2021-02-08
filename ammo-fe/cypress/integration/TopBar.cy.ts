@@ -1,7 +1,8 @@
 import WS from '../../src/network/WS';
+import Config from '../../src/util/Config';
 import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
 
-const socket = WS.getSocket('http://localhost:3001');
+const { socket } = WS.getSocketAndManager(Config.beUrl);
 
 describe('Top bar', () => {
     before(() => {

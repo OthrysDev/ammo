@@ -1,5 +1,6 @@
 import express from 'express';
 import bodyParser from 'body-parser';
+import Config from 'util/Config';
 
 import cors from 'cors';
 import BulletRouter from 'routers/BulletRouter';
@@ -7,10 +8,11 @@ import VersionRouter from 'routers/VersionRouter';
 import { initWS } from 'WebSocket';
 
 const app = express();
-app.use(cors({ origin: 'http://localhost:3000' }));
 
-const server = app.listen(3001, () => {
-    console.log('Ammo-be started & listening on port 3001');
+app.use(cors({ origin: Config.feUrl }));
+
+const server = app.listen(Config.port, () => {
+    console.log(`Ammo-be started & listening on port ${Config.port}`);
 });
 
 initWS(server);

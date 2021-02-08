@@ -1,6 +1,7 @@
 import React, { useState, useEffect, useContext } from 'react';
 import Bullet from 'shared/types/Bullet';
-import WS, { manager } from 'network/WS';
+import WS from 'network/WS';
+import Config from 'util/Config';
 import { useSelector } from 'react-redux';
 import useBulletActions from 'redux/actions/useBulletActions';
 import { RootReducer } from 'redux/reducers';
@@ -23,7 +24,7 @@ const useWSProvider = (): WSProvider => {
     );
 
     let initialized = false;
-    const socket = WS.getSocket('http://localhost:3001');
+    const { socket, manager } = WS.getSocketAndManager(Config.beUrl);
 
     const init = (): void => {
         // Already init. Return

@@ -1,5 +1,6 @@
 import WS from '../../src/network/WS';
 import WSBulletsEvent from '../../src/shared/types/WSBulletsEvent';
+import Config from '../../src/util/Config';
 
 // ***********************************************
 // This example commands.js shows you how to
@@ -62,7 +63,7 @@ declare namespace Cypress {
     }
 }
 
-const socket = WS.getSocket('http://localhost:3001');
+const { socket } = WS.getSocketAndManager(Config.beUrl);
 
 const emitBullet = (bullet): Cypress.Chainable<unknown> => {
     return socket.emit(WSBulletsEvent.EMIT, { bullet });

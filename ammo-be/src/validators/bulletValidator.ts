@@ -1,5 +1,5 @@
 import Joi from 'joi';
-import { isValidUrl, hasValidWeight } from 'utils/ValidationUtil';
+import { isValidUrl, hasValidWeight } from 'util/ValidationUtil';
 
 const bulletSchema = Joi.object({
     url: Joi.string().custom(isValidUrl).message('url is invalid').required(),

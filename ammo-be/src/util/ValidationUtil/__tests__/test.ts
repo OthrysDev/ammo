@@ -1,4 +1,4 @@
-import { isValidUrl, hasValidWeight } from 'utils/ValidationUtil';
+import { isValidUrl, hasValidWeight } from 'util/ValidationUtil';
 
 describe('ValidationUtil', () => {
     describe('isValidUrl', () => {
