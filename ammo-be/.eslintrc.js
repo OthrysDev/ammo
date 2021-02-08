@@ -19,7 +19,7 @@ module.exports = {
         indent: ['error', 4],
         'no-console': 0,
         '@typescript-eslint/explicit-function-return-type': ['error'],
-        'import/extensions': [1, 'never'],
+        'import/extensions': ['error', 'never', { json: 'always' }],
         'comma-dangle': 0,
         'object-curly-newline': 0,
         'import/no-mutable-exports': 0,
@@ -34,7 +34,7 @@ module.exports = {
         'import/resolver': {
             node: {
                 extensions: ['.js', '.jsx', '.d.ts', '.ts', '.tsx', '.json'],
-                moduleDirectory: ['node_modules', 'src'],
+                moduleDirectory: ['.', 'node_modules', 'src'],
             },
         },
     },
