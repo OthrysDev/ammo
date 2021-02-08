@@ -4,7 +4,7 @@ import Typography from 'material/Typography';
 import Box from 'material/Box';
 import { FormattedMessage } from 'react-intl';
 import Palette from 'material/Palette';
-import { isJSON, prettifyJSON } from 'util/StringUtil';
+import { isString, isJSON, prettifyJSON } from 'util/StringUtil';
 
 const useStyles = makeStyles(() => ({
     title: {
@@ -31,11 +31,17 @@ const Body = ({ body }: BodyProps): ReactElement => {
     const classes = useStyles();
 
     // Try to display the body nicely. Only prettifying JSON  for now
-    const prettify = (obj: unknown): ReactElement => {
-        return obj && isJSON(obj) ? (
-            <pre className={classes.pre}>{prettifyJSON(obj as string)}</pre>
+    const prettify = (obj: unknown): ReactElement | null => {
+        if (!obj) return null;
+
+        // Whatever the type of the body, cast it to String
+        let castObj = obj;
+        if (!isString(castObj)) castObj = JSON.stringify(castObj);
+
+        return isJSON(castObj) ? (
+            <pre className={classes.pre}>{prettifyJSON(castObj as string)}</pre>
         ) : (
-            <>{obj}</>
+            <>{castObj}</>
         );
     };
 
