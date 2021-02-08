@@ -1,5 +1,3 @@
-/* eslint-disable import/no-unresolved */
-// eslint-disable-next-line import/extensions
 import config from 'config/config.json';
 import packageJSON from 'package.json';
 import PackageJSON from 'types/PackageJSON';
@@ -12,8 +10,8 @@ interface IConfig extends PackageJSON, ConfigJSON {
 }
 
 const buildConfig = (): IConfig => {
-    const castPackage = (packageJSON as unknown) as PackageJSON;
-    const castConfig = (config as unknown) as ConfigJSON;
+    const castPackage = packageJSON as PackageJSON;
+    const castConfig = config as ConfigJSON;
 
     // Merge the config file with the package.json
     const conf: IConfig = {
