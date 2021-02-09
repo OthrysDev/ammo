@@ -3,22 +3,22 @@
   "version": "0.0.0",
   "keywords": [
     "stress test",
+    "load test",
     "gatling",
     "ammo",
-    "load test",
     "script",
     "scala"
   ],
   "scripts": {
-    "start:be": "cd ammo-be && npm start",
-    "start:fe": "cd ammo-fe && npm start",
+    "start:be": "cd backend && npm start",
+    "start:fe": "cd frontend && npm start",
     "start": "run-p start:be start:fe",
-    "install:be": "cd ammo-be && npm install",
-    "install:fe": "cd ammo-fe && npm install",
+    "install:be": "cd backend && npm install",
+    "install:fe": "cd frontend && npm install",
     "install": "run-p install:be install:fe",
-    "export": "copyfiles --up 2 ammo-be/src/shared/** ammo-fe/src/",
-    "test:be": "cd ammo-be && npm run precommit",
-    "test:fe": "cd ammo-fe && npm run precommit",
+    "export": "copyfiles --up 2 backend/src/shared/** frontend/src/",
+    "test:be": "cd backend && npm run precommit",
+    "test:fe": "cd frontend && npm run precommit",
     "test": "run-p test:be test:fe"
   },
   "husky": {
