@@ -1,6 +1,5 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
-// import Typography from '@material-ui/core/Typography.Subtitle1';
 import Box from 'material/Box';
 import ToolTip from 'components/misc/ToolTip';
 import DownCarretIcon from 'assets/icons/down_carret.svg';
@@ -10,6 +9,7 @@ import useMQ from 'hooks/useMQ';
 import Palette from 'material/Palette';
 import { urlWithoutOrigin, isHttpErrorCode } from 'util/NetUtil';
 import Typography from 'material/Typography';
+import classNames from 'classnames';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -97,7 +97,7 @@ const BulletHeader = ({
                 </Box>
             )}
             <ToolTip
-                uuid={`bullet-header-collapse-button-tooltip-${bullet.id}`}
+                uuid={`bullet-header-collapse-button-${bullet.id}`}
                 title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
             >
                 <Box
@@ -112,9 +112,10 @@ const BulletHeader = ({
                                 ? 'Img.Alt.DownCarretIcon'
                                 : 'Img.Alt.UpCarretIcon'
                         )}
-                        className={`${classes.downCarretIcon} ${
-                            collapse ? '' : classes.flipY
-                        }`}
+                        className={classNames({
+                            [classes.downCarretIcon]: true,
+                            [classes.flipY]: !collapse,
+                        })}
                     />
                 </Box>
             </ToolTip>

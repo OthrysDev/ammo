@@ -1,6 +1,7 @@
 import WS from '../../src/network/WS';
 import Config from '../../src/util/Config';
 import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
+import en from '../../src/i18n/en';
 
 const { socket } = WS.getSocketAndManager(Config.beUrl);
 
@@ -126,5 +127,22 @@ describe('Top bar', () => {
 
         cy.emitBullet(bulletMock);
         cy.get('[data-cy=main-pannel]').children().should('have.length', 3);
+    });
+
+    describe('Reset button', () => {
+        it('Hovering the reset button - should display the tooltip "Reset"', () => {
+            cy.get(`[data-cy=reset-button]`).trigger('mouseover');
+
+            cy.get(`[id=reset-button-tooltip]`).should(
+                'contain',
+                en['Bar.Btn.Tooltip.reset']
+            );
+        });
+
+        it('Clicking on the reset button - should remove all bullets', () => {
+            cy.get(`[data-cy=reset-button]`).click();
+
+            cy.get('[data-cy=main-pannel]').children().should('have.length', 0);
+        });
     });
 });

@@ -1,4 +1,5 @@
 import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
+import en from '../../src/i18n/en';
 
 describe('Bullets', () => {
     before(() => {
@@ -13,8 +14,8 @@ describe('Bullets', () => {
         ).trigger('mouseover');
 
         cy.get(
-            `[id=bullet-header-collapse-button-tooltip-${bulletMock.id}]`
-        ).should('contain', 'Uncollapse');
+            `[id=bullet-header-collapse-button-${bulletMock.id}-tooltip]`
+        ).should('contain', en.Uncollapse);
     });
 
     it('Hovering the collapse button of a script - should display the tooltip "Uncollapse"', () => {
@@ -23,8 +24,8 @@ describe('Bullets', () => {
         ).trigger('mouseover');
 
         cy.get(
-            `[id=script-header-collapse-button-tooltip-${bulletMock.id}]`
-        ).should('contain', 'Uncollapse');
+            `[id=script-header-collapse-button-${bulletMock.id}-tooltip]`
+        ).should('contain', en.Uncollapse);
     });
 
     it('Clicking on the collapse button of a bullet and hovering it - should display the tooltip "Collapse"', () => {
@@ -37,8 +38,8 @@ describe('Bullets', () => {
         ).trigger('mouseover');
 
         cy.get(
-            `[id=bullet-header-collapse-button-tooltip-${bulletMock.id}]`
-        ).should('contain', 'Collapse');
+            `[id=bullet-header-collapse-button-${bulletMock.id}-tooltip]`
+        ).should('contain', en.Collapse);
     });
 
     it('Clicking on the collapse button of a script and hovering it - should display the tooltip "Collapse"', () => {
@@ -51,7 +52,7 @@ describe('Bullets', () => {
         ).trigger('mouseover');
 
         cy.get(
-            `[id=script-header-collapse-button-tooltip-${bulletMock.id}]`
-        ).should('contain', 'Collapse');
+            `[id=script-header-collapse-button-${bulletMock.id}-tooltip]`
+        ).should('contain', en.Collapse);
     });
 });

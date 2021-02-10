@@ -18,7 +18,7 @@ exports[`Storyshots Components/ReconnectionToast ReconnectionToast 1`] = `
         class="MuiSnackbarContent-message"
       >
         <div
-          class="undefined"
+          class=""
         >
           <div
             class="makeStyles-circular"

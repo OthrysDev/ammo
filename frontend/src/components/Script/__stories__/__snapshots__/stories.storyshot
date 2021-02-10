@@ -11,7 +11,7 @@ exports[`Storyshots Components/Script Script 1`] = `
       class="makeStyles-root"
     >
       <div
-        class="undefined"
+        class=""
       >
         <span
           class="makeStyles-subtitle1"
@@ -29,7 +29,7 @@ exports[`Storyshots Components/Script Script 1`] = `
       >
         <img
           alt="Down carret"
-          class="makeStyles-downCarretIcon "
+          class="makeStyles-downCarretIcon"
           src="down_carret.svg"
         />
       </div>
@@ -61,7 +61,7 @@ exports[`Storyshots Components/Script Script with XML body 1`] = `
       class="makeStyles-root"
     >
       <div
-        class="undefined"
+        class=""
       >
         <span
           class="makeStyles-subtitle1"
@@ -79,7 +79,7 @@ exports[`Storyshots Components/Script Script with XML body 1`] = `
       >
         <img
           alt="Down carret"
-          class="makeStyles-downCarretIcon "
+          class="makeStyles-downCarretIcon"
           src="down_carret.svg"
         />
       </div>
