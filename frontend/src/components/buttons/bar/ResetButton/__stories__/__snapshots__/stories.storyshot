@@ -1,0 +1,25 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Storyshots Components/buttons/bar/ResetButton ResetButton 1`] = `
+<div
+  style="transform:scale(1);height:100vh"
+>
+  <button
+    class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root"
+    data-cy="reset-button"
+    tabindex="0"
+    title="Reset the recording session"
+    type="button"
+  >
+    <span
+      class="MuiButton-label"
+    >
+      <img
+        alt="Reset"
+        class="makeStyles-icon"
+        src="reset.svg"
+      />
+    </span>
+  </button>
+</div>
+`;

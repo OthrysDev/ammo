@@ -3,6 +3,7 @@ const Palette = {
     BLACK_DARK: '#1E1E1E',
     BLACK_MED: '#252526',
     BLACK_LIGHT: '#3C3C3C',
+    BLACK_LIGHTER: '#505050',
 
     // Grey
     GREY_DARK: '#858585',

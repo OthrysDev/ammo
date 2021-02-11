@@ -8,6 +8,7 @@ import useI18n from 'hooks/useI18n';
 import Palette from 'material/Palette';
 import Bullet from 'shared/types/Bullet';
 import GatlingScripter from 'scripters/GatlingScripter';
+import classNames from 'classnames';
 
 const useStyles = makeStyles(() => ({
     root: {
@@ -57,7 +58,7 @@ const ScriptHeader = ({
             </Box>
             <Box className={classes.filler} />
             <ToolTip
-                uuid={`script-header-collapse-button-tooltip-${bullet.id}`}
+                uuid={`script-header-collapse-button-${bullet.id}`}
                 title={i18n(collapse ? 'Uncollapse' : 'Collapse')}
             >
                 <Box
@@ -72,9 +73,10 @@ const ScriptHeader = ({
                                 ? 'Img.Alt.DownCarretIcon'
                                 : 'Img.Alt.UpCarretIcon'
                         )}
-                        className={`${classes.downCarretIcon} ${
-                            collapse ? '' : classes.flipY
-                        }`}
+                        className={classNames({
+                            [classes.downCarretIcon]: true,
+                            [classes.flipY]: !collapse,
+                        })}
                     />
                 </Box>
             </ToolTip>

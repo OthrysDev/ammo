@@ -1,6 +1,6 @@
 import React from 'react';
 import { Story } from '@storybook/react/types-6-0';
-import MobileBar from 'components/bars/MobileBar';
+import MobileBar from 'components/bars/MobileBottomBar';
 
 export default {
     component: MobileBar,

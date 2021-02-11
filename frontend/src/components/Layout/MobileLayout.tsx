@@ -1,11 +1,12 @@
 import React, { ReactElement } from 'react';
 import makeStyles from '@material-ui/core/styles/makeStyles';
 import Box from 'material/Box';
-import MobileBar from 'components/bars/MobileBar';
+import MobileBottomBar from 'components/bars/MobileBottomBar';
 import MainPannel from 'components/MainPannel';
+import MobileTopBar from 'components/bars/MobileTopBar';
 
 const useStyles = makeStyles(() => ({
-    bar: {
+    bottomBar: {
         width: '100%',
         position: 'fixed',
         bottom: 0,
@@ -20,8 +21,10 @@ const MobileLayout = (): ReactElement => {
 
     return (
         <>
-            <Box className={classes.bar}>
-                <MobileBar />
+            <MobileTopBar />
+
+            <Box className={classes.bottomBar}>
+                <MobileBottomBar />
             </Box>
 
             <Box className={classes.pannel}>

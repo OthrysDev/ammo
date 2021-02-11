@@ -4,6 +4,7 @@ import { BulletReducerActionType } from 'redux/reducers/bulletReducer';
 
 type BulletActions = {
     addBulletAction: (bullet: Bullet) => Record<string, unknown>;
+    resetBulletsAction: () => Record<string, unknown>;
 };
 
 const useBulletActions = (): BulletActions => {
@@ -16,8 +17,15 @@ const useBulletActions = (): BulletActions => {
         });
     };
 
+    const resetBulletsAction = (): Record<string, unknown> => {
+        return dispatch({
+            type: BulletReducerActionType.RESET_BULLETS,
+        });
+    };
+
     return {
         addBulletAction,
+        resetBulletsAction,
     };
 };
 

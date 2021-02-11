@@ -8,6 +8,31 @@ exports[`Storyshots Components/bars/Bar Bar 1`] = `
     class="makeStyles-root makeStyles-boxShadow2"
   >
     <div
+      class=""
+    >
+      <div
+        class="makeStyles-button"
+      >
+        <button
+          class="MuiButtonBase-root MuiButton-root MuiButton-text makeStyles-root"
+          data-cy="reset-button"
+          tabindex="0"
+          title="Reset the recording session"
+          type="button"
+        >
+          <span
+            class="MuiButton-label"
+          >
+            <img
+              alt="Reset"
+              class="makeStyles-icon"
+              src="reset.svg"
+            />
+          </span>
+        </button>
+      </div>
+    </div>
+    <div
       class="makeStyles-root"
     >
       <div
@@ -32,6 +57,9 @@ exports[`Storyshots Components/bars/Bar Bar 1`] = `
         </button>
       </div>
     </div>
+    <div
+      class=""
+    />
   </div>
 </div>
 `;

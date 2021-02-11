@@ -12,7 +12,10 @@ import MobileBulletScriptRow from 'components/MainPannel/MobileBulletScriptRow';
 
 const useStyles = makeStyles(() => ({
     fullHeightMinusBar: {
-        height: 'calc(calc(var(--vh, 1vh) * 100) - 74px)',
+        // The height of the main pannel is the full height of the window minus :
+        // - 50px : the (menu) top bar
+        // - 74px : the (menu) bottom bar
+        height: 'calc(calc(var(--vh, 1vh) * 100) - 50px - 74px)',
     },
     scrollbar: {
         overflowX: 'hidden',
@@ -21,6 +24,8 @@ const useStyles = makeStyles(() => ({
         width: '100%',
         color: 'white',
         overflowY: 'auto',
+        // Because of the (menu) top bar
+        marginTop: '50px',
     },
     gradientBg: {
         background: `linear-gradient(90deg, ${Palette.BLACK_DARK} 50%, ${Palette.BLACK_MED} 50%)`,

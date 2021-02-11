@@ -20,7 +20,10 @@ export type UIReducerState = {
 };
 
 export default function uiReducer(
-    state = { view: MainPannelView.BULLETS, recorderButtonToggled: true },
+    state = {
+        view: MainPannelView.BULLETS,
+        recorderButtonToggled: true,
+    },
     action: UIReducerAction
 ): UIReducerState {
     switch (action.type) {

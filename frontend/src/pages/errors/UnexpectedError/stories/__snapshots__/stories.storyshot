@@ -5,7 +5,7 @@ exports[`Storyshots Pages/errors/UnexpectedError UnexpectedError 1`] = `
   style="transform:scale(1);height:100vh"
 >
   <div
-    class="undefined"
+    class=""
     data-cy="unexpected-error-page"
   >
     <div

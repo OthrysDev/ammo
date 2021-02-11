@@ -19,6 +19,8 @@ const englishMessages = {
     'Img.Alt.PauseIcon': 'Pause',
     'Img.Alt.RequestIcon': 'Requests',
     'Img.Alt.ScriptIcon': 'Scripts',
+    'Bar.Btn.Img.Alt.reset': 'Reset',
+    'Bar.Btn.Tooltip.reset': 'Reset the recording session',
     'ReconnectionToast.CircularProgress.Title': 'Reconnecting to the server',
 };
 
