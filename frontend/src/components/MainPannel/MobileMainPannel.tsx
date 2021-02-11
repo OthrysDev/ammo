@@ -12,8 +12,9 @@ import MobileBulletScriptRow from 'components/MainPannel/MobileBulletScriptRow';
 
 const useStyles = makeStyles(() => ({
     fullHeightMinusBar: {
-        // 50px : the (menu) top bar
-        // 74px : the (menu) bottom bar
+        // The height of the main pannel is the full height of the window minus :
+        // - 50px : the (menu) top bar
+        // - 74px : the (menu) bottom bar
         height: 'calc(calc(var(--vh, 1vh) * 100) - 50px - 74px)',
     },
     scrollbar: {

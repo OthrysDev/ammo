@@ -21,9 +21,7 @@ const MobileLayout = (): ReactElement => {
 
     return (
         <>
-            <Box>
-                <MobileTopBar />
-            </Box>
+            <MobileTopBar />
 
             <Box className={classes.bottomBar}>
                 <MobileBottomBar />

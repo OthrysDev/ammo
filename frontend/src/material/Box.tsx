@@ -33,7 +33,7 @@ const Box = React.forwardRef(
                 {...otherProps}
                 ref={ref}
                 className={classNames({
-                    [props.className]: !!props.className,
+                    [props.className]: Boolean(props.className),
                     [classes.boxShadow2]: boxShadow === 2,
                 })}
             >
