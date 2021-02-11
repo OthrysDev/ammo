@@ -5,7 +5,7 @@ import en from '../../src/i18n/en';
 
 const { socket } = WS.getSocketAndManager(Config.beUrl);
 
-describe('Top bar', () => {
+describe('Controls', () => {
     before(() => {
         cy.visit('/');
     });
@@ -52,9 +52,10 @@ describe('Top bar', () => {
             .then(() => {
                 cy.emitBullet(bulletMock);
 
-                cy.get('[data-cy=main-pannel]')
-                    .children()
-                    .should('have.length', 0);
+                cy.get('[data-cy^=bullet-script-row-]').should(
+                    'have.length',
+                    0
+                );
             });
     });
 
@@ -63,9 +64,10 @@ describe('Top bar', () => {
             .click()
             .then(() => {
                 cy.emitBullet(bulletMock);
-                cy.get('[data-cy=main-pannel]')
-                    .children()
-                    .should('have.length', 1);
+                cy.get('[data-cy^=bullet-script-row-]').should(
+                    'have.length',
+                    1
+                );
             });
     });
 
@@ -104,7 +106,7 @@ describe('Top bar', () => {
         });
 
         cy.emitBullet(bulletMock);
-        cy.get('[data-cy=main-pannel]').children().should('have.length', 2);
+        cy.get('[data-cy^=bullet-script-row-]').should('have.length', 2);
     });
 
     it('Socket disconnects, pausing the button, reconnecting, receiving a bullet - bullet should not display as we paused', () => {
@@ -115,7 +117,7 @@ describe('Top bar', () => {
         socket.connect();
 
         cy.emitBullet(bulletMock);
-        cy.get('[data-cy=main-pannel]').children().should('have.length', 2);
+        cy.get('[data-cy^=bullet-script-row-]').should('have.length', 2);
     });
 
     it('Socket disconnects, pressing play, reconnecting, receiving a bullet - bullet should display', () => {
@@ -126,7 +128,7 @@ describe('Top bar', () => {
         socket.connect();
 
         cy.emitBullet(bulletMock);
-        cy.get('[data-cy=main-pannel]').children().should('have.length', 3);
+        cy.get('[data-cy^=bullet-script-row-]').should('have.length', 3);
     });
 
     describe('Reset button', () => {
@@ -142,7 +144,7 @@ describe('Top bar', () => {
         it('Clicking on the reset button - should remove all bullets', () => {
             cy.get(`[data-cy=reset-button]`).click();
 
-            cy.get('[data-cy=main-pannel]').children().should('have.length', 0);
+            cy.get('[data-cy^=bullet-script-row-]').should('have.length', 0);
         });
     });
 });

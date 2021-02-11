@@ -26,7 +26,7 @@ const MobileBulletScriptRox = ({
     const classes = useStyles();
 
     return (
-        <Box key={bullet.id}>
+        <Box key={bullet.id} data-cy={`bullet-script-row-${bullet.id}`}>
             <Box
                 className={classes.column}
                 data-cy={`main-pannel-left-grid-bullet-${bullet.id}`}

@@ -15,7 +15,11 @@ export default memo(function DesktopBulletScriptRow({
     bullet,
 }: DesktopBulletScriptRowProps): ReactElement {
     return (
-        <Grid key={`bullet-script-row-${bullet.id}`} container>
+        <Grid
+            key={`bullet-script-row-${bullet.id}`}
+            data-cy={`bullet-script-row-${bullet.id}`}
+            container
+        >
             <Grid item xs={6}>
                 <Bullet bullet={bullet} />
             </Grid>

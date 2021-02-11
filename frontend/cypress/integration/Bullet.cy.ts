@@ -1,5 +1,6 @@
 import { bulletMock } from '../../src/shared/mocks/Bullet.mock';
 import en from '../../src/i18n/en';
+import { isMobile } from '../support/utils';
 
 describe('Bullets', () => {
     before(() => {
@@ -19,6 +20,10 @@ describe('Bullets', () => {
     });
 
     it('Hovering the collapse button of a script - should display the tooltip "Uncollapse"', () => {
+        if (isMobile()) {
+            cy.get('[data-cy=scripts-view-button]').click();
+        }
+
         cy.get(
             `[data-cy=script-header-collapse-button-${bulletMock.id}]`
         ).trigger('mouseover');
@@ -29,6 +34,10 @@ describe('Bullets', () => {
     });
 
     it('Clicking on the collapse button of a bullet and hovering it - should display the tooltip "Collapse"', () => {
+        if (isMobile()) {
+            cy.get('[data-cy=bullets-view-button]').click();
+        }
+
         cy.get(
             `[data-cy=bullet-header-collapse-button-${bulletMock.id}]`
         ).click();
@@ -43,6 +52,10 @@ describe('Bullets', () => {
     });
 
     it('Clicking on the collapse button of a script and hovering it - should display the tooltip "Collapse"', () => {
+        if (isMobile()) {
+            cy.get('[data-cy=scripts-view-button]').click();
+        }
+
         cy.get(
             `[data-cy=script-header-collapse-button-${bulletMock.id}]`
         ).click();
