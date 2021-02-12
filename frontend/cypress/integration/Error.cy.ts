@@ -15,10 +15,10 @@ describe('Error boundary behaviors', () => {
         cy.get('[data-cy=error-button]').click();
 
         // Make sure it's still there
-        cy.get('[data-cy=main-pannel]').children().should('have.length', 1);
+        cy.get('[data-cy^=bullet-script-row-]').should('have.length', 1);
     });
 
-    it('Clicking on the unexpected error page "home" button - bullets should be gone', () => {
+    it('Having an unexpected error, clicking on the unexpected error page "home" button - bullets should be gone', () => {
         // Make sure there's a bullet in the main pannel
         cy.get('[data-cy=main-pannel]').children().should('have.length', 1);
 
@@ -27,6 +27,6 @@ describe('Error boundary behaviors', () => {
         cy.get('[data-cy=error-button]').click();
 
         // Bullet should be gone
-        cy.get('[data-cy=main-pannel]').children().should('have.length', 0);
+        cy.get('[data-cy^=bullet-script-row-]').should('have.length', 0);
     });
 });
